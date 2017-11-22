@@ -1,0 +1,6 @@
+results
+FASTQ_files
+run.sbatch
+slurm*
+*.pyc
+.ipynb_checkpoints
