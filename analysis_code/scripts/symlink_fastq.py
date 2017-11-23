@@ -7,7 +7,7 @@ import glob
 
 origpath = '/shared/ngs/illumina/jmlee34/170310_D00300_0393_AHHFMLBCXY/Unaligned/Project_jmlee34/'
 
-fastqdir = './fastq/'
+fastqdir = './results/FASTQ_files'
 if not os.path.isdir(fastqdir):
     os.mkdir(fastqdir)
 
