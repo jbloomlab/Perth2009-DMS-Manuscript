@@ -1,0 +1,86 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[11pt]{article}
+\usepackage[round,semicolon]{natbib}
+\usepackage[margin=1.4in]{geometry}
+\usepackage{kpfonts}
+
+\usepackage{seqsplit}
+\usepackage{placeins}
+
+\usepackage{newfloat}
+\usepackage[labelfont=bf]{caption}
+\usepackage{nameref}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{float}
+
+\setcounter{topnumber}{8}
+\setcounter{bottomnumber}{8}
+\setcounter{totalnumber}{8}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Figure}]{suppfigure}
+\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
+\DeclareFloatingEnvironment[name={Table}]{supptable}
+\renewcommand{\thesupptable}{S\arabic{supptable}}
+\DeclareFloatingEnvironment[name={File}]{suppfile}
+\renewcommand{\thesuppfile}{S\arabic{suppfile}}
+
+\definecolor{darkblue}{rgb}{0, 0.0, 0.6}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue}
+
+\usepackage{seqsplit}
+
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
+
+\usepackage{setspace}
+
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\floatpagefraction}{1}
+
+
+\title{TITLE} 
+
+\author
+{Juhye M. Lee$^{1,3,4,\dagger}$, John Huddleston$^{2,4,\dagger}$, Michael B. Doud$^{1,3,4}$, Kathryn A. Hooper$^{1,4}$, Trevor Bedford,$^{2}$ and Jesse D. Bloom$^{1,3,5*}$\\
+\\
+\scriptsize{$^1$Basic Sciences and Computational Biology Divisions, Fred Hutchinson Cancer Research Center}\\
+\scriptsize{$^2$Vaccine and Infectious Diseases Division, Fred Hutchinson Cancer Research Center} \\
+\scriptsize{$^3$Department of Genome Sciences and $^4$Medical Scientist Training Program, University of Washington} \\
+\scriptsize{$^5$Department of Molecular and Cellular Biology, University of Washington} \\
+\scriptsize{Seattle, WA, USA} \\
+\scriptsize{$^{\dagger}$These authors contributed equally} \\
+\scriptsize{$^*$Correspondence: \href{jbloom@fredhutch.org}{jbloom@fredhutch.org}}
+}
+
+\date{}
+
+
+\begin{document}
+
+\maketitle
+\onehalfspacing
+
+\begin{abstract}
+\comment{Some title ideas:
+- Determination of lineage-specific mutational effects in hemagglutinin of seasonal H3N2 influenza virus evolution
+- Experimental measurements of mutational effects to hemagglutinin reveal lineage-specific evolution of seasonal H3N2 influenza virus
+- Understanding the effects of mutation to hemagglutinin in the context of seasonal H3N2 influenza virus evolution}
+\end{abstract}
+
+\end{document}
