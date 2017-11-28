@@ -1,0 +1,59 @@
+2017-11-27 19:55:26,445 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/jmlee34/2017/Perth2009-DMS-Manuscript/analysis_code
+
+2017-11-27 19:55:26,445 - INFO - Progress is being logged to {logodir}/{rescaledlogoname}.log
+2017-11-27 19:55:28,309 - INFO - Version information:
+	Time and date: Mon Nov 27 19:55:26 2017
+	Platform: Linux-3.13.0-68-generic-x86_64-with-Ubuntu-14.04-trusty
+	Python version: 3.4.3 (default, Oct 14 2015, 20:28:29)  [GCC 4.8.4]
+	dms_tools2 version: 2.2.0
+	Bio version: 1.70
+	HTSeq version: 0.9.1
+	pandas version: 0.21.0
+	numpy version: 1.13.3
+	IPython version: 6.2.1
+	matplotlib version: 2.0.2
+	plotnine version: 0.2.1
+	natsort version: 5.1.1
+	pystan version: 2.17.0.0
+	scipy version: 1.0.0
+	seaborn version: 0.8.1
+	phydmslib version: 2.2.0
+	jupyter version unknown
+	rpy2 cannot be imported
+
+2017-11-27 19:55:28,309 - INFO - Parsed the following arguments:
+	colormap = jet
+	overlay3 = ['{rsafile}', 'RSA', 'relative solvent accessibility']
+	diffselrange = None
+	underlay = no
+	letterheight = 1
+	sepline = yes
+	restrictdiffsel = all
+	stringency = 1
+	sortsites = yes
+	use_existing = no
+	diffprefs = None
+	ignore_extracols = no
+	mapmetric = functionalgroup
+	outdir = {logodir}
+	overlaycolormap = jet
+	name = {rescaledlogoname}
+	fracsurvivemax = None
+	fracsurvive = None
+	overlay2 = ['{domainsfile}', 'DOM', 'domain']
+	overlay1 = ['{wtoverlayfile}', 'wildtype', 'wildtype']
+	ncpus = -1
+	numberevery = 10
+	excludestop = no
+	prefs = {rescaledavgprefs}
+	diffsel = None
+	nperline = 81
+	scalebar = None
+
+2017-11-27 19:55:28,314 - ERROR - Terminating dms2_logoplot with ERROR.
+Traceback (most recent call last):
+  File "/home/jmlee34/.local/bin/dms2_logoplot", line 105, in main
+    assert dms_tools2.parseargs.checkName(args['name'], 'name')
+  File "/home/jmlee34/.local/lib/python3.4/site-packages/dms_tools2/parseargs.py", line 58, in checkName
+    "{2}".format(nametype, name, ', '.join(illegal_chars)))
+ValueError: name {rescaledlogoname} contains following illegal characters: {, }
