@@ -99,8 +99,8 @@ Previously, we measured the effect of all possible single amino-acid mutations t
 {\bf Overview of deep mutational scanning experiments of H3 hemagglutinin.}
 (A) We used a helper virus approach previously described in Doud (2016) to generate the mutant virus libraries. 
 We transfected MDCK-SIAT1-TMPRSS2 cells with the mutant plasmid library carrying all possible amino-acid mutations to the A/Perth/16/2009 (H3N2) HA, in addition to protein expression plasmids encoding the viral ribonucleoprotein complex. 
-After transfection, we infected the cells with an HA-deficient helper virus carrying all of the WSN/1933 influenza genes. 
-We then passage the initially generated pool of mutant viruses at low MOI to establish a genotype-phenotype linkage and select for functional HA variants. 
+After transfection, we infected the cells with an HA-deficient helper virus carrying all of the WSN/1933 (H1N1) influenza genes. 
+We then passaged the initially generated pool of mutant viruses at low MOI to establish a genotype-phenotype linkage and select for functional HA variants. 
 (B) All of the experiments were completed in biological triplicate, starting from independent preps of the wildtype HA genes to create the mutant plasmids. 
 In addition, we passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to gauge the amount of experimental noise within a single biological replicate.
 (C) Mutation frequencies of nonsynonymous, stop, and synonymous mutations for the mutant DNA, mutant virus, wildtype DNA, and wildtype virus samples. 
@@ -152,20 +152,21 @@ The letters directly above each logo indicate the wildtype amino acid at that si
 \comment{We downloaded X sequences from the Influenza Virus Resource ?.... etc. inferred the tree, ancestral state reconstruction, visualized the tree. Mark Perth/2009 on the tree}
 To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
 All branches ancestral to the MRCA of the recent nodes were defined as the trunk (shown in red), and all other branches were defined as side branches (shown in blue).
-(B) Using the Perth/2009 H3 preferences, we calculated the log$_{2}$ mutational effect for all side branch and all trunk mutations (left panel), in addition to all mutations in internal nodes and terminal nodes on the side branches (right panel). 
+(B) Using the Perth/2009 H3 preferences, we calculated the log$_{2}$ mutational effect for trunk and side branch mutations in windows of 5 years for every year from 1968-2013. 
+The median log$_{2}$ mutational effect in a given window is shown as circles for trunk mutations and triangles for side branch mutations. 
+The shaded region demarcates the interquartile range of trunk and side branch mutational effects.
+The median trunk mutational effects are consistently higher than the median side branch mutational effects for all windows.
+(C) The log$_{2}$ mutational effect for all side branch and all trunk mutations (left panel), in addition to all mutations in internal nodes and terminal nodes on the side branches (right panel) are shown.
 To estimate significance, we performed 10,000 randomizations of the preferences to calculate the median difference in trunk vs side branch mutational effects, and counted how many of the randomizations exceeded the true difference in median trunk vs side branch mutational effects.
 The effects of trunk mutations are higher than side branch, internal and terminal node, mutations.
 }
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=\textwidth]{figs/muteffects_sliding_window/muteffects_sliding_window.pdf}}
-\caption{\label{fig:muteffects_sliding_window}
-{\bf Trunk mutational effects are consistently higher than side branch mutational effects across time.}
-We calculated the log$_{2}$ mutational effect for trunk and side branch mutations in windows of 5 years for every year from 1968-2013. 
-The median log$_{2}$ mutational effect in a given window is shown as circles for trunk mutations and triangles for side branch mutations. 
-The shaded region demarcates the interquartile range of trunk and side branch mutational effects.
-The median trunk mutational effects are consistently higher than the median side branch mutational effects for all windows.
+\centerline{\includegraphics[width=\textwidth]{figs/sequence_preference/sequence_preference.pdf}}
+\caption{\label{fig:sequence_preference}
+{\bf The trunk exhibits higher sequence preference than side branches.}
+figure text
 }
 \end{figure}
 
