@@ -86,12 +86,24 @@ Abstract text.
 
 \section*{INTRODUCTION}
 
-
 \section*{RESULTS}
 \label{sec:results}
 
 \subsection*{Strategy for deep mutational scanning of an H3 hemagglutinin}
-Previously, we measured the effect of all possible single amino-acid mutations to a highly lab-adapted H1 hemagglutinin from the A/WSN/1933 (H1N1) strain. 
+Previously, we measured the effect of all possible single amino-acid mutations to a highly lab-adapted H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
+To better understand the effects of mutations to a hemagglutinin of more direct relevance to influenza strains currently circulating in the human population, we chose to study H3 HA from the A/Perth/16/2009 (H3N2) strain. 
+This strain was the H3N2 component of the influenza vaccine from 2010-2012.
+\comment{mention serial passages and TC-adaptation mutations...}
+
+We mutagenized the Perth/2009 HA gene to create mutant plasmid HA libraries encompassing all 567 codons and harboring an average of $\sim$1.4 codon mutations per clone.
+We then used a helper-virus system previously established in~\cite{doud2016accurate} to bypass the bottlenecks associated with reverse genetics to generate complex mutant virus libraries from the mutant plasmids (Figure~\ref{fig:dms_overview}A).
+In order to maximize viral titers and further avoid bottlenecking the diversity of the initially generated mutant viruses, we used an HA-deficient helper virus carrying WSN/1933 internal and NA genes to rescue the mutant viruses, thereby pairing the mutant HA's with the WSN NA.
+Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which is found endogenously in the human airway and facilitates HA cleavage and activation \comment{cite B\"{o}ttcher 2006 JVI, B\"{o}ttcher-Friebertsh\"{a}user 2010 JVI}.
+All of the experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
+We also passaged and deep sequenced library 3 in technical replicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
+
+Deep sequencing shows...
+
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/dms_overview/dms_overview.pdf}}
@@ -102,7 +114,7 @@ We transfected MDCK-SIAT1-TMPRSS2 cells with the mutant plasmid library carrying
 After transfection, we infected the cells with an HA-deficient helper virus carrying all of the WSN/1933 (H1N1) influenza genes. 
 We then passaged the initially generated pool of mutant viruses at low MOI to establish a genotype-phenotype linkage and select for functional HA variants. 
 (B) All of the experiments were completed in biological triplicate, starting from independent preps of the wildtype HA genes to create the mutant plasmids. 
-In addition, we passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to gauge the amount of experimental noise within a single biological replicate.
+In addition, we passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to estimate the amount of experimental noise within a single biological replicate.
 (C) Mutation frequencies of nonsynonymous, stop, and synonymous mutations for the mutant DNA, mutant virus, wildtype DNA, and wildtype virus samples. 
 There is selection against nonsynonymous and stop codons in the mutant viruses. 
 The percentages signify the frequency of stop codons remaining in the passaged mutant viruses relative to their starting frequency in the mutant plasmid libraries after correcting for the stop codon frequencies in the wildtype DNA and viruses.
@@ -201,7 +213,7 @@ The WSN/1933 H1 and the Perth/2009 H3 share $\sim$42\% amino-acid identity.
 {\bf Shifts in preferences mapped onto the structure of HA}
 (A) The preference shifts as calculated by $RMSD_{corrected}$ between the two HA homologs is mapped onto the structure of HA (PDB 4O5N, citation). 
 The left structure shows the HA trimer, and the right structure colors one of the monomers. 
-The sialic acid receptor is in black sticks.
+The sialic acid receptor is shown in black sticks.
 Gray indicates little shifts in preference, while red indicates large shifts in preference.
 The top ten most shifted sites are shown in spheres on the monomer.
 (B)
@@ -218,7 +230,11 @@ The top ten most shifted sites are shown in spheres on the monomer.
 \section*{METHODS}
 \label{sec:methods}
 \subsection*{HA numbering}
-Unless otherwise indicated, all sites are in H3 numbering.
+Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 domain in plain numbers, and the HA2 domain denoted with "(HA2)".
+
+\subsection*{Creation of MDCK-SIAT1-TMPRSS2 cell line}
+The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified, and cloned into a pHAGE2 lentiviral vector...etc etc
+\comment{Need to look at Katie's notebooks for this...}
 
 \subsection*{Generation of HA codon mutant plasmid libraries}
 
@@ -228,15 +244,23 @@ Unless otherwise indicated, all sites are in H3 numbering.
 
 \subsection*{Analysis of deep sequencing data}
 
+\subsection*{Inference of phylogenetic trees}
+
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
 
 \subsection*{Data availability and source code}
-Deep sequencing data are available from the Sequence Read Archive under BioSample accession \comment{add accession}.
+Deep sequencing data are available from the Sequence Read Archive under BioSample accessions \comment{add accession}.
 
 
 \subsection*{ACKNOWLEDGMENTS}
 We thank Sarah Hilton, Hugh Haddox, Sidney Bell...the Fred Hutch Genomics Core...
 Funding...
 
+
+\bibliographystyle{mbe}
+\bibliography{references.bib}
+
+\clearpage
+\normalsize
 
 \end{document}
