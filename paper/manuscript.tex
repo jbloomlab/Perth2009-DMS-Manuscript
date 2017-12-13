@@ -102,8 +102,20 @@ Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 pro
 All of the experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
 We also passaged and deep sequenced library 3 in technical replicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
 
-Deep sequencing shows...
+Figure~\ref{fig:dms_overview}C shows the mutation frequencies of the mutant plasmids, mutant viruses, wildtype plasmids and wildtype viruses determined from deep sequencing. 
+There is selection against non-functional HA variants as revealed by the reduced mutation frequencies of the mutant viruses compared to their starting frequencies in the mutant plasmids.
+Specifically, stop codons were purged to 20-45\% of their original starting frequencies, after correcting for error rates from the wildtype controls.
+Although the majority of stop codons were purged, incomplete purging of stop codons is likely due to complementation of defective viral particles by infectious virions. 
+We also observed purging of most nonsynonymous mutations to 30-40\% of their initial starting frequencies after error correction, suggesting strong selection against deleterious HA variants.
 
+We next quantified the reproducibility of our deep mutational scanning measurements across biological and technical replicates. 
+We inferred the amino-acid preferences at each site in the Perth/2009 HA using the method described in~\cite{bloom2015software} and implemented in the \texttt{dms\_tools2} software [\url{https://jbloomlab.github.io/dms_tools2/}].
+These preferences represent an estimate of the 567 sites $\times$ 20 amino acids $=$ 11340 experimental measurements and are normalized to sum to one at each site.
+The correlations of the amino-acid preferences between each pair of replicates is shown in Figure~\ref{fig:dms_overview}D.
+The biological replicates are fairly well-correlated, with a Pearson's $R$ ranging from 0.69 to 0.78. 
+Replicate 1 exhibits the least amount of correlation with the other biological replicates, consistent with the observation that this replicate showed the weakest selection against stop and nonsynonymous mutations and might therefore be subject to more experimental noise.
+Of note, the two technical replicates 3-1 and 3-2 were only slightly more reproducible than that between biological replicates.
+This suggests that bottlenecking of the virus library during the low MOI passage contributes to much of the noise observed in our experiments, as we are only able to passage a finite number of viral particles.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/dms_overview/dms_overview.pdf}}
@@ -125,6 +137,8 @@ The biological replicates are fairly well-correlated, as are the technical repli
 
 
 \subsection*{H3 site-specific amino-acid preferences}
+How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
+\comment{phydms analysis here}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
@@ -203,7 +217,8 @@ There is not a distinct difference in trunk and side branch mutational effects.
 {\bf The HA homologs exhibit many large shifts in preference compared to shifts for other viral protein homologs}
 (A) A phylogenetic tree of the HA subtypes, with the two HA's, WSN/1933 H1 and Perth/2009 H3, for which we have measured amino-acid preferences denoted on the tree. 
 The WSN/1933 H1 and the Perth/2009 H3 share $\sim$42\% amino-acid identity.
-(B) The distribution of shifts in preference for various homolog pairs are shown.
+(B) The correlation for the amino-acid preferences for replicates both within and between the two HA homologs.
+(C) The distribution of shifts in preference for various homolog pairs are shown.
 }
 \end{figure}
 
@@ -230,17 +245,24 @@ The top ten most shifted sites are shown in spheres on the monomer.
 \section*{METHODS}
 \label{sec:methods}
 \subsection*{HA numbering}
-Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 domain in plain numbers, and the HA2 domain denoted with "(HA2)".
+Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 subunit in plain numbers, and the HA2 subunit denoted with "(HA2)". The conversion between sequential numbering of the A/Perth/16/2009 HA and H3 numbering was performed using an HA numbering Python script (available at \url{https://github.com/jbloomlab/HA_numbering}).
 
 \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cell line}
-The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified, and cloned into a pHAGE2 lentiviral vector...etc etc
+The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified, and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter and attached to mCherry through an IRES...etc etc
 \comment{Need to look at Katie's notebooks for this...}
 
 \subsection*{Generation of HA codon mutant plasmid libraries}
+Recombinant A/Perth/16/2009 (HA, NA) $\times$ A/Puerto Rico/8/1934 influenza virus, NIB-64, NR-41803 was ordered from BEI Resources, NIAID, NIH. 
+Bulk RNA from the viral sample was extracted using the QIAamp Viral RNA Mini Kit (QIAGEN) according to manufacturer's instructions.
+The Perth/2009 HA and NA genes were then reverse transcribed, PCR amplified, and cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2 \comment{cite?} plasmid backbones.
+
+The codon-mutant libraries were generated using a PCR-based approach described in~\cite{dingens2017comprehensive}.
 
 \subsection*{Generation and passaging of mutant viruses}
+The mutant virus libraries were generated and passaged using the approach described in~\cite{doud2016accurate} with several modifications.
 
 \subsection*{Barcoded subamplicon sequencing}
+
 
 \subsection*{Analysis of deep sequencing data}
 
@@ -249,7 +271,7 @@ The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified,
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
 
 \subsection*{Data availability and source code}
-Deep sequencing data are available from the Sequence Read Archive under BioSample accessions \comment{add accession}.
+Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. Computer code used to analyze the data and produce the results in the paper are in...
 
 
 \subsection*{ACKNOWLEDGMENTS}
