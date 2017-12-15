@@ -138,21 +138,33 @@ The biological replicates are fairly well-correlated, as are the technical repli
 
 \subsection*{H3 site-specific amino-acid preferences}
 How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
-\comment{phydms analysis here}
+This question can be addressed by evaluating how well experimentally informed codon substitution models (ExpCM's) constructed from our laboratory measurements improve phylogenetic fit of H3N2 evolution~\citep{hilton2017phydms}.
+The results shown in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
+The ExpCM also optimizes a stringency parameter ($\beta$) for the preferences to more closely reflect the strength of selection in nature.
+The stringency parameter in the ExpCM is equal to 2.44, which indicates that although the same amino acids are preferred, the strength of selection is more stringent in nature than in our experiments.
+Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid preferences rescaled by this stringency parameter.
 
-\begin{figure}
-\centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
-\caption{\label{fig:mut_tolerance}
-{\bf Different regions of HA exhibit varying degrees of mutational tolerance.}
-Mutational tolerance as calculated by the Shannon entropy of a given site's amino-acid preferences are mapped onto the structure of the H3 trimer (PDB 4O5N, \comment{cite}) and the H1 trimer (PDB 1RVX, \comment{cite}), with both trimers in approximately the same orientation. 
-The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) or the preferences measured in the WSN/1933 H1 (right panel). 
-Lighter shades of blue or red signify low mutational tolerance, while darker shades of blue or red signify high mutational tolerance. 
-For each HA, the structure on the left side colors the full HA trimer, while the structure on the right side colors only one of the monomers.
-The sialic acid receptor is shown as black sticks.
-The Perth/2009 H3 shows relatively high mutational tolerance in the stalk region compared to the head region. 
-The head region of the WSN/1933 H1 is mutationally tolerant compared to the relatively intolerant stalk region. 
+\begin{table}
+\centering
+\begin{tabular}{cccc}
+\hline
+\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Parameters} \\ \hline
+ExpCM & 0.0 & -8439.33 & $\beta = 2.44, \kappa = 5.78, \omega = 0.91$ \\
+Goldman-Yang M5 & 2166.06 & -9516.36 & $\omega_{\alpha} = 0.30, \omega_{\beta} = 0.84, \kappa = 5.10$ \\
+ExpCM, averaged across sites & 2504.18 & -9691.42 & $\beta = 0.68, \kappa = 5.58, \omega = 0.32$ \\
+Goldman-Yang M0 & 2607.92 & -9738.29 & $\kappa = 5.05, \omega = 0.31$ \\
+\hline
+\end{tabular}
+\caption{\label{tab:phydms}
+{\bf The site-specific amino-acid preferences are informative for describing human H3N2 evolution in nature.}
+We implemented several codon substitution models for phylogenetic fitting of an alignment of human H3N2 HA sequences. 
+The maximum likelihood values for each model were compared using the Akaike information criteria ($\Delta$AIC)~\citep{posada2004model}.
+An experimentally-informed codon substitution model (ExpCM) built from the preferences averaged across all replicates performs better than conventional substitution models, specifically the M0 and M5 models in~\cite{yang2000codon}.
+A non-site-specific ExpCM informed by preferences averaged across all sites does not perform as well as the M5 model, but still has a higher log likelihood than M0.
+The optimized parameters for each model is also shown.
 }
-\end{figure}
+\end{table}
+
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/prefslogoplot/rescaled-avgprefs_prefs.pdf}}
@@ -167,6 +179,20 @@ The letters directly above each logo indicate the wildtype amino acid at that si
 }
 \end{figure}
 
+
+\begin{figure}
+\centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
+\caption{\label{fig:mut_tolerance}
+{\bf Different regions of HA exhibit varying degrees of mutational tolerance.}
+Mutational tolerance as calculated by the Shannon entropy of a given site's amino-acid preferences are mapped onto the structure of the H3 trimer (PDB 4O5N, \comment{cite}) and the H1 trimer (PDB 1RVX, \comment{cite}), with both trimers in approximately the same orientation. 
+The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) or the preferences measured in the WSN/1933 H1 (right panel). 
+Lighter shades of blue or red signify low mutational tolerance, while darker shades of blue or red signify high mutational tolerance. 
+For each HA, the structure on the left side colors the full HA trimer, while the structure on the right side colors only one of the monomers.
+The sialic acid receptor is shown as black sticks.
+The Perth/2009 H3 shows relatively high mutational tolerance in the stalk region compared to the head region. 
+The head region of the WSN/1933 H1 is mutationally tolerant compared to the relatively intolerant stalk region. 
+}
+\end{figure}
 
 \subsection*{Estimating mutational effects from an H3N2 phylogeny}
 
