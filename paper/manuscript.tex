@@ -91,9 +91,12 @@ Abstract text.
 
 \subsection*{Strategy for deep mutational scanning of an H3 hemagglutinin}
 Previously, we measured the effect of all possible single amino-acid mutations to a highly lab-adapted H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
-To better understand the effects of mutations to a hemagglutinin of more direct relevance to influenza strains currently circulating in the human population, we chose to study H3 HA from the A/Perth/16/2009 (H3N2) strain. 
+To examine the effects of mutations to a hemagglutinin of more direct relevance to influenza strains currently circulating in the human population, we chose to study H3 HA from the A/Perth/16/2009 (H3N2) strain. 
 This strain was the H3N2 component of the influenza vaccine from 2010-2012.
-\comment{mention serial passages and TC-adaptation mutations...}
+We first rescued virus carrying the wildtype Perth/2009 HA and NA and the WSN internal genes by reverse genetics, and serially passaged the virus in cell culture a total of six times.
+%This passaging was completed to allow the virus to adapt to growth in cell culture and to find cell-culture adaptation mutations that emerged during the course of passaging.
+Two mutations, G78D and T212I, arose together from passaging, and the G78D-T212I Perth/2009 HA mutant supported viral growth to $\sim$15- to 20-fold higher titers than the wildtype HA \comment{(supplementary data?)}.
+We decided to perform all deep mutational scanning experiments in the background of the Perth/2009 HA carrying these two mutations to support higher viral growth and to limit these cell culture adaptation mutations from swamping out the signal from other mutations.
 
 We mutagenized the Perth/2009 HA gene to create mutant plasmid HA libraries encompassing all 567 codons and harboring an average of $\sim$1.4 codon mutations per clone.
 We then used a helper-virus system previously established in~\cite{doud2016accurate} to bypass the bottlenecks associated with reverse genetics to generate complex mutant virus libraries from the mutant plasmids (Figure~\ref{fig:dms_overview}A).
@@ -139,7 +142,7 @@ The biological replicates are fairly well-correlated, as are the technical repli
 \subsection*{H3 site-specific amino-acid preferences}
 How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
 This question can be addressed by evaluating how well experimentally informed codon substitution models (ExpCM's) constructed from our laboratory measurements improve phylogenetic fit of H3N2 evolution~\citep{hilton2017phydms}.
-The results shown in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
+The results in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
 The ExpCM also optimizes a stringency parameter ($\beta$) for the preferences to more closely reflect the strength of selection in nature.
 The stringency parameter in the ExpCM is equal to 2.44, which indicates that although the same amino acids are preferred, the strength of selection is more stringent in nature than in our experiments.
 Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid preferences rescaled by this stringency parameter.
@@ -161,7 +164,7 @@ We implemented several codon substitution models for phylogenetic fitting of an 
 The maximum likelihood values for each model were compared using the Akaike information criteria ($\Delta$AIC)~\citep{posada2004model}.
 An experimentally-informed codon substitution model (ExpCM) built from the preferences averaged across all replicates performs better than conventional substitution models, specifically the M0 and M5 models in~\cite{yang2000codon}.
 A non-site-specific ExpCM informed by preferences averaged across all sites does not perform as well as the M5 model, but still has a higher log likelihood than M0.
-The optimized parameters for each model is also shown.
+The optimized parameters for each model are also shown.
 }
 \end{table}
 
@@ -180,8 +183,10 @@ We next sought to investigate the inherent mutational tolerance of the Perth/200
 Figure~\ref{fig:mut_tolerance} shows the mutational tolerance as calculated from the rescaled Perth/2009 H3 preferences and the rescaled WSN/1933 H1 preferences mapped onto the HA crystal structures.
 Interestingly, the Perth/2009 H3 stalk is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
 In particular, the shorter $\alpha$-helix (helix A) of the stalk domain, antigenic site C, and the most distal portion of the globular head near antigenic site B are all highly mutationally tolerant.
+% may add more details here
 On the other hand, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
-
+The receptor binding pockets of both HA's are relatively mutationally intolerant, although the residues surrounding the receptor binding pocket are fairly tolerant of mutations.
+These findings are consistent with the high functional constraint of the receptor binding pocket, while the mutability of sites surrounding the pocket that are under strong immune pressure may contribute to antigenic evolution~\citep{wilson1981structure, wiley1981structural}.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/prefslogoplot/rescaled-avgprefs_prefs.pdf}}
@@ -202,7 +207,7 @@ The letters directly above each logo indicate the wildtype amino acid at that si
 \caption{\label{fig:mut_tolerance}
 {\bf Different regions of HA exhibit varying degrees of mutational tolerance.}
 Mutational tolerance as calculated by the Shannon entropy of a given site's amino-acid preferences are mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}) and the H1 trimer (PDB 1RVX;~\cite{gamblin2004structure}), with both trimers in approximately the same orientation. 
-The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) or the preferences measured in the WSN/1933 H1 (right panel). 
+The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) from this study, or the preferences measured in the WSN/1933 H1 (right panel) from~\cite{doud2016accurate}. 
 Lighter shades of blue or red signify low mutational tolerance, while darker shades of blue or red signify high mutational tolerance. 
 For each HA, the structure on the left side colors the full HA trimer, while the structure on the right side colors only one of the monomers.
 The sialic acid receptor is shown as black sticks.
@@ -246,7 +251,7 @@ figure text
 (A) We calculated the log$_{2}$ mutational effects of the same set of trunk and side branch mutations from the inferred H3N2 phylogeny in Figure~\ref{fig:trunkvssidebranch} using the WSN/1933 H1 preferences.
 We again randomized the preferences for a total of 10,000 iterations and counted the number of randomizations that exceeded that true difference in median trunk vs side branch mutational effects to calculate a p-value.
 Using the WSN/1933 H1 preferences, there is not a significant difference in trunk vs side branch mutational effects.
-(B) We also performed the same sliding window analysis shown in Figure~\ref{fig:muteffects_sliding_window}, but using the WSN/1933 H1 preferences.
+(B) We also performed the same sliding window analysis shown in Figure~\ref{fig:trunkvssidebranch}B, but using the WSN/1933 H1 preferences.
 There is not a distinct difference in trunk and side branch mutational effects.
 }
 \end{figure}
