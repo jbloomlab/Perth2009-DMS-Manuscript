@@ -91,7 +91,8 @@ Very rough outline:
 \item The evolution of H3N2 is also characterized by clade competition and population turnover.
 \item There have been efforts to predict evolutionary success.
 \item Mutations that contribute to antigenic evolution largely determine strain success.
-\item However, mutations in HA that impact viral growth may also influence strain success.
+\item RNA viruses can accumulate deleterious mutations, and because the influenza does not appreciably recombine, deleterious mutations are linked to beneficial ones.
+\item Mutations in HA that impact viral growth may influence strain success.
 \item We need to understand the functional impact of mutations in HA.
 \item Previously, we measured the effect of all possible single amino-acid mutations to an H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
 \item However, this is a highly lab-adapted strain, and the measurements in this strain may not be particularly relevant for studying mutational processes of more contemporaneous strains circulating in the human population.
@@ -167,8 +168,8 @@ Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid pref
 \centering
 \begin{tabular}{cccc}
 \hline
-\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Parameters} \\ \hline
-ExpCM & 0.0 & -8439.33 & $\beta = 2.44, \kappa = 5.78, \omega = 0.91$ \\
+\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Stringency} \\ \hline
+ExpCM & 0.0 & -8439.33 & $\beta = 2.44, \omega = 0.91$ \\
 Goldman-Yang M5 & 2166.06 & -9516.36 & $\omega_{\alpha} = 0.30, \omega_{\beta} = 0.84, \kappa = 5.10$ \\
 ExpCM, averaged across sites & 2504.18 & -9691.42 & $\beta = 0.68, \kappa = 5.58, \omega = 0.32$ \\
 Goldman-Yang M0 & 2607.92 & -9738.29 & $\kappa = 5.05, \omega = 0.31$ \\
@@ -221,7 +222,7 @@ These findings are consistent with the high functional constraint of the recepto
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
 \caption{\label{fig:mut_tolerance}
-{\bf Different regions of HA exhibit varying degrees of mutational tolerance.}
+{\bf Mutational tolerance mapped onto each site of HA.}
 Mutational tolerance as calculated by the Shannon entropy of a given site's amino-acid preferences are mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}) and the H1 trimer (PDB 1RVX;~\cite{gamblin2004structure}), with both trimers in approximately the same orientation. 
 The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) from this study, or the preferences measured in the WSN/1933 H1 (right panel) from~\cite{doud2016accurate}. 
 Lighter shades of blue or red signify low mutational tolerance, while darker shades of blue or red signify high mutational tolerance. 
@@ -233,17 +234,19 @@ The head region of the WSN/1933 H1 is mutationally tolerant compared to the rela
 \end{figure}
 
 \subsection*{The H3 preferences reveal differences in seasonal influenza virus lineages}
-The human H3N2 phylogeny has a characteristic ladder-like structure, with a persistent trunk lineage and side branches that rapidly die out.
+% The human H3N2 phylogeny has a characteristic ladder-like structure, with a persistent trunk lineage and side branches that rapidly die out.
 Do the preferences reveal inherent differences between lineages of human H3N2 influenza virus that have succeeded and those that have died out?
 To examine this, we calculated the effect of trunk and side branch mutations from an H3N2 phylogeny, shown in Figure~\ref{fig:trunkvssidebranch}A, from 1968-2012 using our preference dataset. 
+Strains with mutations that we measured to be more beneficial to viral growth tend to succeed in nature.
 Figure~\ref{fig:trunkvssidebranch}B shows the median log$_{2}$ mutational effects and the interquartile ranges for trunk and side branch mutations in five-year windows for every year from 1968-2012. 
 On average, trunk mutations tend to be towards more preferred amino acids compared to side branch mutations, and this was true for all windows.
 Next we calculated the effect of all trunk and side branch mutations from the entirety of the phylogenetic tree.
 We found that on average, trunk mutations are significantly more favorable than side branch mutations (Figure~\ref{fig:trunkvssidebranch}C).
 Because a number of tip nodes are likely from egg- or cell-passaged isolates and our experiments were performed in cell culture, we were curious to see if our measurements would lead to higher estimations of mutational effects for terminal nodes.
 We found that terminal node mutations are on average towards less preferred amino acids than internal node mutations, and that both internal and terminal node mutations are significantly less favorable than those on the trunk.
-Therefore, strains that have accumulated mutations that we measured in our experiments to be unpreferred generally die out in nature.
-These findings demonstrate the importance of the functional impacts of HA mutations in determining lineage success. 
+Therefore, strains that have accumulated mutations that we measured in our experiments to be unpreferred generally die out in nature, while more favored mutations  provide a selective advantage to the surviving trunk.
+\comment{The average effect of trunk mutations near zero may also suggest that there is a balance between preferred and unpreferred mutations on the trunk.}
+These findings demonstrate the importance of the functional impacts of HA mutations in determining lineage success.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}}
