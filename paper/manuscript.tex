@@ -61,7 +61,7 @@ Juhye M. Lee$^{1,4,5,\dagger}$ \and
 John Huddleston$^{2,6,\dagger}$ \and 
 Michael B. Doud$^{1,4,5}$ \and 
 Kathryn A. Hooper$^{1,6}$ \and
-Trevor Bedford,$^{2,3}$ \and 
+Trevor Bedford$^{2,3*}$ and \and 
 Jesse D. Bloom$^{1,3,4*}$
 \\
 \scriptsize{$^1$Basic Sciences Division, $^2$Vaccine and Infectious Diseases Division, and $^3$Computational Biology Program,} \\
@@ -69,7 +69,7 @@ Jesse D. Bloom$^{1,3,4*}$
 \scriptsize{$^4$Department of Genome Sciences, $^5$Medical Scientist Training Program, and $^6$Molecular and Cellular Biology Program,} \\
 \scriptsize{University of Washington, Seattle, WA, USA} \\
 \scriptsize{$^{\dagger}$These authors contributed equally} \\
-\scriptsize{$^*$Correspondence: \href{jbloom@fredhutch.org}{jbloom@fredhutch.org}}
+\scriptsize{$^*$Correspondence: \href{trevor@bedford.io}{trevor@bedford.io}, \href{jbloom@fredhutch.org}{jbloom@fredhutch.org}}
 }
 
 \date{}
@@ -85,23 +85,39 @@ Abstract text.
 \end{abstract}
 
 \section*{INTRODUCTION}
+Very rough outline:
+\begin{itemize}
+\item Mutations are rampant in the evolution of human influenza virus. Seasonal H3N2 influenza virus in particular rapidly accumulates mutations.
+\item The evolution of H3N2 is also characterized by clade competition and population turnover.
+\item There have been efforts to predict evolutionary success.
+\item Mutations that contribute to antigenic evolution largely determine strain success.
+\item However, mutations in HA that impact viral growth may also influence strain success.
+\item We need to understand the functional impact of mutations in HA.
+\item Previously, we measured the effect of all possible single amino-acid mutations to an H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
+\item However, this is a highly lab-adapted strain, and the measurements in this strain may not be particularly relevant for studying mutational processes of more contemporaneous strains circulating in the human population.
+\item We chose to study the Perth/2009 H3 HA.
+\item This also enabled a comparison of how the preferences have shifted for two diverged HA's.
+\end{itemize}
 
 \section*{RESULTS}
 \label{sec:results}
 
-\subsection*{Strategy for deep mutational scanning of an H3 hemagglutinin}
-Previously, we measured the effect of all possible single amino-acid mutations to a highly lab-adapted H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
-To examine the effects of mutations to a hemagglutinin of more direct relevance to influenza strains currently circulating in the human population, we chose to study H3 HA from the A/Perth/16/2009 (H3N2) strain. 
+\subsection*{Deep mutational scanning of HA from a recent strain of human H3N2 influenza virus}
+We performed a deep mutational scan of H3 HA from the A/Perth/16/2009 (H3N2) strain. 
 This strain was the H3N2 component of the influenza vaccine from 2010-2012.
-We first rescued virus carrying the wildtype Perth/2009 HA and NA and the WSN internal genes by reverse genetics, and serially passaged the virus in cell culture a total of six times.
+The HA gene we used in our experiments carries two mutations, G78D and T212I, relative to the Perth/2009 HA sequence deposited in GenBank.
+The G78D mutation has appeared sporadically at low frequency in natural H3N2 sequences. 
+Although the T212I mutation is not appreciable in nature \comment{reword}, the T212A mutation rose to fixation in the human population in $\sim$2011.
+We found that the G78D-T212I Perth/2009 HA mutant supported viral growth to $\sim$15- to 20-fold higher titers than the wildtype HA.
+%We first generated virus carrying the wildtype Perth/2009 HA and NA and the WSN internal genes by reverse genetics, and serially passaged the virus in cell culture a total of six times.
 %This passaging was completed to allow the virus to adapt to growth in cell culture and to find cell-culture adaptation mutations that emerged during the course of passaging.
-Two mutations, G78D and T212I, arose together from passaging, and the G78D-T212I Perth/2009 HA mutant supported viral growth to $\sim$15- to 20-fold higher titers than the wildtype HA \comment{(supplementary data?)}.
-We decided to perform all deep mutational scanning experiments in the background of the Perth/2009 HA carrying these two mutations to support higher viral growth and to limit these cell culture adaptation mutations from swamping out the signal from other mutations.
+%Two mutations, G78D and T212I, arose together from passaging.
+We therefore decided to perform all deep mutational scanning experiments in the background of the Perth/2009 HA carrying these two mutations to support higher viral growth.
 
-We mutagenized the Perth/2009 HA gene to create mutant plasmid HA libraries encompassing all 567 codons and harboring an average of $\sim$1.4 codon mutations per clone.
-We then used a helper-virus system previously established in~\cite{doud2016accurate} to bypass the bottlenecks associated with reverse genetics to generate complex mutant virus libraries from the mutant plasmids (Figure~\ref{fig:dms_overview}A).
-In order to maximize viral titers and further avoid bottlenecking the diversity of the initially generated mutant viruses, we used an HA-deficient helper virus carrying WSN/1933 internal and NA genes to rescue the mutant viruses, thereby pairing the mutant HA's with the WSN NA.
-Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which is found endogenously in the human airway and facilitates HA cleavage and activation \comment{cite B\"{o}ttcher 2006 JVI, B\"{o}ttcher-Friebertsh\"{a}user 2010 JVI}.
+We mutagenized the HA gene to create mutant plasmid libraries encompassing all 567 codons and harboring an average of $\sim$1.4 codon mutations per clone.
+We then generated mutant virus libraries from the mutant plasmids using a helper virus system that enables the efficient generation of complex virus libraries~\citep{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
+In order to reduce biosafety concerns and to maximize viral titers, we used an HA-deficient helper virus carrying WSN/1933 internal and NA genes to rescue the mutant viruses.
+Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which facilitates HA cleavage and activation in the human airway \comment{cite B\"{o}ttcher 2006 JVI, B\"{o}ttcher-Friebertsh\"{a}user 2010 JVI}.
 All of the experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
 We also passaged and deep sequenced library 3 in technical replicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
 
@@ -123,7 +139,7 @@ This suggests that bottlenecking of the virus library during the low MOI passage
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/dms_overview/dms_overview.pdf}}
 \caption{\label{fig:dms_overview}
-{\bf Overview of deep mutational scanning experiments of H3 hemagglutinin.}
+{\bf Deep mutational scanning experiments of H3 HA.}
 (A) We used a helper virus approach previously described in Doud (2016) to generate the mutant virus libraries. 
 We transfected MDCK-SIAT1-TMPRSS2 cells with the mutant plasmid library carrying all possible amino-acid mutations to the A/Perth/16/2009 (H3N2) HA, in addition to protein expression plasmids encoding the viral ribonucleoprotein complex. 
 After transfection, we infected the cells with an HA-deficient helper virus carrying all of the WSN/1933 (H1N1) influenza genes. 
@@ -139,7 +155,7 @@ The biological replicates are fairly well-correlated, as are the technical repli
 \end{figure}
 
 
-\subsection*{H3 site-specific amino-acid preferences}
+\subsection*{The HA preferences improve phylogenetic fit of natural H3 sequences}
 How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
 This question can be addressed by evaluating how well experimentally informed codon substitution models (ExpCM's) constructed from our laboratory measurements improve phylogenetic fit of H3N2 evolution~\citep{hilton2017phydms}.
 The results in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
@@ -179,19 +195,10 @@ One possible explanation for why we do not see a strong preference for Met at th
 % I6M(HA2) mutant slightly increases the fusion pH (Daniels 1985 Cell)
 % We see high preference for T,S,Q over the wildtype Ile at site 226. Although Q226 in an H3 background is characterized as having preference for avian-type receptors, most of these studies were done in older H3 strains such as Aichi. Wu 2017 Cell Host Microbe has shown extensive epistasis in the RBS, specifically in the 220-loop, so perhaps the amino acids tolerated in this loop have shifted over time. Indeed the wildtype amino acids at 225 and 226 are different in Perth compared to HK68 and Aichi.
 
-We next sought to investigate the inherent mutational tolerance of the Perth/2009 HA. 
-Figure~\ref{fig:mut_tolerance} shows the mutational tolerance as calculated from the rescaled Perth/2009 H3 preferences and the rescaled WSN/1933 H1 preferences mapped onto the HA crystal structures.
-Interestingly, the Perth/2009 H3 stalk is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
-In particular, the shorter $\alpha$-helix (helix A) of the stalk domain, antigenic site C, and the most distal portion of the globular head near antigenic site B are all highly mutationally tolerant.
-% may add more details here
-On the other hand, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
-The receptor binding pockets of both HA's are relatively mutationally intolerant, although the residues surrounding the receptor binding pocket are fairly tolerant of mutations.
-These findings are consistent with the high functional constraint of the receptor binding pocket, while the mutability of sites surrounding the pocket that are under strong immune pressure may contribute to antigenic evolution~\citep{wilson1981structure, wiley1981structural}.
-
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/prefslogoplot/rescaled-avgprefs_prefs.pdf}}
 \caption{\label{fig:logoplot}
-{\bf The site-specific amino-acid preferences of H3 hemagglutinin.}
+{\bf The site-specific amino-acid preferences of the Perth/2009 HA.}
 This logoplot shows the site-specific amino-acid preferences for the averaged replicates rescaled by the stringency parameter (Table 1) estimated by phydms.
 The height of each letter is proportional to its preference at that site, and the preferences for all sites are normalized to sum to 1.
 The sites are in H3 numbering.
@@ -201,6 +208,15 @@ The letters directly above each logo indicate the wildtype amino acid at that si
 }
 \end{figure}
 
+\subsection*{The H3 stalk is relatively mutationally tolerant}
+We next sought to investigate the inherent mutational tolerance of the Perth/2009 HA. 
+Figure~\ref{fig:mut_tolerance} shows the mutational tolerance as calculated from the rescaled Perth/2009 H3 preferences and the rescaled WSN/1933 H1 preferences mapped onto the HA crystal structures.
+Interestingly, the Perth/2009 H3 stalk is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
+In particular, the shorter $\alpha$-helix (helix A) of the stalk domain, antigenic site C, and the most distal portion of the globular head near antigenic site B are all highly mutationally tolerant.
+% may add more details here
+On the other hand, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
+The receptor binding pockets of both HA's are relatively mutationally intolerant, although the residues surrounding the receptor binding pocket are fairly tolerant of mutations.
+These findings are consistent with the high functional constraint of the receptor binding pocket, while the mutability of sites surrounding the pocket that are under strong immune pressure may contribute to antigenic evolution~\citep{wilson1981structure, wiley1981structural}.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
@@ -216,25 +232,42 @@ The head region of the WSN/1933 H1 is mutationally tolerant compared to the rela
 }
 \end{figure}
 
-\subsection*{Estimating mutational effects from an H3N2 phylogeny}
+\subsection*{The H3 preferences reveal differences in seasonal influenza virus lineages}
+The human H3N2 phylogeny has a characteristic ladder-like structure, with a persistent trunk lineage and side branches that rapidly die out.
+Do the preferences reveal inherent differences between lineages of human H3N2 influenza virus that have succeeded and those that have died out?
+To examine this, we calculated the effect of trunk and side branch mutations from an H3N2 phylogeny, shown in Figure~\ref{fig:trunkvssidebranch}A, from 1968-2012 using our preference dataset. 
+Figure~\ref{fig:trunkvssidebranch}B shows the median log$_{2}$ mutational effects and the interquartile ranges for trunk and side branch mutations in five-year windows for every year from 1968-2012. 
+On average, trunk mutations tend to be towards more preferred amino acids compared to side branch mutations, and this was true for all windows.
+Next we calculated the effect of all trunk and side branch mutations from the entirety of the phylogenetic tree.
+We found that on average, trunk mutations are significantly more favorable than side branch mutations (Figure~\ref{fig:trunkvssidebranch}C).
+Because a number of tip nodes are likely from egg- or cell-passaged isolates and our experiments were performed in cell culture, we were curious to see if our measurements would lead to higher estimations of mutational effects for terminal nodes.
+We found that terminal node mutations are on average towards less preferred amino acids than internal node mutations, and that both internal and terminal node mutations are significantly less favorable than those on the trunk.
+Therefore, strains that have accumulated mutations that we measured in our experiments to be unpreferred generally die out in nature.
+These findings demonstrate the importance of the functional impacts of HA mutations in determining lineage success. 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}}
 \caption{\label{fig:trunkvssidebranch}
-{\bf The trunk of a human H3N2 phylogeny has higher mutational effects than those of side branches.}
+{\bf Mutations in evolutionary successful strains tend to be more favorable than in strains that die out.}
 (A) Phylogenetic tree of human H3N2 influenza virus from 1968-present. 
-\comment{We downloaded X sequences from the Influenza Virus Resource ?.... etc. inferred the tree, ancestral state reconstruction, visualized the tree. Mark Perth/2009 on the tree}
-To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
-All branches ancestral to the MRCA of the recent nodes were defined as the trunk (shown in red), and all other branches were defined as side branches (shown in blue).
+The trunk is shown in red, and side branches are shown in blue.
+The gray branches represent the part of the tree for which we cannot yet distinguish the trunk from side branches.
 (B) Using the Perth/2009 H3 preferences, we calculated the log$_{2}$ mutational effect for trunk and side branch mutations in windows of 5 years for every year from 1968-2013. 
 The median log$_{2}$ mutational effect in a given window is shown as circles for trunk mutations and triangles for side branch mutations. 
 The shaded region demarcates the interquartile range of trunk and side branch mutational effects.
 The median trunk mutational effects are consistently higher than the median side branch mutational effects for all windows.
 (C) The log$_{2}$ mutational effect for all side branch and all trunk mutations (left panel), in addition to all mutations in internal nodes and terminal nodes on the side branches (right panel) are shown.
-To estimate significance, we performed 10,000 randomizations of the preferences to calculate the median difference in trunk vs side branch mutational effects, and counted how many of the randomizations exceeded the true difference in median trunk vs side branch mutational effects.
+The preferences were randomized for a number of iterations to estimate significance.
 The effects of trunk mutations are higher than side branch, internal and terminal node, mutations.
 }
 \end{figure}
+
+Rather than estimating an average effect of mutations for trunk and side branch lineages, we can directly compare nodes in the tree by scoring the HA sequence of every node using the preferences to quantify a metric which we will refer to as \textit{sequence preference}.
+Figure~\ref{fig:sequence_preference} shows that the sequence preference of trunk nodes tends to be higher than that of side branch nodes.
+Interestingly, the sequence preference of all nodes increases over time until it reaches the Perth/2009 node and its closely related nodes, which exhibit higher sequence preference than the trunk. 
+The observation that the strain in which we performed our deep mutational scan has one of the highest sequence preferences illustrates epistatic interactions among mutations such that an unpreferred mutation in one background may be preferred in another.
+% Due to the sheer number of possible pairwise combinations of mutations, it is impossible for us to experimentally characterize these epistatic interactions among mutations. 
+Yet, we are able to distinguish trunk mutations as more favorable than side branch mutations, indicating that the preferences are still of utility over short evolutionary timescales. 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/sequence_preference/sequence_preference.pdf}}
@@ -244,13 +277,18 @@ figure text
 }
 \end{figure}
 
+Can we then distinguish lineage-specific mutational effects using the preferences measured in a related HA homolog?
+Figure~\ref{fig:WSN_trunkvssidebranch} shows the effect of H3 trunk and side branch mutations as quantified by the WSN/1933 H1 preferences from~\cite{doud2016accurate}.
+It is evident that we do not see trunk mutations significantly more favored than side branch mutations using these preferences, suggesting that our ability to discriminate successful and unsuccessful lineages degrades over sufficiently long evolutionary distances. 
+
+\comment{may add text here on using H1 preferences for H1N1 tree}
+
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/WSN_trunkvssidebranch/WSN_trunkvssidebranch.pdf}}
 \caption{\label{fig:WSN_trunkvssidebranch}
 {\bf The WSN/1933 H1 preferences do not reveal differences in trunk vs side branch mutational effects}
 (A) We calculated the log$_{2}$ mutational effects of the same set of trunk and side branch mutations from the inferred H3N2 phylogeny in Figure~\ref{fig:trunkvssidebranch} using the WSN/1933 H1 preferences.
-We again randomized the preferences for a total of 10,000 iterations and counted the number of randomizations that exceeded that true difference in median trunk vs side branch mutational effects to calculate a p-value.
-Using the WSN/1933 H1 preferences, there is not a significant difference in trunk vs side branch mutational effects.
+There is not a significant difference in trunk vs side branch mutational effects.
 (B) We also performed the same sliding window analysis shown in Figure~\ref{fig:trunkvssidebranch}B, but using the WSN/1933 H1 preferences.
 There is not a distinct difference in trunk and side branch mutational effects.
 }
@@ -265,7 +303,10 @@ There is not a distinct difference in trunk and side branch mutational effects.
 {\bf The HA homologs exhibit many large shifts in preference compared to shifts for other viral protein homologs}
 (A) A phylogenetic tree of the HA subtypes, with the two HA's, WSN/1933 H1 and Perth/2009 H3, for which we have measured amino-acid preferences denoted on the tree. 
 The WSN/1933 H1 and the Perth/2009 H3 share $\sim$42\% amino-acid identity.
-(B) The correlation for the amino-acid preferences for replicates both within and between the two HA homologs.
+(B) The correlations of the amino-acid preferences for replicates both within and between the two HA homologs. 
+The within-Perth/2009 and the within-WSN/1933 correlations are shown in blue and red, respectively.
+The between homolog correlations are in gray.
+The correlations for replicates within a homolog are higher than for replicates between homologs.
 (C) The distribution of shifts in preference for various homolog pairs are shown.
 }
 \end{figure}
@@ -315,6 +356,8 @@ The mutant virus libraries were generated and passaged using the approach descri
 \subsection*{Analysis of deep sequencing data}
 
 \subsection*{Inference of phylogenetic trees}
+\comment{We downloaded X sequences from the Influenza Virus Resource ?.... etc. inferred the tree, ancestral state reconstruction, visualized the tree. Mark Perth/2009 on the tree}
+To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
 
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
 
