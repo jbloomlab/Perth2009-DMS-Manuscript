@@ -57,10 +57,10 @@
 \title{Deep mutational scanning of an H3 hemagglutinin can inform evolutionary forecasting of human H3N2 influenza virus} 
 
 \author{
-Juhye M. Lee$^{1,4,5,\dagger}$ \and 
-John Huddleston$^{2,6,\dagger}$ \and 
-Michael B. Doud$^{1,4,5}$ \and 
-Kathryn A. Hooper$^{1,6}$ \and
+Juhye M. Lee$^{1,4,5,\dagger}$, \and 
+John Huddleston$^{2,6,\dagger}$, \and 
+Michael B. Doud$^{1,4,5}$, \and 
+Kathryn A. Hooper$^{1,6}$, \and
 Trevor Bedford$^{2,3*}$ and \and 
 Jesse D. Bloom$^{1,3,4*}$
 \\
@@ -104,29 +104,26 @@ Very rough outline:
 \label{sec:results}
 
 \subsection*{Deep mutational scanning of HA from a recent strain of human H3N2 influenza virus}
-We performed a deep mutational scan of H3 HA from the A/Perth/16/2009 (H3N2) strain. 
+We performed a deep mutational scan to measure the effects of all amino-acid mutations to the A/Perth/16/2009 (H3N2) HA on viral replication in cell culture. 
 This strain was the H3N2 component of the influenza vaccine from 2010-2012.
-The HA gene we used in our experiments carries two mutations, G78D and T212I, relative to the Perth/2009 HA sequence deposited in GenBank.
-The G78D mutation has appeared sporadically at low frequency in natural H3N2 sequences. 
-Although the T212I mutation is not appreciable in nature \comment{reword}, the T212A mutation rose to fixation in the human population in $\sim$2011.
-We found that the G78D-T212I Perth/2009 HA mutant supported viral growth to $\sim$15- to 20-fold higher titers than the wildtype HA.
+We used a variant of this HA that supported better viral replication in cell culture than did the sequence in GenBank \comment{Figure S1}.
+This HA variant contained two mutations: G78D and T212I.
+The G78D mutation occurs at low frequency in natural H3N2 sequences, and T212 is a site where a mutation to Ala rose to fixation in human influenza in $\sim$2011.
 %We first generated virus carrying the wildtype Perth/2009 HA and NA and the WSN internal genes by reverse genetics, and serially passaged the virus in cell culture a total of six times.
 %This passaging was completed to allow the virus to adapt to growth in cell culture and to find cell-culture adaptation mutations that emerged during the course of passaging.
-%Two mutations, G78D and T212I, arose together from passaging.
-We therefore decided to perform all deep mutational scanning experiments in the background of the Perth/2009 HA carrying these two mutations to support higher viral growth.
 
-We mutagenized the HA gene to create mutant plasmid libraries encompassing all 567 codons and harboring an average of $\sim$1.4 codon mutations per clone.
+We mutagenized the entire gene at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone.
 We then generated mutant virus libraries from the mutant plasmids using a helper virus system that enables the efficient generation of complex virus libraries~\citep{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
 In order to reduce biosafety concerns and to maximize viral titers, we used an HA-deficient helper virus carrying WSN/1933 internal and NA genes to rescue the mutant viruses.
-Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which facilitates HA cleavage and activation in the human airway \comment{cite B\"{o}ttcher 2006 JVI, B\"{o}ttcher-Friebertsh\"{a}user 2010 JVI}.
+Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which facilitates HA cleavage and activation in the human airway~\citep{bottcher2006proteolytic, bottcher2010cleavage}.
 All of the experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
 We also passaged and deep sequenced library 3 in technical replicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
+As a control, we used the unmutated gene to generate and passage viruses carrying wildtype HA.
 
-Figure~\ref{fig:dms_overview}C shows the mutation frequencies of the mutant plasmids, mutant viruses, wildtype plasmids and wildtype viruses determined from deep sequencing. 
-There is selection against non-functional HA variants as revealed by the reduced mutation frequencies of the mutant viruses compared to their starting frequencies in the mutant plasmids.
+Deep sequencing revealed selection against non-functional HA variants as evidenced by the reduced mutation frequencies of the mutant viruses compared to their starting frequencies in the mutant plasmids (Figure~\ref{fig:dms_overview}C).
 Specifically, stop codons were purged to 20-45\% of their original starting frequencies, after correcting for error rates from the wildtype controls.
-Although the majority of stop codons were purged, incomplete purging of stop codons is likely due to complementation of defective viral particles by infectious virions. 
-We also observed purging of most nonsynonymous mutations to 30-40\% of their initial starting frequencies after error correction, suggesting strong selection against deleterious HA variants.
+Although the majority of stop codons were purged, incomplete purging of stop codons is likely due to complementation of virions. 
+We also observed purging of nonsynonymous mutations to 30-40\% of their initial starting frequencies after error correction, suggesting strong selection against deleterious HA variants.
 
 We next quantified the reproducibility of our deep mutational scanning measurements across biological and technical replicates. 
 We inferred the amino-acid preferences at each site in the Perth/2009 HA using the method described in~\cite{bloom2015software} and implemented in the \texttt{dms\_tools2} software [\url{https://jbloomlab.github.io/dms_tools2/}].
@@ -141,17 +138,16 @@ This suggests that bottlenecking of the virus library during the low MOI passage
 \centerline{\includegraphics[width=\textwidth]{figs/dms_overview/dms_overview.pdf}}
 \caption{\label{fig:dms_overview}
 {\bf Deep mutational scanning experiments of H3 HA.}
-(A) We used a helper virus approach previously described in Doud (2016) to generate the mutant virus libraries. 
-We transfected MDCK-SIAT1-TMPRSS2 cells with the mutant plasmid library carrying all possible amino-acid mutations to the A/Perth/16/2009 (H3N2) HA, in addition to protein expression plasmids encoding the viral ribonucleoprotein complex. 
-After transfection, we infected the cells with an HA-deficient helper virus carrying all of the WSN/1933 (H1N1) influenza genes. 
+(A) We generated Perth/2009 HA mutant virus libraries in MDCK-SIAT1-TMPRSS2 cells using a helper virus approach described in~\cite{doud2016accurate}.
 We then passaged the initially generated pool of mutant viruses at low MOI to establish a genotype-phenotype linkage and select for functional HA variants. 
-(B) All of the experiments were completed in biological triplicate, starting from independent preps of the wildtype HA genes to create the mutant plasmids. 
-In addition, we passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to estimate the amount of experimental noise within a single biological replicate.
-(C) Mutation frequencies of nonsynonymous, stop, and synonymous mutations for the mutant DNA, mutant virus, wildtype DNA, and wildtype virus samples. 
+Deep sequencing of the variants before and after selection allowed us to infer the H3 site-specific amino-acid preferences.
+(B) The DMS experiments were completed in biological triplicate, starting from independent preps of the wildtype HA genes to create the mutant plasmids. 
+In addition, we passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to estimate the experimental noise within a single biological replicate.
+(C) Mutation frequencies of nonsynonymous, stop, and synonymous mutations for the mutant DNA, mutant virus, and unmutated DNA and virus controls. 
 There is selection against nonsynonymous and stop codons in the mutant viruses. 
 The percentages signify the frequency of stop codons remaining in the passaged mutant viruses relative to their starting frequency in the mutant plasmid libraries after correcting for the stop codon frequencies in the wildtype DNA and viruses.
-(D) The correlations and the Pearson correlation coefficient for the amino-acid preferences between each pair of replicates are shown. 
-The biological replicates are fairly well-correlated, as are the technical replicates, indicating some degree of bottlenecking of variants during the viral passage which can contribute to experimental noise. 
+(D) The Pearson correlations for the amino-acid preferences between each pair of replicates are shown. 
+The correlation between the technical replicates is comparable to that between biological replicates, indicating that the low MOI passage contributes to much of the experimental noise. 
 }
 \end{figure}
 
@@ -166,13 +162,13 @@ Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid pref
 
 \begin{table}
 \centering
-\begin{tabular}{cccc}
+\begin{tabular}{cccccccc}
 \hline
-\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Stringency} \\ \hline
-ExpCM & 0.0 & -8439.33 & $\beta = 2.44, \omega = 0.91$ \\
-Goldman-Yang M5 & 2166.06 & -9516.36 & $\omega_{\alpha} = 0.30, \omega_{\beta} = 0.84, \kappa = 5.10$ \\
-ExpCM, averaged across sites & 2504.18 & -9691.42 & $\beta = 0.68, \kappa = 5.58, \omega = 0.32$ \\
-Goldman-Yang M0 & 2607.92 & -9738.29 & $\kappa = 5.05, \omega = 0.31$ \\
+\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Stringency} & \bf{$\omega$} & \bf{$\overline{\omega}$} & \bf{$\omega_{\alpha}$} & \bf{$\omega_{\beta}$} \\ \hline
+ExpCM & 0.0 & -8439.33 & $2.44$ & $0.91$ & -- & -- & -- \\
+Goldman-Yang M5 & 2166.06 & -9516.36 & -- & -- & $0.36$ & $0.30$ & $0.84$ \\
+ExpCM, averaged across sites & 2504.18 & -9691.42 & $0.68$ & $0.32$ & -- & -- & -- \\
+Goldman-Yang M0 & 2607.92 & -9738.29 & -- & $0.31$ & -- & -- & -- \\
 \hline
 \end{tabular}
 \caption{\label{tab:phydms}
@@ -180,7 +176,7 @@ Goldman-Yang M0 & 2607.92 & -9738.29 & $\kappa = 5.05, \omega = 0.31$ \\
 We implemented several codon substitution models for phylogenetic fitting of an alignment of human H3N2 HA sequences. 
 The maximum likelihood values for each model were compared using the Akaike information criteria ($\Delta$AIC)~\citep{posada2004model}.
 An experimentally-informed codon substitution model (ExpCM) built from the preferences averaged across all replicates performs better than conventional substitution models, specifically the M0 and M5 models in~\cite{yang2000codon}.
-A non-site-specific ExpCM informed by preferences averaged across all sites does not perform as well as the M5 model, but still has a higher log likelihood than M0.
+A non-site-specific ExpCM informed by preferences averaged across all sites performs comparably to the GY94 class of models, indicating the importance of site-specificity in the ExpCM.
 The optimized parameters for each model are also shown.
 }
 \end{table}
@@ -212,12 +208,13 @@ The letters directly above each logo indicate the wildtype amino acid at that si
 \subsection*{The H3 stalk is relatively mutationally tolerant}
 We next sought to investigate the inherent mutational tolerance of the Perth/2009 HA. 
 Figure~\ref{fig:mut_tolerance} shows the mutational tolerance as calculated from the rescaled Perth/2009 H3 preferences and the rescaled WSN/1933 H1 preferences mapped onto the HA crystal structures.
-Interestingly, the Perth/2009 H3 stalk is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
-In particular, the shorter $\alpha$-helix (helix A) of the stalk domain, antigenic site C, and the most distal portion of the globular head near antigenic site B are all highly mutationally tolerant.
-% may add more details here
-On the other hand, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
-The receptor binding pockets of both HA's are relatively mutationally intolerant, although the residues surrounding the receptor binding pocket are fairly tolerant of mutations.
-These findings are consistent with the high functional constraint of the receptor binding pocket, while the mutability of sites surrounding the pocket that are under strong immune pressure may contribute to antigenic evolution~\citep{wilson1981structure, wiley1981structural}.
+We found antigenic site C and the most distal portion of the globular head near antigenic site B in the Perth/2009 H3 to be tolerant of mutations.
+Interestingly, the H3 stalk including the shorter $\alpha$-helix (helix A) is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
+This observation suggests that the stalk may be prone to escape from antibodies, and agrees with previous work demonstrating that it is possible to select for antigenic mutants in H3 by broadly-neutralizing stalk-targeting antibodies~\citep{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human}.
+% In contrast, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
+
+The sites inside the receptor binding pockets are highly functionally constrained and were found to be relatively mutationally intolerant in both H3 and H1~\citep{wilson1981structure}.
+In contrast, the residues surrounding the receptor binding pocket are fairly mutationally tolerant, which may contribute to antigenic evolution as these sites are under strong immune pressure.~\citep{wiley1981structural}.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/mut_tolerance/entropy_heatmap.pdf}}
@@ -233,7 +230,7 @@ The head region of the WSN/1933 H1 is mutationally tolerant compared to the rela
 }
 \end{figure}
 
-\subsection*{The H3 preferences reveal differences in seasonal influenza virus lineages}
+\subsection*{The experimental measurements can help discriminate successful influenza virus lineages}
 % The human H3N2 phylogeny has a characteristic ladder-like structure, with a persistent trunk lineage and side branches that rapidly die out.
 Do the preferences reveal inherent differences between lineages of human H3N2 influenza virus that have succeeded and those that have died out?
 To examine this, we calculated the effect of trunk and side branch mutations from an H3N2 phylogeny, shown in Figure~\ref{fig:trunkvssidebranch}A, from 1968-2012 using our preference dataset. 
@@ -329,7 +326,7 @@ The top ten most shifted sites are shown in spheres on the monomer.
 
 
 \section*{DISCUSSION}
-
+We have measured the effect of all possible single amino-acid mutations to Perth/2009 H3 on viral growth in cell culture.
 
 \clearpage
 \small
