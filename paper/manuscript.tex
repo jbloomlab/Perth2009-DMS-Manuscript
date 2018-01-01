@@ -155,7 +155,7 @@ The correlation between the technical replicates is comparable to that between b
 How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
 This question can be addressed by evaluating how well experimentally informed codon substitution models (ExpCM's) constructed from our laboratory measurements improve phylogenetic fit of H3N2 evolution~\citep{hilton2017phydms}.
 The results in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
-The ExpCM also optimizes a stringency parameter ($\beta$) for the preferences to more closely reflect the strength of selection in nature.
+The ExpCM also optimizes a stringency parameter for the preferences to more closely reflect the strength of selection in nature.
 The stringency parameter in the ExpCM is equal to 2.44, which indicates that although the same amino acids are preferred, the strength of selection is more stringent in nature than in our experiments.
 Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid preferences rescaled by this stringency parameter.
 
@@ -264,6 +264,9 @@ The effects of trunk mutations are higher than side branch internal and terminal
 
 How distantly can the preferences be extended to describe differences in successful and unsuccessful strains?
 To explore this question, we scored the complete HA sequence of every node in the tree using the preferences by quantifying a \textit{sequence preference} metric.
+The sequence preference is defined as 
+$$\displaystyle\sum_{r} \ln \pi_{r, a}$$
+where $\pi_{r, a}$ is the preference for amino acid $a$ at site $r$.
 Consistent with the finding that trunk mutations are generally more favorable than side branch mutations, Figure~\ref{fig:sequence_preference} shows that the sequences of trunk nodes also tend to be more highly preferred than those of side branch nodes.
 Interestingly, the sequence preferences increase over time as the nodes approach the Perth/2009 strain and its closely related nodes, which all exhibit sequence preferences that are higher than that of the trunk. 
 The observation that the strain in which we performed our deep mutational scan has one of the highest sequence preferences illustrates epistatic interactions among mutations such that an unpreferred mutation in one background may be preferred in another.
@@ -306,8 +309,13 @@ There is not a distinct difference in trunk and side branch mutational effects.
 \end{figure}
 
 \subsection*{The H1 and H3 preferences at many sites have shifted}
-How shifted are the preferences between the distantly related Perth/2009 H3 and WSN/1933 H1 homologs?
-Although we have previously compared the preferences between related protein homologs of NP~\citep{doud2015site} and of Env \comment{cite haddox2017}, the HA homologs are considerably more diverged than either of these pairs.
+How shifted are the preferences between evolutionarily distant homologs such as H1 and H3?
+Although we have previously compared the preferences between related protein homologs of NP~\citep{doud2015site} and of Env \comment{cite haddox2017}, the HA homologs we have experimentally studied are considerably more diverged than either of these pairs.
+The WSN/1933 H1 and the Perth/2009 H3 fall into two phylogenetically distinct groups and share 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A).
+\begin{itemize}
+\item Correlations are higher within homolog replicate than between homologs
+\item Next aligned and compared preferences using a correction method to account for experimental noise
+\end{itemize}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/distance_distribution/distance_distribution.pdf}}
