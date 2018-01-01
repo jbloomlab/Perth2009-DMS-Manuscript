@@ -285,7 +285,7 @@ Yet, we are able to distinguish trunk sequences as more favorable than side bran
 \centerline{\includegraphics[width=0.75\textwidth]{figs/sequence_preference/sequence_preference.pdf}}
 \caption{\label{fig:sequence_preference}
 {\bf The HA sequences of trunk nodes tend to be more preferred than those of side branch nodes.}
-We used the preferences to calculate the HA sequence preference of every node in a human H3N2 phylogenetic tree.
+We used the preferences to calculate the HA sequence preference normalized by the number of sites of every node in a human H3N2 phylogenetic tree.
 To calculate the sequence preference, we used the entire HA sequence (top panel), only epitope sites (center panel) or non-epitope sites (bottom panel) as defined by~\cite{wolf2006long}.
 Higher preferences are closer to zero while lower preferences are more negative.
 The preferences at all sites and at epitope sites increase as the tree approaches the Perth/2009 strain, indicating epistasis among epitope sites.
@@ -311,11 +311,12 @@ There is not a distinct difference in trunk and side branch mutational effects.
 \subsection*{The H1 and H3 preferences at many sites have shifted}
 How shifted are the preferences between evolutionarily distant homologs such as H1 and H3?
 Although we have previously compared the preferences between related protein homologs of NP~\citep{doud2015site} and of Env \comment{cite haddox2017}, the HA homologs we have experimentally studied are considerably more diverged than either of these pairs.
-The WSN/1933 H1 and the Perth/2009 H3 fall into two phylogenetically distinct groups and share 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A).
-\begin{itemize}
-\item Correlations are higher within homolog replicate than between homologs
-\item Next aligned and compared preferences using a correction method to account for experimental noise
-\end{itemize}
+The WSN/1933 H1 and the Perth/2009 H3 fall into two phylogenetically distinct groups and share 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A), providing an opportunity to analyze what has shifted and what has remained conserved.
+Simply correlating the preferences between H1 and H3 reveals that the replicate measurements within a homolog are more correlated than between homologs (Figure~\ref{fig:distance_distribution}B).
+
+However, to quantify the extent of mutational shifts at a site-by-site level, we used an approach described in \comment{haddox2017}.
+We aligned Perth/2009 H3 and WSN/1933 H1 and at each alignable site calculated the difference in preferences between homologs while correcting for experimental noise within homologs.
+The distribution of shifts is shown in Figure~\ref{fig:distance_distribution}C.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/distance_distribution/distance_distribution.pdf}}
