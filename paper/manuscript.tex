@@ -317,6 +317,12 @@ Simply correlating the preferences between H1 and H3 reveals that the replicate 
 However, to quantify the extent of mutational shifts at a site-by-site level, we used an approach described in \comment{haddox2017}.
 We aligned Perth/2009 H3 and WSN/1933 H1 and at each alignable site calculated the difference in preferences between homologs while correcting for experimental noise within homologs.
 The distribution of shifts is shown in Figure~\ref{fig:distance_distribution}C.
+Although many sites have small shifts near zero, a considerable number of sites have large shifts in preference, reaching a difference of 0.86 out of a maximum possible of 1.0.
+When we compare HA to the preferences measured in the non-homologous protein HIV Env \comment{haddox2017}, nearly all sites are shifted.
+On the other hand, when we randomize the HA replicates to generate a null distribution, there is very little shift in preferences. 
+For comparison, the preferences of the HIV Env homologs, which are 86\% identical at the amino-acid level, are mostly similar. 
+Although there are a small number of sites with larger shifts reaching a maximum of 0.52, we do not see a dramatic tail in the distribution as we see for the HA's.
+These observations suggest that as homologs diverge, their preferences increasingly shift.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/distance_distribution/distance_distribution.pdf}}
@@ -340,12 +346,14 @@ The bottom distribution is the corrected distance between the Perth/2009 H3 and 
 \centerline{\includegraphics[width=\textwidth]{figs/RMSD_heatmap/RMSD_heatmap.pdf}}
 \caption{\label{fig:RMSD_heatmap}
 {\bf Shifts in preferences mapped onto the structure of HA}
-(A) The preference shifts as calculated by $RMSD_{corrected}$ between the two HA homologs is mapped onto the structure of HA (PDB 4O5N, citation). 
+(A) The preference shifts as calculated by $RMSD_{corrected}$ between the two HA homologs is mapped onto the structure of HA (PDB 4O5N;~\cite{lee2014receptor}). 
 The left structure shows the HA trimer, and the right structure colors one of the monomers. 
 The sialic acid receptor is shown in black sticks.
-Gray indicates little shifts in preference, while red indicates large shifts in preference.
+Blue indicates small shifts in preference near zero, while red indicates large shifts in preference.
 The top ten most shifted sites are shown in spheres on the monomer.
-(B)
+(B) The stalk domain was found to be significantly less shifted than the head domain (left plot).
+Sites absolutely conserved all 18 HA subtypes were also found to be significantly less shifted than the remaining non-conserved sites (right plot).
+(C) 
 }
 \end{figure}
 
