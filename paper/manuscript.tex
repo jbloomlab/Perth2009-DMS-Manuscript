@@ -14,6 +14,9 @@
 \DeclareFloatingEnvironment[name={Figure}]{suppfigure}
 \renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
 
+\DeclareFloatingEnvironment[name={Dataset}]{suppdata}
+\renewcommand{\thesuppdata}{S\arabic{suppdata}}
+
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 
 \title{Deep mutational scanning of hemagglutinin helps distinguish the evolutionary fate of human H3N2 influenza virus lineages}
@@ -34,7 +37,7 @@
 \affil[f]{and Molecular and Cellular Biology Program, University of Washington, Seattle, WA 98195, USA}
 
 % Please give the surname of the lead author for the running footer
-\leadauthor{Lead author last name} 
+\leadauthor{Lee} 
 
 % Please add here a significance statement to explain the relevance of your work
 \significancestatement{Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the Significance Statement is to explain the relevance of the work in broad context to a broad readership. The Significance Statement appears in the paper itself and is required for all research papers.}
@@ -43,10 +46,10 @@
 \authorcontributions{Please provide details of author contributions here.}
 \authordeclaration{Please declare any conflict of interest here.}
 \equalauthors{\textsuperscript{1}J.M.L. and J.H. contributed equally to this work.}
-\correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed. E-mail: trevor@bedford.io, jbloom@fredhutch.org}
+\correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed: trevor@bedford.io, jbloom@fredhutch.org}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-\keywords{Keyword 1 $|$ Keyword 2 $|$ Keyword 3 $|$ ...} 
+\keywords{influenza virus $|$ hemagglutinin $|$ deep mutational scanning $|$ antigenic drift $|$ epistasis} 
 
 \begin{abstract}
 Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
@@ -66,9 +69,22 @@ Please provide an abstract of no more than 250 words in a single paragraph. Abst
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
-\dropcap{T}his PNAS journal template is provided to help you write your work in the correct journal format.  Instructions for use are provided below.
+\dropcap{V}ery rough outline:
+\begin{itemize}
+\item Mutations are rampant in the evolution of human influenza virus. Seasonal H3N2 influenza virus in particular rapidly accumulates mutations.
+\item The evolution of H3N2 is also characterized by clade competition and population turnover.
+\item There have been efforts to predict evolutionary success.
+\item Mutations that contribute to antigenic evolution largely determine strain success.
+\item RNA viruses can accumulate deleterious mutations, and because the influenza does not appreciably recombine, deleterious mutations are linked to beneficial ones.
+\item Mutations in HA that impact viral growth may influence strain success.
+\item We need to understand the functional impact of mutations in HA.
+\item Previously, we measured the effect of all possible single amino-acid mutations to an H1 hemagglutinin from the A/WSN/1933 (H1N1) strain~\citep{thyagarajan2014inherent,doud2016accurate}. 
+\item However, this is a highly lab-adapted strain, and the measurements in this strain may not be particularly relevant for studying mutational processes of more contemporaneous strains circulating in the human population.
+\item We chose to study the Perth/2009 H3 HA.
+\item This also enabled a comparison of how the preferences have shifted for two diverged HA's.
+\end{itemize}
 
-Note: please start your introduction without including the word ``Introduction'' as a section heading (except for math articles in the Physical Sciences section); this heading is implied in the first paragraphs. 
+ 
 
 \section*{Results}
 \label{sec:results}
@@ -76,7 +92,7 @@ Note: please start your introduction without including the word ``Introduction''
 \subsection*{Deep mutational scanning of HA from a recent strain of human H3N2 influenza virus}
 We performed a deep mutational scan to measure the effects of all amino-acid mutations to HA from the A/Perth/16/2009 (H3N2) strain on viral replication in cell culture. 
 This strain was the H3N2 component of the influenza vaccine from 2010-2012~\cite{who2010d,who2011}.
-Relative to the consensus sequence for this HA in Genbank, we used a variant with two mutations that enhanced viral replication in cell culture, G78D and T212I (Figure~\ref{suppfig:Perth2009_mut} and \comment{supplementary file or dataset with our full reverse genetics plasmid sequence}).
+Relative to the consensus sequence for this HA in Genbank, we used a variant with two mutations that enhanced viral replication in cell culture, G78D and T212I (Figure~\ref{suppfig:Perth2009_mut} and Dataset~\ref{suppdata:PerthHA}).
 The G78D mutation occurs at low frequency in natural H3N2 sequences, and T212 is a site where a mutation to Ala rose to fixation in human influenza in $\sim$2011.
 
 We mutagenized the entire HA coding sequence at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone (\comment{supplementary figure with Sanger sequencing}).
@@ -100,19 +116,15 @@ We also observed selection against many nonsynonymous mutations, with their freq
 \centering
 \includegraphics[width=13cm]{figs/dms_overview/dms_overview.pdf}
 \caption{\label{fig:dms_overview}
-{\bf Deep mutational scanning experiments of H3 HA.}
-(A) We generated Perth/2009 HA mutant virus libraries using a helper virus approach described in~\cite{doud2016accurate}.
-We then passaged this pool of mutant viruses at low MOI to establish a genotype-phenotype linkage and to select for functional HA variants. 
-Deep sequencing of the variants before and after selection allowed us to infer the H3 site-specific amino-acid preferences.
-(B) The DMS experiments were performed in biological triplicate, starting from independent preps of the wildtype HA genes to create the mutant plasmids. 
-We also passaged and deep sequenced library 3 in technical replicate, denoted 3-1 and 3-2, to estimate the experimental noise within a biological replicate.
-(C) Mutation frequencies of nonsynonymous, stop, and synonymous mutations for the mutant DNA, mutant virus, and unmutated DNA and virus controls. 
-There is selection against nonsynonymous and stop codons in the mutant viruses. 
-(D) The Pearson correlations for the amino-acid preferences between each pair of replicates are shown. 
-The correlation between the technical replicates is comparable to that between biological replicates, indicating that much of the experimental noise comes from passaging at low MOI. 
+{\bf Deep mutational scanning of the Perth/2009 H3 HA.}
+(A) We generated mutant virus libraries using a helper-virus approach~\cite{doud2016accurate}, and passaged them at low MOI to establish a genotype-phenotype linkage and to select for functional HA variants. 
+Deep sequencing of the variants before and after selection allowed us to estimate each site's amino-acid preferences.
+(B) The experiments were performed in full biological triplicate. 
+We also passaged and deep sequenced library 3 in duplicate.
+(C) Frequencies of nonsynonymous, stop, and synonymous mutations in the mutant plasmid DNA, the passaged mutant viruses, and wildtype DNA and virus controls. 
+(D) The Pearson correlations among the amino-acid preferences estimated in each replicate. 
 }
 \end{figure*}
-
 
 We next quantified the reproducibility of our deep mutational scanning measurements across biological and technical replicates. 
 We first used the deep sequencing data for each replicate to independently estimate the preference of each site in HA for all 20 amino acids using the method described in~\cite{bloom2015software}.
@@ -122,10 +134,11 @@ The biological replicates are fairly well-correlated, with Pearson's $R$ ranging
 Replicate 1 exhibited the lowest correlation with the other replicates, consistent with the observation that this replicate also showed the weakest selection against stop and nonsynonymous mutations perhaps indicating more experimental noise.
 The two technical replicates 3-1 and 3-2 were only slightly more correlated than pairs of biological replicates, suggesting that bottlenecking of library diversity after the reverse-genetics step contributes most of the experimental noise.
 
-\subsection*{The HA preferences improve phylogenetic fit of natural H3 sequences}
-How well do the Perth/2009 HA preferences inferred from experimental measurements describe the evolution of H3N2 influenza virus in nature?
-This question can be addressed by evaluating how well experimentally informed codon substitution models (ExpCM's) constructed from our laboratory measurements improve phylogenetic fit of H3N2 evolution~\cite{hilton2017phydms}.
-The results in Table~\ref{tab:phydms} show that the ExpCM outperforms conventional substitution models in describing the evolution of human H3N2 HA. 
+\subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
+How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
+This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describe H3N2 evolution compared to standard phylogenetic substitution models~\cite{hilton2017phydms}.
+Table~\ref{tab:phydms} shows that the ExpCM greatly outperforms conventional substitution models, showing that our experiments authentically capture some of the constraints on HA evolution. 
+\comment{Jesse and Juhye are here in sentence-level editing} 
 The ExpCM also optimizes a stringency parameter for the preferences to more closely reflect the strength of selection in nature.
 The stringency parameter in the ExpCM is equal to 2.44, which indicates that although the same amino acids are preferred, the strength of selection is more stringent in nature than in our experiments.
 Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid preferences rescaled by this stringency parameter.
@@ -405,7 +418,11 @@ Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with 
 
 \subsubsection*{SI Datasets} 
 
-Supply Excel (.xls), RTF, or PDF files. This file type will be published in raw format and will not be edited or composed. 
+\begin{suppdata}
+\caption{\label{suppdata:PerthHA}
+Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth2009-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.
+}
+\end{suppdata}
 
 
 \end{document}
