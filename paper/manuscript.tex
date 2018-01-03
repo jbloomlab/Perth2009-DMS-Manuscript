@@ -104,35 +104,35 @@ Very rough outline:
 \label{sec:results}
 
 \subsection*{Deep mutational scanning of HA from a recent strain of human H3N2 influenza virus}
-We performed a deep mutational scan to measure the effects of all amino-acid mutations to the A/Perth/16/2009 (H3N2) HA on viral replication in cell culture. 
-This strain was the H3N2 component of the influenza vaccine from 2010-2012.
-We used a variant of this HA that supported better viral replication in cell culture than did the sequence in GenBank (Figure~\ref{suppfig:Perth2009_mut}).
-This HA variant contained two mutations: G78D and T212I.
+We performed a deep mutational scan to measure the effects of all amino-acid mutations to HA from the A/Perth/16/2009 (H3N2) strain on viral replication in cell culture. 
+This strain was the H3N2 component of the influenza vaccine from 2010-2012~\comment{add citation}.
+Relative to the consensus sequence for this HA in Genbank, we used a variant with two mutations that enhanced viral replication in cell culture, G78D and T212I (Figure~\ref{suppfig:Perth2009_mut} and \comment{supplementary file or dataset with our full reverse genetics plasmid sequence}).
 The G78D mutation occurs at low frequency in natural H3N2 sequences, and T212 is a site where a mutation to Ala rose to fixation in human influenza in $\sim$2011.
-%We first generated virus carrying the wildtype Perth/2009 HA and NA and the WSN internal genes by reverse genetics, and serially passaged the virus in cell culture a total of six times.
-%This passaging was completed to allow the virus to adapt to growth in cell culture and to find cell-culture adaptation mutations that emerged during the course of passaging.
 
-We mutagenized the entire gene at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone.
-We then generated mutant virus libraries from the mutant plasmids using a helper virus system that enables the efficient generation of complex virus libraries~\citep{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
-In order to reduce biosafety concerns and to maximize viral titers, we used an HA-deficient helper virus carrying WSN/1933 internal and NA genes to rescue the mutant viruses.
-Additionally, we used MDCK-SIAT1 cells constitutively expressing the TMPRSS2 protease, which facilitates HA cleavage and activation in the human airway~\citep{bottcher2006proteolytic, bottcher2010cleavage}.
+We mutagenized the entire HA coding sequence at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone (\comment{supplementary figure with Sanger sequencing}).
+We then generated mutant virus libraries from the mutant plasmids using a helper-virus system that enables the efficient generation of complex influenza virus libraries~\citep{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
+These mutant viruses derived all of their non-HA genes from the lab-adapted WSN/1933 strain.
+Using WSN/1933 for the non-HA genes reduces biosafety concerns, and also helped increase viral titers.
+To further increase viral titers, we used MDCK-SIAT1 cells that we had engineered to constitutively express the TMPRSS2 protease, which facilitates HA cleavage and activation~\citep{bottcher2006proteolytic, bottcher2010cleavage}.
+
+After generating the mutant virus libraries, we passaged them at low MOI in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
 All of the experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
-We also passaged and deep sequenced library 3 in technical replicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
-As a control, we used the unmutated gene to generate and passage viruses carrying wildtype HA.
+We also passaged and deep sequenced library 3 in duplicate (denoted as library 3-1 and 3-2) to gauge to the amount of experimental noise occurring \textit{within} a single biological replicate.
+As a control to measure sequencing and mutational errors, we used the unmutated HA gene to generate and passage viruses carrying wildtype HA.
 
-Deep sequencing revealed selection against non-functional HA variants as evidenced by the reduced mutation frequencies of the mutant viruses compared to their starting frequencies in the mutant plasmids (Figure~\ref{fig:dms_overview}C).
-Specifically, stop codons were purged to 20-45\% of their original starting frequencies, after correcting for error rates from the wildtype controls.
-Although the majority of stop codons were purged, incomplete purging of stop codons is likely due to complementation of virions. 
-We also observed purging of nonsynonymous mutations to 30-40\% of their initial starting frequencies after error correction, suggesting strong selection against deleterious HA variants.
+Deep sequencing of the initial plasmid mutant libraries and the passaged mutant viruses allowed us to observe selection for functional HA mutants.
+As expected, selection against non-functional HA variants as led to reduced mutation frequencies in the mutant viruses compared to the initial mutant plasmids (Figure~\ref{fig:dms_overview}C).
+Specifically, stop codons were purged to 20-45\% of their initial frequencies after correcting for error rates estimated by sequencing the wildtype controls.
+The incomplete purging of stop codons is likely because genetic complementation due to co-infection \comment{let's cite some paper here, maybe Chris Brooke one?} enabled the persistence of some virions with nonfunctional HAs. 
+We also observed selection against many nonsynonymous mutations, with their frequencies falling to 30-40\% of their initial values after error correction.
 
 We next quantified the reproducibility of our deep mutational scanning measurements across biological and technical replicates. 
-We inferred the amino-acid preferences at each site in the Perth/2009 HA using the method described in~\cite{bloom2015software} and implemented in the \texttt{dms\_tools2} software [\url{https://jbloomlab.github.io/dms_tools2/}].
-These preferences represent an estimate of the 567 sites $\times$ 20 amino acids $=$ 11340 experimental measurements and are normalized to sum to one at each site.
-The correlations of the amino-acid preferences between each pair of replicates is shown in Figure~\ref{fig:dms_overview}D.
-The biological replicates are fairly well-correlated, with a Pearson's $R$ ranging from 0.69 to 0.78. 
-Replicate 1 exhibits the least amount of correlation with the other biological replicates, consistent with the observation that this replicate showed the weakest selection against stop and nonsynonymous mutations and might therefore be subject to more experimental noise.
-Of note, the two technical replicates 3-1 and 3-2 were only slightly more reproducible than that between biological replicates.
-This suggests that bottlenecking of the virus library during the low MOI passage contributes to much of the noise observed in our experiments, as we are only able to passage a finite number of viral particles.
+We first used the deep sequencing data for each replicate to independently estimate the preference of each site in HA for all 20 amino acids using the method described in~\cite{bloom2015software}.
+Because there are 567 residues in HA, there are $567 \times 20 = 11,340$ estimated amino-acid preferences.
+The correlations of the amino-acid preferences between pairs of replicates are shown in Figure~\ref{fig:dms_overview}D.
+The biological replicates are fairly well-correlated, with Pearson's $R$ ranging from 0.69 to 0.78. 
+Replicate 1 exhibited the lowest correlation with the other replicates, consistent with the observation that this replicate also showed the weakest selection against stop and nonsynonymous mutations perhaps indicating more experimental noise.
+The two technical replicates 3-1 and 3-2 were only slightly more correlated than pairs of biological replicates, suggesting that bottlenecking of library diversity after the reverse-genetics step contributes most of the experimental noise.
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{figs/dms_overview/dms_overview.pdf}}
