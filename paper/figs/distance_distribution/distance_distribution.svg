@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="distance_distribution.svg">
+   sodipodi:docname="distance_distribution_v01.svg">
   <defs
      id="defs4">
     <g
@@ -3932,14 +3932,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="124.99216"
-     inkscape:cy="-614.24244"
+     inkscape:cx="562.49782"
+     inkscape:cy="-332.58917"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showborder="false"
-     inkscape:window-width="1813"
-     inkscape:window-height="917"
+     inkscape:window-width="1741"
+     inkscape:window-height="957"
      inkscape:window-x="1440"
      inkscape:window-y="0"
      inkscape:window-maximized="0" />
@@ -3998,13 +3998,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:163.47775269px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-2027.3994"
+       x="-2117.6523"
        y="-30.089153"
        id="text6453"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6455"
-         x="-2027.3994"
+         x="-2117.6523"
          y="-30.089153"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'">A</tspan></text>
     <text
@@ -4021,7 +4021,7 @@
          sodipodi:role="line">B</tspan></text>
     <g
        id="g6225"
-       transform="matrix(1.6500602,0,0,1.6500602,1038.8923,51.476453)">
+       transform="matrix(1.6500602,0,0,1.6500602,1028.8923,51.476453)">
       <g
          inkscape:export-filename="/Users/juhyemlee/Desktop/Bloom_Lab/fi6v3_manuscript/figs/fig01_draft.png"
          transform="matrix(1.5863065,0,0,1.5863065,-2552.7407,-473.99897)"
@@ -4670,23 +4670,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:163.47775269px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-2030.5923"
+       x="-2120.8452"
        y="1907.4171"
        id="text6766"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6768"
-         x="-2030.5923"
+         x="-2120.8452"
          y="1907.4171"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'">C</tspan></text>
     <g
        id="surface304297"
        transform="matrix(3.7982457,0,0,3.7982457,264.87324,-102.31547)">
-      <path
-         id="path7236"
-         d="m 62.550781,151.89062 129.265629,0 0,-138.996089 -129.265629,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7238"
          style="fill:#232323;fill-opacity:1">
@@ -4896,11 +4891,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7302"
-         d="m 62.550781,322.73047 129.265629,0 0,-138.99219 -129.265629,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7304"
          style="fill:#232323;fill-opacity:1">
@@ -5110,11 +5100,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7368"
-         d="m 232.41406,322.73047 129.26172,0 0,-138.99219 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7370"
          transform="translate(232,232)"
@@ -5196,11 +5181,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7394"
-         d="m 62.550781,493.57422 129.265629,0 0,-138.9961 -129.265629,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7396"
          style="fill:#232323;fill-opacity:1">
@@ -5396,11 +5376,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7456"
-         d="m 232.41406,493.57422 129.26172,0 0,-138.9961 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7458"
          transform="translate(232,394)"
@@ -5482,11 +5457,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7482"
-         d="m 402.27734,493.57422 129.26172,0 0,-138.9961 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7484"
          transform="translate(402,394)"
@@ -5568,11 +5538,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7508"
-         d="m 62.550781,664.41406 129.265629,0 0,-138.99219 -129.265629,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7510"
          style="fill:#232323;fill-opacity:1">
@@ -5768,11 +5733,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7570"
-         d="m 232.41406,664.41406 129.26172,0 0,-138.99219 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7572"
          transform="translate(232,563)"
@@ -5854,11 +5814,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7596"
-         d="m 402.27734,664.41406 129.26172,0 0,-138.99219 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7598"
          transform="translate(402,563)"
@@ -5940,11 +5895,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7622"
-         d="m 572.13672,664.41406 129.26562,0 0,-138.99219 -129.26562,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <use
          id="use7624"
          transform="translate(572,563)"
@@ -6026,11 +5976,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7648"
-         d="m 62.550781,835.25781 129.265629,0 0,-138.99609 -129.265629,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7650"
          style="fill:#232323;fill-opacity:1">
@@ -6354,11 +6299,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7750"
-         d="m 232.41406,835.25781 129.26172,0 0,-138.99609 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7752"
          style="fill:#232323;fill-opacity:1">
@@ -6568,11 +6508,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7816"
-         d="m 402.27734,835.25781 129.26172,0 0,-138.99609 -129.26172,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7818"
          style="fill:#232323;fill-opacity:1">
@@ -6782,11 +6717,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7882"
-         d="m 572.13672,835.25781 129.26562,0 0,-138.99609 -129.26562,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7884"
          style="fill:#232323;fill-opacity:1">
@@ -6982,11 +6912,6 @@
            width="100%"
            height="100%" />
       </g>
-      <path
-         id="path7944"
-         d="m 742,835.25781 129.26562,0 0,-138.99609 -129.26562,0 z m 0,0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
       <g
          id="g7946"
          style="fill:#232323;fill-opacity:1">
@@ -7943,89 +7868,89 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="296.20798"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="298.01303"
          y="-87.538788"
          id="text9050"
          sodipodi:linespacing="100%"><tspan
            sodipodi:role="line"
            id="tspan9052"
-           x="296.20798"
+           x="298.01303"
            y="-87.538788"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Perth/2009 H3</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Perth/2009 H3</tspan><tspan
            sodipodi:role="line"
-           x="296.20798"
-           y="-70.940964"
+           x="298.01303"
+           y="-72.720352"
            id="tspan9054"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">vs HIV Env</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">vs HIV Env</tspan></text>
       <text
          sodipodi:linespacing="100%"
          id="text9112"
          y="-43.206268"
-         x="296.20798"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="298.01303"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
            id="tspan9116"
            y="-43.206268"
-           x="296.20798"
+           x="298.01303"
            sodipodi:role="line">WSN H1</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
-           y="-26.608442"
-           x="296.20798"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           y="-28.387836"
+           x="298.01303"
            sodipodi:role="line"
            id="tspan9120">vs HIV Env</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="296.20798"
-         y="-0.2266539"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="297.86221"
+         y="0.61370391"
          id="text9122"
          sodipodi:linespacing="100%"><tspan
            sodipodi:role="line"
-           x="296.20798"
-           y="-0.2266539"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
-           id="tspan9130">HIV Env</tspan><tspan
+           x="301.97202"
+           y="0.61370391"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           id="tspan5797">HIV Env homologs </tspan><tspan
            sodipodi:role="line"
-           x="296.20798"
-           y="16.37117"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
-           id="tspan9134">homologs</tspan></text>
+           x="297.86221"
+           y="15.432136"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           id="tspan5803">(86% identity)</tspan></text>
       <text
          sodipodi:linespacing="100%"
          id="text9136"
          y="46.231819"
-         x="297.12378"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="298.7876"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan9140"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
            y="46.231819"
-           x="297.12378"
+           x="298.7876"
            sodipodi:role="line">randomized</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
-           y="62.829643"
-           x="297.12378"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           y="61.050251"
+           x="298.7876"
            sodipodi:role="line"
            id="tspan9144">Perth/2009 and WSN</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="296.75906"
-         y="90.782883"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="297.86221"
+         y="89.535019"
          id="text9146"
          sodipodi:linespacing="100%"><tspan
-           id="tspan9150"
            sodipodi:role="line"
-           x="296.75906"
-           y="90.782883"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Perth/2009 H3</tspan><tspan
+           x="301.97202"
+           y="89.535019"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           id="tspan9154">Perth/2009 H3 vs WSN H1 </tspan><tspan
            sodipodi:role="line"
-           x="296.75906"
-           y="107.38071"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5978241px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
-           id="tspan9154">vs WSN H1</tspan></text>
+           x="297.86221"
+           y="104.35345"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.81843185px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+           id="tspan5807">(42% identity)</tspan></text>
       <text
          sodipodi:linespacing="100%"
          id="text9156"
