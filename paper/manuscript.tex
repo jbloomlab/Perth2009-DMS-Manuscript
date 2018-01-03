@@ -8,6 +8,12 @@
 % {pnasmathematics} = Template for a one-column mathematics article
 % {pnasinvited} = Template for a PNAS invited submission
 
+% added to enable supplementary figures
+\usepackage{placeins}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Figure}]{suppfigure}
+\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
+
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 
 \title{Deep mutational scanning of hemagglutinin helps distinguish the evolutionary fate of human H3N2 influenza virus lineages}
@@ -340,34 +346,6 @@ Sites absolutely conserved all 18 HA subtypes were also found to be significantl
 We have measured the effect of all possible single amino-acid mutations to Perth/2009 H3 on viral growth in cell culture.
 
 
-\subsection*{References}
-
-References should be cited in numerical order as they appear in text; this will be done automatically via bibtex, e.g. \cite{belkin2002using} and \cite{berard1994embedding,coifman2005geometric}. All references should be included in the main manuscript file.  
-
-
-\subsection*{Supporting Information (SI)}
-
-The main text of the paper must stand on its own without the SI. Refer to SI in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc. Authors are limited to no more than 10 SI files, not including movie files. Authors who place detailed materials and methods in SI must provide sufficient detail in the main text methods to enable a reader to follow the logic of the procedures and results and also must reference the online methods. If a paper is fundamentally a study of a new method or technique, then the methods must be described completely in the main text. Because PNAS edits SI and composes it into a single PDF, authors must provide the following file formats only.
-
-\subsubsection*{SI Text}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference).
-
-\subsubsection*{SI Figures}
-
-Provide a brief legend for each supporting figure after the supporting text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or GIF format; figures may not be embedded in manuscript text. When saving TIFF files, use only LZW compression; do not use JPEG compression. Do not save figure numbers, legends, or author names as part of the image. Composite figures must be pre-assembled.
-
-\subsubsection*{SI Tables}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference); include only one table per file. Do not use tabs or spaces to separate columns in Word tables.
-
-\subsubsection*{SI Datasets} 
-
-Supply Excel (.xls), RTF, or PDF files. This file type will be published in raw format and will not be edited or composed. 
-
-\subsubsection*{Appendices}
-
-PNAS prefers that authors submit individual source files to ensure readability. If this is not possible, supply a single PDF file that contains all of the SI associated with the paper. This file type will be published in raw format and will not be edited or composed.
 
 \matmethods{Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper. 
 
@@ -388,6 +366,46 @@ Example text for subsection.
 %\pnasbreak
 
 % Bibliography
-\bibliography{pnas-sample}
+\subsection*{References}
+\bibliography{references}
+
+% Supplementary material temporarily moved until AFTER everything else for initial submission
+
+\onecolumn
+
+\subsection*{Supporting Information (SI)}
+\FloatBarrier
+
+The main text of the paper must stand on its own without the SI. Refer to SI in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc. Authors are limited to no more than 10 SI files, not including movie files. Authors who place detailed materials and methods in SI must provide sufficient detail in the main text methods to enable a reader to follow the logic of the procedures and results and also must reference the online methods. If a paper is fundamentally a study of a new method or technique, then the methods must be described completely in the main text. Because PNAS edits SI and composes it into a single PDF, authors must provide the following file formats only.
+
+\subsubsection*{SI Text}
+
+Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference).
+
+\subsubsection*{SI Figures}
+
+\begin{suppfigure}
+\centerline{\includegraphics[width=0.5\textwidth]{figs/S01_G78D-T212I/G78D-T212I.pdf}}
+\caption{\label{suppfig:Perth2009_mut}
+{\bf Characterization of the G78D-T212I Perth/2009 HA variant.} 
+(A) 
+The G78D-T212I Perth/2009 HA variant grows to higher titers than do viruses carrying the wildtype Perth/2009 HA.
+Each virus was generated in duplicate by reverse genetics and passaged once at MOI = 0.01 in MDCK-SIAT1-TMPRSS2 cells.
+The rescue and passage viral supernatants were collected at 72 hours post-transfection and 44 hours post-infection, respectively, and titered in MDCK-SIAT1-TMPRSS2 cells. 
+The points mark each duplicate and the bar marks the mean.
+(B)
+The D78 variant remained at a low frequency in natural human H3N2 sequences over the past $~\sim$10 years.
+The A212 variant rose to fixation in $~\sim$2011, replacing the T212 variant.
+}
+\end{suppfigure}
+
+\subsubsection*{SI Tables}
+
+Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference); include only one table per file. Do not use tabs or spaces to separate columns in Word tables.
+
+\subsubsection*{SI Datasets} 
+
+Supply Excel (.xls), RTF, or PDF files. This file type will be published in raw format and will not be edited or composed. 
+
 
 \end{document}
