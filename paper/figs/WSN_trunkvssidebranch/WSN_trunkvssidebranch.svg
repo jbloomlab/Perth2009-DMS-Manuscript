@@ -10484,17 +10484,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="1319.0586"
-     inkscape:cy="-1128.8977"
+     inkscape:zoom="0.7"
+     inkscape:cx="263.34431"
+     inkscape:cy="-500.32627"
      inkscape:document-units="px"
      inkscape:current-layer="surface12731"
      showgrid="false"
      showborder="false"
-     inkscape:window-width="1788"
+     inkscape:window-width="1783"
      inkscape:window-height="975"
-     inkscape:window-x="1517"
-     inkscape:window-y="1"
+     inkscape:window-x="1472"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -10504,7 +10504,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -11229,15 +11229,17 @@
          id="path31806" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.11088181px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="963.98212"
-         y="928.71722"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.08468819px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="963.6366"
+         y="930.61615"
          id="text45256"
          sodipodi:linespacing="100%"><tspan
            sodipodi:role="line"
            id="tspan45258"
-           x="963.98212"
-           y="928.71722">p = 0.14</tspan></text>
+           x="963.6366"
+           y="930.61615"><tspan
+   style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.084692px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Oblique';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+   id="tspan7378">P</tspan> = 0.13</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.57905579px;line-height:100%;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
