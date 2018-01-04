@@ -369,15 +369,43 @@ We have measured the effect of all possible single amino-acid mutations to Perth
 
 
 
-\matmethods{Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper. 
+\matmethods{Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
 
-\subsection*{Subsection for Method}
-Example text for subsection.
+\subsection*{HA numbering}
+Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 subunit in plain numbers, and the HA2 subunit denoted with "(HA2)". The conversion between sequential numbering of the A/Perth/16/2009 HA and H3 numbering was performed using an HA numbering Python script (available at \url{https://github.com/jbloomlab/HA_numbering}).
+
+\subsection*{Creation of MDCK-SIAT1-TMPRSS2 cell line}
+The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified, and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter and attached to mCherry through an IRES...etc etc
+\comment{Need to look at Katie's notebooks for this...}
+
+\subsection*{Generation of HA codon mutant plasmid libraries}
+Recombinant A/Perth/16/2009 (HA, NA) $\times$ A/Puerto Rico/8/1934 influenza virus, NIB-64, NR-41803 was ordered from BEI Resources, NIAID, NIH. 
+Bulk RNA from the viral sample was extracted using the QIAamp Viral RNA Mini Kit (QIAGEN) according to manufacturer's instructions.
+The Perth/2009 HA and NA genes were then reverse transcribed, PCR amplified, and cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2 \comment{cite?} plasmid backbones.
+
+The codon-mutant libraries were generated using a PCR-based approach described in~\cite{bloom2014experimentally,dingens2017comprehensive}.
+
+\subsection*{Generation and passaging of mutant viruses}
+The mutant virus libraries were generated and passaged using the approach described in~\cite{doud2016accurate} with several modifications.
+
+\subsection*{Barcoded subamplicon sequencing}
+
+\subsection*{Analysis of deep sequencing data}
+
+\subsection*{Inference of phylogenetic trees}
+\comment{We downloaded X sequences from the Influenza Virus Resource ?.... etc. inferred the tree, ancestral state reconstruction, visualized the tree. Mark Perth/2009 on the tree}
+To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
+
+\subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
+
+\subsection*{Data availability and source code}
+Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. Computer code used to analyze the data and produce the results in the paper are in...
 }
 
 \showmatmethods{} % Display the Materials and Methods section
 
-\acknow{Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.}
+\acknow{We thank Sarah Hilton, Hugh Haddox, Sidney Bell...the Fred Hutch Genomics Core...
+Funding...}
 
 \showacknow{} % Display the acknowledgments section
 
