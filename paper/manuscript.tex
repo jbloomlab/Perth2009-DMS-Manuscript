@@ -247,7 +247,8 @@ These findings demonstrate the importance of the functional impacts of HA mutati
 \includegraphics[width=11.4cm]{figs/trunkvssidebranch/trunkvssidebranch.pdf}
 \caption{\label{fig:trunkvssidebranch}
 {\bf Mutations in evolutionary successful strains tend to be more favorable than in strains that die out.}
-(A) Using the Perth/2009 H3 preferences, we calculated the log$_{2}$ mutational effect for trunk and side branch mutations in windows of 5 years for every year from 1968-2013. 
+(A) Using the Perth/2009 H3 preferences, we calculated the log$_{2}$ mutational effect for trunk and side branch mutations in windows of five years for every year from 1968-2013. 
+The central year in a given five-year window is denoted on the x-axis.
 The median log$_{2}$ mutational effect in a given window is shown as circles for trunk mutations and triangles for side branch mutations. 
 The shaded region demarcates the interquartile range of trunk and side branch mutational effects.
 Negative numbers signify mutations towards less preferred amino acids, while positive numbers signify more preferred mutations.
@@ -280,17 +281,17 @@ These observations highlight the extensive epistasis among epitope sites, as has
 Many successful epitope mutations are likely contingent upon the background in which they arise.
 Yet, we are able to distinguish trunk sequences as more favorable than side branch sequences, indicating that the preferences are still of utility over short evolutionary timescales. 
 
-\begin{figure*}
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
-\includegraphics[width=12cm]{figs/sequence_preference/sequence_preference.pdf}
+\includegraphics[width=11.4cm]{figs/sequence_preference/sequence_preference.pdf}
 \caption{\label{fig:sequence_preference}
-{\bf The HA sequences of trunk nodes tend to be more preferred than those of side branch nodes.}
-We used the preferences to calculate the HA sequence preference normalized by the number of sites of every node in a human H3N2 phylogenetic tree.
-To calculate the sequence preference, we used the entire HA sequence (top panel), only epitope sites (center panel) or non-epitope sites (bottom panel) as defined by~\cite{wolf2006long}.
-The preferences at all sites and at epitope sites increase as the tree approaches the Perth/2009 strain, indicating epistasis among epitope sites.
-The trunk nodes generally exhibit higher sequence preferences than do side branch nodes.
+{\bf Epistasis has been driven by substitutions at epitope sites.}
+(A) We calculated the HA sequence preference normalized by the number of sites for epitope and non-epitope sites, as defined by~\cite{wolf2006long}.
+The preferences at all sites and at epitope sites increase as the tree approaches the Perth/2009 strain.
+The sequence preference of non-epitope sites is higher than that of epitope sites.
+(B) The log$_{2}$ mutational effect for side branch and trunk mutations at non-epitope (left) and epitope (right) sites are shown.
 }
-\end{figure*}
+\end{SCfigure*}
 
 Can we then distinguish lineage-specific mutational effects using the preferences measured in a distantly related HA homolog?
 We used the preferences measured previously in the WSN/1933 H1~\citep{doud2016accurate} to quantify the effects of H3 trunk and side branch mutations, shown in Figure~\ref{fig:WSN_trunkvssidebranch}.
