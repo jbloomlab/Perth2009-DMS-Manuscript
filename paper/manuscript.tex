@@ -84,16 +84,18 @@ Please provide an abstract of no more than 250 words in a single paragraph. Abst
 \item This also enabled a comparison of how the preferences have shifted for two diverged HA's.
 \end{itemize}
 
-\begin{SCfigure*}[\sidecaptionrelwidth][t]
+%\begin{SCfigure*}[\sidecaptionrelwidth][t]
+\begin{figure}
 \centering
-\includegraphics[width=11.4cm]{figs/H3N2_phylogeny/H3N2_phylogeny.pdf}
+\includegraphics[width=\columnwidth]{figs/H3N2_phylogeny/H3N2_phylogeny.pdf}
 \caption{\label{fig:H3N2_phylogeny}
 {\bf Human H3N2 HA phylogeny from 1968-2017.}
 The trunk is shown in red, and side branches are shown in blue.
 The gray branches represent the part of the tree for which we cannot yet distinguish the trunk from side branches.
 The Perth/2009 strain is indicated with a star.
 }
-\end{SCfigure*}
+\end{figure}
+%\end{SCfigure*}
 
 
  
@@ -148,41 +150,42 @@ The two technical replicates 3-1 and 3-2 were only slightly more correlated than
 
 \subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
 How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
-This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describe H3N2 evolution compared to standard phylogenetic substitution models~\cite{hilton2017phydms}.
-Table~\ref{tab:phydms} shows that the ExpCM greatly outperforms conventional substitution models, showing that our experiments authentically capture some of the constraints on HA evolution. 
-\comment{Jesse and Juhye are here in sentence-level editing} 
-The ExpCM also optimizes a stringency parameter for the preferences to more closely reflect the strength of selection in nature.
-The stringency parameter in the ExpCM is equal to 2.44, which indicates that although the same amino acids are preferred, the strength of selection is more stringent in nature than in our experiments.
-Figure~\ref{fig:logoplot} shows a logo plot of the Perth/2009 HA amino-acid preferences rescaled by this stringency parameter.
+This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describe H3N2 evolution compared to standard phylogenetic substitution models~\cite{bloom2017identification,hilton2017phydms}.
+Table~\ref{tab:phydms} shows that the ExpCM using the replicate-average measurements greatly outperforms conventional substitution models, showing that our experiments authentically capture some of the constraints on HA evolution. 
+Note that while the relative ratio of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models, this ratio is close to one for the ExpCM that accounts for the constraints measured in the experiments.
+ExpCM contain a stringency parameter that relates the selection in the experiments to that in nature~\cite{bloom2017identification,hilton2017phydms}.
+We fit a stringency parameter of 2.44 (Table~\ref{tab:phydms}), indicating that natural selection favors the same amino acids as the experiments, but with greater stringency.
+Throughout the rest of this paper, we use experimental measurements re-scaled~\cite{bloom2017identification,hilton2017phydms} by this stringency parameter.
+These re-scaled preferences are shown in Figure~\ref{fig:logoplot}.
 
-\begin{figure*}
-\centering
+\begin{table*}
 \caption{\label{tab:phydms}
-{\bf The site-specific amino-acid preferences are informative for describing human H3N2 evolution in nature.}}
+{\bf Substitution models informed by the experiments describe H3N2's natural evolution better than traditional substitution models.}}
+\begin{center} 
 \begin{tabular}{cccccccc}
 \hline
-\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Stringency} & \bf{$\omega$} & \bf{$\overline{\omega}$} & \bf{$\omega_{\alpha}$} & \bf{$\omega_{\beta}$} \\ \hline
-ExpCM & 0.0 & -8439.33 & $2.44$ & $0.91$ & -- & -- & -- \\
-Goldman-Yang M5 & 2166.06 & -9516.36 & -- & -- & $0.36$ & $0.30$ & $0.84$ \\
-ExpCM, averaged across sites & 2504.18 & -9691.42 & $0.68$ & $0.32$ & -- & -- & -- \\
-Goldman-Yang M0 & 2607.92 & -9738.29 & -- & $0.31$ & -- & -- & -- \\
+\bf{Model} & \bf{$\Delta$AIC} & \bf{Log Likelihood} & \bf{Stringency} & \bf{$\omega$}  \\ \hline
+ExpCM & 0.0 & -8439.33 & 2.44 & 0.91 \\
+Goldman-Yang M5 & 2166.06 & -9516.36 & -- & 0.30, 0.84, 0.36 \\
+ExpCM, averaged across sites & 2504.18 & -9691.42 & 0.68 & 0.32 \\
+Goldman-Yang M0 & 2607.92 & -9738.29 & -- & 0.31 \\
 \hline
 \end{tabular}
+ \end{center}
+\addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 influenza HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites, and the M0 and M5 versions of the Goldman-Yang model~\cite{yang2000codon}.
+Models are compared by AIC~\cite{posada2004model}.
+The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
+For the M5 model, we give the shape parameter, rate parameter, and mean of the gamma distribution over $\omega$.
+}
+\end{table*}
 
-\addtabletext{We implemented several codon substitution models for phylogenetic fitting of an alignment of human H3N2 HA sequences. 
-The maximum likelihood values for each model were compared using the Akaike information criteria ($\Delta$AIC)~\cite{posada2004model}.
-An experimentally-informed codon substitution model (ExpCM) built from the preferences averaged across all replicates performs better than conventional substitution models, specifically the M0 and M5 models in~\cite{yang2000codon}.
-A non-site-specific ExpCM informed by preferences averaged across all sites performs comparably to the GY94 class of models, indicating the importance of site-specificity in the ExpCM.
-The optimized parameters for each model are also shown.}
-\end{figure*}
-
-A closer examination of the logo plot reveals that the preferences generally agree with existing knowledge about HA's biochemistry.
+A closer examination of Figure~\ref{fig:logoplot} reveals that the experimentally measured amino-acid preferences generally agree with existing knowledge about HA's structure and function.
 For instance, sites that form structurally important disulfide bridges (sites 52 \& 277, 64 \& 76, 97 \& 139, 281 \& 305, 14 \& 137-HA2, 144-HA2 \& 148-HA2)~\cite{waterfield1981disulphide} possess high preference for cysteine.
-At residues involved in receptor binding, there are strong preferences for the amino acids at sites Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies}.
+At residues involved in receptor binding, there are strong preferences for the amino acids that are known to be involved in binding sialic acid, such Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies}\comment{These old citations are for X-31 HA, you might also see if Paulson and/or Ian Wilson have newer structural papers on receptor-binding in recent H3 -- if so, add them}.
 A positively charged amino acid at site 329 is important for cleavage activation of the HA0 precursor, and indeed this site exhibits a high preference for arginine~\cite{kido1992isolation, stech2005new}.
 However, a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine. 
 This codon is part of the signal peptide and is cleaved from the mature HA protein.
-One possible explanation for why we do not see a strong preference for Met at this site is due to alternative translation initiation occurring at a downstream or upstream start site, as has been described for HA~\cite{girard2011upstream}.
+One possible reason we do not see a strong preference for methionine at this site is due to alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
 % No upstream or downstream "ATG"'s are present. I did find an in-frame "ATC" one codon upstream of the canonical start site (in the non-coding region), and interestingly, all Perth/2009 HA sequences deposited in GenBank have an "ATT" in this non-coding position, including Seema's Perth HA.
 % I6M(HA2) mutant slightly increases the fusion pH (Daniels 1985 Cell)
 % We see high preference for T,S,Q over the wildtype Ile at site 226. Although Q226 in an H3 background is characterized as having preference for avian-type receptors, most of these studies were done in older H3 strains such as Aichi. Wu 2017 Cell Host Microbe has shown extensive epistasis in the RBS, specifically in the 220-loop, so perhaps the amino acids tolerated in this loop have shifted over time. Indeed the wildtype amino acids at 225 and 226 are different in Perth compared to HK68 and Aichi.
@@ -191,40 +194,46 @@ One possible explanation for why we do not see a strong preference for Met at th
 \centering
 \includegraphics[width=17cm]{figs/prefslogoplot/rescaled-avgprefs_prefs.pdf}
 \caption{\label{fig:logoplot}
-{\bf The site-specific amino-acid preferences of the Perth/2009 HA.}
-This logoplot shows the site-specific amino-acid preferences for the averaged replicates rescaled by the stringency parameter (Table 1) estimated by phydms.
-The height of each letter is proportional to its preference at that site, and the preferences for all sites are normalized to sum to 1.
+{\bf The site-specific amino-acid preferences of the Perth/2009 HA measure in our experiments.}
+The height of each letter is the preference for that amino acid, after taking the average of our experimental replicates and re-scaling~\cite{hilton2017phydms} by the stringency parameter in Table~\ref{tab:phydms}.
 The sites are in H3 numbering.
-The top overlay bar shows the relative solvent accessibility.
-The bottom overlay bar is colored by the HA domain (sig. pep. = signal peptide, HA1 ecto. = HA1 ectodomain, HA2 ecto. = HA2 ectodomain, TM = transmembrane domain, cyto. tail. = cytoplasmic tail).
-The letters directly above each logo indicate the wildtype amino acid at that site.
+The top overlay bar indicates whether or not a site is part of the set of epitope residues delineated in \cite{wolf2006long}
+The bottom overlay bar indicates the HA domain (sig. pep. = signal peptide, HA1 ecto. = HA1 ectodomain, HA2 ecto. = HA2 ectodomain, TM = transmembrane domain, cyto. tail. = cytoplasmic tail).
+The letters directly above each logo stack indicate the wildtype amino acid at that site.
 }
 \end{figure*}
 
-\subsection*{The mutational tolerance of the head and the stalk shows less of a contrast in H3 than in H1}
-We next sought to investigate the inherent mutational tolerance of the Perth/2009 HA. 
-Figure~\ref{fig:mut_tolerance} shows the mutational tolerance as calculated from the rescaled Perth/2009 H3 preferences and the rescaled WSN/1933 H1 preferences mapped onto the HA crystal structures.
-We found antigenic site C and the most distal portion of the globular head near the 190-helix in the Perth/2009 H3 to be tolerant of mutations.
-Interestingly, the H3 stalk including the shorter $\alpha$-helix (helix A) is relatively mutationally tolerant compared to the tolerance of the globular head domain. 
-This observation suggests that the stalk may be prone to escape from antibodies, and agrees with previous work demonstrating that it is possible to select for antigenic mutants in H3 by broadly-neutralizing stalk-targeting antibodies~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human}.
-% In contrast, the head domain of the WSN/1933 H1 is more mutationally tolerant relative to its stalk domain.
+\subsection*{There is less difference in mutational tolerance between the HA head and stalk domains for H3 than for H1}
+Our experiments measure which amino acids are tolerated at each HA site under selection for protein function.
+We can therefore use our experimentally measured amino-acid preferences to calculate the inherent mutational tolerance of each site, which we define as the Shannon entropy of the re-scaled preferences.
+In our prior deep mutational scanning of the WSN/1933, we found that the stalk domain of this H1 HA was substantially less mutationally tolerant than its globular head~\cite{thyagarajan2014inherent,doud2016accurate}. \comment{Do the Nicholas Wu papers with Ren Sun compare stalk and head at all? If so, maybe we should generalize this sentence to include them.}
 
-The sites inside the receptor binding pockets are highly functionally constrained and were found to be relatively mutationally intolerant in both H3 and H1~\citep{wilson1981structure}.
-In contrast, the residues surrounding the receptor binding pocket are fairly mutationally tolerant, which may contribute to antigenic evolution as these sites are under strong immune pressure.~\citep{wiley1981structural}.
+We performed a similar analysis using the current data for the Perth/2009 H3 HA.
+Surprisingly, there was much less contrast in mutational tolerance between the stalk and head domains for the H3 HA than the H1 (Figure~\ref{fig:mut_tolerance}).
+For instance, the in H3 HA, the short helix A in the stalk is very mutationally tolerant.
+Interestingly, more studies have reported selecting escape mutants from broadly neutralizing anti-stalk antibodies in H3~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} than in H1~\cite{doud2017quantifying}\comment{C179 paper} HAs.
+
+We also see high mutational tolerance in many of the known antigenic sites of H3 HA~\comment{cite some paper on these sites}.
+For instance, in recent H3N2 strains, antigenic site B is immunodominant and the location of most major antigenic drift mutations~\comment{is there some Scott Hensley that we can cite?}.
+We find that the most distal portion of the globular head near the 190-helix, which is part of antigenic site B, is highly tolerant of mutation (Figure~\ref{fig:mut_tolerance}).
+Antigenic site C is also notably mutationally tolerant.
+
+Many sites inside HA's receptor binding pocket are known to be highly functionally constrained~\citep{wilson1981structure,martin1998studies}, and our data indicates that these sites are relatively mutationally intolerant in both H3 and H1 HAs.
+In contrast, the residues surrounding the receptor binding pocket are fairly mutationally tolerant, which may contribute to the rapidity of influenza's antigenic evolution, as these sites are under strong immune pressure.~\citep{wiley1981structural}.\comment{also the Koel et al paper}.
+
+\comment{One other issue we should think about is use of ``site'', ``residue'', and ``region''. I think we should probably be consistent with ``site'' for amino-site, because we've locked ourselves into that nomenclature. So I wonder if we should say ``antigenic region A'', etc to be clear? Maybe consider going back in here and changing that.}
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
 \includegraphics[width=11.4cm]{figs/mut_tolerance/entropy_heatmap.pdf}
 \caption{\label{fig:mut_tolerance}
-{\bf Mutational tolerance mapped onto each site of HA.}
-Mutational tolerance as calculated by the Shannon entropy of a given site's amino-acid preferences are mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}) and the H1 trimer (PDB 1RVX;~\cite{gamblin2004structure}), with both trimers in approximately the same orientation. 
-The site entropies were calculated from the preferences measured in the Perth/2009 H3 (left panel) from this study, or the preferences measured in the WSN/1933 H1 (right panel) from~\cite{doud2016accurate}. 
-Lighter shades of purple or brown signify low mutational tolerance, while darker shades signify high mutational tolerance. 
-For each HA, the structure on the left side colors the full HA trimer, while the structure on the right side colors only one of the monomers.
-The sialic acid receptor is shown as black sticks.
-The Perth/2009 H3 shows relatively high mutational tolerance in the stalk region, particularly in helix A, compared to the head region. 
-High mutational tolerance in H3 was also observed near antigenic site C and near the 190 helix.
-The head region of the WSN/1933 H1 is mutationally tolerant compared to the relatively intolerant stalk region. 
+{\bf Mutational tolerance of each site in H3 and H1 HAs.}
+Mutational tolerance as measured in the current study is mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}).
+Mutational tolerance of the WSN/1933 H1 HA as measured in \cite{doud2016accurate} is mapped on the structure of the H1 trimer (PDB 1RVX;~\cite{gamblin2004structure}).
+Different color scales are used because measurements are comparable among sites within the same HA, but not necessarily across HAs.
+Both trimers are shown in approximately the same orientation. 
+For each HA, the structure at left shows a surface representation of the full trimer, while the structure at right side shows a ribbon representation of just one monomer.
+The sialic acid receptor is shown in black sticks.
 }
 \end{SCfigure*}
 
