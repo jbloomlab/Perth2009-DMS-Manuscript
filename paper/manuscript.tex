@@ -299,30 +299,44 @@ More preferred sequences have larger values.
 }
 \end{figure}
 
-\subsection*{Another subsection}
+\subsection*{Our experiments suggest different patterns of evolution at epitope and non-epitope sites}
+HA is under selection both to maintain its essential function in viral growth and to escape pre-existing immunity.
+Most of the immune selection is focused on a subset of so-called ``epitope sites'' that are targets of the immunodominant antibody response.
+Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites.
+In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed \comment{X} epitope mutations per site, but only Y non-epitope mutations per site.
+Since our experiments only measure how mutations affect viral growth, they might be expected to describe the evolution of epitope and non-epitope sites differently.
 
-We reasoned that much of the increase in sequence preference toward Perth/2009 could be attributed to epitope sites, as most substitutions have occurred at sites under strong immune pressure.
-We therefore assessed each node's preference at epitope and non-epitope sites as defined by~\cite{wolf2006long}.
-The preferences at epitope sites resembles those for all HA sites, with preferences increasing over time (Figure~\ref{fig:sequence_preference}A).
-At non-epitope sites, however, the sequence preferences are higher than at epitope sites, and remain relatively constant over time.
-In the timespan from 1968 to 2012, the trunk fixed X epitope mutations per site and Y non-epitope mutations per site.
-Epistasis in HA is seemingly predominantly driven by antigenic drift \comment{cite kryazhimskiy2011prevalence?}. 
-Extensive epistasis has even been noted for epitope sites within the 220-loop surrounding the receptor binding pocket~\cite{wu2017diversity}.
-The evolutionary success of many epitope mutations are also likely contingent upon the background in which they arise.
-Yet, we are able to distinguish trunk mutations as significantly more favorable than side branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B). 
-This suggests that the preferences are still of utility in distinguishing evolutionarily successful strains from non-successful ones over short evolutionary timescales. 
+Mutations that occur on the trunk are scored as significantly more favorable in our experiments than side-branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}A).
+Therefore, our experiments can distinguish evolutionarily favorable mutations both at sites that are predominantly under functional constraint and ones that are also under immune pressure.
+The fact that our experiments can discriminate between the trunk and side branch at epitope sites despite only assaying for viral growth underscores the fact that most epitope sites are still important for HA function\comment{cite?}. 
 
-\begin{SCfigure*}[\sidecaptionrelwidth][t]
+But interestingly, there are clear differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
+The per-site sequence preference at epitope sites increases over time (Figure~\ref{fig:sequence_preference}A \comment{and new associated supplement that zooms in}), whereas at non-epitope sites it remains relatively constant.
+In addition, the per-site sequence preference is consistently higher at non-epitope than epitope sites, perhaps consistent with the fact that strong immune selection can lead to the fixation of less functionally favorable mutations at epitope sites.
+The fact that the epitope sites exhibit more of an increase in sequence preference over time may be due to the fact that they fix more mutations.
+It is known that as mutations accumulate at protein sites, they can lead to epistatic shifts in the effects of mutations\comment{general epistasis appears}.
+Such epistasis has been experimentally demonstrated for HA\comment{Yewdell paper, maybe Scott Hensley has something else}, including at some specific epitope sites in H3 HA~\cite{wu2017diversity}.
+We hypothesize that the rapid evolution of epitope sites in HA leads to epistatic interactions that shift the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA.
+
+\begin{figure}
 \centering
-\includegraphics[width=11.4cm]{figs/sequence_preference/sequence_preference.pdf}
+\includegraphics[width=\columnwidth]{figs/sequence_preference/sequence_preference.pdf}
 \caption{\label{fig:sequence_preference}
-{\bf Epistasis has been driven by substitutions at epitope sites.}
-(A) We calculated the HA sequence preference normalized by the number of sites for epitope and non-epitope sites, as defined by~\cite{wolf2006long}.
-The preferences at all sites and at epitope sites increase as the tree approaches the Perth/2009 strain.
-The sequence preference of non-epitope sites is higher than that of epitope sites.
-(B) The log$_{2}$ mutational effect for side branch and trunk mutations at non-epitope (left) and epitope (right) sites are shown.
+\comment{Switch panels A and B, the legend is already written to reflect that.}
+{\bf Effects of mutations at epitope and non-epitope sites during HA evolution.}
+We partitioned HA into epitope and non-epitope sites using the definitions of Wolf \textit{et al}~\cite{wolf2006long}.
+(A) The log$_{2}$ mutational effects for side branch and trunk mutations at non-epitope (left) and epitope (right) sites.
+$P$-values were computed as in Figure~\ref{fig:trunkvssidebranch} but only performing the randomizations over the appropriate set of sites (non-epitope or epitope).
+(B) 
+The average per-site sequence preference for all nodes in the phylogenetic tree, calculated separately for each set of sites.
+\comment{Write the P-value as $<10^{-4}$ if \emph{all} $10^4$ randomizations are less than the actual value. Otherwise write something like 0.0007 or (maybe if a lot of zeros $7\times10^{-4}$.
+Add supplementary figure for the zoom-in of non-epitope sites and then refer to it in the Figure legend here. You could even just add the old figure that split them and shows both epitope and non-epitope on their own y-axis as the supplement.
+I think the randomizations should be done just within the same set of sites.}
 }
-\end{SCfigure*}
+\end{figure}
+
+
+\subsection*{Somehow merged into next subsection}
 
 Can we then distinguish lineage-specific mutational effects using the preferences measured in a distantly related HA homolog?
 We used the WSN/1933 H1 preferences measured in~\cite{doud2016accurate} to quantify the effects of H3 trunk and side branch mutations, shown in Figure~\ref{fig:WSN_trunkvssidebranch}.
