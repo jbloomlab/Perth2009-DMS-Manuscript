@@ -389,24 +389,25 @@ Maybe the correlation plot could be slightly smaller, and the other two panels a
 \end{SCfigure*}
 
 \subsection*{Properties associated with the shifts in amino-acid preferences between H3 and H1 HAs}
-
-We next asked if shifted sites tend to cluster together in the HA structure.
-However, the sites of large shifts were interspersed across HA and did not seem to obviously localize together (Figure~\ref{fig:RMSD_heatmap}A).
-Yet, at the domain level, we found the stalk domain to be significantly less shifted than the globular head domain (Figure~\ref{fig:RMSD_heatmap}B). 
-This is unsurprising given that the stalk domain is more conserved both within and across HA subtypes~\cite{nobusawa1991comparison,hai2012influenza,mallajosyula2014influenza}.
-Sites absolutely conserved across all 18 HA subtypes were also found to be significantly less shifted than sites not conserved (Figure~\ref{fig:RMSD_heatmap}B), which is suggestive of the high functional importance of the sites that have remained unchanged throughout the divergence of HA.
+What features distinguish the sites that have shifted versus conserved amino-acid preferences between H3 and H1 HAs?
+The sites of large shifts are spread across HA, and do not obviously localize to one specific region of the protein's structure (Figure~\ref{fig:RMSD_heatmap}A).
+However, at the domain level, sites in the HA stalk tend to have smaller shifts than sites in HA's globular head (Figure~\ref{fig:RMSD_heatmap}B). 
+The HA stalk domain is also more conserved at the amino-acid level across HA subtypes~\cite{nobusawa1991comparison,hai2012influenza,mallajosyula2014influenza}, suggesting that conservation of amino-acid sequence tends to be correlated with conservation of amino-acid preferences.
+Consistent with this idea, sites that are absolutely conserved across all 18 HA subtypes are significantly less shifted than sites that are variable across HA subtypes (Figure~\ref{fig:RMSD_heatmap}B).
+Presumably these sites are under consistent functional constraint across all HAs.
 
 Despite their large sequence divergence, H1 and H3 adopt nearly identical protein folds~\cite{ha2002h5,russell2004h1}.
-Previous work has found that although the subdomain structures are highly similar, there are differences in the rotation and upward translation of the globular head subdomains relative to the central stalk domain among the four HA clades represented by H1 \& H5, H9, H7, and H3~\cite{ha2002h5,russell2004h1}.
-One explanation for such clade-specific subdomain position differences could be local and/or long-range conformational interactions between sites that are variable between clades \comment{needs better wording}.
-We would expect such sites to exhibit large shifts in preference.
-Indeed, clade-specific sites that are conserved within the H1 clade (including H1, H2, H5, and H6) or within the H3 clade (including H3, H4, and H14) are significantly shifted compared to non-clade-specific sites.
-
-In particular, the clade-specific upward shift of the globular head relative to the stalk has largely been attributed to the interaction between sites 107 and 75(HA2)~\cite{ha2002h5,russell2004h1}.
-The H1 HA has a taller turn in the interhelical loop connecting helix A and helix B in the stalk domain, and this tall turn is stabilized by a hydrogen bond between Glu-107 and Lys-75(HA2) (Figure~\ref{fig:RMSD_heatmap}C).
-In the WSN/1933 HA, site 107 has a high preference for Glu and 75(HA2) strongly prefers positively charged Lys and Arg.
+Previous work has found that although the subdomain structures are highly similar, there are differences in the rotation and upward translation of the globular head subdomains relative to the central stalk domain among different HA subtypes~\cite{ha2002h5,russell2004h1}.
+This previous work has defined clades of closely related HA subtypes. 
+One such clade includes H1, H2, H5, and H6, whereas another clade includes H3, H4, and H14 HAs (Figure~\ref{fig:distance_distribution}).
+The clade containing H1 has an upward shift of the globular head relative to the clade containing H3.
+This shift in the head subdomain has been attributed largely to the interaction between sites 107 and 75(HA2)~\cite{ha2002h5,russell2004h1}.
+Specifically, clade containing H1 has a taller turn in the interhelical loop connecting helix A and helix B in the stalk domain, and this tall turn is stabilized by a hydrogen bond between Glu-107 and Lys-75(HA2) (Figure~\ref{fig:RMSD_heatmap}C).
+In deep mutational scanning of the WSN/1933 H1 HA, site 107 has a high preference for Glu and 75(HA2) strongly prefers positively charged Lys and Arg.
 In contrast, the interhelical loop in H3 HA makes a sharper and shorter turn which is facilitated by a Gly at 75(HA2).
-This site prefers Gly and to a lesser extent Val, while site 107 is fairly tolerant of mutations suggesting that the amino-acid identity at this site plays a smaller role in determining the conformation of the interhelical loop in H3.
+In the deep mutational scanning of the Perth/2009 H3 HA, site 75(HA2) prefers Gly and to a lesser extent Val, while site 107 is fairly tolerant of mutations suggesting that the amino-acid identity at this site plays a smaller role in determining the conformation of the interhelical loop.
+Therefore, some of the shifts in HA amino-acid preferences can be directly rationalized in terms of changes in HA structure.
+\comment{We still need to site the last part of Figure~\ref{fig:RMSD_heatmap}B and also update this figure legend}
 
 \begin{figure*}
 \centering
