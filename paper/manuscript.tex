@@ -336,11 +336,12 @@ I think the randomizations should be done just within the same set of sites.}
 \end{figure}
 
 
-\subsection*{Somehow merged into next subsection}
-
-Can we then distinguish lineage-specific mutational effects using the preferences measured in a distantly related HA homolog?
-We used the WSN/1933 H1 preferences measured in~\cite{doud2016accurate} to quantify the effects of H3 trunk and side branch mutations, shown in Figure~\ref{fig:WSN_trunkvssidebranch}.
-It is evident that we do not see trunk mutations significantly more favored than side branch mutations, suggesting that our ability to discriminate successful and unsuccessful strains degrades over sufficiently long evolutionary distances. 
+\subsection*{There are large differences between between H3 and H1 HAs in the amino-acid preferences of many sites}
+The results above show that measurements of mutational effects in the Perth/2009 HA are informative about the evolutionary fate of other human H3N2 HAs.
+How broadly can experimental measurements be generalized across HAs?
+To address this question, we repeated the trunk versus side-branch analyses using amino-acid preferences from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
+Figure~\ref{fig:WSN_trunkvssidebranch} shows that the H1 measurements are not informative for distinguishing the trunk and side branches of an H3 phylogeny.
+This fact indicates that the utility of an experiment for discriminating successful and unsuccessful strains degrades over sufficiently long evolutionary distances. 
 
 \begin{figure}
 \centering
@@ -352,25 +353,25 @@ It is evident that we do not see trunk mutations significantly more favored than
 }
 \end{figure}
 
-\subsection*{The H1 and H3 preferences have shifted at many sites}
-How shifted are the preferences between evolutionarily distant homologs such as H1 and H3?
-Although we have previously compared the experimentally measured preferences between related protein homologs of NP~\cite{doud2015site} and of Env~\cite{haddox2017mapping}, the HA homologs we have studied are considerably more diverged than either of these pairs.
-The WSN/1933 H1 and the Perth/2009 H3 fall into two phylogenetically distinct groups and share 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A), allowing us to examine what has shifted and what has remained conserved across such diverged homologs.
-Simply correlating the preferences between H1 and H3 reveals that the replicate measurements within a homolog are more correlated than between homologs (Figure~\ref{fig:distance_distribution}B).
+An obvious hypothesis for why the H1 deep mutational scanning is not informative about the evolutionary fate of H3 strains is that the effect of the same mutation will often by very different between these two HA subtypes.
+To determine if this is the case, we can examine how much the amino-acid preferences of homologous sites have shifted between H3 and H1 HAs.
+Prior experiments have found only modest shifts in amino-acid preferences between two variants of influenza nucleoprotein with 94\% amino-acid identity\comment{check this number}~\cite{doud2015site} and variants of HIV envelope (Env) with 86\% amino-acid identity~\cite{haddox2017mapping}.
+However, the H1 and H3 HAs are far more diverged, with only 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A).
+One simple way to investigate the extent of shifts in amino-acid preferences is simply to correlate measurements from independent deep mutational scanning replicates on H1 and H3 HAs.
+Figure~\ref{fig:distance_distribution}B clearly reveals that replicate measurements on the same HA variant are more correlated than those on different HA variants.
 
-However, to quantify the extent of mutational shifts at a site-by-site level, we used an approach described in~\cite{doud2015site,haddox2017mapping}.
-We aligned Perth/2009 H3 and WSN/1933 H1 and at each alignable site calculated the difference in preferences between homologs while correcting for experimental noise within homologs.
-The distribution of shifts is shown in Figure~\ref{fig:distance_distribution}C.
-Although many sites have small shifts near zero, a considerable number of sites have large shifts in preference, reaching a difference of 0.86 out of a maximum possible of 1.0.
-When we compare HA to the preferences measured in the non-homologous protein HIV Env~\cite{haddox2017mapping}, nearly all sites are shifted.
-On the other hand, when we randomize the HA replicates to generate a null distribution, there is very little shift in preferences. 
+To more rigorously quantify shifts in amino-acid preferences after correcting for experimental noise, we used the statistical approach described in~\cite{doud2015site,haddox2017mapping}.
+Figure~\ref{fig:distance_distribution}C shows the distribution of shifts in amino-acid preferences between H3 and H1 HAs after correcting for experimental noise.
+Although some sites have small shifts near zero, many sites have large shifts in preference.
+These shifts between H3 and H1 are much larger than expected from the null distribution that would be observed purely from experimental noise.
+They are also much larger than the shifts previously observed between two HIV Envs with 86\% amino-acid identity~\cite{haddox2017mapping}.
+However, the shifts are still generally smaller than those observed when comparing HA to the non-homologous protein HIV Env protein. 
 For comparison, the preferences of the HIV Env homologs, which are 86\% identical at the amino-acid level, are mostly similar. 
-Although there are a small number of sites with larger shifts reaching a maximum of 0.52, we do not see a dramatic tail in the distribution as we see for the HA's.
-These observations suggest that as protein homologs diverge, their preferences increasingly shift.
+These observations show that there are very substantial shifts in mutational effects between highly diverged HA homologs, although the effects of mutations still remain more similar than for non-homologous proteins.
 
-\begin{figure*}
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
-\includegraphics[width=17cm]{figs/distance_distribution/distance_distribution.pdf}
+\includegraphics[width=12cm]{figs/distance_distribution/distance_distribution.pdf}
 \caption{\label{fig:distance_distribution}
 {\bf There are substantial differences in the effects of mutations between H1 and H3 HAs.}
 (A) Phylogenetic tree of HA subtypes, with the WSN/1933 H1 and Perth/2009 H3 HAs labeled. 
@@ -382,9 +383,12 @@ $R$ indicates the Pearson correlation coefficient.
 The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences to experimental noise.
 The shifts are also much larger than those previously observed between two variants of HIV envelope protein (Env) that share 86\% amino-acid identity (pink).
 However, the shifts between H3 and H1 are still less than the differences between either HA and HIV Env (green).
-\comment{Let's remove RMSDcorrected from legend.}
+\comment{Let's remove RMSDcorrected from legend.
+Maybe the correlation plot could be slightly smaller, and the other two panels a bit bigger, especially their fonts.}
 }
-\end{figure*}
+\end{SCfigure*}
+
+\subsection*{Properties associated with the shifts in amino-acid preferences between H3 and H1 HAs}
 
 We next asked if shifted sites tend to cluster together in the HA structure.
 However, the sites of large shifts were interspersed across HA and did not seem to obviously localize together (Figure~\ref{fig:RMSD_heatmap}A).
