@@ -192,7 +192,7 @@
 \setlength{\belowrulesep}{1.5pt}
 \setlength{\belowbottomsep}{10pt}
 \AtBeginEnvironment{tabular}{
-\sffamily\fontsize{7.5}{10}\selectfont
+\sffamily\fontsize{6.5}{10}\selectfont
 }
 \newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
 
