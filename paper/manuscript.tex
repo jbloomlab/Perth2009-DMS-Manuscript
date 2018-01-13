@@ -78,7 +78,7 @@ Overall, our work highlights how experimental measurements of mutational effects
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
-\dropcap{S}easonal H3N2 influenza virus evolves rapidly, readily accumulating mutations in the hemagglutinin (HA) surface protein that contribute to antigenic drift.
+\dropcap{S}easonal H3N2 influenza virus evolves rapidly, readily accumulating mutations in the hemagglutinin (HA) surface protein that contribute to antigenic drift~\cite{smith2004mapping,bhatt2011genomic}.
 The evolution of human H3N2 influenza virus is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2015global}, producing a distinct spindly shape in its phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
 Given the rather distinctive pattern of H3N2 evolution and that vaccination remains an effective way of reducing disease burden, a key challenge in selecting a vaccine strain lies in being able to predict the dominant strain in the upcoming influenza season.
 
@@ -200,7 +200,7 @@ For the M5 model, we give the mean followed by the shape and rate parameters of 
 
 A closer examination of Figure~\ref{fig:logoplot} reveals that the experimentally measured amino-acid preferences generally agree with existing knowledge about HA's structure and function.
 For instance, sites that form structurally important disulfide bridges (sites 52 \& 277, 64 \& 76, 97 \& 139, 281 \& 305, 14 \& 137-HA2, 144-HA2 \& 148-HA2)~\cite{waterfield1981disulphide} possess high preference for cysteine.
-At residues involved in receptor binding, there are strong preferences for the amino acids that are known to be involved in binding sialic acid, such Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies,nobusawa2000change}\comment{These old citations are for X-31 HA, you might also see if Paulson and/or Ian Wilson have newer structural papers on receptor-binding in recent H3 -- if so, add them}.
+At residues involved in receptor binding, there are strong preferences for the amino acids that are known to be involved in binding sialic acid, such Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies,nobusawa2000change,yang2015structure}.
 A positively charged amino acid at site 329 is important for cleavage activation of the HA0 precursor, and indeed this site exhibits a high preference for arginine~\cite{kido1992isolation, stech2005new}.
 However, a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine. 
 This codon is part of the signal peptide and is cleaved from the mature HA protein.
@@ -258,8 +258,8 @@ The sialic acid receptor is shown in black sticks.
 \end{figure}
 
 \subsection*{The experimental measurements can help discriminate between successful and unsuccessful influenza virus lineages}
-A major goal in the study of rapidly evolving viruses such as influenza is to forecast evolutionary trajectories\comment{Michael Lassig has a Nature Ecology \& Evolution review}.
-For instance, forecasting which viral lineages will dominate the upcoming influenza season is an integral part of vaccine-strain selection\comment{add reference}. 
+A major goal in the study of rapidly evolving viruses such as influenza is to forecast evolutionary trajectories~\cite{lassig2017predicting,morris2017predictive}.
+For instance, forecasting which viral lineages will dominate the upcoming influenza season is an integral part of vaccine-strain selection~\cite{neher2015nextflu,lassig2017predicting,morris2017predictive}. 
 Evolutionary forecasts must ultimately distinguish between successful and unsuccessful viral lineages, which in the case of human influenza virus means distinguishing between the trunk and side branches of the phylogenetic tree (Figure~\ref{fig:H3N2_phylogeny}).
 
 To investigate whether our experiments can aid in distinguishing trunk and side branch lineages, we calculated the experimentally measured effects of all mutations in a maximum-likelihood reconstruction of the phylogeny in Figure~\ref{fig:H3N2_phylogeny}.
@@ -271,7 +271,7 @@ We therefore re-calculated the statistics separating side branches to tip and in
 Therefore, strains with mutations that we experimentally measure to be favorable for viral replication tend to do better in nature than strains with mutations that we measure to be less favorable. 
 
 Our experiments were performed on the Perth/2009 HA, but we are scoring mutations on a phylogenetic tree that extends from 1968 to 2017.
-Because the effects of mutations can vary with genetic background\comment{cite some papers about epistasis, amino-acid shifts, etc}, it is possible that the effects of mutations that we measured in the Perth/2009 HA might have shifted somewhat in other related HAs.
+Because the effects of mutations can vary with genetic background~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative}, it is possible that the effects of mutations that we measured in the Perth/2009 HA might have shifted somewhat in other related HAs.
 To explore this question, we scored the complete HA sequence of every node in the phylogenetic tree by quantifying its average per-site sequence preference for HA sequence $\mathbf{s}$, which is defined as 
 \begin{equation}
 F\left(\mathbf{s}\right) = \frac{1}{L}\displaystyle\sum_{r=1}^L \ln \pi_{r, s_r},
@@ -288,7 +288,6 @@ These results suggest that there is some HA background-dependence in the effects
 \includegraphics[width=\columnwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}
 \caption{\label{fig:trunkvssidebranch}
 {\bf Mutations on the trunk are more favorable than those on the side branches according to our experimental measurements.}
-\comment{Legend will be written under assumption that panels (B) and (C) are swapped. Also add sequence preference \emph{per site} to y-axis of the new (C).}
 (A) We used our experiments to calculate the log$_{2}$ mutational effect for all trunk and side branch mutations in five-year windows from 1968 to 2013. 
 The central year in each window is denoted on the x-axis.
 Median mutational effects in each window are shown as circles for the trunk and triangles for side branches. 
@@ -306,35 +305,32 @@ More preferred sequences have larger values.
 HA is under selection both to maintain its essential function in viral growth and to escape pre-existing immunity.
 Most of the immune selection is focused on a subset of so-called ``epitope sites'' that are targets of the immunodominant antibody response.
 Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites.
-In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed \comment{X} epitope mutations per site, but only Y non-epitope mutations per site.
+In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed 0.84 epitope mutations per site, but only 0.07 non-epitope mutations per site.
 Since our experiments only measure how mutations affect viral growth, they might be expected to describe the evolution of epitope and non-epitope sites differently.
 
 Mutations that occur on the trunk are scored as significantly more favorable in our experiments than side-branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}A).
 Therefore, our experiments can distinguish evolutionarily favorable mutations both at sites that are predominantly under functional constraint and ones that are also under immune pressure.
-The fact that our experiments can discriminate between the trunk and side branch at epitope sites despite only assaying for viral growth underscores the fact that most epitope sites are still important for HA function\comment{cite?}. 
+The fact that our experiments can discriminate between the trunk and side branch at epitope sites despite only assaying for viral growth underscores the fact that most epitope sites are still important for HA function~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
 
 But interestingly, there are clear differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
-The per-site sequence preference at epitope sites increases over time (Figure~\ref{fig:sequence_preference}A \comment{and new associated supplement that zooms in}), whereas at non-epitope sites it remains relatively constant.
+The per-site sequence preference at epitope sites increases over time (Figure~\ref{fig:sequence_preference}A and Figure~\ref{suppfig:seqpref_zoomed}), whereas at non-epitope sites it remains relatively constant.
 In addition, the per-site sequence preference is consistently higher at non-epitope than epitope sites, perhaps consistent with the fact that strong immune selection can lead to the fixation of less functionally favorable mutations at epitope sites.
 The fact that the epitope sites exhibit more of an increase in sequence preference over time may be due to the fact that they fix more mutations.
-It is known that as mutations accumulate at protein sites, they can lead to epistatic shifts in the effects of mutations\comment{general epistasis appears}.
-Such epistasis has been experimentally demonstrated for HA\comment{Yewdell paper, maybe Scott Hensley has something else}, including at some specific epitope sites in H3 HA~\cite{wu2017diversity}.
+It is known that as mutations accumulate at protein sites, they can lead to epistatic shifts in the effects of mutations~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative,haddox2017mapping}.
+Such epistasis has been experimentally demonstrated for HA~\cite{das2013defining,myers2013compensatory}, including at some specific epitope sites in H3 HA~\cite{wu2017diversity}.
 We hypothesize that the rapid evolution of epitope sites in HA leads to epistatic interactions that shift the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA.
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figs/sequence_preference/sequence_preference.pdf}
 \caption{\label{fig:sequence_preference}
-\comment{Switch panels A and B, the legend is already written to reflect that.}
 {\bf Effects of mutations at epitope and non-epitope sites during HA evolution.}
 We partitioned HA into epitope and non-epitope sites using the definitions of Wolf \textit{et al}~\cite{wolf2006long}.
 (A) The log$_{2}$ mutational effects for side branch and trunk mutations at non-epitope (left) and epitope (right) sites.
 $P$-values were computed as in Figure~\ref{fig:trunkvssidebranch} but only performing the randomizations over the appropriate set of sites (non-epitope or epitope).
 (B) 
 The average per-site sequence preference for all nodes in the phylogenetic tree, calculated separately for each set of sites.
-\comment{Write the P-value as $<10^{-4}$ if \emph{all} $10^4$ randomizations are less than the actual value. Otherwise write something like 0.0007 or (maybe if a lot of zeros $7\times10^{-4}$.
-Add supplementary figure for the zoom-in of non-epitope sites and then refer to it in the Figure legend here. You could even just add the old figure that split them and shows both epitope and non-epitope on their own y-axis as the supplement.
-I think the randomizations should be done just within the same set of sites.}
+The sequence preferences for epitope and non-epitope sites on separate y-axes is shown in Figure~\ref{suppfig:seqpref_zoomed}.
 }
 \end{figure}
 
@@ -352,13 +348,12 @@ This fact indicates that the utility of an experiment for discriminating success
 \caption{\label{fig:WSN_trunkvssidebranch}
 {\bf Experimental measurements on an H1 HA do \emph{not} provide evolutionarily relevant information for H3 HAs.}
 (A), (B) This figure is analogous to that in Figure~\ref{fig:trunkvssidebranch} except that it scores the H3 sequences using experimental measurements made on the lab-adapted WSN/1933 HA~\cite{doud2016accurate}.
-\comment{Make into two vertical panels}
 }
 \end{figure}
 
 An obvious hypothesis for why the H1 deep mutational scanning is not informative about the evolutionary fate of H3 strains is that the effect of the same mutation will often by very different between these two HA subtypes.
 To determine if this is the case, we can examine how much the amino-acid preferences of homologous sites have shifted between H3 and H1 HAs.
-Prior experiments have found only modest shifts in amino-acid preferences between two variants of influenza nucleoprotein with 94\% amino-acid identity\comment{check this number}~\cite{doud2015site} and variants of HIV envelope (Env) with 86\% amino-acid identity~\cite{haddox2017mapping}.
+Prior experiments have found only modest shifts in amino-acid preferences between two variants of influenza nucleoprotein with 94\% amino-acid identity~\cite{doud2015site} and variants of HIV envelope (Env) with 86\% amino-acid identity~\cite{haddox2017mapping}.
 However, the H1 and H3 HAs are far more diverged, with only 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A).
 One simple way to investigate the extent of shifts in amino-acid preferences is simply to correlate measurements from independent deep mutational scanning replicates on H1 and H3 HAs.
 Figure~\ref{fig:distance_distribution}B clearly reveals that replicate measurements on the same HA variant are more correlated than those on different HA variants.
@@ -378,7 +373,7 @@ These observations show that there are very substantial shifts in mutational eff
 \caption{\label{fig:distance_distribution}
 {\bf There are substantial differences in the effects of mutations between H1 and H3 HAs.}
 (A) Phylogenetic tree of HA subtypes, with the WSN/1933 H1 and Perth/2009 H3 HAs labeled. 
-These HAs have $\sim$42\% amino-acid identity\comment{get the exact number rounded the percent and remove the $\sim$ symbol}.
+These HAs have 42\% amino-acid identity.
 (B) All pairwise correlations of the amino-acid preferences measured in the three individual deep mutational scanning replicates in the current study  and the three replicates in prior deep mutational scanning of an H1 HA~\cite{doud2016accurate}.
 Comparisons between H3 replicates are in purple, those between H1 replicates are in brown, and those across H1 and H3 replicates are in gray. 
 $R$ indicates the Pearson correlation coefficient.
@@ -386,8 +381,6 @@ $R$ indicates the Pearson correlation coefficient.
 The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences to experimental noise.
 The shifts are also much larger than those previously observed between two variants of HIV envelope protein (Env) that share 86\% amino-acid identity (pink).
 However, the shifts between H3 and H1 are still less than the differences between either HA and HIV Env (green).
-\comment{Let's remove RMSDcorrected from legend.
-Maybe the correlation plot could be slightly smaller, and the other two panels a bit bigger, especially their fonts.}
 }
 \end{SCfigure*}
 
@@ -425,7 +418,6 @@ Sites with one amino-acid identity in the clade containing H1, H2, H5, and H6 an
 These sites are shown in spheres on the structure of H1 and H3. 
 One monomer is in dark gray, while the HA1 domain of the neighboring monomer is in lighter gray.
 The spheres are colored as in panel (A), and the experimentally measured amino-acid preferences in the WSN/1933 H1 and Perth/2009 H3 HAs are shown.
-\comment{some of the text needs to be larger in panel (B)}
 }
 \end{SCfigure*}
 
