@@ -218,7 +218,7 @@ One possible reason we do not see a strong preference for methionine at this sit
 \centering
 \includegraphics[width=17cm]{figs/prefslogoplot/rescaled-avgprefs_prefs.pdf}
 \caption{\label{fig:logoplot}
-{\bf The site-specific amino-acid preferences of the Perth/2009 HA measure in our experiments.}
+{\bf The site-specific amino-acid preferences of the Perth/2009 HA measured in our experiments.}
 The height of each letter is the preference for that amino acid, after taking the average of our experimental replicates and re-scaling~\cite{hilton2017phydms} by the stringency parameter in Table~\ref{tab:phydms}.
 The sites are in H3 numbering.
 The top overlay bar indicates whether or not a site is part of the set of epitope residues delineated in \cite{wolf2006long}.
@@ -493,7 +493,7 @@ We performed sequencing on a lane of a flow cell of an Illumina HiSeq 2500 using
 \subsection*{Analysis of deep sequencing data}
 We used dms\_tools2...
 
-\subsection*{Inference of phylogenetic trees}
+\subsection*{Inference of human H3N2 phylogenetic tree}
 \comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. subsampled how? inferred the tree, ancestral state reconstruction, visualized the tree...}
 To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
 We defined all branches ancestral to this most recent common ancestor of recently sampled nodes as the trunk.
@@ -501,6 +501,25 @@ All nodes descended from the trunk were defined as side branch nodes.
 Nodes descended from the most recent common ancestor were defined as unresolved.
 
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
+For a given mutation a1-r-a2, we calculated the mutational effect as:
+\begin{equation}
+\log_2 \frac{\pi_{r,a2}}{\pi_{r,a1}}
+\end{equation}
+where $\pi_{r,a1}$ and $\pi_{r,a2}$ are the preferences for amino-acid $a1$ or $a2$ at site $r$, and the preferences are re-scaled by the stringency parameter provided in Table~\ref{tab:phydms} and averaged across replicates.
+The WSN/1933 H1 HA amino-acid preferences were also re-scaled \comment{by stringency parameter in...} and averaged across replicates.
+The mutational effects for each five-year window were calculated for nodes with date $\geq$ YEAR1 and $<$ YEAR1 $+ 5$, and windows were incremented by one year.
+
+To calculate significance, we randomized the amino-acid preferences across sites and quantified the median difference in trunk and side branch mutational effects.
+We repeated this randomization for a total of 10,000 times and calculated how frequently the difference in median mutational effect between trunk and side branches exceeded the true difference to obtain a $P$-value.
+
+Sequence preference per site for every node on the phylogenetic tree shown in Figure~\ref{fig:H3N2_phylogeny} was calculated using Equation 1 for all sites, or the set of epitope and non-epitope sites defined in~\cite{wolf2006long}.
+
+\subsection*{Alignments and phylogenetic analysis of HA sequences}
+A description of the sequences and methods used to build the phylogenetic tree of HA subtypes shown in Figure~\ref{fig:distance_distribution}A is provided in~\cite{doud2017quantifying}.
+To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using mafft \comment{cite}.
+To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2017mapping} and based off the method presented in~\cite{doud2015site}.
+Briefly, for each site we calculated half of the sum of the absolute value of the difference between preferences for each amino acid.
+The RMSD$_{\text{corrected}}$ value sig
 
 \subsection*{Analysis of mutational shifts}
 
@@ -572,13 +591,19 @@ The cumulative distribution of the distances is shown in the red line.
 \centerline{\includegraphics[width=\textwidth]{figs/S03_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
 \caption{\label{suppfig:WSNprefs_logoplot}
 {\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA.} 
+The amino-acid preferences from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by the stringency parameter.
+The sites are in H3 numbering.
+\comment{The top overlay bar indicates the relative solvent accessibility (RSA).}.
+The bottom overlay bar indicates the HA domain (sig. pep. = signal peptide, HA1 ecto. = HA1 ectodomain, HA2 ecto. = HA2 ectodomain, TM = transmembrane domain, cyto. tail. = cytoplasmic tail).
+The letters directly above each logo stack indicate the wildtype amino acid at that site.
 }
 \end{suppfigure}
 
 \begin{suppfigure}
 \centerline{\includegraphics[width=0.6\textwidth]{figs/S04_seqpref_zoomed/seqpref_zoomed.pdf}}
 \caption{\label{suppfig:seqpref_zoomed}
-{\bf The per-site sequence preference at epitope and non-epitope sites shown in Figure~\ref{fig:sequence_preference}B, but on their own axes.} 
+{\bf The per-site sequence preference at epitope and non-epitope sites}
+The per-site sequence preferences shown in Figure~\ref{fig:sequence_preference}B, but on their own y-axes.
 }
 \end{suppfigure}
 
