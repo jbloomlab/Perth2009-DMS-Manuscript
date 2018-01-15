@@ -430,7 +430,7 @@ The spheres are colored as in panel (A), and the experimentally measured amino-a
 We have measured the effect of all possible single amino-acid mutations to Perth/2009 H3 on viral growth in cell culture.
 
 \begin{itemize}
-\item{These experimental measurements have utility in revealing differences between successful and unsuccessful lineages of human influenza virus.}
+\item{These experimental measurements have utility in revealing differences between successful and unsuccessful lineages over 50 y of human influenza virus evolution.}
 \item{We have only measured the effect of mutations to HA on viral growth, but there are certainly other determinants of strain success}
 \item{Antigenic characteristics play a large role in determining strain success. We therefore need to know how mutations affect antigenicity.}
 \item{non-HA segments are important too}
@@ -494,10 +494,15 @@ We performed sequencing on a lane of a flow cell of an Illumina HiSeq 2500 using
 We used dms\_tools2...
 
 \subsection*{Inference of phylogenetic trees}
-\comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. inferred the tree, ancestral state reconstruction, visualized the tree...}
+\comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. subsampled how? inferred the tree, ancestral state reconstruction, visualized the tree...}
 To parse out trunk mutations from side branch mutations, we first defined a set of recent nodes sampled on or after Jan. 1, 2017, and traced these nodes back to their most recent common ancestor. 
+We defined all branches ancestral to this most recent common ancestor of recently sampled nodes as the trunk.
+All nodes descended from the trunk were defined as side branch nodes.
+Nodes descended from the most recent common ancestor were defined as unresolved.
 
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
+
+\subsection*{Analysis of mutational shifts}
 
 \subsection*{Data availability and source code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. Computer code used to analyze the data and produce the results in the paper are in...
@@ -505,7 +510,7 @@ Deep sequencing data are available from the Sequence Read Archive under BioSampl
 
 \showmatmethods{} % Display the Materials and Methods section
 
-\acknow{We thank Sarah Hilton, Hugh Haddox, Sidney Bell...the Fred Hutch Genomics Core...
+\acknow{We thank Sarah Hilton, Hugh Haddox, Sidney Bell for helpful discussions about data analysis...the Fred Hutch Genomics Core...
 Funding...}
 
 \showacknow{} % Display the acknowledgments section
