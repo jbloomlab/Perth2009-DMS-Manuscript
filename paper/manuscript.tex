@@ -60,7 +60,7 @@ Using these measurements, we revealed differences between successful and unsucce
 \keywords{influenza virus $|$ hemagglutinin $|$ deep mutational scanning $|$ antigenic drift $|$ epistasis} 
 
 \begin{abstract}
-% no more than 250 words. (200 now)
+% no more than 250 words. (199 now)
 The evolution of seasonal H3N2 influenza virus is mediated by the rapid accumulation of mutations. 
 A better understanding of how mutations affect viral growth is critical for studying the pressures and constraints underlying the evolution of the influenza virus in nature. 
 Here we experimentally measure the effect of every possible single amino-acid mutation to an H3 influenza hemagglutinin on viral growth in cell culture. 
@@ -68,7 +68,7 @@ We find the stalk domain to be fairly mutationally tolerant, and there is not a 
 Furthermore, our measurements reveal mutations in successful seasonal influenza viral lineages to be significantly more preferred than mutations in lineages that have died out, and this was true at both epitope and non-epitope sites.
 Epistasis in hemagglutinin is also seemingly driven by antigenic drift.
 The preferences measured in a distantly related protein homolog do not reveal such differences in viral lineages.
-A comparison of the preferences between the two hemagglutinin homologs suggests that mutational effects increasingly shift as proteins diverge.
+A comparison of the preferences between the two hemagglutinin variants show substantial shifts in the effects of mutations.
 Overall, our work highlights how experimental measurements of mutational effects can be leveraged to gain insight into the evolutionary fates of viral strains and potentially be used to predict viral evolution.
 \end{abstract}
 
@@ -88,20 +88,17 @@ Overall, our work highlights how experimental measurements of mutational effects
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
 \dropcap{S}easonal H3N2 influenza virus evolves rapidly, readily accumulating mutations in the hemagglutinin (HA) surface protein that contribute to antigenic drift~\cite{smith2004mapping,bhatt2011genomic}.
 The evolution of human H3N2 influenza virus is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2015global}, producing a distinct spindly shape in its phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
-Given the rather distinctive pattern of H3N2 evolution and that vaccination remains an effective way of reducing disease burden, a key challenge in selecting a vaccine strain lies in being able to predict the dominant strain in the upcoming influenza season.
+A key challenge in the study of H3N2 evolution lies in being able to predict the dominant strain in the upcoming influenza season, as this information can guide selection of a vaccine strain.
+Fundamentally, in order to make these predictions we must be able to distinguish between strains that will persist as the trunk and strains that will die out.
 
-Vaccine strain selection decisions mainly rely on experimentally characterizing the antigenicity of circulating strains.
-To aid in the timeliness and throughput of making such decisions, previous work have endeavored to accurately predict the evolutionary outcomes of viral strains based on the antigenicity and/or tree structure of viral clades~\cite{steinbruck2014computational,neher2014predicting}.
-However, the accuracy of these predictions are subject to uneven geographical and temporal sampling, and for~\cite{neher2014predicting}, the lack of information about a mutation's effect on antigenicity.
-Others have attempted to model the antigenic properties of viral strains using sequence information or phylogenetic relationships~\cite{sun2013using,harvey2016identification,neher2016prediction}.
-
-While mutations that contribute to antigenic evolution of the virus certainly determine strain success, the non-antigenic impacts of mutations play an important role in determining the persistence of viral strains~\cite{pybus2007phylogenetic,kucharski2011influenza,strelkowa2012clonal,luksza2014predictive,koelle2015effects}.
-Due to the high mutation rate of RNA viruses \comment{citation here} and because the influenza virus does not appreciably recombine within a given segment, deleterious mutations become linked to beneficial ones.
-A predictive fitness model takes into account mutations at both antigenic and non-antigenic sites in HA to infer clade fitness~\cite{luksza2014predictive}.
-In this model, mutations at epitope sites are beneficial to viral fitness, while mutations at non-epitope sites incur a fitness cost.
-Although this assumption may generally be true, the effect of mutations on viral fitness, and particularly on protein function, are much more nuanced.
-We therefore need a greater understanding of the phenotypic effects of mutations on viral growth to comprehend the forces and constraints shaping influenza virus evolution in nature.
-
+%To aid in the timeliness and throughput of making such decisions, previous work have endeavored to accurately predict the evolutionary outcomes of viral strains based on the antigenicity and/or tree structure of viral clades~\cite{steinbruck2014computational,neher2014predicting}.
+%However, the accuracy of these predictions are subject to uneven geographical and temporal sampling, and for~\cite{neher2014predicting}, the lack of information about a mutation's effect on antigenicity.
+One approach is to model the antigenic properties of circulating viral strains using sequence information or phylogenetic relationships and experimental measurements~\cite{sun2013using,harvey2016identification,neher2016prediction}.
+While mutations that contribute to antigenic evolution of the virus certainly determine strain success, the non-antigenic effects of mutations play an important role in determining the persistence of viral strains~\cite{pybus2007phylogenetic,kucharski2011influenza,strelkowa2012clonal,luksza2014predictive,koelle2015effects}.
+Due to the high mutation rate of RNA viruses~\cite{holland1982rapid,steinhauer1987rapid,lauring2010quasispecies} and because the influenza virus does not appreciably recombine within a given segment, deleterious mutations become linked to beneficial ones.
+Strain fitness is thereby dependent on both the antigenic and non-antigenic effects of mutations, as modeled in~\cite{luksza2014predictive}.
+However, we lack a broad understanding of the phenotypic effects of mutations to HA, particularly on HA function and viral growth.
+We therefore need a greater understanding of the effects of mutations to HA to comprehend the forces and constraints shaping influenza virus evolution in nature.
 
 \begin{figure}
 \centering
@@ -117,13 +114,13 @@ The Perth/2009 strain is indicated with a star.
 
 We can measure such mutational effects in the lab using deep mutational scanning approaches~\cite{fowler2010high}.
 Previously, we experimentally measured the effect of all possible single amino-acid mutations to an H1 HA from the A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,doud2016accurate}.
-However, the WSN/1933 is a highly lab-adapted strain, and these measurements may not be particularly relevant for studying the mutational processes of more contemporaneous strains circulating in the human population.
+However, WSN/1933 is a highly lab-adapted strain, and these measurements may not be particularly relevant for studying the mutational processes of more contemporaneous strains circulating in the human population.
 Here we measure the effects of mutations to the HA from the A/Perth/16/2009 (H3N2) strain on viral growth in cell culture.
 % Our measurements generally agree with what is already known about HA structure and function.
 We apply these experimental measurements to examine differences in the trunk and side branch lineages of human H3N2 influenza virus.
 Trunk mutations were found to be more favorable than side branch mutations, both at epitope and non-epitope sites.
 We also find evidence that epistasis in HA has primarily been driven by antigenic drift.
-The measurements also enabled a comparison of how the amino-acid preferences have shifted between two diverged HAs.
+The measurements also enabled a comparison of the shifts in amino-acid preferences between two diverged HAs.
 The extent of shifts in amino-acid preferences increase as homologs diverge.
 Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
 
