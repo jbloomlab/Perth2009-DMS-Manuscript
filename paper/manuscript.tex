@@ -103,9 +103,6 @@ The Perth/2009 strain is indicated with a star.
 }
 \end{figure}
 
-%To aid in the timeliness and throughput of making such decisions, previous work have endeavored to accurately predict the evolutionary outcomes of viral strains based on the antigenicity and/or tree structure of viral clades~\cite{steinbruck2014computational,neher2014predicting}.
-%However, the accuracy of these predictions are subject to uneven geographical and temporal sampling, and for~\cite{neher2014predicting}, the lack of information about a mutation's effect on antigenicity.
-
 Two main features distinguish the evolutionarily successful trunk from its competitors: greater antigenic change, and efficient viral growth and transmission.
 In principle, experiments could be informative for identifying how mutations affect these features.
 Most work on influenza evolution to date has utilized experimental data primarily to assess the antigenicity of circulating strains~\cite{sun2013using,harvey2016identification,neher2016prediction}.
@@ -429,14 +426,29 @@ The spheres are colored as in panel (A), and the experimentally measured amino-a
 
 \section*{Discussion}
 \label{sec:discussion}
-We have measured the effect of all possible single amino-acid mutations to Perth/2009 H3 on viral growth in cell culture.
+We have measured the effect of all possible single amino-acid mutations to Perth/2009 H3 on viral growth in cell culture, and shown that these measurements are informative about the evolutionary fate of human H3N2 viral strains in nature.
+Specifically, strains the trunk of the phylogenetic tree tend to have mutations that that our experiments score as more favorable than mutations on the side branches.
+Distinguishing between the trunk and side branches is the equivalent of identifying which strains succeed in nature, and so the ability of our experiments to do this show that they are useful.
 
-\begin{itemize}
-\item{These experimental measurements have utility in revealing differences between successful and unsuccessful lineages over 50 y of human influenza virus evolution.}
-\item{We have only measured the effect of mutations to HA on viral growth, but there are certainly other determinants of strain success}
-\item{Antigenic characteristics play a large role in determining strain success. We therefore need to know how mutations affect antigenicity.}
-\item{non-HA segments are important too}
-\end{itemize}
+It may seem surprising that simple measurements of viral growth in cell culture are informative about fitness in nature.
+There are many examples of mutations that have different effects in the lab and in nature, and our experiments definitely don't measure all the relevant factors.
+In addition, we only look at mutations to HA.
+Nonetheless, prior to our work there was no comprehensive estimates the functional effects of mutations on viral fitness outside of antigenicity.
+Therefore, all prior quantitative modeling either neglected non-antigenic effects or simply assumed that all mutations outside epitope sites had an equivalent deleterious effect on viral fitness.
+While our measurements are certainly imperfect, they are better than this.
+... also suggests that measurements in more realistic experimental models should be even more useful.
+
+Another caveat is that we are making measurements of the effects of mutations in a single HA variant, Perth/2009.
+We are then extrapolating those measurements across the full spectrum of seasonal human H3N2.
+These extrapolations will only be valid to the extent that the effects of mutations remain conserved during HA's evolution.
+It is known from extensive work on protein evolution that mutational effects can shift due to epistasis, and the extent to which this occurs is an important question in its own right.
+The success of our measurements across all H3N2 show that these shifts aren't too huge for relatively similar strains.
+But we also compared our measurements for H3 to prior measurements on H1 and found that there were large shifts --- much greater than those observed in prior protein-wide comparisons of more closely related homologs.
+The effective use of experiments for studying evolution in nature will require further analysis of how mutational effects shift in order to figure out how widely the results of any given experiment can be applied.
+
+Other things are important too.
+We did not look at antigenicity (whereas prior studies have only looked at that).
+In the future, our experimental approach could be used to look at antigenicity too.
 
 \matmethods{Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
 
