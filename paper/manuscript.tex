@@ -450,7 +450,7 @@ However, our high-throughput experimental approach can be harnessed to profile m
 In future, these antigenic studies can be combined with functional measurements to inform forecasting of the evolution of seasonal influenza virus.
 
 \matmethods{Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. 
-Computer code used to analyze the data and produce the results in the paper are in...
+Computer code used to analyze the data and produce the results in the paper are in \comment{link to repository}.
 
 \subsection*{HA numbering}
 Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 subunit in plain numbers, and the HA2 subunit denoted with "(HA2)". The conversion between sequential numbering of the A/Perth/16/2009 HA and H3 numbering was performed using an HA numbering Python script (available at \url{https://github.com/jbloomlab/HA_numbering}).
@@ -469,12 +469,12 @@ Recombinant A/Perth/16/2009 (HA, NA) $\times$ A/Puerto Rico/8/1934 influenza vir
 Bulk RNA from the viral sample was extracted using the QIAamp Viral RNA Mini Kit (QIAGEN) according to manufacturer's instructions.
 The Perth/2009 HA and NA genes were then reverse transcribed using the SuperScript III First-Strand Synthesis SuperMix Kit (Invitrogen), PCR amplified, and cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} plasmid backbones by In-Fusion.
 
-To generate wildtype Perth/2009 H3N2 virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 cells with reverse genetics plasmids encoding the Perth/2009 HA and NA, WSN/1933 internal genes, and the TMPRSS2 lentiviral vector.
+To generate wildtype Perth/2009 H3N2 virus, we transfected in triplicate co-cultures of 293T and MDCK-SIAT1-TMPRSS2 cells with reverse genetics plasmids encoding the Perth/2009 HA and NA, WSN/1933 internal genes, and the TMPRSS2 lentiviral vector.
 \comment{add more details about reverse genetics?}
 The viral supernatant was harvested at 72 hours post-transfection, clarified at 1200 rpm for 5 min, and 0.01 to 1.0 ul of the supernatant was passaged onto $4 \times 10^{5}$ MDCK-SIAT1-TMPRSS2 cells in six-well plates for a total of six serial passages.
-After the final passage, RNA was extracted from 140 ul of the viral supernatant using the QIAamp Viral RNA Mini Kit.
+After the final passage, RNA was extracted from 140 ul of the viral supernatant for each replicate using the QIAamp Viral RNA Mini Kit.
 The HA and NA genes were reverse transcribed, PCR amplified, and sequenced by Sanger sequencing.
-Two mutations, G78D and T212I, arose to fixation after serial passaging. 
+Two mutations, G78D and T212I, arose to fixation in one of the replicates after serial passaging. 
 The Perth/2009 HA carrying these two mutations were cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} plasmid backbones.
 
 To validate that the variant Perth/2009 HA could support viral growth, we generated in duplicate by reverse genetics viruses with the original Perth/2009 HA or the Perth/2009 HA-G78D-T212I variant on a background of Perth/2009 NA $+$ WSN internal genes.
@@ -483,6 +483,7 @@ The viral supernatant was collected at 44 hours post-infection.
 Both the transfection and passage supernatants were titered by TCID$_{50}$ in MDCK-SIAT1-TMPRSS2 cells.
 
 The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using a PCR-based approach described in~\cite{bloom2014experimentally,dingens2017comprehensive} using two rounds of mutagenesis.
+The script used to design the mutagenesis primers is on \url{https://github.com/jbloomlab/CodonTilingPrimers}.
 The codon mutations were introduced into three independent replicates of the Perth/2009 HA variant.
 The mutant variants were then cloned into the pICR2 vector by digestion with BsmBI restriction sites, ligation by T4 DNA ligase, and electroporation and transformation into ElectroMAX DH10B competent cells (Invitrogen; 18290015). 
 We pooled over 6 million transformants for each replicate, cultured in liquid LB + ampicillin at 37$^{\circ}$C for 3 h with shaking, and maxiprepped.
@@ -496,7 +497,7 @@ The transfection supernatant was then expanded by passaging onto a monolayer of 
 
 To generate the mutant virus libraries, we transfected $5 \times 10^5$ MDCK-SIAT1-TMPRSS2 cells in suspension with 937.5 ng each of four protein expression plasmids encoding the ribonucleoprotein complex (HDM-Nan95-PA, HDM-Nan95-PB1, HDM-Nan95-PB2, and HDM-Aichi68-NP)~\cite{gong2013stability}, and 1250 ng of one of the three pICR2-mutant-HA libraries (or the wildtype pICR2-Perth2009-HA-G78D-T212I control) using Lipofectamine3000 (ThermoFisher;L3000008).
 We allowed the transfected cells to adhere in 6-well plates, then four hours later changed the media to D10 media (DMEM supplemented with 10\% heat-inactivated FBS, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL).
-Eighteen hours after transfection, we infected the cells with WSN/1933 HA-deficient helper virus by preparing an inoculum of 500 TCID$_{50}$ per $\mu$L in influenza growth media (Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL), and aspirating the D10 media from the cells, and adding 2 mL of the helper-virus inoculum to each well.
+Eighteen hours after transfection, we infected the cells with WSN/1933 HA-deficient helper virus by preparing an inoculum of 500 TCID$_{50}$ per $\mu$L in influenza growth media (Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL), aspirating the D10 media from the cells, and adding 2 mL of the helper-virus inoculum to each well.
 After three hours, we changed the media to fresh influenza growth media.
 Twenty-four hours after helper-virus infection, we harvested the viral supernatants for each replicate, froze aliquots at -80$^{\circ}$C, and titered in MDCK-SIAT1-TMPRSS2 cells.
 
@@ -524,7 +525,7 @@ The amino-acid preferences for each replicate and for the re-scaled, across-repl
 \subsection*{Alignments and phylogenetic analysis of HA sequences}
 To build the ExpCM using our measurements, we first downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
 The subsampled sequences were then aligned using MAFFT~\cite{katoh2013mafft} and used to build a phylogenetic tree using RAxML~\cite{stamatakis2006raxml}.
-We then used the phydms program~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms})
+We then used the phydms program~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms}) to fit phylogenetic substitution models using the aligned subsampled sequences.
 
 A description of the sequences and methods used to build the phylogenetic tree of HA subtypes shown in Figure~\ref{fig:distance_distribution}A is provided in~\cite{doud2017quantifying}.
 
@@ -633,8 +634,8 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 \begin{suppfigure}
 \centerline{\includegraphics[width=0.6\textwidth]{figs/S04_seqpref_zoomed/seqpref_zoomed.pdf}}
 \caption{\label{suppfig:seqpref_zoomed}
-{\bf The per-site sequence preference at epitope and non-epitope sites}
-The per-site sequence preferences shown in Figure~\ref{fig:sequence_preference}B, but on their own y-axes.
+{\bf The per-site sequence preference at epitope and non-epitope sites.}
+The per-site sequence preferences shown in Figure~\ref{fig:sequence_preference}B, but on separate y-axes.
 }
 \end{suppfigure}
 
