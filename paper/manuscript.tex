@@ -474,13 +474,19 @@ To generate wildtype Perth/2009 H3N2 virus, we transfected a co-culture of 293T 
 The viral supernatant was harvested at 72 hours post-transfection, clarified at 1200 rpm for 5 min, and 0.01 to 1.0 ul of the supernatant was passaged onto $4 \times 10^{5}$ MDCK-SIAT1-TMPRSS2 cells in six-well plates for a total of six serial passages.
 After the final passage, RNA was extracted from 140 ul of the viral supernatant using the QIAamp Viral RNA Mini Kit.
 The HA and NA genes were reverse transcribed, PCR amplified, and sequenced by Sanger sequencing.
-Two mutations, G78D and T212I, arose after serial passaging. 
+Two mutations, G78D and T212I, arose to fixation after serial passaging. 
 The Perth/2009 HA carrying these two mutations were cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} plasmid backbones.
+
+To validate that the variant Perth/2009 HA could support viral growth, we generated in duplicate by reverse genetics viruses with the original Perth/2009 HA or the Perth/2009 HA-G78D-T212I variant on a background of Perth/2009 NA $+$ WSN internal genes.
+The transfection supernatant was collected 72 hours post-transfection and passaged onto a monolayer of MDCK-SIAT1-TMPRSS2 cells at an MOI = 0.01.
+The viral supernatant was collected at 44 hours post-infection.
+Both the transfection and passage supernatants were titered by TCID$_{50}$ in MDCK-SIAT1-TMPRSS2 cells.
 
 The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using a PCR-based approach described in~\cite{bloom2014experimentally,dingens2017comprehensive} using two rounds of mutagenesis.
 The codon mutations were introduced into three independent replicates of the Perth/2009 HA variant.
 The mutant variants were then cloned into the pICR2 vector by digestion with BsmBI restriction sites, ligation by T4 DNA ligase, and electroporation and transformation into ElectroMAX DH10B competent cells (Invitrogen; 18290015). 
 We pooled over 6 million transformants for each replicate, cultured in liquid LB + ampicillin at 37$^{\circ}$C for 3 h with shaking, and maxiprepped.
+We randomly chose 31 clones to Sanger sequence, and summary statistics from sequencing are shown in Figure~\ref{suppfig:SangerSeq}.
 
 \subsection*{Generation and passaging of mutant viruses}
 The mutant virus libraries were generated and passaged using the approach described in~\cite{doud2016accurate} with several modifications.
@@ -507,11 +513,20 @@ The HA gene was then reverse-transcribed with AccuScript Reverse Transcriptase (
 We generated the HA PCR amplicons for each of the three plasmid libraries, the three virus libraries, one wildtype plasmid, and one wildtype virus samples using KOD Hot Start Master Mix (EMD Millipore;71842) according to the PCR reaction mixture and cycling conditions described in~\cite{bloom2014experimentally} and the P09-HA-For and P09-HA-Rev primers.
 We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite{wu2014high} to increase the accuracy from deep sequencing. 
 The approach we used is described in~\cite{doud2016accurate} (also see \url{https://jbloomlab.github.io/dms_tools2/bcsubamp.html}).
+The primers we used to generate the subamplicons are in Dataset~\ref{suppdata:bcsubamp_primers}.
 We performed sequencing on a lane of a flow cell of an Illumina HiSeq 2500 using 2 $\times$ 250 bp paired-end reads in rapid-run mode.
 
 \subsection*{Analysis of deep sequencing data}
 We used the dms\_tools2 software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}) to analyze the deep sequencing data.
 The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
+The amino-acid preferences for each replicate and for the re-scaled, across-replicate average are provided in Datasets \comment{suppfile}.
+
+\subsection*{Alignments and phylogenetic analysis of HA sequences}
+To build the ExpCM using our measurements, we first downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
+The subsampled sequences were then aligned using MAFFT~\cite{katoh2013mafft} and used to build a phylogenetic tree using RAxML~\cite{stamatakis2006raxml}.
+We then used the phydms program~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms})
+
+A description of the sequences and methods used to build the phylogenetic tree of HA subtypes shown in Figure~\ref{fig:distance_distribution}A is provided in~\cite{doud2017quantifying}.
 
 \subsection*{Inference of human H3N2 phylogenetic tree}
 \comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. subsampled how? inferred the tree, ancestral state reconstruction, visualized the tree...}
@@ -534,19 +549,15 @@ We repeated this randomization for a total of 10,000 times and calculated how fr
 
 Sequence preference per site for every node on the phylogenetic tree shown in Figure~\ref{fig:H3N2_phylogeny} was calculated using Equation 1 for all sites, or the set of epitope and non-epitope sites defined in~\cite{wolf2006long}.
 
-\subsection*{Alignments and phylogenetic analysis of HA sequences}
-To build the ExpCM using our measurements, we first downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
-The subsampled sequences were then aligned using MAFFT~\cite{katoh2013mafft} and used to build a phylogenetic tree using RAxML~\cite{stamatakis2006raxml}.
-We then used the phydms program~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms})
-
-A description of the sequences and methods used to build the phylogenetic tree of HA subtypes shown in Figure~\ref{fig:distance_distribution}A is provided in~\cite{doud2017quantifying}.
-
 \subsection*{Analysis of mutational shifts}
 To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using MAFFT~\cite{katoh2013mafft}.
 To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2017mapping} and based off the method presented in~\cite{doud2015site}.
 Briefly, for each site we calculated half of the sum of the absolute value of the difference between preferences for each amino acid.
 The RMSD$_{\text{corrected}}$ value signifies the shift in preference.
-\comment{add more here about absolutely conserved, clade-specific sites, etc}
+
+For the plots shown in Figure~\ref{fig:RMSD_heatmap}B, any residues falling between Cys-52 and Cys-277 were defined as the head domain, and all other residues were defined as the stalk domain.
+We used a multiple sequence alignment of the HA subtype sequences provided in~\cite{doud2017quantifying} to list sites that are absolutely conserved across all subtypes.
+To find clade-specific sites, we listed sites with a single amino-acid identity in all of H1, H2, H5, and H6, and a different identity in H3, H4, and H14. 
 }
 
 \showmatmethods{} % Display the Materials and Methods section
@@ -613,7 +624,7 @@ The blue line indicates the expected distribution if mutations in multiply mutat
 \centerline{\includegraphics[width=\textwidth]{figs/S03_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
 \caption{\label{suppfig:WSNprefs_logoplot}
 {\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA.} 
-The amino-acid preferences from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by the stringency parameter \comment{somehow indicate where this stringency parameter}.
+The amino-acid preferences from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
 The sites are in H3 numbering.
 The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
 }
@@ -636,6 +647,42 @@ Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with 
 \begin{suppdata}
 \caption{\label{suppdata:PerthHA}
 Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth2009-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:bcsubamp_primers}
+Excel file providing the primers used to generate the barcoded subamplicons for Perth/2009 HA deep sequencing.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:rep1_prefs}
+CSV file providing the amino-acid preferences for replicate 1 in sequential HA numbering.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:rep2_prefs}
+CSV file providing the amino-acid preferences for replicate 2 in sequential HA numbering.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:rep3-1_prefs}
+CSV file providing the amino-acid preferences for replicate 3-1 in sequential HA numbering.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:rep3-2_prefs}
+CSV file providing the amino-acid preferences for replicate 3-2 in sequential HA numbering.
+}
+\end{suppdata}
+
+\begin{suppdata}
+\caption{\label{suppdata:avg_prefs}
+CSV file providing the across-replicate averaged and re-scaled amino-acid preferences in H3 numbering.
 }
 \end{suppdata}
 
