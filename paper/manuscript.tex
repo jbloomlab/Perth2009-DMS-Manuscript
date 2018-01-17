@@ -300,7 +300,7 @@ More preferred sequences have larger values.
 \subsection*{Our experiments suggest different patterns of evolution at epitope and non-epitope sites}
 HA is under selection both to maintain its essential function in viral growth and to escape pre-existing immunity.
 Most immune selection is focused on a subset of so-called ``epitope sites'' that are targets of the immunodominant antibody response.
-Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites\comment{Maybe add some references to this point?}.
+Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites~\cite{fitch1991positive,wolf2006long,bhatt2011genomic}.
 There are various classifications of HA epitope sites; here we will use the classification of Wolf \textit{et al}~\cite{wolf2006long}, which defines 129 epitope sites among the 567 residues in HA.
 In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed 0.84 epitope mutations per site, but only 0.07 non-epitope mutations per site.
 Since our experiments only measure how mutations affect viral growth, they might be expected to describe the evolution of epitope and non-epitope sites differently.
@@ -449,13 +449,16 @@ Importantly, the antigenic properties of HA are integral in determining strain s
 However, our high-throughput experimental approach can be harnessed to profile mutations that confer escape from antibodies, as has been performed for the WSN/1933 H1 HA~\cite{doud2017complete,doud2017quantifying} and HIV Env~\cite{dingens2017comprehensive}.
 In future, these antigenic studies can be combined with functional measurements to inform forecasting of the evolution of seasonal influenza virus.
 
-\matmethods{Please describe your materials and methods here. This can be more than one paragraph, and may contain subsections and equations as required. Authors should include a statement in the methods section describing how readers will be able to access the data in the paper.
+\matmethods{Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. 
+Computer code used to analyze the data and produce the results in the paper are in...
 
 \subsection*{HA numbering}
 Unless otherwise indicated, all sites are in H3 numbering, with the signal peptide in negative numbers, the HA1 subunit in plain numbers, and the HA2 subunit denoted with "(HA2)". The conversion between sequential numbering of the A/Perth/16/2009 HA and H3 numbering was performed using an HA numbering Python script (available at \url{https://github.com/jbloomlab/HA_numbering}).
 
 \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cell line}
-\comment{A sentence or two about the rationale: Normally trypsin must be added. In order to obviate the need for trypsin.}
+When growing influenza virus, TPCK-trypsin must normally be added in order to cleave HA into its mature form.
+In order to obviate the need for trypsin, we engineered an MDCK-SIAT1 cell line to constitutively express the TMPRSS2 protease.
+This protease cleaves and activates HA and is found endogenously in the human airway~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
 The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656), PCR amplified, and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter followed by an IRES driving expression of mCherry.
 We used the lentiviral vector to transduce MDCK-SIAT1 cells, and sorted an intermediate mCherry population by flow cytometry.
 We refer to the resulting bulk population of sorted cells as MDCK-SIAT1-TMPRSS2 cells.
@@ -464,7 +467,7 @@ There is no selectable marker for the TMPRSS2; however, we generally maintain th
 \subsection*{Generation of HA codon mutant plasmid libraries}
 Recombinant A/Perth/16/2009 (HA, NA) $\times$ A/Puerto Rico/8/1934 influenza virus, NIB-64, NR-41803 was ordered from BEI Resources, NIAID, NIH. 
 Bulk RNA from the viral sample was extracted using the QIAamp Viral RNA Mini Kit (QIAGEN) according to manufacturer's instructions.
-The Perth/2009 HA and NA genes were then reverse transcribed using the SuperScript III First-Strand Synthesis SuperMix Kit (Invitrogen), PCR amplified, and cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2 \comment{cite?} plasmid backbones by In-Fusion.
+The Perth/2009 HA and NA genes were then reverse transcribed using the SuperScript III First-Strand Synthesis SuperMix Kit (Invitrogen), PCR amplified, and cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} plasmid backbones by In-Fusion.
 
 To generate wildtype Perth/2009 H3N2 virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 cells with reverse genetics plasmids encoding the Perth/2009 HA and NA, WSN/1933 internal genes, and the TMPRSS2 lentiviral vector.
 \comment{add more details about reverse genetics?}
@@ -472,7 +475,7 @@ The viral supernatant was harvested at 72 hours post-transfection, clarified at 
 After the final passage, RNA was extracted from 140 ul of the viral supernatant using the QIAamp Viral RNA Mini Kit.
 The HA and NA genes were reverse transcribed, PCR amplified, and sequenced by Sanger sequencing.
 Two mutations, G78D and T212I, arose after serial passaging. 
-The Perth/2009 HA carrying these two mutations were cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2 \comment{cite?} plasmid backbones.
+The Perth/2009 HA carrying these two mutations were cloned into the pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} plasmid backbones.
 
 The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using a PCR-based approach described in~\cite{bloom2014experimentally,dingens2017comprehensive} using two rounds of mutagenesis.
 The codon mutations were introduced into three independent replicates of the Perth/2009 HA variant.
@@ -502,11 +505,13 @@ We then extracted the RNA using the Qiagen RNeasy Mini Kit by resuspending the v
 The HA gene was then reverse-transcribed with AccuScript Reverse Transcriptase (Agilent 200820) using the primers P09-HA-For (5'-AGCAAAAGCAGGGGATAATTCTATTAATC-3') and P09-HA-Rev (5'-AGTAGAAACAAGGGTGTTTTTAATTACTAATACAC-3').
 
 We generated the HA PCR amplicons for each of the three plasmid libraries, the three virus libraries, one wildtype plasmid, and one wildtype virus samples using KOD Hot Start Master Mix (EMD Millipore;71842) according to the PCR reaction mixture and cycling conditions described in~\cite{bloom2014experimentally} and the P09-HA-For and P09-HA-Rev primers.
-\comment{used the same conditions as Mike - cite his Viruses paper to be succinct?}.
+We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite{wu2014high} to increase the accuracy from deep sequencing. 
+The approach we used is described in~\cite{doud2016accurate} (also see \url{https://jbloomlab.github.io/dms_tools2/bcsubamp.html}).
 We performed sequencing on a lane of a flow cell of an Illumina HiSeq 2500 using 2 $\times$ 250 bp paired-end reads in rapid-run mode.
 
 \subsection*{Analysis of deep sequencing data}
-We used dms\_tools2...
+We used the dms\_tools2 software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}) to analyze the deep sequencing data.
+The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
 
 \subsection*{Inference of human H3N2 phylogenetic tree}
 \comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. subsampled how? inferred the tree, ancestral state reconstruction, visualized the tree...}
@@ -521,31 +526,32 @@ For a given mutation a1-r-a2, we calculated the mutational effect as:
 \log_2 \frac{\pi_{r,a2}}{\pi_{r,a1}}
 \end{equation}
 where $\pi_{r,a1}$ and $\pi_{r,a2}$ are the preferences for amino-acid $a1$ or $a2$ at site $r$, and the preferences are re-scaled by the stringency parameter provided in Table~\ref{tab:phydms} and averaged across replicates.
-The WSN/1933 H1 HA amino-acid preferences were also re-scaled \comment{by stringency parameter in...} and averaged across replicates.
-The mutational effects for each five-year window were calculated for nodes with date $\geq$ YEAR1 and $<$ YEAR1 $+ 5$, and windows were incremented by one year.
+The WSN/1933 H1 HA amino-acid preferences were also re-scaled by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}) and averaged across replicates.
+The mutational effects were also calculated for five-year windows from 1968 to 2012, and windows were incremented by one year.
 
-To calculate significance, we randomized the amino-acid preferences across sites and quantified the median difference in trunk and side branch mutational effects.
+To calculate significance, we randomized the amino-acid preferences across all sites, epitope sites, or non-epitope sites, and quantified the median difference in trunk and side branch mutational effects.
 We repeated this randomization for a total of 10,000 times and calculated how frequently the difference in median mutational effect between trunk and side branches exceeded the true difference to obtain a $P$-value.
 
 Sequence preference per site for every node on the phylogenetic tree shown in Figure~\ref{fig:H3N2_phylogeny} was calculated using Equation 1 for all sites, or the set of epitope and non-epitope sites defined in~\cite{wolf2006long}.
 
 \subsection*{Alignments and phylogenetic analysis of HA sequences}
+To build the ExpCM using our measurements, we first downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
+The subsampled sequences were then aligned using MAFFT~\cite{katoh2013mafft} and used to build a phylogenetic tree using RAxML~\cite{stamatakis2006raxml}.
+We then used the phydms program~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms})
+
 A description of the sequences and methods used to build the phylogenetic tree of HA subtypes shown in Figure~\ref{fig:distance_distribution}A is provided in~\cite{doud2017quantifying}.
-To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using mafft \comment{cite}.
-To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2017mapping} and based off the method presented in~\cite{doud2015site}.
-Briefly, for each site we calculated half of the sum of the absolute value of the difference between preferences for each amino acid.
-The RMSD$_{\text{corrected}}$ value sig
 
 \subsection*{Analysis of mutational shifts}
-
-\subsection*{Data availability and source code}
-Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610. Computer code used to analyze the data and produce the results in the paper are in...
+To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using MAFFT~\cite{katoh2013mafft}.
+To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2017mapping} and based off the method presented in~\cite{doud2015site}.
+Briefly, for each site we calculated half of the sum of the absolute value of the difference between preferences for each amino acid.
+The RMSD$_{\text{corrected}}$ value signifies the shift in preference.
+\comment{add more here about absolutely conserved, clade-specific sites, etc}
 }
 
 \showmatmethods{} % Display the Materials and Methods section
 
-\acknow{We thank Sarah Hilton, Hugh Haddox, Sidney Bell for helpful discussions about data analysis...the Fred Hutch Genomics Core...
-Funding...}
+\acknow{We thank Sarah Hilton, Hugh Haddox, and Sidney Bell for helpful discussions about data analysis. We thank the Fred Hutch Genomics Core for performing the Illumina deep sequencing. This work was supported by...}
 
 \showacknow{} % Display the acknowledgments section
 
