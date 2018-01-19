@@ -17,6 +17,10 @@
 \DeclareFloatingEnvironment[name={Dataset}]{suppdata}
 \renewcommand{\thesuppdata}{S\arabic{suppdata}}
 
+\setcounter{topnumber}{10}
+\setcounter{bottomnumber}{10}
+\setcounter{totalnumber}{10}
+
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 
 
@@ -126,12 +130,6 @@ This strain was the H3N2 component of the influenza vaccine from 2010-2012~\cite
 Relative to the consensus sequence for this HA in Genbank, we used a variant with two mutations that enhanced viral growth in cell culture, G78D and T212I (Figure~\ref{suppfig:Perth2009_mut} and Dataset~\ref{suppdata:PerthHA}).
 The G78D mutation occurs at low frequency in natural H3N2 sequences, and T212 is a site where a mutation to Ala rose to fixation in human influenza in $\sim$2011.
 
-We mutagenized the entire HA coding sequence at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone (Figure~\ref{suppfig:SangerSeq}).
-We then generated mutant virus libraries from the mutant plasmids using a helper-virus system that enables efficient generation of complex influenza virus libraries~\cite{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
-These mutant viruses derived all their non-HA genes from the lab-adapted A/WSN/1933 strain.
-Using WSN/1933 for the non-HA genes reduces biosafety concerns, and also helped increase viral titers.
-To further increase viral titers, we used MDCK-SIAT1 cells that we had engineered to constitutively express the TMPRSS2 protease, which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
-
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
 \includegraphics[width=12cm]{figs/dms_overview/dms_overview.pdf}
@@ -145,6 +143,12 @@ We also passaged and deep sequenced library 3 in duplicate.
 (D) The Pearson correlations among the amino-acid preferences estimated in each replicate. 
 }
 \end{SCfigure*}
+
+We mutagenized the entire HA coding sequence at the codon level to create mutant plasmid libraries harboring an average of $\sim$1.4 codon mutations per clone (Figure~\ref{suppfig:SangerSeq}).
+We then generated mutant virus libraries from the mutant plasmids using a helper-virus system that enables efficient generation of complex influenza virus libraries~\cite{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
+These mutant viruses derived all their non-HA genes from the lab-adapted A/WSN/1933 strain.
+Using WSN/1933 for the non-HA genes reduces biosafety concerns, and also helped increase viral titers.
+To further increase viral titers, we used MDCK-SIAT1 cells that we had engineered to constitutively express the TMPRSS2 protease, which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
 
 After generating the mutant virus libraries, we passaged them at low MOI in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
 All experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B). 
@@ -279,7 +283,10 @@ where $\pi_{r, s_r}$ is the preference measured in our experiments (e.g., Figure
 Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend to have higher preference than those of side branch nodes across the entire timespan, consistent with the finding that trunk mutations are generally more favorable than side branch mutations. 
 However, the average per-site sequence preference increases as the nodes approach the Perth/2009 strain.
 The Perth/2009 itself has among the highest per-site sequence preference of the entire tree, despite falling on a side branch.
-These results suggest that there is some HA background-dependence in the effects of mutations, but that despite this fact our experimental measurements consistently reveal the selective advantage of the trunk over more than a half-century of viral evolution.
+We do not think that this result means that Perth/2009 is actually higher fitness than the other strains.
+Rather, if there are modest shifts in the effects of mutations as HA evolves, then sequences more distant from Perth/2009 could be scored as having lower preference simply because these shifts start to degrade the accuracy of our measurements.
+But importantly, our experiments consistently show the trunk to be more favorable than the side branches regardless of whether we look at sequences that precede Perth/2009 (most of Figure~\ref{fig:trunkvssidebranch}C) or sequences that occur after Perth/2009 has diverged from the trunk (Figure~\ref{suppfig:future}). 
+Therefore, our experimental measurements consistently reveal the selective advantage of the trunk over more than a half-century of viral evolution.
 
 
 \begin{figure}
@@ -635,6 +642,20 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 \end{suppfigure}
 
 \begin{suppfigure}
+\comment{add figure}
+\caption{\label{suppfig:future}
+Our experiments show a selective advantage for the trunk even if we limit the analysis to sequences that occur after the split of Perth/2009 off the trunk.
+(A) Phylogenetic tree showing all nodes that branch from the trunk before or contemporaneously with Perth/2009 (orange), all nodes that occur after the branch to Perth/2009 for which we can resolve the trunk (red) or side branches (blue), and all nodes for which it is not yet clear which sequences will be on the trunk or side branches.
+In this figure, we restrict the analysis to the nodes in red or blue.
+(B)  
+Average per-site sequence preference (similar to Figure~\ref{fig:trunkvssidebranch}C) for all trunk and side-branch nodes that occur after the branch to Perth/2009.
+(C)
+The sequence preferences of nodes on the trunk generally exceed those of nodes on the side branches along the post-Perth/2009 portion of the tree.
+Note that because there are relatively few post-Perth/2009 sequences for which we can currently distinguish trunk from side branch, the number of points in this plot is small, precluding meaningful statistical analyses of the type performed in Figure~\ref{fig:trunkvssidebranch}B.
+}
+\end{suppfigure}
+
+\begin{suppfigure}
 \centerline{\includegraphics[width=0.6\textwidth]{figs/S04_seqpref_zoomed/seqpref_zoomed.pdf}}
 \caption{\label{suppfig:seqpref_zoomed}
 {\bf The per-site sequence preference at epitope and non-epitope sites.}
@@ -642,11 +663,10 @@ The per-site sequence preferences shown in Figure~\ref{fig:sequence_preference}B
 }
 \end{suppfigure}
 
-\subsubsection*{SI Tables}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a PDF with the same file name for visual reference); include only one table per file. Do not use tabs or spaces to separate columns in Word tables.
+\clearpage
 
 \subsubsection*{SI Datasets} 
+\FloatBarrier
 
 \begin{suppdata}
 \caption{\label{suppdata:PerthHA}
