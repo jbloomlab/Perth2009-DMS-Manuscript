@@ -1,16 +1,17 @@
-# Perth2009-DMS-Manuscript Analysis Code
+# Deep mutational scanning of the Perth/2009 H3N2 HA
 
 ## Overview
 
-This is the analysis code directory for the deep mutational scanning of the A/Perth/16/2009(H3N2) HA manuscript repository.
+This is the analysis code directory for the deep mutational scanning of the A/Perth/16/2009(H3N2) HA. 
+We analyze the deep mutational scanning data, and then see if it useful for identifying the fates of viral lineages in nature.
 Study by Juhye Lee, John Huddleston, Mike Doud, Katie Hooper, Trevor Bedford & Jesse Bloom.
 
 ## Organization
 
 #### Analysis notebooks
 There are two analysis notebooks:
-  * `dms_analysis.ipynb`: in this notebook, we analyze deep sequencing data and estimate the amino-acid preferences using `dms_tools2`. We also compare the shifts in amino-acid preferences between the Perth/2009 H3 and the WSN/1933 H1 HA's.
-  * `trunk_vs_tip_analysis.ipynb`: in this notebook, we use the Perth/2009 H3 HA amino-acid preferences to examine differences in trunk and side branch lineages of human H3N2 influenza viral strains.
+  * [analysis_notebook.ipynb](analysis_notebook.ipynb): in this notebook, we analyze deep sequencing data and estimate the amino-acid preferences using `dms_tools2`. We also compare the shifts in amino-acid preferences between the Perth/2009 H3 and the WSN/1933 H1 HA's.
+  * [trunk_vs_tip_analysis.ipynb](trunk_vs_tip_analysis.ipynb): in this notebook, we use the Perth/2009 H3 HA amino-acid preferences to examine differences in trunk and side branch lineages of human H3N2 influenza viral strains.
 
 #### Input files
 The [./data/](./data/) subdirectory contains the following input files:
@@ -18,7 +19,6 @@ The [./data/](./data/) subdirectory contains the following input files:
   * `abs_conserved_sites.txt`: list of sites that are absolutely conserved across all 18 HA subtypes
   * `clade_specific_sites.txt`: list of sites that have clade-specific identities in the clade containing H1 and the clade containing H3
   * `domains.csv`: csv file listing each site and its associated HA domain
-  * `Env_BF520_replicate-*_prefs_rescaled.csv`: amino-acid preferences files for HIV Env (BF520) for each replicate. These amino-acid preferences have already been re-scaled
   * `flu_h3n2_1968_6v_tree.json.gz`: tree build of human H3N2 influenza virus HA sequences in a `JSON` file format
   * `H1toH3_renumber.csv`: file to convert from H1 sequential numbering to H3 numbering
   * `H3_human_alignment.fa`: file of subsampled human seasonal H3N2 HA sequences for running `phydms`
@@ -32,3 +32,5 @@ The [./data/](./data/) subdirectory contains the following input files:
   * `WSN_compareprefs_renumber.csv`: file to renumber the WSN/1933 H1 preferences to allow for comparing the preferences between H1 and H3
   * `WSN_HA_reference.fa`: the reference sequence for the wildtype WSN/1933 H1 HA
   * `WSN_replicate-*_prefs.csv`: the unscaled amino-acid preferences files for the WSN/1933 H1 HA for each replicate, in sequential numbering
+  * `Env_BF520_replicate-*_prefs_rescaled.csv`: amino-acid preferences files for HIV Env (BF520) for each replicate. These amino-acid preferences have already been re-scaled. Taken from [Haddox et al](https://doi.org/10.1101/235630).
+  * `BG505_to_BF520_prefs_dist.csv`: shifts between BG505 and BF520 preferences as calculated by [Haddox et al](https://doi.org/10.1101/235630).
