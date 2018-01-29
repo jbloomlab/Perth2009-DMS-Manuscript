@@ -538,8 +538,13 @@ The amino-acid preferences were re-scaled by the stringency parameter using the 
 The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2017quantifying}.
 
 \subsection*{Inference of human H3N2 phylogenetic tree}
-\comment{John to add methods here. We downloaded X sequences from the Influenza Virus Resource ?.... etc. subsampled how? inferred the tree, ancestral state reconstruction, visualized the tree...}
-To parse trunk mutations from side branch mutations, we defined a set of recent nodes sampled on or after Jan-1-2017, and traced these nodes back to their most recent common ancestor. 
+We downloaded H3N2 HA sequences from 1968 to 2017 using a curated database of publicly available sequences from GISAID (https://github.com/nextstrain/fauna; commit 1281ed9).
+We constructed an annotated phylogenetic tree from these sequences using Nextstrain's augur tool \cite{Hadfield224048} (https://github.com/nextstrain/augur; commit 006896d) with sequences subsampled to six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
+This subsampling selected 2,145 strains of H3N2's HA.
+The tree was constructed with RAxML 8.2.10~\cite{stamatakis2006raxml}.
+Ancestral state reconstruction and branch length timing were performed with treetime~\cite{Sagulenko2018}.
+
+To parse trunk mutations from side branch mutations, we defined a set of recent nodes sampled on or after Jan-1-2017, and traced these nodes back to their most recent common ancestor.
 We defined all branches ancestral to this most recent common ancestor as the trunk.
 All nodes that do not have descendants isolated after 2017 were defined as side branch nodes.
 Nodes descended from the most recent common ancestor were defined as unresolved, as it is still unclear whether these nodes will ultimately be on the trunk or side branches.
