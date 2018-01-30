@@ -52,7 +52,7 @@
 A key goal in the study of influenza virus evolution is to forecast which viral strains will persist and which ones will die out. 
 Here we experimentally measure the effects of all amino-acid mutations to the hemagglutinin protein from a human H3N2 influenza strain on viral growth in cell culture.
 We show that these measurements have utility for distinguishing among viral strains that do and do not succeed in nature.
-Overall, our work suggest that new high-throughput experimental approaches may be useful for evolutionary forecasting.
+Overall, our work suggests that new high-throughput experimental approaches may be useful for evolutionary forecasting.
 }
 
 % Please include corresponding author, author contribution and author declaration information
@@ -166,7 +166,7 @@ Because there are 566 residues in HA, there are $566 \times 20 = 11,320$ estimat
 The correlations of the amino-acid preferences between pairs of replicates are shown in Figure~\ref{fig:dms_overview}D.
 The biological replicates are fairly well-correlated, with Pearson's $R$ ranging from 0.69 to 0.78. 
 Replicate 1 exhibited the weakest correlation with the other replicates; this replicate also showed the weakest selection against stop and nonsynonymous mutations (Figure~\ref{fig:dms_overview}C), perhaps indicating more experimental noise.
-The two technical replicates 3-1 and 3-2 were only slightly more correlated than pairs of biological replicates, suggesting that bottlenecking of library diversity after the reverse-genetics step contributes most of the experimental noise.
+The two technical replicates 3-1 and 3-2 were only slightly more correlated than pairs of biological replicates, suggesting that bottlenecking of library diversity during viral passage contributes most of the experimental noise.
 
 \subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
 How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
@@ -283,7 +283,7 @@ Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend
 However, the average per-site sequence preference increases as the nodes approach the Perth/2009 strain.
 The Perth/2009 itself has among the highest per-site sequence preference of the entire tree, despite falling on a side branch.
 We do not think that this result means that Perth/2009 is actually higher fitness than the other strains.
-Rather, if there are modest shifts in the effects of mutations as HA evolves, then sequences more distant from Perth/2009 could be scored as having lower preference simply because these shifts start to degrade the accuracy of our measurements.
+Rather, if there are modest shifts in the effects of mutations as HA evolves, then sequences more distant from Perth/2009 could be scored as having lower preference simply because these shifts start to degrade the applicability of our measurements.
 But importantly, our experiments consistently show the trunk to be more favorable than the side branches regardless of whether we look at sequences that precede Perth/2009 (most of Figure~\ref{fig:trunkvssidebranch}C) or sequences that occur after Perth/2009 has diverged from the trunk (Figure~\ref{suppfig:future}). 
 Therefore, our experimental measurements consistently reveal the selective advantage of the trunk over more than a half-century of viral evolution.
 
@@ -316,7 +316,7 @@ Since our experiments only measure how mutations affect viral growth, they might
 
 Mutations that occur on the trunk are scored as significantly more favorable in our experiments than side-branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}A).
 Therefore, our experiments can distinguish evolutionarily favorable mutations both at sites that are predominantly under functional constraint and at sites that are also under immune pressure.
-The fact that our experiments can discriminate between the trunk and side branches at epitope sites despite only assaying for viral growth underscores the fact that most epitope sites are still important for HA function~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
+The fact that our experiments can discriminate between the trunk and side branches at epitope sites despite only assaying for viral growth underscores the fact that mutations at epitope sites still have significant non-antigenic functional consequences~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
 
 However, there are differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
 The per-site sequence preference at epitope sites increases over time, whereas at non-epitope sites it remains relatively constant  (Figure~\ref{fig:sequence_preference}B and Figure~\ref{suppfig:seqpref_zoomed}).
@@ -371,7 +371,7 @@ Figure~\ref{fig:distance_distribution}C shows the distribution of shifts in amin
 Although some sites have small shifts near zero, many sites have large shifts.
 These shifts between H3 and H1 are much larger than expected from the null distribution that would be observed purely from experimental noise.
 They are also much larger than the shifts previously observed between two HIV Envs with 86\% amino-acid identity~\cite{haddox2017mapping}.
-However, the shifts are still smaller than those observed when comparing HA to the non-homologous HIV Env protein. 
+However, the typical shift between H3 and H1 is still smaller than that observed when comparing HA to the non-homologous HIV Env protein. 
 Therefore, there are very substantial shifts in mutational effects between highly diverged HA homologs, although the effects of mutations remain more similar than for non-homologous proteins.
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
@@ -387,7 +387,7 @@ $R$ indicates the Pearson correlation coefficient.
 (C) We calculated the shift in amino-acid preferences at each site between H3 and H1 HAs using the method in \cite{haddox2017mapping}, and plotted the distribution of shifts for all sites.
 The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences are due to experimental noise.
 The shifts are also much larger than those previously observed between two variants of HIV envelope protein (Env) that share 86\% amino-acid identity (pink).
-However, the shifts between H3 and H1 are still less than the differences between either HA and HIV Env (green).
+However, the shifts between H3 and H1 are usually less than the differences between either HA and HIV Env (green).
 }
 \end{SCfigure*}
 
@@ -455,9 +455,9 @@ On the other hand, when we compared our measurements for an H3 HA to prior measu
 Further investigation of how mutational effects shift as proteins diverge will be important for determining how broadly any given experiment can be generalized when attempting to make evolutionary forecasts.
 
 Our work did not characterize the antigenic effects of mutations, which also play an important role in determining strain success in nature~\cite{koel2013substitutions,neher2016prediction}.
-Indeed, some of our results (\textit{e.g.}, Figure~\ref{fig:sequence_preference}) suggest as much by showing that the experiments better capture selection at non-epitope than epitope sites.
+%Indeed, some of our results (\textit{e.g.}, Figure~\ref{fig:sequence_preference}) suggest as much by showing that the experiments better capture selection at non-epitope than epitope sites.
 However, our basic selection and deep-sequencing approach can be harnessed to completely map how mutations affect antibody recognition~\cite{doud2017complete,doud2017quantifying}.
-But so far, experiments using this approach have either failed to examine antibodies or sera that are relevant to driving the evolution of H3N2 influenza~\cite{doud2017complete,doud2017quantifying}, or have used relevant sera but examined a non-comprehensive set of mutations~\cite{li2016selection}.
+But so far, experiments using this approach have not examined antibodies or sera that are relevant to driving the evolution of H3N2 influenza~\cite{doud2017complete,doud2017quantifying}, or have used relevant sera but examined a non-comprehensive set of mutations~\cite{li2016selection}.
 Future experiments that completely map how HA mutations affect recognition by human sera seem likely to be especially fruitful for informing viral forecasting.
 
 \matmethods{
