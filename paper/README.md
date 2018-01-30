@@ -1,0 +1,3 @@
+# Manuscript
+
+Compile with `rake`.
