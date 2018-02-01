@@ -117,7 +117,7 @@ However, while extensive work has gone into characterizing how mutations affect 
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of large numbers of mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
 Here we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain, A/Perth/16/2009.
-We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
+We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side-branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
 However, the experiments are useful for assessing the effects of mutations only in closely related viral strains, since we show that mutations often have disparate effects on H3 and H1 HAs.
 Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
 
@@ -264,9 +264,9 @@ A major goal in the study of rapidly evolving viruses such as influenza is to fo
 For instance, forecasting which viral lineages will dominate the upcoming influenza season is an integral part of vaccine-strain selection~\cite{neher2015nextflu,lassig2017predicting,morris2017predictive}.
 Evolutionary forecasts should be able to distinguish successful and unsuccessful viral lineages, which includes discriminating between the trunk and side branches of the phylogenetic tree (Figure~\ref{fig:H3N2_phylogeny}).
 
-To investigate whether our experiments can aid in distinguishing trunk and side branch lineages, we calculated the experimentally measured effects of all mutations in a maximum-likelihood reconstruction of the H3N2 phylogeny (Figure~\ref{fig:H3N2_phylogeny}).
+To investigate whether our experiments can aid in distinguishing trunk and side-branch lineages, we calculated the experimentally measured effects of all mutations in a maximum-likelihood reconstruction of the H3N2 phylogeny (Figure~\ref{fig:H3N2_phylogeny}).
 The mutations that occurred on the trunk of the tree were consistently more beneficial for viral growth according to our experimental measurements (Figure~\ref{fig:trunkvssidebranch}A).
-This difference in the effects of mutations between the trunk and side branch lineages was statistically significant when taken across the entire phylogeny (Figure~\ref{fig:trunkvssidebranch}B).
+This difference in the effects of mutations between the trunk and side-branch lineages was statistically significant when taken across the entire phylogeny (Figure~\ref{fig:trunkvssidebranch}B).
 Some influenza sequences are derived from egg- or cell-passaged isolates that contain lab-adaptation mutations~\citep{mcwhite2016sequence}.
 These mutations mostly occur on the terminal side branches that lead to tip nodes on the phylogenetic tree.
 We therefore re-calculated the statistics separating side branches to tip and internal nodes, and again found that the difference between the trunk and both sets of side branches was statistically significant (Figure~\ref{fig:trunkvssidebranch}B).
@@ -279,7 +279,7 @@ To explore this question, we scored the complete HA sequence $\mathbf{s}$ of eve
 F\left(\mathbf{s}\right) = \frac{1}{L}\displaystyle\sum_{r=1}^L \ln \pi_{r, s_r},
 \end{equation}
 where $\pi_{r, s_r}$ is the preference measured in our experiments (e.g., Figure~\ref{fig:logoplot}) for the amino acid $s_r$ at site $r$ in HA sequence $\mathbf{s}$, and $L$ is the length of the sequence.
-Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend to have higher preference than those of side branch nodes across the entire timespan, consistent with the finding that trunk mutations are generally more favorable than side branch mutations. 
+Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend to have higher preference than those of side-branch nodes across the entire timespan, consistent with the finding that trunk mutations are generally more favorable than side-branch mutations. 
 However, the average per-site sequence preference increases as the nodes approach the Perth/2009 strain.
 The Perth/2009 itself has among the highest per-site sequence preference of the entire tree, despite falling on a side branch.
 We do not think that this result means that Perth/2009 is actually higher fitness than the other strains.
@@ -293,7 +293,7 @@ Therefore, our experimental measurements consistently reveal the selective advan
 \includegraphics[width=\columnwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}
 \caption{\label{fig:trunkvssidebranch}
 {\bf Mutations on the trunk are more favorable than those on the side branches according to our experimental measurements.}
-(A) We used our experiments to calculate the log$_{2}$ mutational effect for all trunk and side branch mutations in five-year windows from 1968 to 2013. 
+(A) We used our experiments to calculate the log$_{2}$ mutational effect for all trunk and side-branch mutations in five-year windows from 1968 to 2013. 
 The central year in each window is denoted on the x-axis.
 Median mutational effects in each window are shown as circles for the trunk and triangles for side branches. 
 Shaded regions demarcate the interquartile range.
@@ -301,7 +301,7 @@ Negative numbers signify mutations to less preferred amino acids, while positive
 (B) The log$_{2}$ mutational effect for all side branch and trunk mutations (left panel), and the same data but separating side branches to terminal and internal nodes (right panel).
 $P$-values were computed by randomizing the experimental measurements among sites 10,000 times, and determining how often the difference in median mutational effect between the trunk and side branches exceeded the actual value.
 (C) The average per-site sequence preference of every node in the phylogenetic tree in Fig.~\ref{fig:H3N2_phylogeny}.
-Trunk nodes are in red, side branch nodes in blue, and Perth/2009 is marked with a yellow star.
+Trunk nodes are in red, side-branch nodes in blue, and Perth/2009 is marked with a yellow star.
 More preferred sequences have larger values.
 }
 \end{figure}
@@ -335,7 +335,7 @@ Such a trend is not apparent for non-epitope sites, perhaps because they are und
 \caption{\label{fig:sequence_preference}
 {\bf Effects of mutations at epitope and non-epitope sites during HA evolution.}
 We partitioned HA into epitope and non-epitope sites~\cite{wolf2006long}.
-(A) The log$_{2}$ mutational effects for side branch and trunk mutations at non-epitope (left) and epitope (right) sites.
+(A) The log$_{2}$ mutational effects for side-branch and trunk mutations at non-epitope (left) and epitope (right) sites.
 $P$-values were computed as in Figure~\ref{fig:trunkvssidebranch} but only performing the randomizations over the appropriate set of sites (non-epitope or epitope).
 (B) 
 The average per-site sequence preference for all nodes in the phylogenetic tree, calculated separately for each set of sites.
@@ -540,9 +540,9 @@ We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013maf
 Ancestral state reconstruction and branch length timing were performed with treetime~\cite{Sagulenko2018}.
 We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
 
-To parse trunk mutations from side branch mutations, we defined a set of recent nodes sampled on or after January 1, 2017, and traced these nodes back to their most recent common ancestor.
+To parse trunk mutations from side-branch mutations, we defined a set of recent nodes sampled on or after January 1, 2017, and traced these nodes back to their most recent common ancestor.
 We defined all branches ancestral to this most recent common ancestor as the trunk.
-All nodes that do not have descendants isolated after 2017 were defined as side branch nodes.
+All nodes that do not have descendants isolated after 2017 were defined as side-branch nodes.
 Nodes descended from the most recent common ancestor were defined as unresolved, as it is still unclear whether these nodes will ultimately be on the trunk or side branches.
 The phylogenetic tree is available as a JSON file on \comment{link to repository}.
 The tree was visualized using baltic (\url{https://github.com/blab/baltic}).
@@ -655,8 +655,8 @@ Average per-site sequence preference (similar to Figure~\ref{fig:trunkvssidebran
 (C)
 The sequence preferences of nodes on the trunk generally exceed those of nodes on the side branches along the post-Perth/2009 portion of the tree.
 (D)
-Post-Perth/2009 trunk mutations on average tend to be more favorable than side branch mutations.
-Note that there are relatively few post-Perth/2009 mutations (13 trunk mutations and 324 side branch mutations).
+Post-Perth/2009 trunk mutations on average tend to be more favorable than side-branch mutations.
+Note that there are relatively few post-Perth/2009 mutations (13 trunk mutations and 324 side-branch mutations).
 }
 \end{suppfigure}
 
