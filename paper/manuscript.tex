@@ -235,7 +235,7 @@ For instance, in the H3 HA, the short helix A in the stalk is very mutationally 
 Interestingly, there are more reports of readily selecting escape mutants from broadly neutralizing anti-stalk antibodies in H3~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} than in H1~\cite{okuno1993common,doud2017quantifying,anderson2017natural} HAs.
 
 We also see high mutational tolerance in many of the known antigenic regions of H3 HA~\cite{wiley1981structural}.
-For instance, in recent H3N2 strains, antigenic region B is immunodominant, and most recent major antigenic drift mutations have occurred in this region~\cite{chambers2015identification,koel2013substitutions,popova2012immunodominance}.
+For instance, antigenic region B is an immunodominant area, and many recent major antigenic drift mutations have occurred in this region~\cite{chambers2015identification,koel2013substitutions,popova2012immunodominance}.
 We find that the most distal portion of the globular head near the 190-helix, which is part of antigenic region B, is highly tolerant of mutations (Figure~\ref{fig:mut_tolerance}).
 Antigenic region C is also notably mutationally tolerant.
 
@@ -319,14 +319,14 @@ Therefore, our experiments can distinguish evolutionarily favorable mutations bo
 The fact that our experiments can discriminate between the trunk and side branches at epitope sites despite only assaying for viral growth underscores the fact that mutations at epitope sites still have significant non-antigenic functional consequences~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
 
 However, there are differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
-The per-site sequence preference at epitope sites increases over time, whereas at non-epitope sites it remains relatively constant  (Figure~\ref{fig:sequence_preference}B and Figure~\ref{suppfig:seqpref_zoomed}).
-In addition, the per-site sequence preference is consistently higher at non-epitope than epitope sites, perhaps because immune pressure sometimes drives the fixation of functionally less favorable mutations at epitope sites.
+The per-site sequence preference at epitope sites increases over time, whereas at non-epitope sites it remains relatively constant  (Figure~\ref{fig:sequence_preference}B).
+%In addition, the per-site sequence preference is consistently higher at non-epitope than epitope sites, perhaps because immune pressure sometimes drives the fixation of functionally less favorable mutations at epitope sites.
 The fact that only epitope sites exhibit an increase in sequence preference over time can also be rationalized in terms of prior knowledge about protein evolution.
 As proteins evolve, there can be epistatic shifts in the effects of mutations~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative,haddox2017mapping}.
 Such epistasis has been experimentally demonstrated for HA~\cite{das2013defining,myers2013compensatory}, including at some epitope sites in H3 HA~\cite{wu2017diversity}.
 It is also known that immune pressure can increase epistasis among substitutions by selecting for combinations of functionally deleterious immune-escape mutations and counterbalancing secondary mutations~\cite{gong2014epistatically}.
 We hypothesize that immune pressure increases the accumulation of epistatic interactions involving substitutions at epitope sites.
-Over time, these epistatic interactions could manifest as shifts in the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA (Figure~\ref{fig:sequence_preference}B and Figure~\ref{suppfig:seqpref_zoomed}).
+Over time, these epistatic interactions could manifest as shifts in the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA (Figure~\ref{fig:sequence_preference}B).
 Such a trend is not apparent for non-epitope sites, perhaps because they are under less selection to fix adaptive mutations.
 
 \begin{figure}
@@ -339,7 +339,6 @@ We partitioned HA into epitope and non-epitope sites~\cite{wolf2006long}.
 $P$-values were computed as in Figure~\ref{fig:trunkvssidebranch} but only performing the randomizations over the appropriate set of sites (non-epitope or epitope).
 (B) 
 The average per-site sequence preference for all nodes in the phylogenetic tree, calculated separately for each set of sites.
-The sequence preferences for epitope and non-epitope sites on separate y-axes is shown in Figure~\ref{suppfig:seqpref_zoomed}.
 }
 \end{figure}
 
@@ -481,9 +480,9 @@ The HA and NA genes for the Perth/2009 viral strain were reverse-transcribed and
 
 We initially created a virus with the HA and NA from Perth/2009 and internal genes from WSN/1933, and passaged it in cell culture to test its genetic stability.
 To generate this virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 in D10 media (DMEM supplemented with 10\% heat-inactivated FBS, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL) with equal amounts of pHW-Perth09-HA, pHW-Perth09-NA, the pHW18* series of plasmids~\cite{hoffmann2000dna} for all non-HA/NA viral genes, and pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
-The next day we changed the media to influenza growth media (abbreviated IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL --- no trypsin was added since there was TMPRSS2), and then we collected the viral supernatant at 72 hours post-transfection.
+The next day we changed the media to influenza growth media (IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL --- no trypsin was added since there was TMPRSS2), and then we collected the viral supernatant at 72 hours post-transfection.
 This viral supernatant was then blind passaged in MDCK-SIAT1-TMPRSS2 a total of six additional times.
-We then isolated viral RNA from these passaged viruses and sequenced the HA gene.
+We isolated viral RNA from these passaged viruses and sequenced the HA gene.
 The passaged HA had two mutations, G78D and T212I, which we found enhanced viral growth as shown in Figure~\ref{suppfig:Perth2009_mut}.
 The HA with these two mutations was cloned into pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} to create pHW-Perth09-HA-G78D-T212I and pICR2-Perth09-HA-G78D-T212I.
 For all subsequent experiments, we used viruses with the HA containing these two mutations in order to improve titers and viral genetic stability, and this is the HA that we refer to as Perth/2009 in the manuscript text.
@@ -536,7 +535,7 @@ The amino-acid preferences were re-scaled by the stringency parameter using the 
 The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2017quantifying}.
 
 \subsection*{Inference of human H3N2 phylogenetic tree}
-We applied Nextstrain's augur pipeline~\cite{Hadfield224048} (https://github.com/nextstrain/augur; commit 006896d) to publicly available H3N2 HA sequences from GISAID, sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
+We applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID, sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
 We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
 Ancestral state reconstruction and branch length timing were performed with treetime~\cite{Sagulenko2018}.
 We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
@@ -546,7 +545,7 @@ We defined all branches ancestral to this most recent common ancestor as the tru
 All nodes that do not have descendants isolated after 2017 were defined as side branch nodes.
 Nodes descended from the most recent common ancestor were defined as unresolved, as it is still unclear whether these nodes will ultimately be on the trunk or side branches.
 The phylogenetic tree is available as a JSON file on \comment{link to repository}.
-The tree was visualized using baltic (https://github.com/blab/baltic).
+The tree was visualized using baltic (\url{https://github.com/blab/baltic}).
 
 \subsection*{Quantification of mutational effects and sequence preferences from an H3N2 phylogeny}
 We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
