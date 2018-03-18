@@ -232,7 +232,8 @@ In prior mutational studies of H1 HAs, the stalk domain was found to be substant
 
 We performed a similar analysis using the current data for the Perth/2009 H3 HA.
 Surprisingly, there was much less contrast in mutational tolerance between the stalk and head domains for the H3 HA than for the H1 (Figure~\ref{fig:mut_tolerance}).
-For instance, in the H3 HA, the short helix A in the stalk is very mutationally tolerant.
+Specifically, for solvent-exposed residues, the head domain is more mutationally tolerant than the stalk domain for the WSN/1933 H1 HA, whereas such a difference in tolerances was not seen for the Perth/2009 H3 HA (Figure~\ref{fig:mut_tolerance}B), and this was true using different relative solvent accessibility cutoffs to define solvent-exposed residues (Figure~\ref{suppfig:head_stalk_RSA}).
+Furthermore, in the H3 HA, the short helix A in the stalk was found to be very mutationally tolerant.
 Interestingly, there are more reports of readily selecting escape mutants from broadly neutralizing anti-stalk antibodies in H3~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} than in H1~\cite{okuno1993common,doud2018quantifying,anderson2017natural} HAs.
 
 We also see high mutational tolerance in many of the known antigenic regions of H3 HA~\cite{wiley1981structural}.
@@ -244,21 +245,24 @@ Many residues inside HA's receptor binding pocket are known to be highly functio
 In contrast, the residues surrounding the receptor binding pocket are fairly mutationally tolerant, which may contribute to the rapidity of influenza's antigenic evolution, since mutations at these sites can have large effects on antigenicity~\cite{wiley1981structural,koel2013substitutions}.
 
 %\begin{SCfigure*}[\sidecaptionrelwidth][t]
-\begin{figure}
+\begin{figure*}[ht]
 \centering
-%\includegraphics[width=11.4cm]{figs/mut_tolerance/entropy_heatmap.pdf}
-\includegraphics[width=\columnwidth]{figs/mut_tolerance/entropy_heatmap.pdf}
+\includegraphics[width=\textwidth]{figs/mut_tolerance/mut_tolerance_new.pdf}
 \caption{\label{fig:mut_tolerance}
 {\bf Mutational tolerance of each site in H3 and H1 HAs.}
-Mutational tolerance as measured in the current study is mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}).
+(A) Mutational tolerance as measured in the current study is mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}).
 Mutational tolerance of the WSN/1933 H1 HA as measured in \cite{doud2016accurate} is mapped onto the structure of the H1 trimer (PDB 1RVX;~\cite{gamblin2004structure}).
 Different color scales are used because measurements are comparable among sites within the same HA, but not necessarily across HAs.
 Both trimers are shown in approximately the same orientation. 
 For each HA, the structure at left shows a surface representation of the full trimer, while the structure at right side shows a ribbon representation of just one monomer.
 The sialic acid receptor is shown in red sticks.
+(B) The mutational tolerance (Shannon entropy of re-scaled preferences) of solvent-exposed residues with a relative solvent accessibility $\geq$ 0.2 in the head and stalk domains of the Perth/2009 H3 HA (purple) and WSN/1933 H1 HA (gold). 
+We quantified the absolute solvent accessibility of each site using DSSP~\cite{kabsch1983} and then normalized to a relative solvent accessibility using the absolute accessibilities in~\cite{tien2013}.
+Residues falling in between the two cysteines at sites 52 and 277 were defined as belonging to the head domain, while all other residues were defined as the stalk domain.
+Note that the mutational tolerance values are not comparable between the two HAs.
 }
 %\end{SCfigure*}
-\end{figure}
+\end{figure*}
 
 \subsection*{The experimental measurements can help discriminate between successful and unsuccessful influenza virus lineages}
 A major goal in the study of rapidly evolving viruses such as influenza is to forecast evolutionary trajectories~\cite{lassig2017predicting,morris2017predictive}.
@@ -652,6 +656,20 @@ The sequence preferences of nodes on the trunk generally exceed those of nodes o
 (D)
 Post-Perth/2009 trunk mutations on average tend to be more favorable than side-branch mutations.
 This effect is of similar magnitude to pre-Perth/2009 mutations (see Figure~\ref{fig:sequence_preference}) but is not statistically significant because there are relatively few post-Perth/2009 mutations (13 trunk mutations and 324 side-branch mutations).
+}
+\end{suppfigure}
+
+\begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.75\textwidth]{figs/supp_head_stalk_RSA/head_stalk_RSA.pdf}}
+\caption{\label{suppfig:head_stalk_RSA}
+{\bf Mutational tolerances of the head and stalk domains at various RSA cutoffs.}
+The mutational tolerances of the head and stalk domains show less disparity for the Perth/2009 H3 HA compared to those for the WSN/1933 H1 HA. 
+We used relative solvent accessibility (RSA) cutoffs of $0.1$, $0.2$, and $0.3$ to define solvent-exposed residues and plotted the mutational tolerances (Shannon entropy of re-scaled preferences) of these residues in the head and stalk domains for the Perth/2009 H3 HA (purple) and the WSN/1933 H1 HA (brown). 
+Residues falling in between the two cysteines at sites 52 and 277 were defined as belonging to the head domain, while all other residues were defined as the stalk domain.
+The HA structures color the residues that are defined as solvent exposed at a given RSA cutoff. 
+One monomer is shown in surface representation and another monomer shown in ribbon representation. 
+Residues in lighter shades of purple or brown are in the head domain, while residues in darker shades are in the stalk domain.
+Note that the mutational tolerance values are not comparable between the two HAs.
 }
 \end{suppfigure}
 
