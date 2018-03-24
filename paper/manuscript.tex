@@ -90,11 +90,15 @@ Overall, our work suggests that experimental measurements of mutational effects 
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 \dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein.
- Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping,bhatt2011genomic}.
-This evolution is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}, producing a spindly phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
-Several lines of evidence indicate that the trunk has higher fitness than other lineages~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
-A key challenge in the study of H3N2 evolution is to forecast which strain will dominate the upcoming influenza season, as this information can guide selection of a vaccine strain~\cite{morris2017predictive}.
-In order to make these forecasts, it is important to identify the features that enable the trunk strain to persist as other strains die out.
+Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping,bhatt2011genomic}.
+This evolution is further characterized by competition and turnover among groups of strains or clades.
+As a result, mutations that differentiate clades exhibit dynamic frequency trajectories as these clades appear, circulate, or die out.
+Several lines of evidence indicate that successful clades, which reach high maximum frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency.
+A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
+% This evolution is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}, producing a spindly phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
+% Several lines of evidence indicate that the trunk has higher fitness than other lineages~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
+% A key challenge in the study of H3N2 evolution is to forecast which strain will dominate the upcoming influenza season, as this information can guide selection of a vaccine strain~\cite{morris2017predictive}.
+% In order to make these forecasts, it is important to identify the features that enable the trunk strain to persist as other strains die out.
 
 \begin{figure}
 \centering
@@ -107,7 +111,7 @@ The Perth/2009 strain is indicated with a star.
 }
 \end{figure}
 
-Two main characteristics distinguish the evolutionarily successful trunk from its competitors: greater antigenic change, and efficient viral growth and transmission.
+Two main characteristics distinguish evolutionarily successful clades from their competitors: greater antigenic change, and efficient viral growth and transmission.
 In principle, experiments could be informative for identifying how mutations affect these features.
 Most work on influenza evolution to date has utilized experimental data primarily to assess the antigenicity of circulating strains~\cite{sun2013using,harvey2016identification,neher2016prediction,koel2013substitutions,chambers2015identification,li2016selection}.
 While the antigenic features of a virus certainly contribute to its success, the non-antigenic effects of mutations also play an important role~\cite{pybus2007phylogenetic,strelkowa2012clonal,luksza2014predictive,koelle2015effects}.
@@ -118,9 +122,10 @@ However, there are no large-scale quantitative characterizations of how mutation
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of large numbers of mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
 Here we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
-We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side-branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
-However, the experiments are useful for assessing the effects of mutations only in closely related viral strains, since we show that mutations often have disparate effects on H3 and H1 HAs.
-Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
+We then apply these measurements to examine differences in maximum clade frequencies.
+%We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side-branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
+%However, the experiments are useful for assessing the effects of mutations only in closely related viral strains, since we show that mutations often have disparate effects on H3 and H1 HAs.
+%Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
 
 \section*{Results}
 \label{sec:results}
@@ -264,106 +269,128 @@ Note that the mutational tolerance values are not comparable between the two HAs
 %\end{SCfigure*}
 \end{figure*}
 
-\subsection*{The experimental measurements can help discriminate between successful and unsuccessful influenza virus lineages}
-A major goal in the study of rapidly evolving viruses such as influenza is to forecast evolutionary trajectories~\cite{lassig2017predicting,morris2017predictive}.
-For instance, forecasting which viral lineages will dominate the upcoming influenza season is an integral part of vaccine-strain selection~\cite{neher2015nextflu,lassig2017predicting,morris2017predictive}.
-Evolutionary forecasts should be able to distinguish successful and unsuccessful viral lineages, which includes discriminating between the trunk and side branches of the phylogenetic tree (Figure~\ref{fig:H3N2_phylogeny}).
+\subsection*{Our measurements reveal differences between clades of low and high maximum frequencies}
+The maximum frequencies achieved by particular mutations are a reflection of the fitnesses of strains carrying those mutations.
+Do the experimentally-determined preferences therefore reveal underlying differences in strains that reach various maximum frequencies?
+To explore this question, we examined the relationship between the experimentally measured effects of all mutations and the maximum frequency achieved by all nodes with at least one tip in a maximum-likelihood H3N2 phylogeny.
+We estimated the frequency trajectories for every node in the tree by... \comment {I'll let John / Trevor add more here}.
+Evolutionarily successful nodes that occurred \textit{before} the Perth/2009 strain diverged from the trunk of the phylogenetic tree tend to carry mutations that move towards the Perth/2009 sequence. 
+Because the effects of mutations may vary depending on genetic background, we analyzed nodes that preceded the Perth/2009 strain separately from nodes that occurred after the split of Perth/2009 from the trunk of the phylogenetic tree \comment{need better explanation of pre- and post-Perth/2009 rationale here since it seems like we are going to completely drop the trunk/tip analysis from the paper? Also this is where we would reference the tree supplemental figure}.
+We found that mutations measured to be very deleterious to viral growth in our experiments were not observed at high frequencies in nature.
+Rather, only mutations with beneficial or small deleterious effects in our experiments appeared to reach high frequencies or even fix in nature, as evidenced by the slight but significant\comment{?} trend towards higher frequencies with more favorable mutations (Figure ~\ref{fig:muteffect_maxfreq}).
+Furthermore, shifts toward more favorable mutations with increasing maximum frequency were also apparent from plotting the distribution of mutational effects for different frequency bins.
+Mutations were on average scored as being more detrimental in the lower frequency bins than at higher frequencies.
+The trend towards more beneficial mutations with increasing maximum frequency was stronger for the pre-Perth/2009 nodes, which may be somewhat driven by high-frequency mutations generally moving towards the Perth/2009 sequence and thereby scored more favorably.
+Despite this, the post-Perth/2009 nodes exhibited mutations that were on average more favorable for viral growth at higher frequency nodes.
+Notably, nodes that reached moderate global frequencies ($> 10 \%$) had relatively few mutations that were highly deleterious compared to nodes that remained below $2 \%$ frequency, suggesting that unfavorable mutations may help determine whether or not a strain is able to surpass low frequencies in the global population.
+% Many low-frequency nodes also have mutations that are considered to be beneficial or have little effect in our experiments, indicating that factors other than viral growth influence clade dynamics.
+Overall, these results demonstrate that measurements of mutational effects in the Perth/2009 HA reveal differences in fitness between clades that circulate at low frequencies and those that achieve fixation or near-fixation.
 
-To investigate whether our experiments can aid in distinguishing trunk and side-branch lineages, we calculated the experimentally measured effects of all mutations in a maximum-likelihood reconstruction of the H3N2 phylogeny (Figure~\ref{fig:H3N2_phylogeny}).
-The mutations on the trunk of the tree were consistently more beneficial for viral growth according to our experimental measurements (Figure~\ref{fig:trunkvssidebranch}A).
-This difference in the effects of mutations between the trunk and side-branch lineages was statistically significant when taken across the entire phylogeny (Figure~\ref{fig:trunkvssidebranch}B).
-Some influenza sequences are derived from egg- or cell-passaged isolates that contain lab-adaptation mutations~\citep{mcwhite2016sequence}.
-These mutations mostly occur on the terminal side branches that lead to tip nodes on the phylogenetic tree.
-We therefore re-calculated the statistics separating side branches to tip and internal nodes, and again found that the difference between the trunk and both sets of side branches was statistically significant (Figure~\ref{fig:trunkvssidebranch}B).
-Therefore, strains with mutations that we experimentally measure to be favorable for viral growth tend to do better in nature than strains with mutations that we measure to be less favorable. 
+To determine how broadly experimental measurements can be generalized across HAs, we repeated the maximum frequency analyses using amino-acid preferences from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
+Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend towards more beneficial mutations for higher-frequency nodes of an H3 phylogeny.
+This observation indicates that the utility of an experiment for revealing differences between low and high frequency clades degrades over sufficiently long evolutionary distances. 
 
-Our experiments were performed on the Perth/2009 HA, but we scored mutations on a phylogenetic tree that extends from 1968 to 2017.
-Because the effects of mutations can vary with genetic background~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative}, it is possible that the effects of mutations that we measured in the Perth/2009 HA might have shifted somewhat in other related HAs.
-To explore this question, we scored the complete HA sequence $\mathbf{s}$ of every node in the phylogenetic tree by quantifying its average per-site sequence preference as 
-\begin{equation}
-F\left(\mathbf{s}\right) = \frac{1}{L}\displaystyle\sum_{r=1}^L \ln \pi_{r, s_r},
-\end{equation}
-where $\pi_{r, s_r}$ is the preference measured in our experiments (e.g., Figure~\ref{fig:logoplot}) for the amino acid $s_r$ at site $r$ in HA sequence $\mathbf{s}$, and $L$ is the length of the sequence.
-Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend to have higher preference than those of side-branch nodes across the entire timespan, consistent with the finding that trunk mutations are generally more favorable than side-branch mutations. 
-However, the average per-site sequence preference increases as the nodes approach the Perth/2009 strain.
-The Perth/2009 itself has among the highest per-site sequence preference of the entire tree, despite falling on a side branch.
-We do not think that this result means that Perth/2009 is actually higher fitness than the other strains.
-Rather, if there are modest shifts in the effects of mutations as HA evolves, then sequences more distant from Perth/2009 could be scored as having lower preference simply because these shifts start to degrade the applicability of our measurements.
-But importantly, our experiments consistently show the trunk to be more favorable than the side branches regardless of whether we look at sequences that precede Perth/2009 (most of Figure~\ref{fig:trunkvssidebranch}C) or sequences that occur after Perth/2009 has diverged from the trunk (Figure~\ref{suppfig:future}). 
-Therefore, our experimental measurements consistently reveal the selective advantage of the trunk over more than a half-century of viral evolution.
-
-
-\begin{figure}
+\begin{figure*}[ht]
 \centering
-\includegraphics[width=\columnwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}
-\caption{\label{fig:trunkvssidebranch}
-{\bf Mutations on the trunk are more favorable than those on the side branches according to our experimental measurements.}
-(A) We used our experiments to calculate the log$_{2}$ mutational effect for all trunk and side-branch mutations in five-year windows from 1968 to 2013. 
-The central year in each window is denoted on the x-axis.
-Median mutational effects in each window are shown as circles for the trunk and triangles for side branches. 
-Shaded regions demarcate the interquartile range.
-Negative numbers signify mutations to less preferred amino acids, while positive numbers signify mutations to more preferred mutations.
-(B) The log$_{2}$ mutational effect for all side branch and trunk mutations (left panel), and the same data but separating side branches to terminal and internal nodes (right panel).
-$P$-values were computed by randomizing the experimental measurements among sites 10,000 times, and determining how often the difference in median mutational effect between the trunk and side branches exceeded the actual value.
-(C) The average per-site sequence preference of every node in the phylogenetic tree in Fig.~\ref{fig:H3N2_phylogeny}.
-Trunk nodes are in red, side-branch nodes in blue, and Perth/2009 is marked with a yellow star.
-More preferred sequences have larger values.
+\includegraphics[width=\textwidth]{figs/muteffect_by_maxfreq.pdf}
+\caption{\label{fig:muteffect_maxfreq}
+{\bf Highly deleterious mutations are not observed in high-frequency nodes.}
+Figure caption.
 }
-\end{figure}
+\end{figure*}
 
-\subsection*{Our experiments suggest different patterns of evolution at epitope and non-epitope sites}
-HA is under selection both to maintain its essential function in viral growth and to escape pre-existing immunity.
-Most immune selection is focused on a subset of so-called ``epitope sites'' that are targets of the immunodominant antibody response.
-Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites~\cite{fitch1991positive,wolf2006long,bhatt2011genomic}.
-There are various classifications of HA epitope sites; here we will use the classification of Wolf \textit{et al}~\cite{wolf2006long}, which defines 129 epitope sites among the 566 residues in HA.
-In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed 0.84 epitope mutations per site, but only 0.07 non-epitope mutations per site.
-Since our experiments only measure how mutations affect viral growth, they might be expected to describe the evolution of epitope and non-epitope sites differently.
-
-Mutations on the trunk are scored as significantly more favorable in our experiments than side-branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}A).
-Therefore, our experiments can distinguish evolutionarily favorable mutations both at sites that are predominantly under functional constraint and at sites that are also under immune pressure.
-The fact that our experiments can discriminate between the trunk and side branches at epitope sites despite only assaying for viral growth underscores the fact that mutations at these sites still have non-antigenic functional consequences~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
-
-However, there are differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
-The per-site sequence preference at epitope sites increases over time, whereas at non-epitope sites it remains relatively constant  (Figure~\ref{fig:sequence_preference}B).
-This difference is unlikely to be explained purely by differences in the number of mutations at these two sets of sites: there have been $\sim$4-fold more total trunk mutations at epitope than non-epitope sites (109 versus 28), but the large increase in sequence preference for the epitope sites is $\gg$4-fold larger than the nearly imperceptible increase for non-epitope sites.
-The fact that only epitope sites exhibit an increase in sequence preference over time can be rationalized in terms of prior knowledge about protein evolution.
-As proteins evolve, there can be epistatic shifts in the effects of mutations~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative,haddox2017mapping}.
-Such epistasis has been experimentally demonstrated for HA~\cite{das2013defining,myers2013compensatory}, including at some epitope sites in H3 HA~\cite{wu2017diversity}.
-It is also known that immune pressure can increase epistasis among substitutions~\cite{gong2014epistatically}.
-We hypothesize that immune pressure increases the accumulation of epistatic interactions involving substitutions at epitope sites.
-Over time, these epistatic interactions could manifest as shifts in the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA (Figure~\ref{fig:sequence_preference}B).
-Such a trend is not apparent for non-epitope sites, perhaps because they are under less selection to fix adaptive mutations.
-
-\begin{figure}
+\begin{figure*}[ht]
 \centering
-\includegraphics[width=\columnwidth]{figs/sequence_preference/sequence_preference.pdf}
-\caption{\label{fig:sequence_preference}
-{\bf Effects of mutations at epitope and non-epitope sites during HA evolution.}
-We partitioned HA into epitope and non-epitope sites~\cite{wolf2006long}.
-(A) The log$_{2}$ mutational effects for side-branch and trunk mutations at non-epitope (left) and epitope (right) sites.
-$P$-values were computed as in Figure~\ref{fig:trunkvssidebranch} but only performing the randomizations over the appropriate set of sites (non-epitope or epitope).
-(B) 
-The average per-site sequence preference for all nodes in the phylogenetic tree, calculated separately for each set of sites.
+\includegraphics[width=\textwidth]{figs/muteffect_by_maxfreq_WSN.pdf}
+\caption{\label{fig:muteffect_maxfreq_WSN}
+{\bf Experimental measurements on an H1 HA do not reveal differences between low- and high-frequency nodes.}
+Figure caption.
 }
-\end{figure}
+\end{figure*}
+
+%\subsection*{The experimental measurements can help discriminate between successful and unsuccessful influenza virus lineages}
+%A major goal in the study of rapidly evolving viruses such as influenza is to forecast evolutionary trajectories~\cite{lassig2017predicting,morris2017predictive}.
+%For instance, forecasting which viral lineages will dominate the upcoming influenza season is an integral part of vaccine-strain selection~\cite{neher2015nextflu,lassig2017predicting,morris2017predictive}.
+%Evolutionary forecasts should be able to distinguish successful and unsuccessful viral lineages, which includes discriminating between the trunk and side branches of the phylogenetic tree (Figure~\ref{fig:H3N2_phylogeny}).
+%
+%To investigate whether our experiments can aid in distinguishing trunk and side-branch lineages, we calculated the experimentally measured effects of all mutations in a maximum-likelihood reconstruction of the H3N2 phylogeny (Figure~\ref{fig:H3N2_phylogeny}).
+%The mutations on the trunk of the tree were consistently more beneficial for viral growth according to our experimental measurements (Figure~\ref{fig:trunkvssidebranch}A).
+%This difference in the effects of mutations between the trunk and side-branch lineages was statistically significant when taken across the entire phylogeny (Figure~\ref{fig:trunkvssidebranch}B).
+%Some influenza sequences are derived from egg- or cell-passaged isolates that contain lab-adaptation mutations~\citep{mcwhite2016sequence}.
+%These mutations mostly occur on the terminal side branches that lead to tip nodes on the phylogenetic tree.
+%We therefore re-calculated the statistics separating side branches to tip and internal nodes, and again found that the difference between the trunk and both sets of side branches was statistically significant (Figure~\ref{fig:trunkvssidebranch}B).
+%Therefore, strains with mutations that we experimentally measure to be favorable for viral growth tend to do better in nature than strains with mutations that we measure to be less favorable. 
+%
+%Our experiments were performed on the Perth/2009 HA, but we scored mutations on a phylogenetic tree that extends from 1968 to 2017.
+%Because the effects of mutations can vary with genetic background~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative}, it is possible that the effects of mutations that we measured in the Perth/2009 HA might have shifted somewhat in other related HAs.
+%To explore this question, we scored the complete HA sequence $\mathbf{s}$ of every node in the phylogenetic tree by quantifying its average per-site sequence preference as 
+%\begin{equation}
+%F\left(\mathbf{s}\right) = \frac{1}{L}\displaystyle\sum_{r=1}^L \ln \pi_{r, s_r},
+%\end{equation}
+%where $\pi_{r, s_r}$ is the preference measured in our experiments (e.g., Figure~\ref{fig:logoplot}) for the amino acid $s_r$ at site $r$ in HA sequence $\mathbf{s}$, and $L$ is the length of the sequence.
+%Figure~\ref{fig:trunkvssidebranch}C shows that the sequences of trunk nodes tend to have higher preference than those of side-branch nodes across the entire timespan, consistent with the finding that trunk mutations are generally more favorable than side-branch mutations. 
+%However, the average per-site sequence preference increases as the nodes approach the Perth/2009 strain.
+%The Perth/2009 itself has among the highest per-site sequence preference of the entire tree, despite falling on a side branch.
+%We do not think that this result means that Perth/2009 is actually higher fitness than the other strains.
+%Rather, if there are modest shifts in the effects of mutations as HA evolves, then sequences more distant from Perth/2009 could be scored as having lower preference simply because these shifts start to degrade the applicability of our measurements.
+%But importantly, our experiments consistently show the trunk to be more favorable than the side branches regardless of whether we look at sequences that precede Perth/2009 (most of Figure~\ref{fig:trunkvssidebranch}C) or sequences that occur after Perth/2009 has diverged from the trunk (Figure~\ref{suppfig:future}). 
+%Therefore, our experimental measurements consistently reveal the selective advantage of the trunk over more than a half-century of viral evolution.
+
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figs/trunkvssidebranch/trunkvssidebranch.pdf}
+%\caption{\label{fig:trunkvssidebranch}
+%{\bf Mutations on the trunk are more favorable than those on the side branches according to our experimental measurements.}
+%(A) We used our experiments to calculate the log$_{2}$ mutational effect for all trunk and side-branch mutations in five-year windows from 1968 to 2013. 
+%The central year in each window is denoted on the x-axis.
+%Median mutational effects in each window are shown as circles for the trunk and triangles for side branches. 
+%Shaded regions demarcate the interquartile range.
+%Negative numbers signify mutations to less preferred amino acids, while positive numbers signify mutations to more preferred mutations.
+%(B) The log$_{2}$ mutational effect for all side branch and trunk mutations (left panel), and the same data but separating side branches to terminal and internal nodes (right panel).
+%$P$-values were computed by randomizing the experimental measurements among sites 10,000 times, and determining how often the difference in median mutational effect between the trunk and side branches exceeded the actual value.
+%(C) The average per-site sequence preference of every node in the phylogenetic tree in Fig.~\ref{fig:H3N2_phylogeny}.
+%Trunk nodes are in red, side-branch nodes in blue, and Perth/2009 is marked with a yellow star.
+%More preferred sequences have larger values.
+%}
+%\end{figure}
+
+%\subsection*{Our experiments suggest different patterns of evolution at epitope and non-epitope sites}
+%HA is under selection both to maintain its essential function in viral growth and to escape pre-existing immunity.
+%Most immune selection is focused on a subset of so-called ``epitope sites'' that are targets of the immunodominant antibody response.
+%Although both epitope and non-epitope sites evolve rapidly, immune selection drives a higher rate of evolution at epitope sites~\cite{fitch1991positive,wolf2006long,bhatt2011genomic}.
+%There are various classifications of HA epitope sites; here we will use the classification of Wolf \textit{et al}~\cite{wolf2006long}, which defines 129 epitope sites among the 566 residues in HA.
+%In the timeframe from 1968 to 2012, the trunk of the tree in Figure~\ref{fig:H3N2_phylogeny} fixed 0.84 epitope mutations per site, but only 0.07 non-epitope mutations per site.
+%Since our experiments only measure how mutations affect viral growth, they might be expected to describe the evolution of epitope and non-epitope sites differently.
+%
+%Mutations on the trunk are scored as significantly more favorable in our experiments than side-branch mutations at both epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}A).
+%Therefore, our experiments can distinguish evolutionarily favorable mutations both at sites that are predominantly under functional constraint and at sites that are also under immune pressure.
+%The fact that our experiments can discriminate between the trunk and side branches at epitope sites despite only assaying for viral growth underscores the fact that mutations at these sites still have non-antigenic functional consequences~\cite{nakajima2003restriction,das2013defining,koel2013substitutions}. 
+%
+%However, there are differences in how the average per-site sequence preference changes over time at the epitope and non-epitope sites (Figure~\ref{fig:sequence_preference}B).
+%The per-site sequence preference at epitope sites increases over time, whereas at non-epitope sites it remains relatively constant  (Figure~\ref{fig:sequence_preference}B).
+%This difference is unlikely to be explained purely by differences in the number of mutations at these two sets of sites: there have been $\sim$4-fold more total trunk mutations at epitope than non-epitope sites (109 versus 28), but the large increase in sequence preference for the epitope sites is $\gg$4-fold larger than the nearly imperceptible increase for non-epitope sites.
+%The fact that only epitope sites exhibit an increase in sequence preference over time can be rationalized in terms of prior knowledge about protein evolution.
+%As proteins evolve, there can be epistatic shifts in the effects of mutations~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative,haddox2017mapping}.
+%Such epistasis has been experimentally demonstrated for HA~\cite{das2013defining,myers2013compensatory}, including at some epitope sites in H3 HA~\cite{wu2017diversity}.
+%It is also known that immune pressure can increase epistasis among substitutions~\cite{gong2014epistatically}.
+%We hypothesize that immune pressure increases the accumulation of epistatic interactions involving substitutions at epitope sites.
+%Over time, these epistatic interactions could manifest as shifts in the effects of mutations, leading to an apparent increase in per-site sequence preference over time when mutational effects are measured in the Perth/2009 HA (Figure~\ref{fig:sequence_preference}B).
+%Such a trend is not apparent for non-epitope sites, perhaps because they are under less selection to fix adaptive mutations.
 
 
 \subsection*{There are large differences between H3 and H1 HAs in the amino-acid preferences of many sites}
-The results above show that measurements of mutational effects in the Perth/2009 HA are informative about the evolutionary fate of other human H3N2 HAs.
-To determine how broadly experimental measurements be generalized across HAs, we repeated the trunk versus side-branch analyses using amino-acid preferences from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
-Figure~\ref{fig:WSN_trunkvssidebranch} shows that the H1 measurements are not informative for distinguishing the trunk and side branches of an H3 phylogeny.
-This fact indicates that the utility of an experiment for discriminating successful and unsuccessful strains degrades over sufficiently long evolutionary distances. 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figs/WSN_trunkvssidebranch/WSN_trunkvssidebranch.pdf}
-\caption{\label{fig:WSN_trunkvssidebranch}
-{\bf Experimental measurements on an H1 HA do \emph{not} provide evolutionarily relevant information for H3 HAs.}
-(A), (B) This figure is analogous to that in Figure~\ref{fig:trunkvssidebranch} except that it scores the H3 sequences using experimental measurements made on the lab-adapted WSN/1933 HA~\cite{doud2016accurate}.
-}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\columnwidth]{figs/WSN_trunkvssidebranch/WSN_trunkvssidebranch.pdf}
+%\caption{\label{fig:WSN_trunkvssidebranch}
+%{\bf Experimental measurements on an H1 HA do \emph{not} provide evolutionarily relevant information for H3 HAs.}
+%(A), (B) This figure is analogous to that in Figure~\ref{fig:trunkvssidebranch} except that it scores the H3 sequences using experimental measurements made on the lab-adapted WSN/1933 HA~\cite{doud2016accurate}.
+%}
+%\end{figure}
 
-An obvious hypothesis for why the H1 deep mutational scanning is not informative about the evolutionary fate of H3 strains is that the effect of the same mutation is often different between these two HA subtypes.
+An obvious hypothesis for why the H1 deep mutational scanning do not reveal differences among H3 strains is that the effect of the same mutation is often different between these two HA subtypes.
 To determine if this is the case, we examined how much the amino-acid preferences of homologous sites have shifted between H3 and H1 HAs.
 Prior experiments have found only modest shifts in amino-acid preferences between two variants of influenza nucleoprotein with 94\% amino-acid identity~\cite{doud2015site} and variants of HIV envelope (Env) with 86\% amino-acid identity~\cite{haddox2017mapping}.
 However, the H1 and H3 HAs are far more diverged, with only 42\% amino-acid identity (Figure~\ref{fig:distance_distribution}A).
