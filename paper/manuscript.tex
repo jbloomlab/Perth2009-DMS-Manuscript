@@ -70,11 +70,11 @@ Overall, our work suggests that new high-throughput experimental approaches may 
 Human influenza virus rapidly accumulates mutations in its major surface protein hemagglutinin (HA).
 The evolutionary success of influenza virus lineages depends on how these mutations affect HA's functionality and antigenicity.
 Here we experimentally measure the effects on viral growth in cell culture of all single amino-acid mutations to the HA from a recent human H3N2 influenza virus strain. 
-We then show that mutations in evolutionarily successful H3N2 viral lineages are measured to generally be more favorable than mutations in lineages that die out.
-Therefore, despite the well-known caveats about cell-culture measurements of viral fitness, such measurements can still be informative for understanding virus evolution in nature.
+We then show that mutations in evolutionarily successful H3N2 viral lineages are measured to generally be more favorable than mutations in lineages that quickly die out.
+Therefore, despite the well-known caveats about cell-culture measurements of viral fitness, such measurements can still be informative for understanding evolution in nature.
 We also compare our measurements for an H3 HA to similar data previously generated for a distantly related H1 HA, and find substantial differences in which amino acids are preferred at many sites.
 For instance, the H3 HA has less disparity in mutational tolerance between the head and stalk domains than the H1 HA.
-Overall, our work suggests that experimental measurements of mutational effects can be leveraged to help forecast the evolutionary fates of viral lineages in nature --- but only when the measurements are made on a viral strain similar to the ones being studied in nature.
+Overall, our work suggests that experimental measurements of mutational effects can be leveraged to help understand the evolutionary fates of viral lineages in nature --- but only when the measurements are made on a viral strain similar to the ones being studied in nature.
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
@@ -91,25 +91,25 @@ Overall, our work suggests that experimental measurements of mutational effects 
 
 \dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein.
 Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping,bhatt2011genomic}.
-This evolution is further characterized by competition and turnover among groups of strains or clades.
+This evolution is further characterized by competition and turnover among groups of strains or clades~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}.
 As a result, mutations that differentiate clades exhibit dynamic frequency trajectories as these clades appear, circulate, or die out.
-Several lines of evidence indicate that successful clades, which reach high maximum frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency.
+Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
 A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
 % This evolution is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}, producing a spindly phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
 % Several lines of evidence indicate that the trunk has higher fitness than other lineages~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
 % A key challenge in the study of H3N2 evolution is to forecast which strain will dominate the upcoming influenza season, as this information can guide selection of a vaccine strain~\cite{morris2017predictive}.
 % In order to make these forecasts, it is important to identify the features that enable the trunk strain to persist as other strains die out.
 
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{figs/H3N2_phylogeny/H3N2_phylogeny.pdf}
-\caption{\label{fig:H3N2_phylogeny}
-{\bf Human H3N2 HA phylogeny from 1968-2017.}
-The trunk is shown in red, and side branches are shown in blue.
-The gray branches represent the part of the tree for which we cannot yet distinguish the trunk from side branches.
-The Perth/2009 strain is indicated with a star.
-}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\linewidth]{figs/H3N2_phylogeny/H3N2_phylogeny.pdf}
+%\caption{\label{fig:H3N2_phylogeny}
+%{\bf Human H3N2 HA phylogeny from 1968-2017.}
+%The trunk is shown in red, and side branches are shown in blue.
+%The gray branches represent the part of the tree for which we cannot yet distinguish the trunk from side branches.
+%The Perth/2009 strain is indicated with a star.
+%}
+%\end{figure}
 
 Two main characteristics distinguish evolutionarily successful clades from their competitors: greater antigenic change, and efficient viral growth and transmission.
 In principle, experiments could be informative for identifying how mutations affect these features.
@@ -122,7 +122,8 @@ However, there are no large-scale quantitative characterizations of how mutation
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of large numbers of mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
 Here we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
-We then apply these measurements to examine differences in maximum clade frequencies.
+We then examine these measurements in the context of the natural evolution of human influenza, and show that they can help discriminate evolutionarily successful viral clades from lineages that quickly die out.
+However, the utility of experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
 %We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side-branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
 %However, the experiments are useful for assessing the effects of mutations only in closely related viral strains, since we show that mutations often have disparate effects on H3 and H1 HAs.
 %Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
@@ -207,7 +208,7 @@ For the M5 model, we give the mean followed by the shape and rate parameters of 
 \end{table}
 
 Examination of Figure~\ref{fig:logoplot} reveals that the experimentally measured amino-acid preferences generally agree with existing knowledge about HA's structure and function.
-For instance, sites that form structurally important disulfide bridges (sites 52 \& 277, 64 \& 76, 97 \& 139, 281 \& 305, 14 \& 137-HA2, 144-HA2 \& 148-HA2)~\cite{waterfield1981disulphide} possess high preference for cysteine.
+For instance, sites that form structurally important disulfide bridges (sites 52 \& 277, 64 \& 76, 97 \& 139, 281 \& 305, 14 \& 137-HA2, 144-HA2 \& 148-HA2)~\cite{waterfield1981disulphide} strongly prefer cysteine.
 At residues involved in receptor binding, there are strong preferences for the amino acids that are known to be involved in binding sialic acid, such as Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies,nobusawa2000change,yang2015structure}.
 A positively charged amino acid at site 329 is important for cleavage of the HA0 precursor into the mature form~\cite{stech2005new}, and this site strongly prefers arginine.
 However, a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine. 
@@ -237,7 +238,8 @@ In prior mutational studies of H1 HAs, the stalk domain was found to be substant
 
 We performed a similar analysis using the current data for the Perth/2009 H3 HA.
 Surprisingly, there was much less contrast in mutational tolerance between the stalk and head domains for the H3 HA than for the H1 (Figure~\ref{fig:mut_tolerance}).
-Specifically, for solvent-exposed residues, the head domain is more mutationally tolerant than the stalk domain for the WSN/1933 H1 HA, whereas such a difference in tolerances was not seen for the Perth/2009 H3 HA (Figure~\ref{fig:mut_tolerance}B), and this was true using different relative solvent accessibility cutoffs to define solvent-exposed residues (Figure~\ref{suppfig:head_stalk_RSA}).
+Specifically, for solvent-exposed residues, the head domain was more mutationally tolerant than the stalk domain for the WSN/1933 H1 HA, whereas such a difference in tolerances was not seen for the Perth/2009 H3 HA (Figure~\ref{fig:mut_tolerance}B). 
+This difference between H1 and H3 HAs in the disparity of mutational tolerance between surface residues in the head and stalk domains was robust to the solvent accessibility cutoff used to define surface residues (Figure~\ref{suppfig:head_stalk_RSA}).
 Furthermore, in the H3 HA, the short helix A in the stalk was found to be very mutationally tolerant.
 Interestingly, there are more reports of readily selecting escape mutants from broadly neutralizing anti-stalk antibodies in H3~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} than in H1~\cite{okuno1993common,doud2018quantifying,anderson2017natural} HAs.
 
@@ -269,23 +271,38 @@ Note that the mutational tolerance values are not comparable between the two HAs
 %\end{SCfigure*}
 \end{figure*}
 
-\subsection*{Our measurements reveal differences between clades of low and high maximum frequencies}
-The maximum frequencies achieved by particular mutations are a reflection of the fitnesses of strains carrying those mutations.
-Do the experimentally-determined preferences therefore reveal underlying differences in strains that reach various maximum frequencies?
-To explore this question, we examined the relationship between the experimentally measured effects of all mutations and the maximum frequency achieved by all nodes with at least one tip in a maximum-likelihood H3N2 phylogeny.
+\subsection*{Our measurements can help distinguish between viral clades that reach low and high frequencies in nature}
+A major goal in the study of rapidly evolving viruses such as influenza is to better understand the features that distinguish successful and unsuccessful clades, as this can help us identify clades that are likely to fix from those that will quickly die out~\cite{lassig2017predicting,morris2017predictive}.
+In principle, the maximum frequencies achieved by particular strains are a reflection of the fitnesses of those strains~\cite{strelkowa2012clonal,neher2014predicting,koelle2015effects}.
+We therefore investigated whether our experiments would reveal underlying differences in strains that reach various frequencies in the global population.
+
+We first examined the relationship between the effects of all mutations and the maximum frequency achieved by all nodes with at least one tip in a maximum-likelihood H3N2 phylogeny.
 We estimated the frequency trajectories for every node in the tree by... \comment {I'll let John / Trevor add more here}.
 Evolutionarily successful nodes that occurred \textit{before} the Perth/2009 strain diverged from the trunk of the phylogenetic tree tend to carry mutations that move towards the Perth/2009 sequence. 
 Because the effects of mutations may vary depending on genetic background, we analyzed nodes that preceded the Perth/2009 strain separately from nodes that occurred after the split of Perth/2009 from the trunk of the phylogenetic tree \comment{need better explanation of pre- and post-Perth/2009 rationale here since it seems like we are going to completely drop the trunk/tip analysis from the paper? Also this is where we would reference the tree supplemental figure}.
+
 We found that mutations measured to be very deleterious to viral growth in our experiments were not observed at high frequencies in nature.
 Rather, only mutations with beneficial or small deleterious effects in our experiments appeared to reach high frequencies or even fix in nature, as evidenced by the slight but significant\comment{?} trend towards higher frequencies with more favorable mutations (Figure ~\ref{fig:muteffect_maxfreq}).
 Furthermore, shifts toward more favorable mutations with increasing maximum frequency were also apparent from plotting the distribution of mutational effects for different frequency bins.
 Mutations were on average scored as being more detrimental in the lower frequency bins than at higher frequencies.
+
 The trend towards more beneficial mutations with increasing maximum frequency was stronger for the pre-Perth/2009 nodes, which may be somewhat driven by high-frequency mutations generally moving towards the Perth/2009 sequence and thereby scored more favorably.
 Despite this, the post-Perth/2009 nodes exhibited mutations that were on average more favorable for viral growth at higher frequency nodes.
+
 Notably, nodes that reached moderate global frequencies ($> 10 \%$) had relatively few mutations that were highly deleterious compared to nodes that remained below $2 \%$ frequency, suggesting that unfavorable mutations may help determine whether or not a strain is able to surpass low frequencies in the global population.
 % Many low-frequency nodes also have mutations that are considered to be beneficial or have little effect in our experiments, indicating that factors other than viral growth influence clade dynamics.
 Overall, these results demonstrate that measurements of mutational effects in the Perth/2009 HA reveal differences in fitness between clades that circulate at low frequencies and those that achieve fixation or near-fixation.
 
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figs/frequency_trajectory_ex.png}
+\caption{\label{fig:frequency_trajectory}
+{\bf Frequency trajectories of seasonal influenza viral clades.}
+Figure caption
+}
+\end{figure}
+
+\subsection*{Measurements made for an H1 HA are not useful for understanding the evolution of H3 influenza}
 To determine how broadly experimental measurements can be generalized across HAs, we repeated the maximum frequency analyses using amino-acid preferences from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
 Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend towards more beneficial mutations for higher-frequency nodes of an H3 phylogeny.
 This observation indicates that the utility of an experiment for revealing differences between low and high frequency clades degrades over sufficiently long evolutionary distances. 
