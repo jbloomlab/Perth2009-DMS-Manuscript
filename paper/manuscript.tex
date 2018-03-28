@@ -26,7 +26,7 @@
 
 \begin{document}
 
-\title{Deep mutational scanning of hemagglutinin helps identify evolutionarily successful human H3N2 influenza viruses}
+\title{Deep mutational scanning of hemagglutinin helps predict the evolutionary fates of human H3N2 influenza virus variants}
 
 % Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 \author[a,d,e]{Juhye M. Lee}
@@ -54,7 +54,7 @@
 A key goal in the study of influenza virus evolution is to forecast which viral strains will persist and which ones will die out. 
 Here we experimentally measure the effects of all amino-acid mutations to the hemagglutinin protein from a human H3N2 influenza strain on viral growth in cell culture.
 We show that these measurements have utility for distinguishing among viral strains that do and do not succeed in nature.
-Overall, our work suggests that new high-throughput experimental approaches may be useful for evolutionary forecasting.
+Overall, our work suggests that new high-throughput experimental approaches may be useful for understanding virus evolution in nature.
 }
 
 % Please include corresponding author, author contribution and author declaration information
@@ -66,7 +66,7 @@ Overall, our work suggests that new high-throughput experimental approaches may 
 \keywords{influenza virus $|$ hemagglutinin $|$ deep mutational scanning $|$ antigenic drift $|$ epistasis} 
 
 \begin{abstract}
-% no more than 250 words. (170 now)
+% no more than 250 words. 
 Human influenza virus rapidly accumulates mutations in its major surface protein hemagglutinin (HA).
 The evolutionary success of influenza virus lineages depends on how these mutations affect HA's functionality and antigenicity.
 Here we experimentally measure the effects on viral growth in cell culture of all single amino-acid mutations to the HA from a recent human H3N2 influenza virus strain. 
@@ -95,21 +95,6 @@ This evolution is further characterized by competition and turnover among groups
 As a result, mutations that differentiate clades exhibit dynamic frequency trajectories as these clades appear, circulate, or die out.
 Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
 A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
-% This evolution is further characterized by strain competition and frequent population turnover~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}, producing a spindly phylogenetic tree with a persistent trunk lineage and short-lived side branches~\cite{fitch1991positive} (Figure~\ref{fig:H3N2_phylogeny}).
-% Several lines of evidence indicate that the trunk has higher fitness than other lineages~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
-% A key challenge in the study of H3N2 evolution is to forecast which strain will dominate the upcoming influenza season, as this information can guide selection of a vaccine strain~\cite{morris2017predictive}.
-% In order to make these forecasts, it is important to identify the features that enable the trunk strain to persist as other strains die out.
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\linewidth]{figs/H3N2_phylogeny/H3N2_phylogeny.pdf}
-%\caption{\label{fig:H3N2_phylogeny}
-%{\bf Human H3N2 HA phylogeny from 1968-2017.}
-%The trunk is shown in red, and side branches are shown in blue.
-%The gray branches represent the part of the tree for which we cannot yet distinguish the trunk from side branches.
-%The Perth/2009 strain is indicated with a star.
-%}
-%\end{figure}
 
 Two main characteristics distinguish evolutionarily successful clades from their competitors: greater antigenic change, and efficient viral growth and transmission.
 In principle, experiments could be informative for identifying how mutations affect these features.
@@ -119,14 +104,11 @@ Specifically, due to influenza virus's high mutation rate~\cite{holland1982rapid
 The resulting accumulation of deleterious mutations can affect non-antigenic properties that are central to viral fitness~\cite{luksza2014predictive}.
 However, there are no large-scale quantitative characterizations of how mutations to H3N2 HA affect non-antigenic properties crucial to viral fitness.
 
-It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of large numbers of mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
+It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of all single amino-acid mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
 Here we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
-We then examine these measurements in the context of the natural evolution of human influenza, and show that they can help discriminate evolutionarily successful viral clades from lineages that quickly die out.
-However, the utility of experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
-%We then examine whether these measurements are useful for distinguishing between H3N2 trunk and side-branch lineages, and find that mutations on the trunk are measured to be more favorable than those on the side branches, both at epitope and non-epitope sites.
-%However, the experiments are useful for assessing the effects of mutations only in closely related viral strains, since we show that mutations often have disparate effects on H3 and H1 HAs.
-%Our work highlights the potential for using high-throughput experimental measurements of mutational effects to inform evolutionary forecasting of human seasonal influenza virus.
+We then show that these experimental measurements can help discriminate evolutionarily successful viral clades from lineages that quickly die out.
+However, the utility of the experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
 
 \section*{Results}
 \label{sec:results}
