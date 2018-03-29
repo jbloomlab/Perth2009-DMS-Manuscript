@@ -255,12 +255,12 @@ Note that the mutational tolerance values are not comparable between the two HAs
 
 \subsection*{Our measurements can help distinguish between viral clades that reach low and high frequencies in nature}
 A major goal in the study of rapidly evolving viruses such as influenza is to understand the features that distinguish successful and unsuccessful clades, as this can help us identify clades that are likely to reach high frequencies from those that will quickly die out~\cite{lassig2017predicting,morris2017predictive}.
-The frequencies that viral strains reach nature depend in large part on their fitnesses~\cite{strelkowa2012clonal,neher2014predicting,koelle2015effects}.
+The frequency that a viral strain reaches in nature depends in large part on its fitness~\cite{strelkowa2012clonal,neher2014predicting,koelle2015effects}.
 Our experiments measure viral growth in cell culture, which is a partial albeit imperfect proxy for viral fitness.
 We therefore investigated whether these measurements could help distinguish among strains that do and do not reach high frequencies during natural evolution.  
 
 Specifically, we examined the relationship between our experimental measurements and the maximum frequency reached by the clade descended from each branch on the tree on which an amino-acid mutation has occurred.
-\comment{Trevor: is there some general paper we should cite for the concept of clade frequencies, or should we just cite as here?}
+\comment{Trevor: is there some general paper we should cite for the concept of clade frequencies, or should we just state what we did without a citation?}
 This concept of relating the experimentally measured effects of mutations to the maximum clade frequency is illustrated in Figure~\ref{fig:frequency_trajectory} for sequences isolated between 2004 and 2014.
 If a mutation is deleterious, we would expect the clade descended from the branch containing that mutation to quickly die out, whereas branches with beneficial mutations are more likely to lead to clades that expand in frequency.
 Qualitative inspection of Figure~\ref{fig:frequency_trajectory} suggests that mutations that are experimentally measured to be neutral or beneficial are more likely than those measured to be deleterious to occur on branches leading to high frequency clades.
@@ -292,7 +292,7 @@ Importantly, the effect size is similar for both the pre- and post-Perth/2009 se
 (A) The correlation between the effects of mutations as measured in our experiments and the maximum frequency reached by viral clades.
 The plots show the Spearman correlation $\rho$ and a $P$-value obtained by repeatedly randomizing the experimental measurements among sites \comment{John: is this right about how the $P$-value was calculated?}.
 (B) The distribution of mutational effects among clades binned by the maximum frequency that they reach.
-Note that the analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{fig:tree}).
+Note that the analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 \comment{Split the top and bottom into A and B, adjust font sizes (particularly, tick labels too big), adjust capitalization to be consistent with other figures (which usually start lower-case unless proper noun), increasing spacing between A and B panels. Also, no need for a title at top and figure can probably get smaller.}
 }
 \end{figure*}
@@ -301,7 +301,7 @@ The trends in Figure~\ref{fig:muteffect_maxfreq} appear to be most strongly driv
 Among clades that reach high frequency, the mutations are overwhelmingly measured to be either beneficial or close to neutral.
 Overall, these results demonstrate that measurements of how mutations affect viral growth in cell culture are informative for understanding the fates of the viral clades in nature: in particular, if a clade has a mutation that is measurably deleterious to viral growth, that clade is unlikely to prosper in nature.
 
-\subsection*{Measurements made for an H1 HA are not useful for understanding the evolution of H3 influenza}
+\subsection*{Measurements made on an H1 HA are not useful for understanding the evolution of H3 influenza}
 To determine how broadly experimental measurements can be generalized across HAs, we repeated the clade frequency analyses using mutational effects from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
 Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend for more beneficial mutations to be enriched in higher-frequency clades of an H3 phylogeny.
 This result is not unsurprising given that H1 and H3 HAs only have 42\% sequence identity, but it does underscore that the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied. 
