@@ -26,11 +26,11 @@
 
 \begin{document}
 
-\title{Deep mutational scanning of hemagglutinin helps predict the evolutionary fates of human H3N2 influenza virus variants}
+\title{Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants}
 
 % Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 \author[a,d,e]{Juhye M. Lee}
-\author[b,f]{John Huddleston} 
+\author[b,f]{John Huddleston}
 \author[a,d,e]{Michael B. Doud}
 \author[a,f]{Kathryn A. Hooper}
 \author[g]{Nicholas C. Wu}
@@ -60,19 +60,19 @@ Overall, our work suggests that new high-throughput experimental approaches may 
 % Please include corresponding author, author contribution and author declaration information
 \authorcontributions{J.M.L. performed the experiments; J.M.L. and J.H. analyzed data with input from T.B. and J.D.B.; M.B.D. contributed essential reagents and expertise; K.A.H. contributed essential reagents; N.C.W. made key intellectual contributions; J.M.L. and J.D.B. wrote the paper with input from J.H. and T.B.; all authors were involved in project design and revising the paper}
 \authordeclaration{The authors declare no conflict of interest.}
-\correspondingauthor{\textsuperscript{1}To whom correspondence should be addressed: trevor@bedford.io, jbloom@fredhutch.org}
+\correspondingauthor{\textsuperscript{1}To whom correspondence should be addressed: tbedford@fredhutch.org, jbloom@fredhutch.org}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-\keywords{influenza virus $|$ hemagglutinin $|$ deep mutational scanning $|$ antigenic drift $|$ epistasis} 
+\keywords{influenza virus $|$ hemagglutinin $|$ deep mutational scanning $|$ antigenic drift $|$ epistasis}
 
 \begin{abstract}
-% no more than 250 words. 
+% no more than 250 words.
 Human influenza virus rapidly accumulates mutations in its major surface protein hemagglutinin (HA).
 The evolutionary success of influenza virus lineages depends on how these mutations affect HA's functionality and antigenicity.
-Here we experimentally measure the effects on viral growth in cell culture of all single amino-acid mutations to the HA from a recent human H3N2 influenza virus strain. 
-We then show that mutations in evolutionarily successful H3N2 viral lineages are measured to generally be more favorable than mutations in lineages that quickly die out.
+Here we experimentally measure the effects on viral growth in cell culture of all single amino-acid mutations to the HA from a recent human H3N2 influenza virus strain.
+We show that mutations that are measured to be more favorable in cell culture tend to result in more evolutionarily successful H3N2 viral lineages than mutations that are less favorable in cell culture.
 Therefore, despite the well-known caveats about cell-culture measurements of viral fitness, such measurements can still be informative for understanding evolution in nature.
-We also compare our measurements for an H3 HA to similar data previously generated for a distantly related H1 HA, and find substantial differences in which amino acids are preferred at many sites.
+We also compare our measurements for H3 HA to similar data previously generated for a distantly related H1 HA, and find substantial differences in which amino acids are preferred at many sites.
 For instance, the H3 HA has less disparity in mutational tolerance between the head and stalk domains than the H1 HA.
 Overall, our work suggests that experimental measurements of mutational effects can be leveraged to help understand the evolutionary fates of viral lineages in nature --- but only when the measurements are made on a viral strain similar to the ones being studied in nature.
 \end{abstract}
@@ -89,11 +89,11 @@ Overall, our work suggests that experimental measurements of mutational effects 
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
-\dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein.
-Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping,bhatt2011genomic}.
-This evolution is further characterized by competition and turnover among groups of strains or clades~\cite{fitch1997long,strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects,bedford2015global}.
-As a result, mutations that differentiate clades exhibit dynamic frequency trajectories as these clades appear, circulate, or die out.
-Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{strelkowa2012clonal,bedford2011,neher2014predicting,koelle2015effects}.
+\dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein~\cite{fitch1997long, bhatt2011genomic}.
+Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping}.
+This evolution is further characterized by competition and turnover among groups of strains or clades bearing different complements of mutations~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,koelle2015effects,bedford2015global}.
+Clades vary widely in their evolutionary success with some dieing out soon after emergence and others going on to take over the virus population.
+Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,luksza2014predictive}.
 A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
 
 Two main characteristics distinguish evolutionarily successful clades from their competitors: greater antigenic change, and efficient viral growth and transmission.
@@ -106,7 +106,7 @@ However, there are no large-scale quantitative characterizations of how mutation
 
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of all single amino-acid mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
-Here we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
+Here, we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
 We then show that these experimental measurements can help discriminate evolutionarily successful viral clades from lineages that quickly die out.
 However, the utility of the experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
 
@@ -254,23 +254,19 @@ Note that the mutational tolerance values are not comparable between the two HAs
 \end{figure*}
 
 \subsection*{Our measurements can help distinguish between viral clades that reach low and high frequencies in nature}
-A major goal in the study of rapidly evolving viruses such as influenza is to understand the features that distinguish successful and unsuccessful clades, as this can help us identify clades that are likely to reach high frequencies from those that will quickly die out~\cite{lassig2017predicting,morris2017predictive}.
-The frequency that a viral strain reaches in nature depends in large part on its fitness~\cite{strelkowa2012clonal,neher2014predicting,koelle2015effects}.
-Our experiments measure viral growth in cell culture, which is a partial albeit imperfect proxy for viral fitness.
-We therefore investigated whether these measurements could help distinguish among strains that do and do not reach high frequencies during natural evolution.  
-
-Specifically, we examined the relationship between our experimental measurements and the maximum frequency reached by the clade descended from each branch on the tree on which an amino-acid mutation has occurred.
-\comment{Trevor: is there some general paper we should cite for the concept of clade frequencies, or should we just state what we did without a citation?}
-This concept of relating the experimentally measured effects of mutations to the maximum clade frequency is illustrated in Figure~\ref{fig:frequency_trajectory} for sequences isolated between 2004 and 2014.
-If a mutation is deleterious, we would expect the clade descended from the branch containing that mutation to quickly die out, whereas branches with beneficial mutations are more likely to lead to clades that expand in frequency.
-Qualitative inspection of Figure~\ref{fig:frequency_trajectory} suggests that mutations that are experimentally measured to be neutral or beneficial are more likely than those measured to be deleterious to occur on branches leading to high frequency clades.
+Mutations occurring in the H3N2 population have widely varying evolutionary outcomes~\ref{fig:frequency_trajectory}.
+Some mutations appear, spread and fix in the population, while others briefly circulate before dieing out.
+We take the maximum frequency reached by a mutation as a coarse indicator of its fitness, under the assumption that fitter mutations are expected to reach higher frequency on average than less fit mutations \cite{ewens2012mathematical}.
+If a mutation is deleterious, we would expect it to quickly die out, whereas beneficial mutations are more likely to expand in frequency.
+Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, i.e.\ although R142G occurs multiple times on the phylogeny we track each of these mutations separately.
+As such, each mutation is shown as a separate circle occuring on a separate branch in Figure \ref{fig:frequency_trajectory}.
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figs/frequency_trajectory_ex.png}
 \caption{\label{fig:frequency_trajectory}
 {\bf Frequency trajectories of viral clades and their relation to the effects of individual mutations.}
-The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} windowed from 2004 to 2014. 
+The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} windowed from 2004 to 2014.
 Circles indicate amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
 The bottom panel shows the frequency trajectory of the clade downstream of each mutation, with clades colored according to the mutational effects as in the top panel.
 It is obvious that most clades that reach high frequency have mutations that are measured to be relatively favorable in our experiments.
@@ -278,6 +274,8 @@ It is obvious that most clades that reach high frequency have mutations that are
 }
 \end{figure}
 
+Here, we examine to what degree our experimental measurements correlate with realized evolutionary outcomes.
+Qualitative inspection of Figure~\ref{fig:frequency_trajectory} suggests that mutations that are experimentally measured to be neutral or beneficial are more likely than those measured to be deleterious to occur on branches leading to high frequency clades.
 To analyze the relationship between mutational effect and clade frequency more quantitatively, we next partitioned the phylogeny of human H3N2 influenza HA into sequences that split from the line of descent (trunk of the phylogenetic tree) before or after the Perth/2009 strain used in our experiments (see Figure~\ref{suppfig:tree}).
 The rationale for partitioning into pre- and post-Perth/2009 sequences is that we wanted to test the utility of our measurements for prospective as well as post-hoc analyses.
 \comment{John: do you have a sentence to add about how we used max tips to avoid passaging artifacts?}
