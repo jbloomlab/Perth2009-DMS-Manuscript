@@ -91,7 +91,7 @@ Overall, our work suggests that experimental measurements of mutational effects 
 
 \dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein~\cite{fitch1997long, bhatt2011genomic}.
 Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping}.
-This evolution is further characterized by competition and turnover among groups of strains or clades bearing different complements of mutations~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,koelle2015effects,bedford2015global}.
+This evolution is further characterized by competition and turnover among groups of strains called clades bearing different complements of mutations~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,koelle2015effects,bedford2015global}.
 Clades vary widely in their evolutionary success with some dieing out soon after emergence and others going on to take over the virus population.
 Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,luksza2014predictive}.
 A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
@@ -107,14 +107,14 @@ However, there are no large-scale quantitative characterizations of how mutation
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of all single amino-acid mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
 Here, we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
-We then show that these experimental measurements can help discriminate evolutionarily successful viral clades from lineages that quickly die out.
+We then show that these experimental measurements can help discriminate evolutionarily successful mutations from those that quickly die out.
 However, the utility of the experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
 
 \section*{Results}
 \label{sec:results}
 
 \subsection*{Deep mutational scanning of HA from a recent strain of human H3N2 influenza virus}
-We performed a deep mutational scan to measure the effects of all amino-acid mutations to HA from the A/Perth/16/2009 (H3N2) strain on viral growth in cell culture. 
+We performed a deep mutational scan to measure the effects of all amino-acid mutations to HA from the A/Perth/16/2009 (H3N2) strain on viral growth in cell culture.
 This strain was the H3N2 component of the influenza vaccine from 2010-2012~\cite{who2010d,who2011}.
 Relative to the consensus sequence for this HA in Genbank, we used a variant with two mutations that enhanced viral growth in cell culture, G78D and T212I (Figure~\ref{suppfig:Perth2009_mut} and Dataset~\ref{suppdata:PerthHA}).
 The G78D mutation occurs at low frequency in natural H3N2 sequences, and T212 is a site where a mutation to Ala rose to fixation in human influenza in $\sim$2011.
@@ -253,68 +253,67 @@ Note that the mutational tolerance values are not comparable between the two HAs
 %\end{SCfigure*}
 \end{figure*}
 
-\subsection*{Our measurements can help distinguish between viral clades that reach low and high frequencies in nature}
-Mutations occurring in the H3N2 population have widely varying evolutionary outcomes~\ref{fig:frequency_trajectory}.
+\subsection*{Our measurements can help distinguish between mutations that reach low and high frequencies in nature}
+Mutations occurring in the H3N2 virus population have widely varying evolutionary outcomes (Figure~\ref{fig:frequency_trajectory}).
 Some mutations appear, spread and fix in the population, while others briefly circulate before dieing out.
 We take the maximum frequency reached by a mutation as a coarse indicator of its fitness, under the assumption that fitter mutations are expected to reach higher frequency on average than less fit mutations \cite{ewens2012mathematical}.
-If a mutation is deleterious, we would expect it to quickly die out, whereas beneficial mutations are more likely to expand in frequency.
-We anticipated that clades with deleterious mutations represented by low mutational effects would never reach high global frequencies. 
-Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, i.e.\ although R142G occurs multiple times on the phylogeny we track each of these mutations separately.
+If a mutation is highly deleterious, we would expect it to quickly die out, whereas less deleterious or beneficial mutations are more likely to expand in frequency.
+Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, i.e.\ although R142G occurs multiple times on the phylogeny we track each of these mutations occurring on different backgrounds separately.
 As such, each mutation is shown as a separate circle occuring on a separate branch in Figure \ref{fig:frequency_trajectory}.
-We identified all mutations on a phylogeny branch and assigned a single mutational effect value based on the sum of effects for each mutation on the branch. 
-
-In contrast, we expected clades with beneficial mutations represented by high mutational effects to dominate globally and fix. 
-Correspondingly, we observed few clades in our phylogeny with strongly deleterious mutational effects and rarely observed these clades reaching high frequency (Figure~\ref{fig:frequency_trajectory}). 
-Clades that reached high global frequencies generally had neutral or beneficial mutational effects. 
-
+However, because multiple mutations on the same phylogeny branch cannot be disentangled, we identified all mutations on a branch and assigned a single mutational effect based on the sum of effects for each mutation on the branch.
+We observed few circulating mutations in our phylogeny with strongly deleterious mutational effects and rarely observed these mutations reaching high frequency (Figure~\ref{fig:frequency_trajectory}).
+Mutations that reached high global frequencies generally had neutral or beneficial mutational effects.
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figs/frequency_trajectory_ex.png}
 \caption{\label{fig:frequency_trajectory}
-{\bf Frequency trajectories of viral clades and their relation to the effects of individual mutations.}
+{\bf Frequency trajectories of individual mutations and their relation to the experimentally determined effects of these mutations.}
 The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} windowed from 2004 to 2014.
-Circles indicate amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
-The bottom panel shows the frequency trajectory of the clade downstream of each mutation, with clades colored according to the mutational effects as in the top panel.
-It is obvious that most clades that reach high frequency have mutations that are measured to be relatively favorable in our experiments.
+Circles indicate individual amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
+The bottom panel shows the frequency trajectory of each mutation, with mutation trajectories colored according to the mutational effects as in the top panel.
+It is clear that most mutations that reach high frequency are measured to be relatively favorable in our experiments.
 }
 \end{figure}
 
-We further quantified this relationship by calculating a Spearman rank correlation between mutational effects and maximum global frequencies of clades in the H3N2 phylogeny.
-Qualitative inspection of Figure~\ref{fig:frequency_trajectory} suggests that mutations that are experimentally measured to be neutral or beneficial are more likely than those measured to be deleterious to occur on branches leading to high frequency clades.
-To minimize effects related to the genetic background of the DMS strain, we excluded clades closely related to the DMS strain itself and partitioned the remaining clades into those pre- and post-dating the Perth/2009 strain.
-We additionally excluded clades from the post-Perth partition that were sampled in 2014 or after and that have not had enough evolutionary time to reach fixation.
+We next sought to quantify the correlation between mutation effects and maximum frequencies attained.
+To minimize effects related to the genetic background of the DMS strain, we excluded mutations closely related to the DMS strain itself and partitioned the remaining mutations into XXX \comment{John: please add number} mutations pre-dating and XXX \comment{John: please add number} mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
+We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
-In both pre-Perth and post-Perth clades, we found a modest, statistically significant relationship between maximum clade frequency and mutational effect (Figure~\ref{fig:muteffect_maxfreq}A).
-The similar effect size for both partitions suggests that our experimental measurements can be used to predict clade frequencies despite the genetic background of the DMS strain.
+We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
+In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$).
+The similar effect size for both partitions suggests that our experimental measurements can be used to predict mutation frequencies despite the genetic background of the DMS strain.
 
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/muteffect_by_maxfreq.pdf}
 \caption{\label{fig:muteffect_maxfreq}
-{\bf The experimental measurements are informative about the evolutionary fate of viral clades.}
-(A) The correlation between the effects of mutations as measured in our experiments and the maximum frequency reached by viral clades.
-The plots show the Spearman correlation $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations for which the Spearman correlation $\rho$ between maximum frequency and randomized mutational effects was greater than or equal to the observed $\rho$.
-(B) The distribution of mutational effects among clades binned by the maximum frequency that they reach.
-Note that the analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
+{\bf Experimental measurements are informative about the evolutionary fate of viral mutations.}
+(A) Correlation between the effects of mutations as measured in our experiments and the maximum frequency reached by these mutations.
+The plots show Spearman $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations for which permuted $\rho$ was greater than or equal to the observed $\rho$.
+(B) The distribution of mutational effects partitioned by maximum mutation frequency.
+The vertical black line shows the mean \comment{John: or is it median?} mutation effect for each category.
+The analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 }
 \end{figure*}
 
-The trends in Figure~\ref{fig:muteffect_maxfreq} appear to be most strongly driven by the fact that mutations we measure to be substantially deleterious to viral growth almost never occur in clades that reach high frequency.
-Among clades that reach high frequency, the mutations are overwhelmingly measured to be either beneficial or close to neutral.
-Overall, these results demonstrate that measurements of how mutations affect viral growth in cell culture are informative for understanding the fates of the viral clades in nature: in particular, if a clade has a mutation that is measurably deleterious to viral growth, that clade is unlikely to prosper in nature.
+The trends in Figure~\ref{fig:muteffect_maxfreq}A appear to be most strongly driven by behavior of strongly deleterious mutations.
+We investigated this further by partitioning mutations in those circulating at low, medium and high levels and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
+We observe both a shift in the mean \comment{John: or is it median?} mutation effect and in the distribution of mutation effects as we increase in circulation category.
+Mutations that we measure to be substantially deleterious almost never reach high frequency.
+Overall, these results demonstrate that measurements of how mutations affect viral growth in cell culture are informative for understanding the fates of these mutations in nature: in particular, if a mutation is measurably deleterious to viral growth, that mutation is unlikely to prosper in nature.
 
 \subsection*{Measurements made on an H1 HA are not useful for understanding the evolution of H3 influenza}
-To determine how broadly experimental measurements can be generalized across HAs, we repeated the clade frequency analyses using mutational effects from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
-Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend for more beneficial mutations to be enriched in higher-frequency clades of an H3 phylogeny.
-This result is not unsurprising given that H1 and H3 HAs only have 42\% sequence identity, but it does underscore that the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied. 
+To determine how broadly experimental measurements can be generalized across HAs, we repeated the analysis of H3N2 mutation frequencies, but using mutational effects from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
+Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend for mutation effect on H1 to correlate with H3 maximum mutation frequency.
+This result is not surprising given that H1 and H3 HAs only have 42\% sequence identity, but it does underscore that the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied.
 
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/muteffect_by_maxfreq_WSN_1.pdf}
 \caption{\label{fig:muteffect_maxfreq_WSN}
-{\bf Experimental measurements on an H1 HA are not informative about the evolutionary fate of H3N2 viral clades.}
-This figure repeats the analysis of the H3N2 clade frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
+{\bf Experimental measurements on an H1 HA are not informative about the evolutionary fate of H3N2 mutations.}
+This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}, i.e.\
 Figure~\ref{suppfig:muteffect_maxfreq_WSN_supp} shows the histograms comparable to those in Figure~\ref{fig:muteffect_maxfreq}B.
 \comment{John: Can you match any formatting changes that you make to Figure~\ref{fig:muteffect_maxfreq}A here so that they look consistent.}
 }
@@ -395,9 +394,9 @@ One monomer is in dark gray, while the HA1 domain of the neighboring monomer is 
 
 \section*{Discussion}
 \label{sec:discussion}
-We have measured the effects of all possible single amino-acid mutations to the Perth/2009 H3 HA on viral growth in cell culture and demonstrated that these measurements have some value for understanding the evolutionary fate of human H3N2 viral strains in nature.
-Specifically, viral clades that reach high frequency tend to have mutations that our experiments measure to be more beneficial for viral growth than the mutations that occur in clades that quickly die out.
-The fact that our experiments can be used to help identify some of the features of successful viral clades suggests that they might inform evolutionary forecasting.
+We have measured the effects of all possible single amino-acid mutations to the Perth/2009 H3 HA on viral growth in cell culture and demonstrated that these measurements have some value for understanding the evolutionary fate of these mutations in nature.
+Specifically, mutations measured to be more beneficial for viral growth tend to circulate at higher frequency in nature than mutations measured to be more deleterious for viral growth.
+The fact that our experiments can be used to help identify evolutionary successful mutations suggests that they might inform evolutionary forecasting.
 In their landmark paper introducing predictive viral fitness models that accounted for both antigenic and non-antigenic mutations, {\L}uksza and L{\"a}ssig~\cite{luksza2014predictive} noted that the models could in principle be improved by integrating ``diverse genotypic and phenotypic data'' that more realistically represented the effects of specific mutations.
 Our work suggests that deep mutational scanning may be able to provide such data.
 
@@ -497,19 +496,20 @@ The amino-acid preferences were re-scaled by the stringency parameter using the 
 The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2018quantifying}.
 
 \subsection*{Quantification of relative solvent accessibility}
-We quantified the absolute solvent accessibility of each site of the H3 HA (PDB 4O5N;~\cite{lee2014receptor}) or the H1 HA (PDB 1RVX;~\cite{gamblin2004structure}) structure using DSSP~\cite{kabsch1983}. 
+We quantified the absolute solvent accessibility of each site of the H3 HA (PDB 4O5N;~\cite{lee2014receptor}) or the H1 HA (PDB 1RVX;~\cite{gamblin2004structure}) structure using DSSP~\cite{kabsch1983}.
 We then normalized to a relative solvent accessibility using the absolute accessibilities in~\cite{tien2013}.
 
-\subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum clade frequencies}
+\subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum mutation frequencies}
 To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID, sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
 We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
 Ancestral state reconstruction and branch length timing were performed with treetime~\cite{Sagulenko2018}.
 We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
 The phylogenetic tree is available as a JSON file on GitHub at \comment{repository will be made public upon acceptance of paper; if you are a reviewer who wants access please contact the editor}.
 The tree was visualized using baltic (\url{https://github.com/blab/baltic}).
+
 \comment{John: can you update this section to be accurate?}
 
-\comment{John: can you add a section on calculation of max clade frequencies?}
+\comment{John: can you add a section on calculation of max mutation frequencies?}
 
 \subsection*{Quantification of mutational effects}
 We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
@@ -601,7 +601,7 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 \begin{suppfigure}[H]
 \centerline{\includegraphics[clip=true, trim=0 5.5in 0 0,width=0.7\textwidth]{figs/S04_post_Perth2009/post_Perth2009_seqpref.pdf}}
 \caption{\label{suppfig:tree}
-{\bf A phylogenetic tree of all HA sequences used in our analysis of clade frequencies.}
+{\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
 HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
 The Perth/2009 strain used in our experiments is indicated.
 The rest of the tree is partitioned into nodes that preceded the split of the Perth/2009 strain from the trunk of the tree (blue) and nodes that branched off the trunk after the clade containing Perth/2009 (orange).
@@ -627,8 +627,8 @@ Note that the mutational tolerance values are not comparable between the two HAs
 \begin{suppfigure}[H]
 \centerline{\includegraphics[width=0.75\textwidth]{figs/muteffect_by_maxfreq_WSN_2.pdf}}
 \caption{\label{suppfig:muteffect_maxfreq_WSN_supp}
-{\bf The distribution of mutational effects measured in H1 HA among H3N2 clades binned by the maximum frequency that they reach.}
-This figure repeats the analysis of the H3N2 clade frequencies in Figure~\ref{fig:muteffect_maxfreq}B, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
+{\bf The distribution of mutational effects measured in H1 HA among H3N2 mutations binned by the maximum frequency that they reach.}
+This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}B, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
 }
 \end{suppfigure}
 
