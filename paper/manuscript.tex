@@ -255,7 +255,7 @@ In contrast, the residues surrounding the receptor binding pocket are fairly mut
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\linewidth]{figs/frequency_trajectory_ex.pdf}
+\includegraphics[width=\linewidth]{figs/frequency_trajectory_ex/frequency_trajectory_ex.pdf}
 \caption{\label{fig:frequency_trajectory}
 {\bf Frequency trajectories of individual mutations and their relation to the experimentally determined effects of these mutations.}
 The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} windowed from 2004 to 2014.
@@ -265,9 +265,11 @@ It is clear that most mutations that reach high frequency are measured to be rel
 }
 \end{figure}
 
-\begin{figure*}[ht]
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+%\begin{figure*}[ht]
 \centering
-\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq.pdf}
+\includegraphics[width=12cm]{figs/muteffect_by_maxfreq/muteffect_by_maxfreq.pdf}
+%\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq/muteffect_by_maxfreq.pdf}
 \caption{\label{fig:muteffect_maxfreq}
 {\bf Experimental measurements are informative about the evolutionary fate of viral mutations.}
 (A) Correlation between the effects of mutations as measured in our experiments and the maximum frequency reached by these mutations.
@@ -276,7 +278,8 @@ The plots show Spearman $\rho$ and an empirical $P$-value representing the propo
 The vertical black line shows the mean mutation effect for each category.
 The analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 }
-\end{figure*}
+\end{SCfigure*}
+%\end{figure*}
 
 \subsection*{Our measurements can help distinguish between mutations that reach low and high frequencies in nature}
 Mutations occurring in the H3N2 virus population have widely varying evolutionary outcomes (Figure~\ref{fig:frequency_trajectory}).
@@ -298,16 +301,19 @@ We quantified the relationship between mutational effects and maximum mutation f
 In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$).
 The similar effect size for both partitions suggests that our experimental measurements can be used to predict mutation frequencies despite the genetic background of the DMS strain.
 
-\begin{figure*}[ht]
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+%\begin{figure*}[ht]
 \centering
-\includegraphics[width=1.0\textwidth]{figs/muteffect_by_maxfreq_WSN_1.pdf}
+\includegraphics[width=12cm]{figs/muteffect_by_maxfreq_WSN/muteffect_by_maxfreq_WSN.pdf}
+%\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq_WSN/muteffect_by_maxfreq_WSN.pdf}
 \caption{\label{fig:muteffect_maxfreq_WSN}
 {\bf Experimental measurements on an H1 HA are not informative about the evolutionary fate of H3N2 mutations.}
 This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}, i.e.\
 Figure~\ref{suppfig:muteffect_maxfreq_WSN_supp} shows the histograms comparable to those in Figure~\ref{fig:muteffect_maxfreq}B.
 The empirical $P$-value represents the results of 1,000 permutations.
 }
-\end{figure*}
+\end{SCfigure*}
+%\end{figure*}
 
 The trends in Figure~\ref{fig:muteffect_maxfreq}A appear to be most strongly driven by behavior of strongly deleterious mutations.
 We investigated this further by partitioning mutations in those circulating at low, medium and high levels and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
@@ -583,7 +589,7 @@ TB is a Pew Biomedical Scholar and is supported by NIH R35 GM119774.
 \clearpage
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.5\textwidth]{figs/S01_G78D-T212I/G78D-T212I.pdf}}
+\centerline{\includegraphics[width=0.5\textwidth]{figs/supp_G78D-T212I/G78D-T212I.pdf}}
 \caption{\label{suppfig:Perth2009_mut}
 {\bf Characterization of the G78D-T212I Perth/2009 HA variant.}
 (A)
@@ -598,7 +604,7 @@ The A212 variant rose to fixation in $~\sim$2011, replacing the T212 variant.
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.6\textwidth]{figs/S02_SangerSeq/SangerSeq.pdf}}
+\centerline{\includegraphics[width=0.6\textwidth]{figs/supp_SangerSeq/SangerSeq.pdf}}
 \caption{\label{suppfig:SangerSeq}
 {\bf Sanger sequencing of 31 randomly chosen clones from the mutant plasmid libraries.}
 (A) There were an average of $\sim$1.4 codon mutations per clone across the three plasmid mutant libraries.
@@ -612,7 +618,7 @@ The blue line indicates the expected distribution if mutations in multiply mutat
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=\textwidth]{figs/S03_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
+\centerline{\includegraphics[width=\textwidth]{figs/supp_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
 \caption{\label{suppfig:WSNprefs_logoplot}
 {\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA as measured in \cite{doud2016accurate}.}
 The amino-acid preferences from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
@@ -623,7 +629,7 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 
 \begin{suppfigure}[H]
 %%\centerline{\includegraphics[clip=true, trim=0 5.5in 0 0,width=0.7\textwidth]{figs/S04_post_Perth2009/post_Perth2009_seqpref.pdf}}
-\centerline{\includegraphics[width=1.0\textwidth]{figs/S04_post_Perth2009/post_Perth2009_seqpref.pdf}}
+\centerline{\includegraphics[width=1.0\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
 {\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
 HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
@@ -649,7 +655,7 @@ Note that the mutational tolerance values are not comparable between the two HAs
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=1.0\textwidth]{figs/muteffect_by_maxfreq_WSN_2.pdf}}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_muteffect_maxfreq_WSN/muteffect_maxfreq_WSN_supp.pdf}}
 \caption{\label{suppfig:muteffect_maxfreq_WSN_supp}
 {\bf The distribution of mutational effects measured in H1 HA among H3N2 mutations binned by the maximum frequency that they reach.}
 This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}B, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
@@ -675,6 +681,12 @@ The unscaled preferences for replicates 1, 2, 3-1, and 3-2 are each in a separat
 Additional tabs give the across-replicate averaged and re-scaled amino-acid preferences in sequential numbering and in H3 numbering as shown in Figure~\ref{fig:logoplot}.
 There are also tabs that give the conversion from sequential to H3 numbering.
 Each tab can simply be exported to CSV for computational analyses.
+}
+\end{suppdata}
+
+\begin{suppdata}[H]
+\caption{\label{suppdata:gisaid}
+Excel file providing acknowledgments and accessions for sequences downloaded from GISAID.
 }
 \end{suppdata}
 
