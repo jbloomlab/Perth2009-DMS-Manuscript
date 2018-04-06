@@ -11,15 +11,18 @@ Study by Juhye Lee, John Huddleston, Mike Doud, Katie Hooper, Trevor Bedford & J
 #### Analysis notebooks
 There are two analysis notebooks:
   * [analysis_notebook.ipynb](analysis_notebook.ipynb): in this notebook, we analyze deep sequencing data and estimate the amino-acid preferences using `dms_tools2`. We also compare the shifts in amino-acid preferences between the Perth/2009 H3 and the WSN/1933 H1 HA's.
-  * [trunk_vs_tip_analysis.ipynb](trunk_vs_tip_analysis.ipynb): in this notebook, we use the Perth/2009 H3 HA amino-acid preferences to examine differences in trunk and side branch lineages of human H3N2 influenza viral strains.
+  * [max_frequency_analysis.ipynb](max_frequency_analysis.ipynb): in this notebook, we use the Perth/2009 H3 HA and WSN/1933 H1 HA amino-acid preferences to examine the relationships between the frequencies achieved by mutations in a human H3N2 phylogeny and the effects of these mutations.
 
 #### Input files
 The [./data/](./data/) subdirectory contains the following input files:
 
+  * `1RVX_trimer_sequentialnumbering.dssp`: the `DSSP` file for the H1 HA (`PDB 1RVX`)
+  * `4O5N_trimer.dssp`: the `DSSP` file for the H3 HA (`PDB 4O5N`)
   * `abs_conserved_sites.txt`: list of sites that are absolutely conserved across all 18 HA subtypes
   * `clade_specific_sites.txt`: list of sites that have clade-specific identities in the clade containing H1 and the clade containing H3
   * `domains.csv`: csv file listing each site and its associated HA domain
-  * `flu_h3n2_1968_6v_tree.json.gz`: tree build of human H3N2 influenza virus HA sequences in a `JSON` file format
+  * `flu_h3n2_ha_1968_2018_6v_frequencies.json.gz`: `JSON` file of the frequency trajectories of all nodes in a human H3N2 phylogeny (see file below)
+  * `flu_h3n2_ha_1968_2018_6v_tree.json.gz`: tree build of human H3N2 influenza virus HA sequences from 1968 to 2018 in a `JSON` file format
   * `H1toH3_renumber.csv`: file to convert from H1 sequential numbering to H3 numbering
   * `H3_human_alignment.fa`: file of subsampled human seasonal H3N2 HA sequences for running `phydms`
   * `H3_swine_alignment.fa`: file of subsampled swine H3N2 HA sequences for running `phydms`
@@ -27,7 +30,6 @@ The [./data/](./data/) subdirectory contains the following input files:
   * `Perth09_HA_reference.fa`: the reference sequence for the wildtype Perth/2009 HA
   * `Perth2009_compareprefs_renumber.csv`: file to renumber the Perth/2009 H3 preferences to allow for comparing the preferences between H3 and H1
   * `Perth2009_WSN_aa_align.fa`: the alignment file for the Perth/2009 H3 and WSN/1933 H1, aligned using `MAFFT`
-  * `wolf_epitope_sites.csv`: list of Wolf epitope sites in H3 numbering
   * `WSN_avgprefs_rescaled_H3numbering.csv`: the across-replicate and re-scaled WSN/1933 H1 HA amino-acid preferences, in H3 numbering
   * `WSN_compareprefs_renumber.csv`: file to renumber the WSN/1933 H1 preferences to allow for comparing the preferences between H1 and H3
   * `WSN_HA_reference.fa`: the reference sequence for the wildtype WSN/1933 H1 HA
