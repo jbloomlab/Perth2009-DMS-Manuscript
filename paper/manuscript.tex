@@ -491,7 +491,7 @@ We performed deep sequencing on a lane of an Illumina HiSeq 2500 using 2 $\times
 We used the \texttt{dms\_tools2} software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}, version \texttt{2.2.0}) to analyze the deep sequencing data.
 The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
 The amino-acid preferences for each replicate and for the re-scaled, across-replicate average are provided in Dataset~\ref{suppdata:prefsfiles}.
-Computer code that performs the entirety of this analysis is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript} \comment{Juhye, add additional details and link to the exact notebook}.
+Computer code that performs the entirety of this analysis is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/analysis_code/analysis_notebook.ipynb}.
 
 \subsection*{Phylogenetic model comparison and fitting of a stringency parameter}
 For the analysis in Table~\ref{tab:phydms}, we downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
@@ -519,7 +519,7 @@ To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's
 We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
 Ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
 We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
-The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript} \comment{Juhye: add link to exact file}.
+The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/analysis_code/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
 The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
 
 % notation for frequencies model
