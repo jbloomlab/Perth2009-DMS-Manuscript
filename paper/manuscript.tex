@@ -112,16 +112,16 @@ We also passaged and deep sequenced library 3 in duplicate.
 
 Two main characteristics distinguish evolutionarily successful clades from their competitors: greater antigenic change, and efficient viral growth and transmission.
 In principle, experiments could be informative for identifying how mutations affect these features.
-Most work on influenza evolution to date has utilized experimental data primarily to assess the antigenicity of circulating strains~\cite{sun2013using,harvey2016identification,neher2016prediction,koel2013substitutions,chambers2015identification,li2016selection}.
-While the antigenic features of a virus certainly contribute to its success, the non-antigenic effects of mutations also play an important role~\cite{pybus2007phylogenetic,strelkowa2012clonal,luksza2014predictive,koelle2015effects}.
+Most work on influenza evolution to date has utilized experimental data to assess the antigenicity of circulating strains~\cite{sun2013using,harvey2016identification,neher2016prediction,koel2013substitutions,chambers2015identification,li2016selection}.
+However, the non-antigenic effects of mutations also play an important role~\cite{pybus2007phylogenetic,strelkowa2012clonal,luksza2014predictive,koelle2015effects}.
 Specifically, due to influenza virus's high mutation rate~\cite{holland1982rapid,steinhauer1987rapid,lauring2010quasispecies} and lack of intra-segment recombination~\cite{boni2008homologous}, deleterious mutations become linked to beneficial ones.
-The resulting accumulation of deleterious mutations can affect non-antigenic properties that are central to viral fitness~\cite{luksza2014predictive}.
-However, there are no large-scale quantitative characterizations of how mutations to H3N2 HA affect non-antigenic properties crucial to viral fitness.
+The resulting accumulation of deleterious mutations can affect non-antigenic properties central to viral fitness~\cite{luksza2014predictive}.
+However, there are no large-scale quantitative characterizations of how mutations to H3N2 HA affect viral growth.
 
 It is now possible to use deep mutational scanning~\cite{fowler2014deep} to measure the functional effects of all single amino-acid mutations to viral proteins~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate,haddox2016experimental,qi2015high,haddox2018mapping}.
 However, the only HA for which such large-scale measurements have previously been made is from the highly lab-adapted A/WSN/1933 (H1N1) strain~\cite{thyagarajan2014inherent,wu2014high,doud2016accurate}.
-Here, we measure the effects on viral growth in cell culture of all mutations to the HA from a recent human H3N2 strain.
-We then show that these experimental measurements can help discriminate evolutionarily successful mutations from those that are found in strains that quickly die out.
+Here, we measure the effects on viral growth in cell culture of all mutations to the HA of a recent human H3N2 strain.
+We show that these experimental measurements can help discriminate evolutionarily successful mutations from those found in strains that quickly die out.
 However, the utility of the experiments for understanding natural evolution depends on the similarity between the experimental and natural strains: measurements made on an H1 HA are not useful for understanding the evolutionary fate of H3 viral strains.
 
 \section*{Results}
@@ -141,7 +141,7 @@ To further increase viral titers, we used MDCK-SIAT1 cells that we had engineere
 
 After generating the mutant virus libraries, we passaged them at low MOI in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
 All experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B).
-We also passaged and deep sequenced library 3 in duplicate (denoted as library 3-1 and 3-2) to gauge the experimental noise occurring \textit{within} a single biological replicate.
+We also passaged and deep sequenced library 3 in duplicate (library 3-1 and 3-2) to gauge experimental noise \textit{within} a single biological replicate.
 As a control to measure sequencing and mutational errors, we used the unmutated HA gene to generate and passage viruses carrying wildtype HA.
 
 Deep sequencing of the initial plasmid mutant libraries and the passaged mutant viruses revealed selection for functional HA mutants.
@@ -151,7 +151,7 @@ We also observed selection against many nonsynonymous mutations (Figure~\ref{fig
 
 \begin{table}[b!]
 \caption{\label{tab:phydms}
-{\bf Substitution models informed by the experiments describe H3N2's natural evolution better than traditional substitution models.}}
+{\bf Substitution models informed by the experiments describe HA's evolution better than traditional models.}}
 \begin{center}
 \begin{tabular}{cccccccc}
 \hline
@@ -163,7 +163,7 @@ GY94 M0 & 2536 & -9704 & -- & 0.31 \\
 \hline
 \end{tabular}
  \end{center}
-\addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 influenza HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and the M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
+\addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
 Models are compared by AIC~\cite{posada2004model} computed from the log likelihood (LnL) and number of model parameters.
 The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
 For the M5 model, we give the mean followed by the shape and rate parameters of the gamma distribution over $\omega$.
@@ -183,9 +183,9 @@ The letters directly above each logo stack indicate the wildtype amino acid at t
 }
 \end{figure*}
 
-We next quantified the reproducibility of our deep mutational scanning measurements across biological and technical replicates.
-We first used the deep sequencing data for each replicate to estimate the preference of each site in HA for all 20 amino acids using the method described in~\cite{bloom2015software}.
-Because there are 566 residues in HA, there are $566 \times 19 = 10,754$ distinct measurements (the 20 preferences at each site are constrained to sum to one~\cite{bloom2015software}).
+We next quantified the reproducibility of our deep mutational scanning across biological and technical replicates.
+We first used the deep sequencing data for each replicate to estimate the preference of each site in HA for all 20 amino acids as described in~\cite{bloom2015software}.
+Because there are 566 residues in HA, there are $566 \times 19 = 10,754$ distinct measurements (the 20 preferences at each site sum to one~\cite{bloom2015software}).
 The correlations of the amino-acid preferences between pairs of replicates are shown in Figure~\ref{fig:dms_overview}D.
 The biological replicates were well-correlated, with Pearson's $R$ ranging from 0.69 to 0.78.
 Replicate 1 exhibited the weakest correlation with other replicates; this replicate also showed the weakest selection against stop and nonsynonymous mutations (Figure~\ref{fig:dms_overview}C), perhaps indicating more experimental noise.
@@ -193,19 +193,19 @@ The two technical replicates 3-1 and 3-2 were only slightly more correlated than
 
 \subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
 How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
-This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describes H3N2 evolution compared to standard phylogenetic substitution models~\cite{bloom2017identification,hilton2017phydms}.
+This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describes H3N2 evolution compared to standard substitution models~\cite{bloom2017identification,hilton2017phydms}.
 Table~\ref{tab:phydms} shows that the ExpCM using the across-replicate average of our measurements greatly outperforms conventional substitution models.
 This result indicates that our experiments authentically capture some of the constraints on HA evolution.
 The relative rate of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models (Table~\ref{tab:phydms}).
-However, the relative rate of nonsynonymous to synonymous substitutions after accounting for the amino-acid preferences measured in our experiments ($\omega$ for the ExpCM) is close to one (Table~\ref{tab:phydms}), indicating that most purifying selection against nonsynonymous substitutions is accounted for by the constraints measured in the deep mutational scanning.
+However, the relative rate of nonsynonymous to synonymous substitutions after accounting for the amino-acid preferences measured in our experiments ($\omega$ for the ExpCM) is close to one (Table~\ref{tab:phydms}), indicating that most purifying selection against nonsynonymous substitutions is accounted for in the deep mutational scanning.
 The ExpCM stringency parameter~\cite{hilton2017phydms} is 2.47 (Table~\ref{tab:phydms}), indicating that natural selection favors the same amino acids as the experiments but with greater stringency.
-Throughout the rest of this paper, we use experimental measurements re-scaled~\cite{bloom2017identification,hilton2017phydms} by this stringency parameter.
+Throughout the rest of this paper, we use the amino-acid preferences re-scaled~\cite{bloom2017identification,hilton2017phydms} by this stringency parameter.
 These re-scaled preferences are shown in Figure~\ref{fig:logoplot}.
 
 %\begin{SCfigure*}[\sidecaptionrelwidth][t]
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=\textwidth]{figs/mut_tolerance/mut_tolerance_new.pdf}
+\includegraphics[width=0.95\textwidth]{figs/mut_tolerance/mut_tolerance_new.pdf}
 \caption{\label{fig:mut_tolerance}
 {\bf Mutational tolerance of each site in H3 and H1 HAs.}
 (A) Mutational tolerance as measured in the current study is mapped onto the structure of the H3 trimer (PDB 4O5N;~\cite{lee2014receptor}).
@@ -219,7 +219,6 @@ Residues falling in between the two cysteines at sites 52 and 277 were defined a
 A residue was classified as solvent exposed if its relative solvent accessibility was $\geq$ 0.2; Figure~\ref{suppfig:head_stalk_RSA} shows that the results are robust to the choice of solvent accessibility cutoff.
 Note that the mutational tolerance values are not comparable between the two HAs, but are comparable between domains of the same HA.
 }
-%\end{SCfigure*}
 \end{figure*}
 
 Examination of Figure~\ref{fig:logoplot} reveals that the experimentally measured amino-acid preferences generally agree with existing knowledge about HA's structure and function.
@@ -229,9 +228,6 @@ A positively charged amino acid at site 329 is important for cleavage of the HA0
 However, a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine.
 This codon is part of the signal peptide and is cleaved from the mature HA protein.
 One possible reason that our experiments do not show a strong preference for methionine at this site could be alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
-% No upstream or downstream "ATG"'s are present. I did find an in-frame "ATC" one codon upstream of the canonical start site (in the non-coding region), and interestingly, all Perth/2009 HA sequences deposited in GenBank have an "ATT" in this non-coding position, including Seema's Perth HA.
-% I6M(HA2) mutant slightly increases the fusion pH (Daniels 1985 Cell)
-% We see high preference for T,S,Q over the wildtype Ile at site 226. Although Q226 in an H3 background is characterized as having preference for avian-type receptors, most of these studies were done in older H3 strains such as Aichi. Wu 2017 Cell Host Microbe has shown extensive epistasis in the RBS, specifically in the 220-loop, so perhaps the amino acids tolerated in this loop have shifted over time. Indeed the wildtype amino acids at 225 and 226 are different in Perth compared to HK68 and Aichi.
 
 \subsection*{There is less difference in mutational tolerance between the HA head and stalk domains for H3 than for H1}
 Our experiments measure which amino acids are tolerated at each HA site under selection for viral growth.
@@ -253,9 +249,9 @@ Antigenic region C is also notably mutationally tolerant.
 Many residues inside HA's receptor binding pocket are known to be highly functionally constrained~\cite{wilson1981structure,martin1998studies}, and our data indicates that these sites are relatively mutationally intolerant in both H3 and H1 HAs (Figure~\ref{fig:mut_tolerance}A).
 In contrast, the residues surrounding the receptor binding pocket are fairly mutationally tolerant, which may contribute to the rapidity of influenza's antigenic evolution, since mutations at these sites can have large effects on antigenicity~\cite{wiley1981structural,koel2013substitutions}.
 
-\begin{figure}[h!]
+\begin{figure}[b!]
 \centering
-\includegraphics[width=\linewidth]{figs/frequency_trajectory_ex/frequency_trajectory_ex.pdf}
+\includegraphics[width=0.95\linewidth]{figs/frequency_trajectory_ex/frequency_trajectory_ex.pdf}
 \caption{\label{fig:frequency_trajectory}
 {\bf Frequency trajectories of individual mutations and their relation to the experimentally measured effects of these mutations.}
 The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} from 2004 to 2014.
@@ -265,11 +261,9 @@ It is clear that most mutations that reach high frequency are measured to be rel
 }
 \end{figure}
 
-\begin{SCfigure*}[\sidecaptionrelwidth][t]
-%\begin{figure*}[ht]
+\begin{SCfigure*}[\sidecaptionrelwidth][h!]
 \centering
 \includegraphics[width=12cm]{figs/muteffect_by_maxfreq/muteffect_by_maxfreq.pdf}
-%\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq/muteffect_by_maxfreq.pdf}
 \caption{\label{fig:muteffect_maxfreq}
 {\bf Experimental measurements are informative about the evolutionary fate of viral mutations.}
 (A) Correlation between the effects of mutations as measured in our deep mutational scanning of the Perth/2009 HA and the maximum frequency reached by these mutations in nature.
@@ -279,13 +273,11 @@ The vertical black line shows the mean mutation effect for each category.
 The analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 }
 \end{SCfigure*}
-%\end{figure*}
 
 \subsection*{Our measurements can help distinguish between mutations that reach low and high frequencies in nature}
 Mutations occurring in the H3N2 virus population experience widely varying evolutionary fates (Figure~\ref{fig:frequency_trajectory}).
 Some mutations appear, spread and fix in the population, while others briefly circulate before disappearing.
 We take the maximum frequency reached by a mutation as a coarse indicator of its effect on fitness, since favorable mutations generally reach higher frequency than unfavorable ones~\cite{ewens2012mathematical}.
-%Highly deleterious mutations will usually die out, whereas less deleterious or beneficial ones are more likely to expand in frequency.
 Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, e.g.\ although R142G occurs multiple times on the phylogeny we track each of these mutations occurring on different backgrounds separately.
 As such, each mutation is shown as a separate circle on a separate branch in Figure \ref{fig:frequency_trajectory}.
 However, because multiple mutations on the same phylogeny branch cannot be disentangled, when multiple mutations occurred on a single branch, we assigned a single mutational effect based on the sum of effects of each mutation.
@@ -302,10 +294,8 @@ In both pre-Perth and post-Perth time periods, we found a modest, but statistica
 The similar effect sizes for both partitions shows that our experimental measurements can help explain the evolutionary fates of mutations in strains that post-date the experimentally studied strain, as well as to retrospectively analyze mutations that precede the experimental strain. 
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
-%\begin{figure*}[ht]
 \centering
 \includegraphics[width=12cm]{figs/muteffect_by_maxfreq_WSN/muteffect_by_maxfreq_WSN.pdf}
-%\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq_WSN/muteffect_by_maxfreq_WSN.pdf}
 \caption{\label{fig:muteffect_maxfreq_WSN}
 {\bf Experimental measurements on an H1 HA are not informative about the evolutionary fate of H3N2 mutations.}
 This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}, i.e.\
@@ -313,7 +303,6 @@ Figure~\ref{suppfig:muteffect_maxfreq_WSN_supp} shows the histograms comparable 
 The empirical $P$-value represents the results of 1,000 permutations.
 }
 \end{SCfigure*}
-%\end{figure*}
 
 The trends in Figure~\ref{fig:muteffect_maxfreq}A are most strongly driven by the behavior of substantially deleterious mutations.
 We investigated this further by partitioning mutations into those that reach low, medium and high frequencies, and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
@@ -325,6 +314,22 @@ Overall, these results demonstrate that measurements of how mutations affect vir
 To determine how broadly experimental measurements can be generalized across HAs, we repeated the foregoing analysis of H3N2 mutation frequencies, but using mutational effects measured in our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA (the two HAs only have 42\% protein sequence identity).
 Figure~\ref{fig:muteffect_maxfreq_WSN} shows that there is no correlation between the H1 experimental measurements and maximum frequency that mutations reach during H3N2 viral evolution.
 Therefore, the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied.
+
+\begin{SCfigure*}[\sidecaptionrelwidth][b]
+\centering
+\includegraphics[width=12cm]{figs/distance_distribution/distance_distribution.pdf}
+\caption{\label{fig:distance_distribution}
+{\bf There are large shifts in the effects of mutations between H1 and H3 HAs.}
+(A) Phylogenetic tree of HA subtypes, with the WSN/1933 H1 and Perth/2009 H3 HAs labeled.
+(B) All pairwise correlations of the amino-acid preferences measured in the three individual deep mutational scanning replicates in the current study and the three replicates in prior deep mutational scanning of the H1 HA~\cite{doud2016accurate}.
+Comparisons between H3 replicates are in purple, those between H1 replicates are in brown, and those across H1 and H3 replicates are in gray.
+$R$ indicates the Pearson correlation coefficient.
+(C) We calculated the shift in amino-acid preferences at each site between H3 and H1 HAs using the method in \cite{haddox2018mapping}, and plotted the distribution of shifts for all sites.
+The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences are due to experimental noise.
+The shifts are also much larger than those previously observed between two variants of HIV Env that share 86\% amino-acid identity (pink).
+However, the shifts between H3 and H1 are less than the differences between HA and HIV Env (green).
+}
+\end{SCfigure*}
 
 \subsection*{There are large differences between H3 and H1 HAs in the amino-acid preferences of many sites}
 An obvious hypothesis for why the H1 deep mutational scanning is not useful for understanding the evolution of H3N2 influenza viruses is that the effect of the same mutation is often different between these two HA subtypes.
@@ -341,22 +346,6 @@ These shifts between H3 and H1 are much larger than expected from the null distr
 They are also much larger than the shifts previously observed between two HIV Envs with 86\% amino-acid identity~\cite{haddox2018mapping}.
 However, the typical shift between H3 and H1 is still smaller than that observed when comparing HA to the non-homologous HIV Env protein.
 Therefore, there are very substantial shifts in mutational effects between highly diverged HA homologs, although the effects of mutations remain more similar than for non-homologous proteins.
-
-\begin{SCfigure*}[\sidecaptionrelwidth][t]
-\centering
-\includegraphics[width=12cm]{figs/distance_distribution/distance_distribution.pdf}
-\caption{\label{fig:distance_distribution}
-{\bf There are large shifts in the effects of mutations between H1 and H3 HAs.}
-(A) Phylogenetic tree of HA subtypes, with the WSN/1933 H1 and Perth/2009 H3 HAs labeled.
-(B) All pairwise correlations of the amino-acid preferences measured in the three individual deep mutational scanning replicates in the current study and the three replicates in prior deep mutational scanning of the H1 HA~\cite{doud2016accurate}.
-Comparisons between H3 replicates are in purple, those between H1 replicates are in brown, and those across H1 and H3 replicates are in gray.
-$R$ indicates the Pearson correlation coefficient.
-(C) We calculated the shift in amino-acid preferences at each site between H3 and H1 HAs using the method in \cite{haddox2018mapping}, and plotted the distribution of shifts for all sites.
-The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences are due to experimental noise.
-The shifts are also much larger than those previously observed between two variants of HIV Env that share 86\% amino-acid identity (pink).
-However, the shifts between H3 and H1 are less than the differences between HA and HIV Env (green).
-}
-\end{SCfigure*}
 
 \subsection*{Properties associated with the shifts in amino-acid preferences between H3 and H1 HAs}
 What features distinguish the sites with shifted amino-acid preferences between H3 and H1 HAs?
