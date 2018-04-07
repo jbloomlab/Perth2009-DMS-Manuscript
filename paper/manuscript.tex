@@ -92,8 +92,8 @@ Overall, our work suggests that experimental measurements of mutational effects 
 \dropcap{S}easonal H3N2 influenza virus evolves rapidly, fixing 3 to 4 amino-acid mutations per year in its hemagglutinin (HA) surface protein~\cite{fitch1997long, bhatt2011genomic}.
 Many of these mutations contribute to the rapid antigenic drift that necessitates frequent updates to the annual influenza vaccine~\cite{smith2004mapping}.
 This evolution is further characterized by competition and turnover among groups of strains called clades bearing different complements of mutations~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,koelle2015effects,bedford2015global}.
-Clades vary widely in their evolutionary success with some dying out soon after emergence and others going on to take over the virus population.
-Several lines of evidence indicate that successful clades, which reach high frequencies or even fix in the global population, have higher fitness than clades that remain at low frequency~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,luksza2014predictive}.
+Clades vary widely in their evolutionary success, with some dying out soon after emergence and others going on to take over the virus population.
+Several lines of evidence indicate that successful clades have higher fitness than clades that remain at low frequency~\cite{bedford2011,strelkowa2012clonal,neher2014predicting,luksza2014predictive}.
 A key goal in the study of H3N2 evolution is to identify the features that enable certain clades to succeed as others die out.
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
@@ -146,7 +146,7 @@ As a control to measure sequencing and mutational errors, we used the unmutated 
 
 Deep sequencing of the initial plasmid mutant libraries and the passaged mutant viruses revealed selection for functional HA mutants.
 Specifically, stop codons were purged to 20-45\% of their initial frequencies after correcting for error rates estimated by sequencing the wildtype controls (Figure~\ref{fig:dms_overview}C).
-The incomplete purging of stop codons is likely because genetic complementation due to co-infection~\cite{marshall2013influenza} enabled the persistence of some virions with nonfunctional HAs.
+The incomplete purging of stop codons is likely because genetic complementation due to co-infection~\cite{marshall2013influenza, brooke2013most} enabled the persistence of some virions with nonfunctional HAs.
 We also observed selection against many nonsynonymous mutations (Figure~\ref{fig:dms_overview}C), with their frequencies falling to 30-40\% of their initial values after error correction.
 
 \begin{table}[b!]
@@ -257,10 +257,10 @@ In contrast, the residues surrounding the receptor binding pocket are fairly mut
 \centering
 \includegraphics[width=\linewidth]{figs/frequency_trajectory_ex/frequency_trajectory_ex.pdf}
 \caption{\label{fig:frequency_trajectory}
-{\bf Frequency trajectories of individual mutations and their relation to the experimentally determined effects of these mutations.}
-The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} windowed from 2004 to 2014.
+{\bf Frequency trajectories of individual mutations and their relation to the experimentally measured effects of these mutations.}
+The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} from 2004 to 2014.
 Circles indicate individual amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
-The bottom panel shows the frequency trajectory of each mutation, with mutation trajectories colored according to the mutational effects as in the top panel.
+The bottom panel shows the frequency trajectory of each mutation, with trajectories colored according to the mutational effects as in the top panel.
 It is clear that most mutations that reach high frequency are measured to be relatively favorable in our experiments.
 }
 \end{figure}
@@ -272,8 +272,8 @@ It is clear that most mutations that reach high frequency are measured to be rel
 %\includegraphics[width=0.85\textwidth]{figs/muteffect_by_maxfreq/muteffect_by_maxfreq.pdf}
 \caption{\label{fig:muteffect_maxfreq}
 {\bf Experimental measurements are informative about the evolutionary fate of viral mutations.}
-(A) Correlation between the effects of mutations as measured in our experiments and the maximum frequency reached by these mutations.
-The plots show Spearman $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations for which permuted $\rho$ was greater than or equal to the observed $\rho$.
+(A) Correlation between the effects of mutations as measured in our deep mutational scanning of the Perth/2009 HA and the maximum frequency reached by these mutations in nature.
+The plots show Spearman $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations of the experimental measurements for which the permuted $\rho$ was greater than or equal to the observed $\rho$.
 (B) The distribution of mutational effects partitioned by maximum mutation frequency.
 The vertical black line shows the mean mutation effect for each category.
 The analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
@@ -282,24 +282,24 @@ The analysis is performed separately for the pre- and post-Perth/2009 partitions
 %\end{figure*}
 
 \subsection*{Our measurements can help distinguish between mutations that reach low and high frequencies in nature}
-Mutations occurring in the H3N2 virus population have widely varying evolutionary outcomes (Figure~\ref{fig:frequency_trajectory}).
-Some mutations appear, spread and fix in the population, while others briefly circulate before dying out.
-We take the maximum frequency reached by a mutation as a coarse indicator of its fitness, under the assumption that fitter mutations are expected to reach higher frequency on average than less fit mutations \cite{ewens2012mathematical}.
-If a mutation is highly deleterious, we would expect it to quickly die out, whereas less deleterious or beneficial mutations are more likely to expand in frequency.
-Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, i.e.\ although R142G occurs multiple times on the phylogeny we track each of these mutations occurring on different backgrounds separately.
-As such, each mutation is shown as a separate circle occurring on a separate branch in Figure \ref{fig:frequency_trajectory}.
+Mutations occurring in the H3N2 virus population experience widely varying evolutionary fates (Figure~\ref{fig:frequency_trajectory}).
+Some mutations appear, spread and fix in the population, while others briefly circulate before disappearing.
+We take the maximum frequency reached by a mutation as a coarse indicator of its effect on fitness, since favorable mutations generally reach higher frequency than unfavorable ones~\cite{ewens2012mathematical}.
+%Highly deleterious mutations will usually die out, whereas less deleterious or beneficial ones are more likely to expand in frequency.
+Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, e.g.\ although R142G occurs multiple times on the phylogeny we track each of these mutations occurring on different backgrounds separately.
+As such, each mutation is shown as a separate circle on a separate branch in Figure \ref{fig:frequency_trajectory}.
 However, because multiple mutations on the same phylogeny branch cannot be disentangled, when multiple mutations occurred on a single branch, we assigned a single mutational effect based on the sum of effects of each mutation.
 
-After annotating mutations and their frequencies on the phylogeny in this way (Figure~\ref{fig:frequency_trajectory}), it is visually obvious that there are relatively few circulating mutations with strongly deleterious mutational effects---and that such deleterious mutations rarely reach high frequency when they do occur.
-Mutations that reached high global frequencies generally had neutral or beneficial mutational effects.
+After annotating mutations and their frequencies on the phylogeny in this way (Figure~\ref{fig:frequency_trajectory}), it is visually obvious that there are relatively few circulating mutations that we measure to be strongly deleterious---and that such deleterious mutations rarely reach high frequency when they do occur.
+Mutations that reach high frequencies generally have neutral or beneficial effects according to our experimental measurements.
 
-We next sought to quantify the correlation between mutation effects and maximum frequencies attained.
-To minimize effects related to the genetic background of the DMS strain, we excluded mutations closely related to the DMS strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
+We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evoluton.
+To minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
 We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
 We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
 In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$).
-The similar effect size for both partitions suggests that our experimental measurements can be used to predict mutation frequencies despite the genetic background of the DMS strain.
+The similar effect sizes for both partitions shows that our experimental measurements can help explain the evolutionary fates of mutations in strains that post-date the experimentally studied strain, as well as to retrospectively analyze mutations that precede the experimental strain. 
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
 %\begin{figure*}[ht]
@@ -315,16 +315,16 @@ The empirical $P$-value represents the results of 1,000 permutations.
 \end{SCfigure*}
 %\end{figure*}
 
-The trends in Figure~\ref{fig:muteffect_maxfreq}A appear to be most strongly driven by behavior of strongly deleterious mutations.
-We investigated this further by partitioning mutations in those circulating at low, medium and high levels and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
-We observe both a shift in the mean mutation effect and in the distribution of mutation effects as we increase in circulation category.
-Mutations that we measure to be substantially deleterious almost never reach high frequency.
+The trends in Figure~\ref{fig:muteffect_maxfreq}A are most strongly driven by the behavior of substantially deleterious mutations.
+We investigated this further by partitioning mutations into those that reach low, medium and high frequencies, and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
+The mutations that reach higher frequency have a more favorable mean effect.
+Mutations measured to be substantially deleterious almost never reach high frequency.
 Overall, these results demonstrate that measurements of how mutations affect viral growth in cell culture are informative for understanding the fates of these mutations in nature: in particular, if a mutation is measurably deleterious to viral growth, that mutation is unlikely to prosper in nature.
 
 \subsection*{Measurements made on an H1 HA are not useful for understanding the evolution of H3 influenza}
-To determine how broadly experimental measurements can be generalized across HAs, we repeated the analysis of H3N2 mutation frequencies, but using mutational effects from our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA.
-Figure~\ref{fig:muteffect_maxfreq_WSN} shows that the H1 measurements do \textit{not} reveal a trend for mutation effect on H1 to correlate with H3 maximum mutation frequency.
-This result is not surprising given that H1 and H3 HAs only have 42\% sequence identity, but it does underscore that the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied.
+To determine how broadly experimental measurements can be generalized across HAs, we repeated the foregoing analysis of H3N2 mutation frequencies, but using mutational effects measured in our prior deep mutational scanning of the WSN/1933 H1 HA, which is highly diverged from the Perth/2009 H3 HA (the two HAs only have 42\% protein sequence identity).
+Figure~\ref{fig:muteffect_maxfreq_WSN} shows that there is no correlation between the H1 experimental measurements and maximum frequency that mutations reach during H3N2 viral evolution.
+Therefore, the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied.
 
 \subsection*{There are large differences between H3 and H1 HAs in the amino-acid preferences of many sites}
 An obvious hypothesis for why the H1 deep mutational scanning is not useful for understanding the evolution of H3N2 influenza viruses is that the effect of the same mutation is often different between these two HA subtypes.
@@ -346,16 +346,15 @@ Therefore, there are very substantial shifts in mutational effects between highl
 \centering
 \includegraphics[width=12cm]{figs/distance_distribution/distance_distribution.pdf}
 \caption{\label{fig:distance_distribution}
-{\bf There are substantial differences in the effects of mutations between H1 and H3 HAs.}
+{\bf There are large shifts in the effects of mutations between H1 and H3 HAs.}
 (A) Phylogenetic tree of HA subtypes, with the WSN/1933 H1 and Perth/2009 H3 HAs labeled.
-These HAs have 42\% amino-acid identity.
-(B) All pairwise correlations of the amino-acid preferences measured in the three individual deep mutational scanning replicates in the current study  and the three replicates in prior deep mutational scanning of an H1 HA~\cite{doud2016accurate}.
+(B) All pairwise correlations of the amino-acid preferences measured in the three individual deep mutational scanning replicates in the current study and the three replicates in prior deep mutational scanning of the H1 HA~\cite{doud2016accurate}.
 Comparisons between H3 replicates are in purple, those between H1 replicates are in brown, and those across H1 and H3 replicates are in gray.
 $R$ indicates the Pearson correlation coefficient.
 (C) We calculated the shift in amino-acid preferences at each site between H3 and H1 HAs using the method in \cite{haddox2018mapping}, and plotted the distribution of shifts for all sites.
 The shifts between H3 and H1 (yellow) are much larger than the null distribution (blue) expected if all differences are due to experimental noise.
 The shifts are also much larger than those previously observed between two variants of HIV Env that share 86\% amino-acid identity (pink).
-However, the shifts between H3 and H1 are usually less than the differences between HA and HIV Env (green).
+However, the shifts between H3 and H1 are less than the differences between HA and HIV Env (green).
 }
 \end{SCfigure*}
 
@@ -401,24 +400,24 @@ One monomer is in dark gray, while the HA1 domain of the neighboring monomer is 
 \section*{Discussion}
 \label{sec:discussion}
 We have measured the effects of all possible single amino-acid mutations to the Perth/2009 H3 HA on viral growth in cell culture and demonstrated that these measurements have some value for understanding the evolutionary fate of these mutations in nature.
-Specifically, mutations measured to be more beneficial for viral growth tend to circulate at higher frequency in nature than mutations measured to be more deleterious for viral growth.
-The fact that our experiments can be used to help identify evolutionary successful mutations suggests that they might inform evolutionary forecasting.
+Specifically, mutations measured to be more beneficial for viral growth tend to reach higher frequencies in nature than mutations measured to be more deleterious for viral growth.
+The fact that our experiments can help identify evolutionary successful mutations suggests that they might inform evolutionary forecasting.
 In their landmark paper introducing predictive viral fitness models that accounted for both antigenic and non-antigenic mutations, {\L}uksza and L{\"a}ssig~\cite{luksza2014predictive} noted that the models could in principle be improved by integrating ``diverse genotypic and phenotypic data'' that more realistically represented the effects of specific mutations.
 Our work suggests that deep mutational scanning may be able to provide such data.
 
 It is important to emphasize that measurements of viral growth in cell culture do \emph{not} represent true fitness in nature.
-Indeed, a vast amount of work in virology has chronicled the many ways in which experiments can select for lab artifacts or fail to capture important pressures that are relevant in nature~\cite{daniels1985fusion,sun2010modifications,lee2013comparison,wu2017structural}.
+Indeed, a vast amount of work in virology has chronicled the ways in which experiments can select for lab artifacts or fail to capture important pressures that are relevant in nature~\cite{daniels1985fusion,sun2010modifications,lee2013comparison,wu2017structural}.
 Mutations in viral genes other than HA are also important in determining strain success~\cite{memoli2009recent,raghwani2017selection}.
 Given these caveats, it might seem surprising that measuring viral growth in cell culture can be informative about the success of viral strains in nature.
 Yet, prior to our work, there were no comprehensive studies of the functional effects of mutations to H3 HA on any property that even resembled viral fitness in nature, and modeling work has either omitted the non-antigenic effects of mutations~\cite{sun2013using,harvey2016identification,neher2016prediction} or assumed that all non-epitope mutations had equivalent deleterious effects~\cite{luksza2014predictive}.
-The strength of our measurements are not that they perfectly capture fitness in nature, but that they are systematic and quantitative --- and so represent an improvement over no information at all.
+The strength of our measurements are not that they perfectly capture fitness in nature, but that they are systematic and quantitative---and so represent an improvement over no information at all.
 We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility.
 
 We measured the effects of all single amino-acid mutations to a specific HA, and then generalized these measurements to other H3N2 HAs from a 50-year timespan.
 These generalizations will only be valid to the extent that the effects of mutations are conserved during HA's evolution.
-Extensive work on protein evolution has shown that epistasis can shift the effects of mutations~\cite{gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative,haddox2018mapping}, and the extent to which this occurs is an important question in its own right.
+Extensive prior work has shown that epistasis can shift the effects of mutations as proteins evolve~\cite{pollock2012amino,shah2015contingency,gong2013stability,natarajan2013epistasis,harms2014historical,starr2016epistasis,starr2017alternative}.
 Our work suggests that measurements on a HA from single human H3N2 viral strain can be usefully generalized to at least some extent across the entire evolutionary history of human H3N2 HA.
-On the other hand, when we compared our measurements for an H3 HA to prior measurements on H1 HA, we found substantial shifts at many sites --- much greater than those observed in prior protein-wide comparisons of more closely related homologs~\cite{doud2015site,haddox2018mapping}.
+On the other hand, when we compared our measurements for an H3 HA to prior measurements on H1 HA, we found substantial shifts at many sites---much greater than those observed in prior protein-wide comparisons of more closely related homologs~\cite{doud2015site,haddox2018mapping}.
 Further investigation of how mutational effects shift as proteins diverge will be important for determining how broadly any given experiment can be generalized when attempting to make evolutionary forecasts.
 
 Our work did not characterize the antigenic effects of mutations, which also play an important role in determining strain success in nature~\cite{koel2013substitutions,neher2016prediction}.
@@ -435,25 +434,25 @@ Computer code used to analyze the data and produce the results in the paper are 
 Sites are in H3 numbering, with the signal peptide in negative numbers, HA1 in plain numbers, and HA2 denoted with "(HA2)". Sequential 1, 2, ... numbering of the Perth/2009 HA can be converted to H3 numbering by subtracting 16 for the HA1 subunit, and subtracting 345 for the HA2 subunit.
 
 \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cells}
-When growing influenza virus in cell culture, trypsin is normally added in order to cleave HA into its mature form.
-To obviate the need for trypsin, we engineered an MDCK-SIAT1 cell line to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
+When growing influenza virus in cell culture, trypsin is normally added to cleave HA into its mature form.
+To obviate the need for trypsin, we engineered MDCK-SIAT1 cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
 The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656) and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter followed by an IRES driving expression of mCherry to create plasmid pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
 We used the lentiviral vector to transduce MDCK-SIAT1 cells, and sorted an intermediate mCherry-positive population by flow cytometry.
 We refer to the sorted bulk population as MDCK-SIAT1-TMPRSS2 cells.
 There is no selectable marker for the TMPRSS2; however, we maintain the cells at low passage number, and have seen no indication that they lose their ability to support the growth of viruses with H3 HAs in the absence of exogenous trypsin.
 
 \subsection*{Generation of HA codon mutant plasmid libraries}
-The HA and NA genes for the Perth/2009 viral strain were reverse-transcribed and amplified from recombinant virus obtained from BEI Resources (NR-41803), and cloned into the pHW2000~\citep{hoffmann2000dna} influenza reverse-genetics plasmids to create pHW-Perth09-HA and pHW-Perth09-NA.
+HA and NA genes for the Perth/2009 viral strain were cloned from recombinant virus obtained from BEI Resources (NR-41803) into the pHW2000~\citep{hoffmann2000dna} influenza reverse-genetics plasmids to create pHW-Perth09-HA and pHW-Perth09-NA.
 
 We initially created a virus with the HA and NA from Perth/2009 and internal genes from WSN/1933, and passaged it in cell culture to test its genetic stability.
 To generate this virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 in D10 media (DMEM supplemented with 10\% heat-inactivated FBS, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL) with equal amounts of pHW-Perth09-HA, pHW-Perth09-NA, the pHW18* series of plasmids~\cite{hoffmann2000dna} for all non-HA/NA viral genes, and pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
-The next day we changed the media to influenza growth media (IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL --- no trypsin was added since there was TMPRSS2), and then we collected the viral supernatant at 72 hours post-transfection.
-This viral supernatant was then blind passaged in MDCK-SIAT1-TMPRSS2 a total of six additional times.
+The next day we changed the media to influenza growth media (IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL (no trypsin was added since there was TMPRSS2), and then collected the viral supernatant at 72 hours post-transfection.
+This viral supernatant was blind passaged in MDCK-SIAT1-TMPRSS2 a total of six additional times.
 We isolated viral RNA from these passaged viruses and sequenced the HA gene.
-The passaged HA had two mutations, G78D and T212I, which we found enhanced viral growth as shown in Figure~\ref{suppfig:Perth2009_mut}.
+The passaged HA had two mutations, G78D and T212I, which enhanced viral growth as shown in Figure~\ref{suppfig:Perth2009_mut}.
 The HA with these two mutations was cloned into pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} to create pHW-Perth09-HA-G78D-T212I and pICR2-Perth09-HA-G78D-T212I.
-For all subsequent experiments, we used viruses with the HA containing these two mutations in order to improve titers and viral genetic stability, and this is the HA that we refer to as Perth/2009 in the manuscript text.
-We also used all non-HA genes (including NA) from WSN/1933 to help increase titers and reduce biosafety concerns.
+For all subsequent experiments, we used viruses with the HA containing these two mutations to improve titers and viral genetic stability, and this is the HA that we refer to as Perth/2009 in the manuscript text.
+We used all non-HA genes (including NA) from WSN/1933 to help increase titers and reduce biosafety concerns.
 
 The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using the PCR-based approach described in \cite{bloom2014experimentally} with the primer melting-temperature modifications described in \cite{dingens2017comprehensive}, using two rounds of mutagenesis.
 The script to design the mutagenesis primers is at \url{https://github.com/jbloomlab/CodonTilingPrimers}.
@@ -473,13 +472,13 @@ At 24 hours after helper-virus infection, we harvested the viral supernatants fo
 The titers were 92, 536, 536, and 734 TCID$_{50}$ per $\mu$L for the three library replicates and the wildtype control, respectively.
 
 We passaged $9 \times 10^5$ TCID$_{50}$ of the transfection supernatants at an MOI of 0.0035 TCID$_{50}$ per cell.
-To do this, we plated $4.6 \times 10^6$ MDCK-SIAT1-TMPRSS2 cells per dish in 15-cm dishes in D10 media, and allowed the cells to grow for 24 hours, at which time they had reached a density of $\sim 1.7 \times 10^7$ cells per dish.
-We then replaced the media in each dish with 25 mL of an inoculum of 2.5 TCID$_{50}$ of virus per $\mu$L.
+To do this, we plated $4.6 \times 10^6$ MDCK-SIAT1-TMPRSS2 cells per dish in 15-cm dishes in D10 media, and allowed the cells to grow for 24 hours, at which time they were at $\sim 1.7 \times 10^7$ cells per dish.
+We replaced the media in each dish with 25 mL of an inoculum of 2.5 TCID$_{50}$ of virus per $\mu$L in IGM.
 We collected viral supernatant for sequencing 48 hours post-infection.
 
 \subsection*{Barcoded subamplicon sequencing}
-To extract viral RNA from the three replicate HA virus libraries and the wildtype HA virus, we ultracentrifuged 24 mL of the supernatant at 22,000 rpm for 1.5 h at 4$^{\circ}$C in a Beckman Coulter SW28 rotor, and extracted RNA using the Qiagen RNeasy Mini Kit by resuspending the viral pellet in 400 $\mu$L of buffer RLT supplemented with $\beta$-mercaptoethanol, pipetting 30 times, transferring the liquid to a microcentrifuge tube, adding 600 $\mu$L 70\% ethanol, and proceeding with the extraction according to the manufacturer's instructions.
-The HA gene was then reverse-transcribed with AccuScript Reverse Transcriptase (Agilent 200820) using the primers P09-HA-For (5'-AGCAAAAGCAGGGGATAATTCTATTAATC-3') and P09-HA-Rev (5'-AGTAGAAACAAGGGTGTTTTTAATTACTAATACAC-3').
+To extract viral RNA from the three replicate HA virus libraries and the wildtype HA virus, we ultracentrifuged 24 mL of supernatant at 22,000 rpm for 1.5 h at 4$^{\circ}$C in a Beckman Coulter SW28 rotor, and extracted RNA using the Qiagen RNeasy Mini Kit by resuspending the viral pellet in 400 $\mu$L of buffer RLT supplemented with $\beta$-mercaptoethanol, pipetting 30 times, transferring the liquid to a microcentrifuge tube, adding 600 $\mu$L 70\% ethanol, and proceeding according to the manufacturer's instructions.
+The HA gene was reverse-transcribed with AccuScript Reverse Transcriptase (Agilent 200820) using primers P09-HA-For (5'-AGCAAAAGCAGGGGATAATTCTATTAATC-3') and P09-HA-Rev (5'-AGTAGAAACAAGGGTGTTTTTAATTACTAATACAC-3').
 
 We generated the HA PCR amplicons for the three plasmid libraries, the three virus libraries, the wildtype plasmid control, and the wildtype virus control using KOD Hot Start Master Mix (EMD Millipore 71842) using the PCR reaction mixture and cycling conditions described in~\cite{bloom2014experimentally} and the P09-HA-For and P09-HA-Rev primers.
 We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite{wu2014high} to increase the accuracy from deep sequencing.
@@ -491,7 +490,7 @@ We performed deep sequencing on a lane of an Illumina HiSeq 2500 using 2 $\times
 We used the \texttt{dms\_tools2} software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}, version \texttt{2.2.0}) to analyze the deep sequencing data.
 The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
 The amino-acid preferences for each replicate and for the re-scaled, across-replicate average are provided in Dataset~\ref{suppdata:prefsfiles}.
-Computer code that performs the entirety of this analysis is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/analysis_code/analysis_notebook.ipynb}.
+Computer code that performs the entirety of this analysis and shows many detailed plots about read depth and other quality control metrics is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/analysis_notebook.ipynb}.
 
 \subsection*{Phylogenetic model comparison and fitting of a stringency parameter}
 For the analysis in Table~\ref{tab:phydms}, we downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
@@ -515,11 +514,11 @@ where $\pi_{r,a_1}$ and $\pi_{r,a_2}$ are the re-scaled preferences for amino ac
 The WSN/1933 H1 HA amino-acid preferences are the replicate-average values reported in \cite{doud2016accurate}, re-scaled by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
 
 \subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum mutation frequencies}
-To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid}, sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
+To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid} (see Dataset~\ref{suppdata:gisaid}), sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
 We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
 Ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
 We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
-The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/analysis_code/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
+The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/data/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
 The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
 
 % notation for frequencies model
@@ -531,7 +530,7 @@ The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
 
 The frequency trajectory of each individual mutation on the phylogeny is estimated following Nextstrain's augur pipeline and as first implemented in Nextflu \cite{neher2015nextflu}.
 Herein, mutation frequency dynamics are modeled according to a Brownian motion diffusion process discretized to one-month intervals.
-Relative to a simple Brownian motion, the expectation includes an `inertia' term $\inertia$ that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
+Relative to a simple Brownian motion, the expectation includes an ``inertia'' term $\inertia$ that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
 This results in the following diffusion process
 \begin{equation}
 x(t+\dt) = \normal\big( x(t) + \inertia \, \dx , \; \dt \, \sigma^2 \, x(t) \, (1-x(t)) \big),
@@ -560,7 +559,7 @@ We used the multiple sequence alignment of the HA subtype sequences from \cite{d
 
 \showmatmethods{} % Display the Materials and Methods section
 
-\acknow{We thank Sarah Hilton, Hugh Haddox, and Sidney Bell for helpful discussions about data analysis and we thank Richard Neher for sharing analysis code.
+\acknow{We thank Sarah Hilton, Hugh Haddox, and Sidney Bell for helpful discussions about data analysis and we thank Richard Neher for sharing analysis code and providing helpful comments on an initial version of the manuscript.
 We thank the Fred Hutch Genomics Core for performing the Illumina deep sequencing.
 This work was supported by grant R01 AI127893 from the NIAID of the NIH to JDB and TB and grant U19 AI117891 to TB.
 JML was supported in part by the Center for Inference and Dynamics of Infectious Diseases (CIDID), which is funded by grant U54GM111274 from the NIGMS of the NIH.
@@ -628,7 +627,6 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-%%\centerline{\includegraphics[clip=true, trim=0 5.5in 0 0,width=0.7\textwidth]{figs/S04_post_Perth2009/post_Perth2009_seqpref.pdf}}
 \centerline{\includegraphics[width=1.0\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
 {\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
@@ -637,6 +635,8 @@ The Perth/2009 strain used in our experiments is indicated.
 The rest of the tree is partitioned into nodes that preceded the split of the Perth/2009 strain from the trunk of the tree (blue) and nodes that branched off the trunk after the clade containing Perth/2009 (orange).
 In Figure~\ref{fig:muteffect_maxfreq}, these two partitions of the tree are analyzed separately.
 Nodes in the clade containing the Perth/2009 strain and nodes sampled in 2014 or after were excluded from our analyses.
+The Perth/2009 strain was excluded to avoid artifacts related to mutations that occurred on the branches leading to the HA sequence used in the experiment.
+The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet full resolved.
 }
 \end{suppfigure}
 
