@@ -10,7 +10,7 @@ Study by Juhye Lee, John Huddleston, Mike Doud, Katie Hooper, Trevor Bedford & J
 
 #### Analysis notebooks
 There are two analysis notebooks:
-  * [analysis_notebook.ipynb](analysis_notebook.ipynb): in this notebook, we analyze deep sequencing data and estimate the amino-acid preferences using `dms_tools2`. We also compare the shifts in amino-acid preferences between the Perth/2009 H3 and the WSN/1933 H1 HA's.
+  * [analysis_notebook.ipynb](analysis_notebook.ipynb): in this notebook, we analyze deep sequencing data and estimate the amino-acid preferences using [dms_tools2](https://jbloomlab.github.io/dms_tools2/). We also compare the shifts in amino-acid preferences between the Perth/2009 H3 and the WSN/1933 H1 HA's.
   * [max_frequency_analysis.ipynb](max_frequency_analysis.ipynb): in this notebook, we use the Perth/2009 H3 HA and WSN/1933 H1 HA amino-acid preferences to examine the relationships between the frequencies achieved by mutations in a human H3N2 phylogeny and the effects of these mutations.
 
 #### Input files
