@@ -1,0 +1,92 @@
+\documentclass[a4paper,11pt]{letter}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\topmargin -2cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 23cm
+\footskip 1.0cm
+
+% sets Palatino as text font
+\usepackage{mathpazo}
+
+% Some of the article customisations are relevant for this class
+
+\signature{
+\vspace{-0.5in}\includegraphics[width=1.5in]{cover_letter_images/BloomSignature.png} \\
+Jesse D. Bloom \\
+} % Goes after the closing (ie at the end of the letter, with space for a signature)
+
+\address{
+\includegraphics[width=2.5in]{cover_letter_images/HutchLogo.png} \\ 
+Jesse D. Bloom, Ph.D. \\
+Fred Hutchinson Cancer Research Center \\
+Seattle, WA  98109 \\
+\href{mailto:jbloom@fredhutch.org}{jbloom@fredhutch.org} \\
+\url{https://research.fhcrc.org/bloom/en.html}
+}
+% Alternatively, these may be set on an individual basis within each letter environment.
+
+\begin{document}
+\begin{letter}{}
+
+\opening{Dear \textit{PNAS} Editorial Board,} % eg Hello.
+
+I am writing to submit the enclosed manuscript, ``Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants,'' for consideration as a \textit{PNAS Plus} research report.
+
+In this manuscript, we show that high-throughput experimental measurements of how mutations affect influenza virus growth in the lab can help explain the fates of viral lineages in nature.
+Specifically, we use the new technique of deep mutational scanning to measure how \emph{all} amino-acid mutations to the hemagglutinin protein of a recent human H3N2 strain of influenza virus affect viral growth in the lab.
+We then show that our measurements can help distinguish which viral strains succeed and which ones die out in nature.
+Our work therefore takes an important step towards the goal of leveraging experiments to forecast virus evolution in nature.
+For this reason, it will be of interest to evolutionary biologists, virologists, and computational biologists---making it suitable for a broad journal such as \textit{PNAS}.
+
+Our work will also be of specific interest to virologists and structural biologists for several additional reasons.
+Hemagglutinin is an important protein because it is a major target of anti-influenza immunity and a prototype viral membrane fusion protein.
+Our detailed map of how all mutations to hemagglutinin affect viral growth is valuable for understanding its biochemistry.
+Additionally, there has been recent work trying to elicit immunity that targets the stalk domain of hemagglutinin.
+This work is motivated by the observation that the stalk domain of H1 influenza hemagglutinin is less mutationally tolerant than the immunodominant head domain.
+Surprisingly, our work shows that the reduced mutational tolerance of the stalk does \emph{not} extend to H3 hemagglutinin, perhaps partially explaining why there is more literature on anti-stalk antibodies for H1 versus H3 hemagglutinins.
+
+Finally, our work will be of specific interest to evolutionary biologists because it sheds light on the question of how the effects of mutations shift during evolution.
+Prior work has experimentally compared the effects of mutations among closely related proteins, but ours is the first to compare them among highly diverged proteins.
+We find that many mutations have different effects in H3 and H3 hemagglutinins, showing the stark effect of epistasis when comparing distant homologs.
+
+For all of these reasons, we are confident that our work will be of substantial interest to the readership of \textit{PNAS}.
+In addition, we would like to highlight how we have adhered to the ideals of open and transparent science by making all of our data and analysis, include the current version of the manuscript itself, publicly available at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}. 
+This openness will facilitate the efforts of others to understand, validate, and extend our work.
+
+Because of the highly quantitative nature of our work, we suggest members of the Editorial Board and the NAS who have expertise in evolutionary biology, computation, and viruses. 
+Specifically, we suggest the following \textit{PNAS} Editorial Board members:
+\begin{itemize}
+\item Richard Lenski: a leader in the study of evolution in the lab.
+\item Simon Levin: an expert in quantitative biology and its application to viruses.
+\item Peter Palese: a leading expert in influenza virus.
+\end{itemize}
+
+We suggest the following additional NAS members:
+\begin{itemize}
+\item Boris Shraiman: an expert in quantitative studies of influenza virus evolution.
+\item James Bull: an expert in virus evolution.
+\item Daniel Fisher: an expert in quantitative approaches in evolution.
+\item Stephen Harrison: an expert on viral proteins, including hemagglutinin.
+\item Robert Lamb: an expert on viruses including influenza virus.
+\item Pamela Bjorkman: an expert on viral proteins, including hemagglutinin.
+\end{itemize}
+
+We suggest the following potential reviewers.
+We have included reviewers with expertise that spans the range of fields covered by our study:
+\begin{itemize}
+\item Michael Lassig (Cologne, \href{mailto:lassig@thp.uni-koeln.de}{lassig@thp.uni-koeln.de}) is a leading expert in predictive models of influenza virus evolution.
+\item Joshua Plotkin (Penn, \href{mailto:jplotkin@sas.upenn.edu}{jplotkin@sas.upenn.edu}) is an expert on quantitative studies of virus evolution.
+\item Nicholas Heaton (Duke, \href{mailto:nicholas.heaton@dm.duke.edu}{nicholas.heaton@dm.duke.edu}) is an expert on influenza virus.
+\item Katia Koelle (Emory, \href{mailto:katia.koelle@emory.edu}{katia.koelle@emory.edu}) is an expert on influenza virus evolution.
+\item Ren Sun (UCLA, \href{mailto:rsun@mednet.ucla.edu}{rsun@mednet.ucla.edu}) is an expert on the deep mutational scanning of virus proteins.
+\item Colin Russell (AMC Amsterdam, \href{mailto:c.a.russell@amc.uva.nl}{c.a.russell@amc.uva.nl}) is an expert on influenza virus evolution.
+\end{itemize}
+
+\closing{Sincerely} % eg Regards,
+
+\end{letter}
+\end{document}
