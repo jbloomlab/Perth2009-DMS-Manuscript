@@ -503,10 +503,9 @@ where $\pi_{r,a_1}$ and $\pi_{r,a_2}$ are the re-scaled preferences for amino ac
 The WSN/1933 H1 HA amino-acid preferences are the replicate-average values reported in \cite{doud2016accurate}, re-scaled by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
 
 \subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum mutation frequencies}
-To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid} (see Dataset~\ref{suppdata:gisaid}), sampling six viruses per month over the time interval of January 1, 1968 to April 1, 2017.
-We aligned the resulting 2,139 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
+To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid} (see Dataset~\ref{suppdata:gisaid}), sampling six viruses per month over the time interval of January 1, 1968 to February 1, 2018.
+We aligned the resulting 2,189 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
 Ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
-We pruned seven strains with premature stop codons in their amino acid translations that represented likely sequencing errors, producing a final tree with 2,132 strains.
 The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/data/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
 The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
 
