@@ -1,0 +1,113 @@
+May 7, 2018 
+
+Title: "Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants" 
+Tracking #: 2018-06133 
+Authors: Lee et al. 
+
+Dear Dr. Bloom, 
+
+The expert who is serving as editor for your manuscript [MS# 2018-06133] has obtained 2 reviews, which are included below. The editor requests that you constructively address the concerns of the reviewers in a revised manuscript. Please note that multiple revisions are rarely permitted and there is no guarantee that the paper will be accepted. 
+
+PNAS allows 60 days to submit a revision. Your revision is due by July 6, 2018. If you require additional time, please contact the PNAS office. 
+
+When submitting revised materials, we require that you include a cover letter with a point-by-point response to the reviewers' comments. If you submitted a single PDF at initial submission, you must submit individual publication-ready files (e.g., Word file for manuscript text; EPS, TIFF, or high-resolution PDF for figures; Word file for tables; etc.) 
+
+Please note that statements such as "data not shown" and "personal communication" cannot be used to support claims in the work and should be removed prior to submission. Authors are encouraged to use supporting information to show all necessary data, or to deposit their data in a publicly accessible database if posting as supporting information is not possible. Authors should include a statement in their methods section describing how readers will be able to access the data, associated protocols, code, and materials. 
+
+You may submit your revised manuscript here: https://www.pnascentral.org/cgi-bin/main.plex?el=A5B3DFbN5A3NUt7I2A9ftdMjiesiAxOKOZe3rlh5RbrwZ. 
+
+***Adding, removing, or reordering your author list requires approval from all coauthors before we can proceed. If you wish to add an additional corresponding author, please note this in the "Comments for Editorial Staff" box when completing your revision.*** 
+
+We recommend that authors submit ORCID IDs. If you provide your ORCID ID when you submit your manuscript, you can opt in to have your ORCID record automatically updated if your article is published. Watch for an email from Crossref in your ORCID inbox requesting permission to access your ORCID record. 
+
+Thank you for submitting to PNAS. We look forward to receiving your revision. 
+
+Sincerely yours, 
+Natasha V. Raikhel 
+Interim Editor-in-Chief 
+(p) 202.334.2679 
+(f) 202.334.2739 
+(e) pnas@nas.edu 
+
+********************* 
+Review #1 Comments
+
+Suitable Quality?: No 
+Sufficient General Interest?: No 
+Conclusions Justified?: No 
+Clearly Written?: No 
+Procedures Described?: Yes 
+Supplemental Material Warranted?: Yes 
+
+Comments: 
+In their manuscript Lee et al. examine the tolerance of an H3 virus HA for single point mutations using deep mutational scanning. Using the data obtained from cell culture experiments the authors then try to understand if there is a correlation between the observed changes in vitro and actual virus evolution in vivo. Finally, they test if there is any correlation between H3 and H1 mutational tolerance and basically find that measurements made with H1 HA are not helpful to predict H3 evolution. The manuscript is written in a relatively confusing way and the experimental setup is problematic. Some of the obtained data also need re-evaluation/experimental validation. 
+
+Major points 
+
+1) It is disturbing that there is no preference for having a methionine in the first position of the HA ORF. The authors discuss this and refer to one 2002 paper that shows additional start sites for non-human H2. This is a pretty weak explanation. If this is really the case the authors should actually isolate/rescue these viruses and test their fitness relative to wild type. 
+
+Of note, position 1 for the H1 HA in the supplementary figures is not even shown. 
+
+2) While other important features of the HA like several cysteines seem to be conserved, there is no pressure on other elements which are considered important for viral fitness including the NGT glycosylation site in the beginning of HA1 which is conserved in all group 2 HAs or the adjacent NAT glycosylation site which is conserved in H3, H7, H10 and H15. On the other hand, head glycosylation sites, which are highly variable in nature, seem to be conserved. Again, viruses without these glycosylation sites should be rescued and evaluated for fitness relative to wild type. 
+
+3) It is also surprising that the transmembrane domain seems to be highly plastic, a feature that is certainly not present in nature where it is highly conserved within H3 HAs. 
+
+4) Were sequences from passaged viruses (isolated on MDCKs and other cell lines) included in the comparison between in vitro mutagenesis data and natural evolution data? They need to be excluded since their presence might induce a bias towards what is tolerated/preferred in cell culture. Only sequences obtained directly from patient specimens should be used for the comparison. 
+
+5) It is unclear how the 'rescaling' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a 'sequence logo' figure for comparison. 
+
+6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
+
+7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
+
+a) The TCID50 is likely underestimating the number of virus particles with HA genomic segments because not all of them (likely the minority) will be capable of inducting a full infectious cycle (but their presence might still be detected in the cell supernatants). 
+
+b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
+
+c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged 9x10^5 TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
+
+d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
+
+The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
+
+Minor points 
+
+1) Many abbreviations are not defined in the manuscript including MDCK-SIAT1, TMPRSS2, MOI, DMEM, FBS, LB. 
+
+2) The authors state on page 5 that mutations detected in cell culture as deleterious rarely reach high frequency in nature. Could you please give a few examples? 
+
+3) The authors picked 31 random clones to evaluate the mutation rate per clone. These sequences should be made available. Did this set include viruses without a proper start codon (see above)? What was their growth phenotype in vitro? 
+
+Reviewer #2 Comments: 
+
+Suitable Quality?: No 
+Sufficient General Interest?: Yes 
+Conclusions Justified?: Yes 
+Clearly Written?: No 
+Procedures Described?: Yes 
+Supplemental Material Warranted?: Yes 
+
+Comments: 
+The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is "systematic and quantitative" in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
+
+Major points: 
+
+The authors themselves acknowledge the most important limitation of this study: that the experimental measure of viral growth in cell culture is not reflective of true fitness in nature. Most importantly, the work presented here does not capture host-induced pressures on the antigenic regions of the viral protein. This is evidenced by the discrepancy between the high mutational tolerance they calculated for the stalk region and the actual change in stalk amino acid sequence. A simple protein BLAST comparison between the amino acid sequences of HA from H3N2 viruses Perth09 and HK68 shows a 77% conservation in head amino acids but a 94% conservation in stalk amino acids. Additionally, according to figure 2, there is no observable reversion of the G78D mutation they introduced despite the dominance of G78 in the population as seen in figure S1. The authors recognize this in their work and do not attempt to exaggerate the significance of these findings. Still, it would be useful to differentiate between head and stalk mutations when depicting individual amino acid mutations in figure 4 and their frequency trajectories to highlight that the predominance of mutations that occur in nature are in the head. 
+
+The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
+
+Additionally, the authors should directly show the discrepancies between this in vitro selection and the H3 HA's evolution in nature. This group has performed such an analysis in their previous deep mutational scanning work with the H1 HA of WSN (Doud and Bloom, Viruses 2016). Maximum likelihood phylogenetics can be used to estimate the difference between experimental amino acid preference and natural preference. One might expect that this would provide some insight into the nature of the bias introduced through cell culture. 
+
+The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as "modest." One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
+
+The experimental approach of deep mutational scanning has been applied to viral proteins before, including HIV env, influenza H1 HA, and NP. The novelty in this paper is that it is the first time such an analysis has been performed for H3 specifically and that it demonstrates the (albeit limited) utility of deep mutational scanning in predicting the success of viral strains in nature. Ultimately, it is clear from the discussion that the authors see this study as an intermediate step, suggesting that their work is "an improvement over no information at all." While something is indeed better than nothing, in my opinion, this paper represents only an incremental step forward in the field of influenza evolutionary forecasting due to the aforementioned limitations, especially since this experiment and subsequent analysis could be performed using more stringent selection methods during viral passaging like treatment with human sera for data that is presumably more faithful to nature. 
+
+Minor Points: 
+
+The correlation for prospective analysis (post-Perth) is smaller than the correlation for post-hoc analysis (pre-Perth). Since prospective analysis is more important when predicting evolutionary fates, it might be beneficial for the authors to comment on this difference. 
+
+A number of issues interfere with the clarity of this manuscript, particularly when appealing to a broader scientific audience. While this is understandable given the nature of this study, several adjustments should be made. A clear description of mutational effect is never provided in the results, though it forms a crucial component of the data. As such, it is not really intuitive as to why the range from -10-0 should be considered "neutral." Additionally, mutational tolerance is quantified as Shannon entropy of the re-scaled amino-acid preferences at each site, but it is unclear how this entropy is calculated. The entire first half of the second results section describing how the experimentally informed codon substitution model they generate is better than existing models and the associated Table 1 is very difficult to understand. AIC is never explained. The significance of dN/dS being much less than 1 for conventional models should be explained. The purpose of modeling of ExpCM, site avg. is unclear. 
+In figure 4, it would be useful to show Perth09 on the tree and mention that closely related strains are excluded from analysis in the figure legend. As it stands, there is just an unlabeled cluster of viruses for which no individual amino acid mutations are characterized. It is also important for the authors to clearly state what frequency they are talking about. Specifically, in consideration of a particular mutation, what is the population in the denominator? 
+
+The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
+
