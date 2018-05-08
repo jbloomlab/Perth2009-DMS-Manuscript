@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
+\newcommand{\response}[1]{{\color{black}#1}}
 
 \title{Response to reviews of ``Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants'' for \textit{PNAS}}
 \author{Juhye M. Lee, John Huddleston, Michael B. Doud, Kathryn A. Hooper,\\Nicholas C. Wu, Trevor Bedford, Jesse D. Bloom}
@@ -31,29 +32,120 @@ In their manuscript Lee et al. examine the tolerance of an H3 virus HA for singl
 
 1) It is disturbing that there is no preference for having a methionine in the first position of the HA ORF. The authors discuss this and refer to one 2002 paper that shows additional start sites for non-human H2. This is a pretty weak explanation. If this is really the case the authors should actually isolate/rescue these viruses and test their fitness relative to wild type. 
 
-Of note, position 1 for the H1 HA in the supplementary figures is not even shown. 
+\comment{To reply to this point, we need to generate one of these mutants and show that it grows in cell culture.
+{\bf Juhye:} we should discuss how to do this.}
+
+Of note, position 1 for the H1 HA in the supplementary figure is not even shown. 
+
+\response{Figure~S3 shows data for the H1 HA as measured previously by Doud and Bloom (2016). 
+That study used mutant libraries in which all codons \emph{except} the one for the N-terminal methionine were mutagenized.
+Therefore, that study did not estimate the effects of mutations to the first codon, which is why it is not shown in Figure~S3.
+We have added a sentence to the legend for this supplementary figure explaining this fact.
+}
 
 2) While other important features of the HA like several cysteines seem to be conserved, there is no pressure on other elements which are considered important for viral fitness including the NGT glycosylation site in the beginning of HA1 which is conserved in all group 2 HAs or the adjacent NAT glycosylation site which is conserved in H3, H7, H10 and H15. On the other hand, head glycosylation sites, which are highly variable in nature, seem to be conserved. Again, viruses without these glycosylation sites should be rescued and evaluated for fitness relative to wild type. 
 
+\comment{{\bf Juhye:} to reply to this point, we should generate several of these mutants and evaluate their growth in cell culture.}
+
 3) It is also surprising that the transmembrane domain seems to be highly plastic, a feature that is certainly not present in nature where it is highly conserved within H3 HAs. 
+
+\comment{Here we need to explain that constraint in our experiments and conservation in nature are not expected to be entirely the same.
+Conservation in nature results from the convolution of constraint and diversifying selection from immunity, whereas our experiments only look at constraint.
+As evidence to explain this point, we can point to studies showing that the head of HA is much more conserved for swine influenza viruses where there is less pressure from immunity.
+{\bf Juhye:} To make this more convincing, we should also pick a site in the transmembrane domain that is highly conserved in nature but not under constraint in our experiments, and validate it.}
 
 4) Were sequences from passaged viruses (isolated on MDCKs and other cell lines) included in the comparison between in vitro mutagenesis data and natural evolution data? They need to be excluded since their presence might induce a bias towards what is tolerated/preferred in cell culture. Only sequences obtained directly from patient specimens should be used for the comparison. 
 
-5) It is unclear how the 'rescaling' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a 'sequence logo' figure for comparison. 
+\comment{This is a good suggestion. 
+{\bf John:} I think we should add an additional analysis that does this only for sequences that were not passaged in cell-culture or eggs.
+I believe that GISAID annotates passage history.
+I would expect that we can only do this for the post-Perth sequences as I doubt that there are many unpasaged viruses prior to the early 2000's.
+We could just add this as another panel assuming it gives the same results.}
+
+5) It is unclear how the ``rescaling'' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a ``sequence logo'' figure for comparison. 
+
+\comment{This is easy to explain better; the only reason we didn't go into more detail before is because of space constraints.
+We can also show the non-rescaled logo plots, as Supplemental Information.
+I thought there was a limit on the number of Supplemental Information figures, but I can't find that right now so maybe we can just add them as more... If someone objects, we can then merge some of the SI figures into one large multi-panel figure.
+We can explain how the scaling factor doesn't effect any of the evolutionary analyses as it is just a constant factor that multiplies all mutational effects, and so will therefore simply correspond to a change in units on the x-axis of the Figure~5.}
 
 6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
 
+\comment{We looked at this pretty carefully, and there are definitely more reports of selecting anti-stalk antibodies for H1 and H3.
+The reviewer's counterpoint is to mention on of the H3 studies. 
+However, we didn't say that there are no H3 reports, just that there are a lot more H1 reports.
+Certainly this is not systematic proof, but our statement in the text goes to great pains to caveat that this is purely circumstantial and not systematic proof.
+But since this isn't a central claim of the paper of anyway, let's just remove it in a concession to the reviewer.
+The study we're helping Nicholas Wu with will eventually systematically test this point.
+}
+
 7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
+
+\response{The reviewer has a number of questions and suggestions about the experimental design.
+Over the last few years, we have performed a number of studies optimizing procedures for deep mutational scanning of influenza virus libraries (see PMIDs 24859245, 25006036, 27271655) during which we have carefully considered all of the experimental parameters that the reviewer discusses.
+Below we briefly explain why each of our choices for these experimental parameters were appropriate.
+We do not deny that there are slightly different ways that the experiments could be done, but the in end, the ``proof is in the pudding.'' 
+In the manuscript, we show that the measurements made using the experimental parameters that we chose lead to useful data as judged by the following criterion:
+\begin{itemize}
+\item The results from fully independent experimental replicates are highly correlated (Fig.~1D), which would not be the case if the results were dominated by noise.
+\item The experimental measurements do a good job of predicting the effects of individually validated mutations \comment{Here we would refer to the validation experiments described above}.
+\item The experimental measurements can inform substitution models that describe influenza virus's evolution much better than standard models (Table~1).
+\item The experimental measurements provide information that can help predict the fates of influenza virus lineages in nature (Fig.~5).
+\end{itemize}
+We do not claim that other experimental parameter choices might not lead to equivalent or even slightly better results, but we have carefully considered all of our choices and clearly they lead to very good results.
+
+Below we explain our reasoning for each choice about which the reviewer makes suggestions:
+}
 
 a) The TCID50 is likely underestimating the number of virus particles with HA genomic segments because not all of them (likely the minority) will be capable of inducting a full infectious cycle (but their presence might still be detected in the cell supernatants). 
 
+\response{The reviewer is certainly correct that TCID50 assays underestimate the number of HA genomic segments, as it is well known that the number of physical influenza virions exceeds the number of infectious units by 10-100 fold.
+This is why we used an extremely low MOI (0.0035) so that most cells are still infected by no more than one virion.
+It is impossible to ever grow a viral stock that is completely free of defective particles.
+However, in both our original rescue with helper virus and in the passage, we follow the steps suggested by Carolina Lopez and Scott Hensley (PMID 27047455) to minimize defective particles.
+These include low MOI (0.0035 TCID50 per cell is quite low), and short growth times to avoid accumulation of defective particles (the helper-virus rescue was allowed to propagate for just 24 hours, and the low-MOI passage for just 48 hours).
+\comment{Juhye, do you have HA-staining titers for these viruses too? Then we can explicitly compare HA-expressing units to TCID50.}
+}
+
 b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
+
+\response{It is true that the original inoculum remains and so will contribute to the variants detected during sequencing.
+However, the original inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing.
+Specifically, in the original inoculum placed on the cells, the titer is \comment{?} TCID50 / ml, whereas at the time of supernatant collection for sequencing the titer is \comment{?} TCID50 / ml.
+Therefore, the original inoculum constitutes just \comment{?}\% of the viral titer at the time of collection, and therefore makes a negligible contribution to the sequenced material.
+\comment{Juhye, can you calculate these numbers from the TCID50 of the collected viruses. 
+You can also mention those titers in the Methods.
+I expect that we will see at least a 10,000-fold dilution of the original inoculum.
+If we really want to nail this point (and the one after it), we could also do qPCR on the inoculum (we could re-constitute some from a bit of transfection supernatant) and the passage supernatant to show that the HA RNA amounts also changed comparably.
+I don't think this is really necessary since it's obvious, but we could do it if we want to really drive a stake through the heart of the reviewers' concern...}
+}
 
 c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged $9\times10^5$ TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
 
+\comment{The reviewer's math is off here, we passaged $9\times 10^5$ TCID50 \emph{total} across all 15 cm dishes. 
+This could be clarified by adding a word to the Methods indicating how many 15-cm dishes we used (right now, it just says ``in 15-cm dishes.''
+Below that we say that we used an inoculum of 2.5 TCID50 / $\mu$l, which corresponds to dilutions that range from 1:37 to 1:294, not 1:2.5 or 1:25 as the reviewer says.
+In addition, we should point out that the supernatant comes from a helper-virus rescue that has occurred for just 24 hours, and so has low titers of both infectious virus and TCID50s.
+Again, we could really drive a stake through this question by doing the qPCR mentioned above.
+}
+
 d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
 
+\response{The reviewer is correct that we never clarified the viral supernatant before RNA extraction.
+There are two reason for this.
+First, for a relatively short and very low MOI passage like the one we used (48 hours starting at a MOI of 0.0035), there was little cell debri since the cell monolayer was still largely intact at the end of the passage.
+Second, there is no reason to expect that the RNA in supernatant virions will better correspond to functional HA mutants that RNA in cell debris.
+If anything, the opposite might be expected.
+Functional HA is needed only for viral entry.
+The RNA in cell debris at least originated from a virus that was able to enter the cell, whereas the HA in released virions has not yet undergone selection beyond that which occurred at the infection stage.
+In practice, after 48 hours, most RNA is from viruses that have undergone multiple cycles of infection, and so there has been reasonably strong selection for HA function in both virion RNA and cell debris RNA.
+}
+
 The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
+
+\response{For the reasons described above, it is not necessary to totally repeat the experiments.
+Certainly other experimental parameter choices could have been used, but this is always the case for complex experiments.
+Our choices will reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
 
 \subsubsection*{Minor points} 
 
