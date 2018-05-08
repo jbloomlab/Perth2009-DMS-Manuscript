@@ -158,29 +158,75 @@ Our choices will reasonable, and the four lines of evidence listed at the beginn
 \subsection*{Reviewer \#2 Comments} 
 
 \subsubsection*{Comments:} 
-The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25\%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is "systematic and quantitative" in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
+The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25\%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is ``systematic and quantitative'' in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
+
+\comment{We thank the reviewer for the accurate and fair summary of our work.}
 
 \subsubsection*{Major points:} 
 
 The authors themselves acknowledge the most important limitation of this study: that the experimental measure of viral growth in cell culture is not reflective of true fitness in nature. Most importantly, the work presented here does not capture host-induced pressures on the antigenic regions of the viral protein. This is evidenced by the discrepancy between the high mutational tolerance they calculated for the stalk region and the actual change in stalk amino acid sequence. A simple protein BLAST comparison between the amino acid sequences of HA from H3N2 viruses Perth09 and HK68 shows a 77\% conservation in head amino acids but a 94\% conservation in stalk amino acids. Additionally, according to figure 2, there is no observable reversion of the G78D mutation they introduced despite the dominance of G78 in the population as seen in figure S1. The authors recognize this in their work and do not attempt to exaggerate the significance of these findings. Still, it would be useful to differentiate between head and stalk mutations when depicting individual amino acid mutations in figure 4 and their frequency trajectories to highlight that the predominance of mutations that occur in nature are in the head. 
 
+\response{We thank the reviewer for acknowledging our efforts to fairly present the considerable caveats associated with cell-culture measurements.
+
+The suggestion to make a version of Fig.~4 that distinguished between the stalk and the head is a good one.
+It is difficult to also overlay the structural location (stalk versus head) on the current Fig.~4, since colors are already used to indicate mutational effects.
+We have therefore created a new supplemental figure (Fig.~S\comment{?}) that shows these data---as the reviewer suspected, this shows that head mutations are much more common.
+\comment{{\bf John:} Can you make this figure? I'm actually not 100\% sure of the point, as I don't think the layout in Fig.~4 is the best way to show head versus stalk. 
+But since it's what the reviewer suggested, let's just do it and make it a supplement.
+This would be just like the current Fig.~4 except rather than coloring by mutational effect, we color by head versus stalk.
+Then I think we should also make a second panel that shows the number of head and stalk mutations that reach an indicated frequency over the whole timespan, as this is really a better way to show the point.
+So the x-axis would be mutation frequency, we would count mutations that reach each frequency, bin them and show this for head and stalk.
+This would definitely show that there are more head mutations overall, and would probably show that more head mutations reach high frequency.
+You could argue that it would be more informative to do this for epitope versus non-epitope, but since the reviewer asked for head versus stalk and we won't really discuss this much in the text anyway, let's just do head versus stalk...}
+
+The reviewer is correct that G78D appears to be a site where the correspondence between selection in our experiments and frequency in nature is low.
+This makes sense, as G78D is one of the two sites that we specifically identified as being a lab adaptation (see Figure~S1).
+We now explicitly mention this fact in the text \comment{still need to actually add this mention}.
+} 
+
 The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
+
+\comment{This would be interesting to do, but is a whole other study.
+This is the one point that I think we are just going to have to argue is beyond the scope of the manuscript.
+}
 
 Additionally, the authors should directly show the discrepancies between this in vitro selection and the H3 HA's evolution in nature. This group has performed such an analysis in their previous deep mutational scanning work with the H1 HA of WSN (Doud and Bloom, Viruses 2016). Maximum likelihood phylogenetics can be used to estimate the difference between experimental amino acid preference and natural preference. One might expect that this would provide some insight into the nature of the bias introduced through cell culture. 
 
-The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as "modest." One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
+\comment{We can definitely do this pretty easily, perhaps adding Sarah Hilton as an author to help.
+Not sure where we would fit the data given that the paper is already too long, but I guess we could cram it in the supplement.
+}
+
+The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as ``modest.'' One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
+
+\comment{This is a possibility, although I highly doubt that it is true.
+However, we can easily add a sentence acknowledging the possibility.
+}
 
 The experimental approach of deep mutational scanning has been applied to viral proteins before, including HIV env, influenza H1 HA, and NP. The novelty in this paper is that it is the first time such an analysis has been performed for H3 specifically and that it demonstrates the (albeit limited) utility of deep mutational scanning in predicting the success of viral strains in nature. Ultimately, it is clear from the discussion that the authors see this study as an intermediate step, suggesting that their work is "an improvement over no information at all." While something is indeed better than nothing, in my opinion, this paper represents only an incremental step forward in the field of influenza evolutionary forecasting due to the aforementioned limitations, especially since this experiment and subsequent analysis could be performed using more stringent selection methods during viral passaging like treatment with human sera for data that is presumably more faithful to nature. 
+
+\comment{This is a fair point.
+However, I think we should argue that it's the first paper to show deep mutational scanning can actually provide at least some information that reflects outcomes in nature.
+This comment does make me worry that the reviewer just doesn't think the work is significant enough, but since the editor did ask for a revision you'd have to hope that if we answer all specific comments that would be enough.
+}
 
 \subsubsection*{Minor Points:} 
 
 The correlation for prospective analysis (post-Perth) is smaller than the correlation for post-hoc analysis (pre-Perth). Since prospective analysis is more important when predicting evolutionary fates, it might be beneficial for the authors to comment on this difference. 
 
+\comment{Not sure if the difference between $\rho = 0.17$ and $\rho = 0.14$ is significant. 
+We could figure out how to calculate this, but first let's see what it looks like for the non-lab-passaged sequences requested by Reviewer 1.}
+
 A number of issues interfere with the clarity of this manuscript, particularly when appealing to a broader scientific audience. While this is understandable given the nature of this study, several adjustments should be made. A clear description of mutational effect is never provided in the results, though it forms a crucial component of the data. As such, it is not really intuitive as to why the range from -10-0 should be considered "neutral." Additionally, mutational tolerance is quantified as Shannon entropy of the re-scaled amino-acid preferences at each site, but it is unclear how this entropy is calculated. The entire first half of the second results section describing how the experimentally informed codon substitution model they generate is better than existing models and the associated Table 1 is very difficult to understand. AIC is never explained. The significance of dN/dS being much less than 1 for conventional models should be explained. The purpose of modeling of ExpCM, site avg. is unclear. 
+
+\comment{We can clarify these easily.}
+
 In figure 4, it would be useful to show Perth09 on the tree and mention that closely related strains are excluded from analysis in the figure legend. As it stands, there is just an unlabeled cluster of viruses for which no individual amino acid mutations are characterized. It is also important for the authors to clearly state what frequency they are talking about. Specifically, in consideration of a particular mutation, what is the population in the denominator? 
+
+\comment{We can clarify these easily.}
 
 The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
 
+\comment{Easily fixed.}
 
 
 
