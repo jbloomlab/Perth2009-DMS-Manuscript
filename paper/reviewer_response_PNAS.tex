@@ -1,48 +1,33 @@
-May 7, 2018 
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage{color}
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
 
-Title: "Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants" 
-Tracking #: 2018-06133 
-Authors: Lee et al. 
+\newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 
-Dear Dr. Bloom, 
+\title{Response to reviews of ``Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants'' for \textit{PNAS}}
+\author{Juhye M. Lee, John Huddleston, Michael B. Doud, Kathryn A. Hooper,\\Nicholas C. Wu, Trevor Bedford, Jesse D. Bloom}
 
-The expert who is serving as editor for your manuscript [MS# 2018-06133] has obtained 2 reviews, which are included below. The editor requests that you constructively address the concerns of the reviewers in a revised manuscript. Please note that multiple revisions are rarely permitted and there is no guarantee that the paper will be accepted. 
+\begin{document}
+\maketitle
 
-PNAS allows 60 days to submit a revision. Your revision is due by July 6, 2018. If you require additional time, please contact the PNAS office. 
+We thank the reviewers for the careful reading and suggestions about the manuscript.
+In the revised version, we have performed additional experiments and analyses that should address all of the reviewer concerns.
 
-When submitting revised materials, we require that you include a cover letter with a point-by-point response to the reviewers' comments. If you submitted a single PDF at initial submission, you must submit individual publication-ready files (e.g., Word file for manuscript text; EPS, TIFF, or high-resolution PDF for figures; Word file for tables; etc.) 
+\emph{Below, the reviewer comments {\color{blue} are in blue}, and our responses are in black.}
 
-Please note that statements such as "data not shown" and "personal communication" cannot be used to support claims in the work and should be removed prior to submission. Authors are encouraged to use supporting information to show all necessary data, or to deposit their data in a publicly accessible database if posting as supporting information is not possible. Authors should include a statement in their methods section describing how readers will be able to access the data, associated protocols, code, and materials. 
+\color{blue}
 
-You may submit your revised manuscript here: https://www.pnascentral.org/cgi-bin/main.plex?el=A5B3DFbN5A3NUt7I2A9ftdMjiesiAxOKOZe3rlh5RbrwZ. 
+\subsection*{Reviewer \#1 Comments}
 
-***Adding, removing, or reordering your author list requires approval from all coauthors before we can proceed. If you wish to add an additional corresponding author, please note this in the "Comments for Editorial Staff" box when completing your revision.*** 
-
-We recommend that authors submit ORCID IDs. If you provide your ORCID ID when you submit your manuscript, you can opt in to have your ORCID record automatically updated if your article is published. Watch for an email from Crossref in your ORCID inbox requesting permission to access your ORCID record. 
-
-Thank you for submitting to PNAS. We look forward to receiving your revision. 
-
-Sincerely yours, 
-Natasha V. Raikhel 
-Interim Editor-in-Chief 
-(p) 202.334.2679 
-(f) 202.334.2739 
-(e) pnas@nas.edu 
-
-********************* 
-Review #1 Comments
-
-Suitable Quality?: No 
-Sufficient General Interest?: No 
-Conclusions Justified?: No 
-Clearly Written?: No 
-Procedures Described?: Yes 
-Supplemental Material Warranted?: Yes 
-
-Comments: 
+\subsubsection*{Comments:} 
 In their manuscript Lee et al. examine the tolerance of an H3 virus HA for single point mutations using deep mutational scanning. Using the data obtained from cell culture experiments the authors then try to understand if there is a correlation between the observed changes in vitro and actual virus evolution in vivo. Finally, they test if there is any correlation between H3 and H1 mutational tolerance and basically find that measurements made with H1 HA are not helpful to predict H3 evolution. The manuscript is written in a relatively confusing way and the experimental setup is problematic. Some of the obtained data also need re-evaluation/experimental validation. 
 
-Major points 
+\subsubsection*{Major points} 
 
 1) It is disturbing that there is no preference for having a methionine in the first position of the HA ORF. The authors discuss this and refer to one 2002 paper that shows additional start sites for non-human H2. This is a pretty weak explanation. If this is really the case the authors should actually isolate/rescue these viruses and test their fitness relative to wild type. 
 
@@ -64,13 +49,13 @@ a) The TCID50 is likely underestimating the number of virus particles with HA ge
 
 b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
 
-c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged 9x10^5 TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
+c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged $9\times10^5$ TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
 
 d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
 
 The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
 
-Minor points 
+\subsubsection*{Minor points} 
 
 1) Many abbreviations are not defined in the manuscript including MDCK-SIAT1, TMPRSS2, MOI, DMEM, FBS, LB. 
 
@@ -78,21 +63,14 @@ Minor points
 
 3) The authors picked 31 random clones to evaluate the mutation rate per clone. These sequences should be made available. Did this set include viruses without a proper start codon (see above)? What was their growth phenotype in vitro? 
 
-Reviewer #2 Comments: 
+\subsection*{Reviewer \#2 Comments} 
 
-Suitable Quality?: No 
-Sufficient General Interest?: Yes 
-Conclusions Justified?: Yes 
-Clearly Written?: No 
-Procedures Described?: Yes 
-Supplemental Material Warranted?: Yes 
+\subsubsection*{Comments:} 
+The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25\%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is "systematic and quantitative" in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
 
-Comments: 
-The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is "systematic and quantitative" in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
+\subsubsection*{Major points:} 
 
-Major points: 
-
-The authors themselves acknowledge the most important limitation of this study: that the experimental measure of viral growth in cell culture is not reflective of true fitness in nature. Most importantly, the work presented here does not capture host-induced pressures on the antigenic regions of the viral protein. This is evidenced by the discrepancy between the high mutational tolerance they calculated for the stalk region and the actual change in stalk amino acid sequence. A simple protein BLAST comparison between the amino acid sequences of HA from H3N2 viruses Perth09 and HK68 shows a 77% conservation in head amino acids but a 94% conservation in stalk amino acids. Additionally, according to figure 2, there is no observable reversion of the G78D mutation they introduced despite the dominance of G78 in the population as seen in figure S1. The authors recognize this in their work and do not attempt to exaggerate the significance of these findings. Still, it would be useful to differentiate between head and stalk mutations when depicting individual amino acid mutations in figure 4 and their frequency trajectories to highlight that the predominance of mutations that occur in nature are in the head. 
+The authors themselves acknowledge the most important limitation of this study: that the experimental measure of viral growth in cell culture is not reflective of true fitness in nature. Most importantly, the work presented here does not capture host-induced pressures on the antigenic regions of the viral protein. This is evidenced by the discrepancy between the high mutational tolerance they calculated for the stalk region and the actual change in stalk amino acid sequence. A simple protein BLAST comparison between the amino acid sequences of HA from H3N2 viruses Perth09 and HK68 shows a 77\% conservation in head amino acids but a 94\% conservation in stalk amino acids. Additionally, according to figure 2, there is no observable reversion of the G78D mutation they introduced despite the dominance of G78 in the population as seen in figure S1. The authors recognize this in their work and do not attempt to exaggerate the significance of these findings. Still, it would be useful to differentiate between head and stalk mutations when depicting individual amino acid mutations in figure 4 and their frequency trajectories to highlight that the predominance of mutations that occur in nature are in the head. 
 
 The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
 
@@ -102,7 +80,7 @@ The authors are upfront about the limited degree to which their calculated mutat
 
 The experimental approach of deep mutational scanning has been applied to viral proteins before, including HIV env, influenza H1 HA, and NP. The novelty in this paper is that it is the first time such an analysis has been performed for H3 specifically and that it demonstrates the (albeit limited) utility of deep mutational scanning in predicting the success of viral strains in nature. Ultimately, it is clear from the discussion that the authors see this study as an intermediate step, suggesting that their work is "an improvement over no information at all." While something is indeed better than nothing, in my opinion, this paper represents only an incremental step forward in the field of influenza evolutionary forecasting due to the aforementioned limitations, especially since this experiment and subsequent analysis could be performed using more stringent selection methods during viral passaging like treatment with human sera for data that is presumably more faithful to nature. 
 
-Minor Points: 
+\subsubsection*{Minor Points:} 
 
 The correlation for prospective analysis (post-Perth) is smaller than the correlation for post-hoc analysis (pre-Perth). Since prospective analysis is more important when predicting evolutionary fates, it might be beneficial for the authors to comment on this difference. 
 
@@ -111,3 +89,8 @@ In figure 4, it would be useful to show Perth09 on the tree and mention that clo
 
 The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
 
+
+
+
+
+\end{document}  
