@@ -14,3 +14,5 @@ This repository is organized into the following subdirectories:
 * [./paper/](./paper/) contains the paper describing this analysis and results. This directory also contains a [figs](./paper/figs) subdirectory that contains all of the figures in the paper.
 
 * [./analysis_code/]([./analysis_code/) contains Jupyter notebooks that perform all the analyses, as well as necessary input data files.
+
+* [./lab_notes/]([./lab_notes]) contains lab notebooks describing the experiments in the paper.
