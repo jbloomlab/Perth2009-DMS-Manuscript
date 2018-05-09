@@ -35,6 +35,8 @@ In their manuscript Lee et al. examine the tolerance of an H3 virus HA for singl
 \comment{To reply to this point, we need to generate one of these mutants and show that it grows in cell culture.
 {\bf Juhye:} we should discuss how to do this.}
 
+\comment{JML: OK, agreed.}
+
 Of note, position 1 for the H1 HA in the supplementary figure is not even shown. 
 
 \response{Figure~S3 shows data for the H1 HA as measured previously by Doud and Bloom (2016). 
@@ -47,12 +49,16 @@ We have added a sentence to the legend for this supplementary figure explaining 
 
 \comment{{\bf Juhye:} to reply to this point, we should generate several of these mutants and evaluate their growth in cell culture.}
 
+\comment{JML: We can test some of these as well. But fitness in nature is not necessarily reflective of fitness in a cell culture system, and just because something is conserved in natural sequences does not necessarily mean it is indisposable for viral growth in the lab.... This is related to point 3 below.}
+
 3) It is also surprising that the transmembrane domain seems to be highly plastic, a feature that is certainly not present in nature where it is highly conserved within H3 HAs. 
 
 \comment{Here we need to explain that constraint in our experiments and conservation in nature are not expected to be entirely the same.
 Conservation in nature results from the convolution of constraint and diversifying selection from immunity, whereas our experiments only look at constraint.
 As evidence to explain this point, we can point to studies showing that the head of HA is much more conserved for swine influenza viruses where there is less pressure from immunity.
 {\bf Juhye:} To make this more convincing, we should also pick a site in the transmembrane domain that is highly conserved in nature but not under constraint in our experiments, and validate it.}
+
+\comment{JML: OK, can test a couple of these as well. I'd also like to point out (1) that the WSN HA also exhibits some degree of flexibility in amino acids that are tolerated in the TM domain, and (2) that various studies have found that chimeric HA's with transmembrane domains from {\bf completely different proteins} can still maintain HA cell surface expression and fusion activity (Melikyan et al 1999 Mol Biol Cell, Schroth-Diez et al 1998 JVI, Dong et al 1992 JVI, Roth et al 1986 JCB) and that the {\bf length} of the TM domain seems to play a large role in determining HA fusion activity (Armstrong et al 2000 JCB).} 
 
 4) Were sequences from passaged viruses (isolated on MDCKs and other cell lines) included in the comparison between in vitro mutagenesis data and natural evolution data? They need to be excluded since their presence might induce a bias towards what is tolerated/preferred in cell culture. Only sequences obtained directly from patient specimens should be used for the comparison. 
 
@@ -69,6 +75,8 @@ We can also show the non-rescaled logo plots, as Supplemental Information.
 I thought there was a limit on the number of Supplemental Information figures, but I can't find that right now so maybe we can just add them as more... If someone objects, we can then merge some of the SI figures into one large multi-panel figure.
 We can explain how the scaling factor doesn't effect any of the evolutionary analyses as it is just a constant factor that multiplies all mutational effects, and so will therefore simply correspond to a change in units on the x-axis of the Figure~5.}
 
+\comment{JML: There is a limit of 10 supplementary files + figures combined, and we are currently at that limit. We could make a multipanel with the WSN HA logoplot, although I agree that this wouldn't be ideal. We could also just add it to the Jupyter notebook and link to that as well I suppose}
+
 6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
 
 \comment{We looked at this pretty carefully, and there are definitely more reports of selecting anti-stalk antibodies for H1 and H3.
@@ -78,6 +86,8 @@ Certainly this is not systematic proof, but our statement in the text goes to gr
 But since this isn't a central claim of the paper of anyway, let's just remove it in a concession to the reviewer.
 The study we're helping Nicholas Wu with will eventually systematically test this point.
 }
+
+\comment{JML: Agreed that it may be better just to remove that sentence.}
 
 7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
 
@@ -107,11 +117,13 @@ These include low MOI (0.0035 TCID50 per cell is quite low), and short growth ti
 \comment{Juhye, do you have HA-staining titers for these viruses too? Then we can explicitly compare HA-expressing units to TCID50.}
 }
 
+\comment{JML: I only titered by TCID50, but we used a super low MOI and see points below.}
+
 b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
 
 \response{It is true that the original inoculum remains and so will contribute to the variants detected during sequencing.
 However, the original inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing.
-Specifically, in the original inoculum placed on the cells, the titer is \comment{?} TCID50 / ml, whereas at the time of supernatant collection for sequencing the titer is \comment{?} TCID50 / ml.
+Specifically, in the original inoculum placed on the cells, the titer is \comment{100 to 700} TCID50 / ul, whereas at the time of supernatant collection for sequencing the titer is \comment{30 to 230} TCID50 / ul for unconcentrated virus \comment{but 400 to 7550 TCID50 / ul for the concentrated virus}.
 Therefore, the original inoculum constitutes just \comment{?}\% of the viral titer at the time of collection, and therefore makes a negligible contribution to the sequenced material.
 \comment{Juhye, can you calculate these numbers from the TCID50 of the collected viruses. 
 You can also mention those titers in the Methods.
@@ -119,6 +131,8 @@ I expect that we will see at least a 10,000-fold dilution of the original inocul
 If we really want to nail this point (and the one after it), we could also do qPCR on the inoculum (we could re-constitute some from a bit of transfection supernatant) and the passage supernatant to show that the HA RNA amounts also changed comparably.
 I don't think this is really necessary since it's obvious, but we could do it if we want to really drive a stake through the heart of the reviewers' concern...}
 }
+
+\comment{JML: Actually I {\bf did} change the media. I was really concerned about viral particles hanging around, so 3 hours post-infection, I changed the media to fresh IGM. I have updated the Methods to reflect this. So particles transferred from the rescue transfection, even if they make up a large proportion of the original inoculum are not going to be detected anyway.}
 
 c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged $9\times10^5$ TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
 
@@ -128,6 +142,8 @@ Below that we say that we used an inoculum of 2.5 TCID50 / $\mu$l, which corresp
 In addition, we should point out that the supernatant comes from a helper-virus rescue that has occurred for just 24 hours, and so has low titers of both infectious virus and TCID50s.
 Again, we could really drive a stake through this question by doing the qPCR mentioned above.
 }
+
+\comment{JML: Yes, the $9\times 10^5$ TCID50 was across 15 x 15 cm plates. Also added this to the Methods.}
 
 d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
 
@@ -141,11 +157,15 @@ The RNA in cell debris at least originated from a virus that was able to enter t
 In practice, after 48 hours, most RNA is from viruses that have undergone multiple cycles of infection, and so there has been reasonably strong selection for HA function in both virion RNA and cell debris RNA.
 }
 
+\comment{JML: Actually I {\bf did} centrifuge the viral supernatant at 2000xg for 5 min to clarify any cellular debris. I then took the clarified supernatant and ultracentrifuged 24 mL of this for RNA extraction. Updated the methods to reflect this.}
+
 The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
 
 \response{For the reasons described above, it is not necessary to totally repeat the experiments.
 Certainly other experimental parameter choices could have been used, but this is always the case for complex experiments.
 Our choices will reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
+
+\comment{JML: see JML comments above}
 
 \subsubsection*{Minor points} 
 
@@ -161,6 +181,8 @@ But I suppose if we validate some specific mutation (e.g., a cysteine mutation) 
 3) The authors picked 31 random clones to evaluate the mutation rate per clone. These sequences should be made available. Did this set include viruses without a proper start codon (see above)? What was their growth phenotype in vitro? 
 
 \comment{We can add these sequences to Figure~S1.}
+
+\comment{JML: Two of the 31 clones had mutations in the start codon. I'll compile a list of the mutations in the 31 clones}.
 
 \subsection*{Reviewer \#2 Comments} 
 
@@ -202,6 +224,8 @@ Additionally, the authors should directly show the discrepancies between this in
 \comment{We can definitely do this pretty easily, perhaps adding Sarah Hilton as an author to help.
 Not sure where we would fit the data given that the paper is already too long, but I guess we could cram it in the supplement.
 }
+
+\comment{JML: I've also been wanting to do this and can do this easily. But it depends on how much space we have (probably not much)}.
 
 The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as ``modest.'' One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
 
