@@ -271,7 +271,7 @@ It is clear that most mutations that reach high frequency are measured to be rel
 The plots show Spearman $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations of the experimental measurements for which the permuted $\rho$ was greater than or equal to the observed $\rho$.
 (B) The distribution of mutational effects partitioned by maximum mutation frequency.
 The vertical black line shows the mean mutation effect for each category.
-The analysis is performed separately for the pre- and post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
+The analysis is performed separately for pre-Perth/2009, post-Perth/2009, and unpassaged isolates from the post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 }
 \end{SCfigure*}
 
@@ -286,12 +286,15 @@ However, because multiple mutations on the same phylogeny branch cannot be disen
 After annotating mutations and their frequencies on the phylogeny in this way (Figure~\ref{fig:frequency_trajectory}), it is visually obvious that there are relatively few circulating mutations that we measure to be strongly deleterious---and that such deleterious mutations rarely reach high frequency when they do occur.
 Mutations that reach high frequencies generally have neutral or beneficial effects according to our experimental measurements.
 
-We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evoluton.
+We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evolution.
 To minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
 We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
 We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
-In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$).
+In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$). 
+To restrict potential biases of our experimental measurements towards mutations from cell- or egg-passaged isolates, we evaluated mutations from unpassaged isolates.
+Due to the limited availability of primary isolate sequences until the last decade, we analyzed mutations of unpassaged isolates from the post-Perth partition of the phylogenetic tree~\cite{mcwhite2016sequence}.
+The correlation between mutational effect and maximum frequency was stronger for mutations from unpassaged post-Perth isolates ($\rho = 0.24$).
 The similar effect sizes for both partitions shows that our experimental measurements can help explain the evolutionary fates of mutations in strains that post-date the experimentally studied strain, as well as to retrospectively analyze mutations that precede the experimental strain. 
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
@@ -401,7 +404,7 @@ Mutations in viral genes other than HA are also important in determining strain 
 Given these caveats, it might seem surprising that measuring viral growth in cell culture can be informative about the success of viral strains in nature.
 Yet, prior to our work, there were no comprehensive studies of the functional effects of mutations to H3 HA on any property that even resembled viral fitness in nature, and modeling work has either omitted the non-antigenic effects of mutations~\cite{sun2013using,harvey2016identification,neher2016prediction} or assumed that all non-epitope mutations had equivalent deleterious effects~\cite{luksza2014predictive}.
 The strength of our measurements are not that they perfectly capture fitness in nature, but that they are systematic and quantitative---and so represent an improvement over no information at all.
-We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility.
+We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains.
 
 We measured the effects of all single amino-acid mutations to a specific HA, and then generalized these measurements to other H3N2 HAs from a 50-year timespan.
 These generalizations will only be valid to the extent that the effects of mutations are conserved during HA's evolution.
@@ -607,28 +610,31 @@ The blue line indicates the expected distribution if mutations in multiply mutat
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=\textwidth]{figs/supp_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
+\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_WSNprefs_logoplot/supp_logoplots.pdf}}
 \caption{\label{suppfig:WSNprefs_logoplot}
-{\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA as measured in \cite{doud2016accurate}.}
-The amino-acid preferences from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
-The sites are in H3 numbering.
+{\bf The site-specific amino-acid preferences of the Perth/2009 H3 HA and the WSN/1933 H1 HA.}
+(A) The un-scaled amino-acid preferences of the Perth/2009 H3 HA.
+The overlays show the same information as in Figure~\ref{fig:logoplot} (domain, epitope site, and wildtype amino acid).
+(B) The amino-acid preferences of the WSN/1933 H1 HA from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
 The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
 Note that \cite{doud2016accurate} used libraries in which all codons were mutagenized \emph{except} for the one encoding N-terminal methionine.
 Therefore, no data is shown for the first codon in the gene.
+The sites are in H3 numbering for both logo plots.
 }
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=1.0\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
+\centerline{\includegraphics[width=0.9\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
 {\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
-HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
+(A) HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
 The Perth/2009 strain used in our experiments is indicated.
 The rest of the tree is partitioned into nodes that preceded the split of the Perth/2009 strain from the trunk of the tree (blue) and nodes that branched off the trunk after the clade containing Perth/2009 (orange).
 In Figure~\ref{fig:muteffect_maxfreq}, these two partitions of the tree are analyzed separately.
 Nodes in the clade containing the Perth/2009 strain and nodes sampled in 2014 or after were excluded from our analyses.
 The Perth/2009 strain was excluded to avoid artifacts related to mutations that occurred on the branches leading to the HA sequence used in the experiment.
 The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet full resolved.
+(B) The post-Perth/2009 partition of the tree containing only sequences from unpassaged isolates.
 }
 \end{suppfigure}
 

@@ -62,6 +62,13 @@ As evidence to explain this point, we can point to studies showing that the head
 
 4) Were sequences from passaged viruses (isolated on MDCKs and other cell lines) included in the comparison between in vitro mutagenesis data and natural evolution data? They need to be excluded since their presence might induce a bias towards what is tolerated/preferred in cell culture. Only sequences obtained directly from patient specimens should be used for the comparison. 
 
+\response{We thank the reviewer for this good suggestion and now include an analysis of the relationship between mutational effect and maximum frequency for mutations from unpassaged isolates.
+Due to the sparseness of unpassaged isolate sequences previous to the last decade, we analyzed unpassaged isolates from the post-Perth/2009 partition of the H3N2 HA phylogenetic tree.
+Figures 5, 6, and S6 now include panels showing the results for these unpassaged isolate mutations.
+The results in Figure 5 demonstrate that the correlation between mutational effect as determined by our experiments and maximum mutation frequency is stronger for unpassaged isolates than when we include all isolates ($\rho = 0.24$).
+We do not see such a correlation when we use the WSN/1933 H1 HA preferences to estimate the mutational effects for unpassaged isolate mutations.
+}
+
 \comment{This is a good suggestion. 
 {\bf John:} I think we should add an additional analysis that does this only for sequences that were not passaged in cell-culture or eggs.
 I believe that GISAID annotates passage history.
@@ -70,12 +77,17 @@ We could just add this as another panel assuming it gives the same results.}
 
 5) It is unclear how the ``rescaling'' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a ``sequence logo'' figure for comparison. 
 
+\response{Rescaling of the preferences is performed by fitting a stringency parameter that is a reflection of how strongly our experimentally determined preferences correspond to the gene's evolution in nature.
+This parameter is fit under an experimentally informed codon substitution model (ExpCM) using the phydms program \comment{reference here}.
+A stringency parameter greater than 1 indicates that natural selection favors the same amino acids as the experiments but with greater stringency, while a value less than 1 indicates that natural selection does not favor the amino acids with as much stringency as the experiments.
+Because selection in the lab often does not fully reflect the stringency of selection in nature and selection across experiments may not be entirely consistent, we re-scale the preferences by this stringency parameter.
+We now include a supplementary panel A to Figure S3 showing the un-scaled Perth/2009 H3 HA preferences.
+}
+
 \comment{This is easy to explain better; the only reason we didn't go into more detail before is because of space constraints.
 We can also show the non-rescaled logo plots, as Supplemental Information.
 I thought there was a limit on the number of Supplemental Information figures, but I can't find that right now so maybe we can just add them as more... If someone objects, we can then merge some of the SI figures into one large multi-panel figure.
 We can explain how the scaling factor doesn't effect any of the evolutionary analyses as it is just a constant factor that multiplies all mutational effects, and so will therefore simply correspond to a change in units on the x-axis of the Figure~5.}
-
-\comment{JML: There is a limit of 10 supplementary files + figures combined, and we are currently at that limit. We could make a multipanel with the WSN HA logoplot, although I agree that this wouldn't be ideal. We could also just add it to the Jupyter notebook and link to that as well I suppose}
 
 6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
 
@@ -215,6 +227,8 @@ We now explicitly mention this fact in the text \comment{still need to actually 
 
 The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
 
+\response{We agree that this would be an interesting experiment to perform...}
+
 \comment{This would be interesting to do, but is a whole other study.
 This is the one point that I think we are just going to have to argue is beyond the scope of the manuscript.
 }
@@ -228,6 +242,8 @@ Not sure where we would fit the data given that the paper is already too long, b
 \comment{JML: I've also been wanting to do this and can do this easily. But it depends on how much space we have (probably not much)}.
 
 The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as ``modest.'' One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
+
+\response{We now have acknowledged this possibility in the Discussion in the sentence "We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains.}
 
 \comment{This is a possibility, although I highly doubt that it is true.
 However, we can easily add a sentence acknowledging the possibility.
@@ -244,6 +260,10 @@ This comment does make me worry that the reviewer just doesn't think the work is
 
 The correlation for prospective analysis (post-Perth) is smaller than the correlation for post-hoc analysis (pre-Perth). Since prospective analysis is more important when predicting evolutionary fates, it might be beneficial for the authors to comment on this difference. 
 
+\response{We now include an analysis of mutational effects and maximum frequency for mutations of unpassaged isolates (see Figures 5, 6, and S6) from the post-Perth partition of the phylogenetic tree to limit any potential biases that our experimental measurements may have towards mutations from cell- or egg-passaged isolates.
+The results show that this correlation is stronger when considering mutations from unpassaged isolates in a post-hoc analysis, demonstrating the potential utility of our experimental measurements in a prospective analysis, specifically when passaged isolate sequences are excluded.
+}
+
 \comment{Not sure if the difference between $\rho = 0.17$ and $\rho = 0.14$ is significant. 
 We could figure out how to calculate this, but first let's see what it looks like for the non-lab-passaged sequences requested by Reviewer 1.}
 
@@ -257,7 +277,7 @@ In figure 4, it would be useful to show Perth09 on the tree and mention that clo
 
 The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
 
-\comment{Easily fixed.}
+\response{We have now fixed the graph labels in figure 8B accordingly.}
 
 
 
