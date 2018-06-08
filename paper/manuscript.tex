@@ -540,6 +540,10 @@ f(x,t) = \prod_{v\in V} x(t) \prod_{v\notin V} (1-x(t)),
 where $v\in V$ represents the set of viruses that have the mutation and $v\notin V$ represents the set of viruses that do not have the mutation.
 Each frequency trajectory is estimated by simultaneously maximizing the likelihood of the process model and the likelihood of the observation model via adjusting frequency trajectory $\mathbf{x}=(x_1, \ldots, x_n)$.
 
+To determine the effect of virus passaging on the relationship between mutational effects and maximum frequencies in natural populations, we repeated the above analyses using only viruses that were sequenced directly without passaging.
+Routine direct sequencing did not begin until the early 2000s \cite{McWhite2016}.
+To construct a tree with a similar number of viruses as the original analysis, we sampled 30 viruses per month between January 1, 2000 and April 1, 2018, producing a tree with 2,374 unpassaged viruses with augur (commit: 6d9f708).
+We included the passaged DMS strain, A/Perth/16/2009, in the resulting tree to enable comparison between pre-Perth and post-Perth clades.
 
 \subsection*{Analysis of mutational shifts}
 To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using MAFFT~\cite{katoh2013mafft}.
