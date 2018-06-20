@@ -138,9 +138,9 @@ We mutagenized the entire HA coding sequence at the codon level to create mutant
 We then generated mutant virus libraries from the mutant plasmids using a helper-virus system that enables efficient generation of complex influenza virus libraries~\cite{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
 These mutant viruses derived all their non-HA genes from the lab-adapted A/WSN/1933 strain.
 Using WSN/1933 for the non-HA genes reduces biosafety concerns, and also helped increase viral titers.
-To further increase viral titers, we used MDCK-SIAT1 cells that we had engineered to constitutively express the TMPRSS2 protease, which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
+To further increase viral titers, we used MDCK-SIAT1 (Madin-Darby canine kidney cells with enhanced expression of sialic acids) cells that we had engineered to constitutively express the TMPRSS2 (Transmembrane Protease, Serine 2) protease, which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
 
-After generating the mutant virus libraries, we passaged them at low MOI in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
+After generating the mutant virus libraries, we passaged them at low multiplicity of infection (MOI) in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
 All experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B).
 We also passaged and deep sequenced library 3 in duplicate (library 3-1 and 3-2) to gauge experimental noise \textit{within} a single biological replicate.
 As a control to measure sequencing and mutational errors, we used the unmutated HA gene to generate and passage viruses carrying wildtype HA.
@@ -240,7 +240,7 @@ Surprisingly, the head domain of the H3 HA is \emph{not} more mutationally toler
 Specifically, whereas solvent-exposed residues in the head domain are substantially more mutationally tolerant than those in the stalk domain for the WSN/1933 H1 HA, the trend is actually reversed for the Perth/2009 H3 HA (Figure~\ref{fig:mut_tolerance}B).
 This difference between the relative mutational tolerances of the H1 and H3 HAs is robust to the cutoff used to define surface residues (Figure~\ref{suppfig:head_stalk_RSA}).
 For instance, for the H3 HA, the short helix A in the stalk domain is as mutationally tolerant as many surface-exposed residues in the head domain---something that is not the case for the H1 HA.
-Helix A forms part of the epitope of many broadly neutralizing anti-stalk antibodies~\cite{mallajosyula2014influenza,laursen2013broadly,chai2016two}, and interestingly, there are more reports of readily selecting escape mutants from such anti-stalk antibodies in H3~\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} than in H1~\cite{okuno1993common,doud2018quantifying,anderson2017natural} HAs.
+Helix A forms part of the epitope of many broadly neutralizing anti-stalk antibodies~\cite{mallajosyula2014influenza,laursen2013broadly,chai2016two}.
 
 We also see high mutational tolerance in many of the known antigenic regions of H3 HA~\cite{wiley1981structural}.
 For instance, antigenic region B is an immunodominant area, and many recent major antigenic drift mutations have occurred in this region~\cite{chambers2015identification,koel2013substitutions,popova2012immunodominance}.
@@ -257,6 +257,7 @@ In contrast, the residues surrounding the receptor binding pocket are fairly mut
 {\bf Frequency trajectories of individual mutations and their relation to the experimentally measured effects of these mutations.}
 The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} from 2004 to 2014.
 Circles indicate individual amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
+The Perth/2009 strain is labeled with a star, and nodes in the clade containing the Perth/2009 strain were excluded from our analyses.
 The bottom panel shows the frequency trajectory of each mutation, with trajectories colored according to the mutational effects as in the top panel.
 It is clear that most mutations that reach high frequency are measured to be relatively favorable in our experiments.
 }
@@ -438,7 +439,7 @@ There is no selectable marker for the TMPRSS2; however, we maintain the cells at
 HA and NA genes for the Perth/2009 viral strain were cloned from recombinant virus obtained from BEI Resources (NR-41803) into the pHW2000~\citep{hoffmann2000dna} influenza reverse-genetics plasmids to create pHW-Perth09-HA and pHW-Perth09-NA.
 
 We initially created a virus with the HA and NA from Perth/2009 and internal genes from WSN/1933, and passaged it in cell culture to test its genetic stability.
-To generate this virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 in D10 media (DMEM supplemented with 10\% heat-inactivated FBS, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL) with equal amounts of pHW-Perth09-HA, pHW-Perth09-NA, the pHW18* series of plasmids~\cite{hoffmann2000dna} for all non-HA/NA viral genes, and pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
+To generate this virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 in D10 media (DMEM, or Dulbecco's Modified Eagle Medium, supplemented with 10\% heat-inactivated FBS, or Fetal Bovine Serum, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL) with equal amounts of pHW-Perth09-HA, pHW-Perth09-NA, the pHW18* series of plasmids~\cite{hoffmann2000dna} for all non-HA/NA viral genes, and pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
 The next day we changed the media to influenza growth media (IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL (no trypsin was added since there was TMPRSS2), and then collected the viral supernatant at 72 hours post-transfection.
 This viral supernatant was blind passaged in MDCK-SIAT1-TMPRSS2 a total of six additional times.
 We isolated viral RNA from these passaged viruses and sequenced the HA gene.
@@ -452,7 +453,7 @@ The script to design the mutagenesis primers is at \url{https://github.com/jbloo
 We created three independent libraries, one for each biological replicate.
 The mutant variants were then cloned at high efficiency into the pICR2~\cite{ashenberg2017deep} vector using digestion with BsmBI, ligation with T4 DNA ligase, and electroporation into ElectroMAX DH10B competent cells (Invitrogen 18290015).
 We obtained $>$6 million transformants for each replicate.
-We scraped the plates, expanded the cultures in liquid LB + ampicillin at 37$^{\circ}$C for 3 h with shaking, and then maxiprepped.
+We scraped the plates, expanded the cultures in liquid LB (Luria-Bertani Broth) + ampicillin at 37$^{\circ}$C for 3 h with shaking, and then maxiprepped.
 We randomly chose 31 clones to Sanger sequence to evaluate the mutation rate (Figure~\ref{suppfig:SangerSeq}).
 
 \subsection*{Generation and passaging of mutant viruses}
@@ -467,7 +468,7 @@ The titers were 92, 536, 536, and 734 TCID$_{50}$ per $\mu$L for the three libra
 We passaged $9 \times 10^5$ TCID$_{50}$ of the transfection supernatants at an MOI of 0.0035 TCID$_{50}$ per cell.
 To do this, we plated $4.6 \times 10^6$ MDCK-SIAT1-TMPRSS2 cells per dish in fifteen 15-cm dishes in D10 media, and allowed the cells to grow for 24 hours, at which time they were at $\sim 1.7 \times 10^7$ cells per dish.
 We replaced the media in each dish with 25 mL of an inoculum of 2.5 TCID$_{50}$ of virus per $\mu$L in IGM.
-Three hours post-infection, we replaced the inoculum with fresh IGM.
+Three hours post-infection, we replaced the inoculum with fresh IGM for replicates 1, 2, and 3-2.
 We collected viral supernatant for sequencing 48 hours post-infection.
 
 \subsection*{Barcoded subamplicon sequencing}
@@ -541,7 +542,7 @@ where $v\in V$ represents the set of viruses that have the mutation and $v\notin
 Each frequency trajectory is estimated by simultaneously maximizing the likelihood of the process model and the likelihood of the observation model via adjusting frequency trajectory $\mathbf{x}=(x_1, \ldots, x_n)$.
 
 To determine the effect of virus passaging on the relationship between mutational effects and maximum frequencies in natural populations, we repeated the above analyses using only viruses that were sequenced directly without passaging.
-Routine direct sequencing did not begin until the early 2000s \cite{McWhite2016}.
+Routine direct sequencing did not begin until the early 2000s \cite{mcwhite2016sequence}.
 To construct a tree with a similar number of viruses as the original analysis, we sampled 30 viruses per month between January 1, 2000 and April 1, 2018, producing a tree with 2,374 unpassaged viruses with augur (commit: 6d9f708).
 We included the passaged DMS strain, A/Perth/16/2009, in the resulting tree to enable comparison between pre-Perth and post-Perth clades.
 
@@ -551,6 +552,18 @@ To quantify the shifts in preference for every alignable site while accounting f
 
 For the plots shown in Figure~\ref{fig:RMSD_heatmap}B, any residues falling between Cys-52 and Cys-277 were defined as the head domain, and all other residues were defined as the stalk domain.
 We used the multiple sequence alignment of the HA subtype sequences from \cite{doud2018quantifying} to identify sites that are absolutely conserved across all subtypes, or in the different clades described in Figure~\ref{fig:RMSD_heatmap}.
+
+\subsection*{Validation of individual point mutants}
+To validate the viral growth of Perth/2009 HA point mutants M(-16)K, C52A, C52C, C199(HA2)K, T24F, T40V, and S287A, we used site-directed mutagenesis to introduce the amino-acid mutation into the Perth/2009 HA bidirectional reverse genetics plasmid, and verified the sequence of two clones for each mutant by Sanger sequencing.
+We generated these individual mutant viruses carrying GFP in the PB1 segment using a protocol described in \cite{hooper2013mutant}, and the PB2, PA, NP, NA, M, and NS segments of the A/WSN/1933 (H1N1) strain.
+To rescue each mutant GFP-carrying virus in duplicate, we transfected a co-culture of $4 \times 10^5$ 293T-CMV-PB1 and $0.5 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells with the eight reverse genetics plasmid and the pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W plasmid.
+Each well received a transfection mixture of 100 $\mu$L DMEM, 3 $\mu$L BioT transfection reagent, and 250 ng of each plasmid.
+We changed the media in each well with 2 mL IGM eight hours post-transfection.
+At 53 hours post-transfection, transfection supernatants were harvested, clarified by centrifugation at 2000 $\times$ \textit{g} for five minutes, aliquoted, and frozen at -80$^\circ$C.
+
+To titer the GFP-carrying viruses, we plated $1 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells per well in 12-well plates in IGM.
+Four hours after plating, we infected cells with dilutions of viral supernatant.
+At 16 hours post-infection, we selected wells with 1 to 10\% of cells that were GFP-positive and analyzed the fraction of GFP-positive cells by flow cytometry to calculate the titer of infectious particles per $\mu$L.
 
 }
 
@@ -628,6 +641,17 @@ The sites are in H3 numbering for both logo plots.
 \end{suppfigure}
 
 \begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.9\textwidth]{figs/supp_diffprefs/diffprefs.pdf}}
+\caption{\label{suppfig:diffprefs_logoplot}
+{\bf The differential preferences of the Perth/2009 H3 HA compared to amino-acid frequencies from a sequence alignment of natural human H3.}
+The differential preferences estimated by comparing the Perth/2009 H3 HA preferences to amino-acid frequencies from a sequence alignment of natural human H3N2 HA sequences.
+For each site, the height of each letter above and below the line indicate how differentially preferred that amino acid is in our experiments compared to in nature.
+The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
+The sites are in H3 numbering.
+}
+\end{suppfigure}
+
+\begin{suppfigure}[H]
 \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
 {\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
@@ -664,6 +688,32 @@ This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref
 }
 \end{suppfigure}
 
+\begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.5\textwidth]{figs/supp_head_stalk_mutfreq/head_stalk_mutfreq.pdf}}
+\caption{\label{suppfig:head_stalk_mutfreq_supp}
+{\bf Frequency trajectories of head and stalk domain mutations.}
+(A) This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:frequency_trajectory}, but colors amino-acid mutations by whether they occur in the head (purple) or the stalk (blue) domain.
+(B) Histogram of mutation maximum frequencies by the number of nodes for head and stalk domain mutations.
+It is clear that mutations in the head domain are more numerous than those in the stalk.
+}
+\end{suppfigure}
+
+\begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\caption{\label{suppfig:point_mut_validation_supp}
+{\bf Viral titers of individual Perth/2009 H3 HA point mutants.}
+Influenza GFP viruses carrying wildtype or single point mutants of the Perth/2009 HA were rescued by reverse genetics in duplicate. 
+Viral transfection supernatant was harvested at 53 hours post-transfection and titered by flow cytometry in MDCK-SIAT1-TMPRSS2 cells.
+Note that the wildtype, C52A and C52C mutant virus titers shown in each panel represent the same duplicate measurements.
+The points mark each duplicate and the bar marks the mean.
+(A) The start codon mutant M(-16)K reaches titers approximately one log less than those of wildtype. 
+The C52A mutant fails to reach high titers, and the C52C synonymous variant grows to titers comparable to those of wildtype virus.
+(B) The transmembrane domain mutant C199(HA2)K grows to higher titers than the wildtype.
+(C) The T24F and T40V mutants, which remove glycosylation motifs, attain titers similar to or higher than wildtype, respectively. 
+The S287A mutant, which also removes a glycosylation motif, does not grow as well as wildtype virus.
+}
+\end{suppfigure}
+
 \begin{suppdata}[H]
 \caption{\label{suppdata:PerthHA}
 Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth09-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.
@@ -681,7 +731,7 @@ Excel file providing the primers used to generate the barcoded subamplicons for 
 Excel file giving the amino-acid preferences in sequential 1, 2, ... numbering of the Perth/2009 HA.
 The unscaled preferences for replicates 1, 2, 3-1, and 3-2 are each in a separate tab of the file.
 Additional tabs give the across-replicate averaged and re-scaled amino-acid preferences in sequential numbering and in H3 numbering as shown in Figure~\ref{fig:logoplot}.
-There are also tabs that give the conversion from sequential to H3 numbering.
+There are also tabs that give the conversion from sequential to H3 numbering, and a list of the mutations in the 31 clones we Sanger sequenced to evaluate the mutation rate of the mutant plasmid libraries.
 Each tab can simply be exported to CSV for computational analyses.
 }
 \end{suppdata}

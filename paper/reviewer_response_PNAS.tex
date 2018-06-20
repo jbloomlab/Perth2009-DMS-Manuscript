@@ -32,10 +32,12 @@ In their manuscript Lee et al. examine the tolerance of an H3 virus HA for singl
 
 1) It is disturbing that there is no preference for having a methionine in the first position of the HA ORF. The authors discuss this and refer to one 2002 paper that shows additional start sites for non-human H2. This is a pretty weak explanation. If this is really the case the authors should actually isolate/rescue these viruses and test their fitness relative to wild type. 
 
-\comment{To reply to this point, we need to generate one of these mutants and show that it grows in cell culture.
-{\bf Juhye:} we should discuss how to do this.}
-
-\comment{JML: OK, agreed.}
+\response{We have now rescued by reverse genetics influenza GFP viruses carrying the M(-16)K mutation in the start codon, and titered by flow cytometry. 
+By 53 hours post-transfection when we harvested transfection supernatant, the M(-16)K mutant reached a titer of approximately one log less than that of wildtype virus.
+Although we may have expected the M(-16)K mutant to grow comparably to wildtype given that Met and Lys are both preferred at the start codon, we would like to emphasize that (1) we grew influenza GFP viruses which may not behave identically to live influenza viruses and (2) we did not capture the full viral growth kinetics of this mutant since we titered at a relatively early timepoint after transfection.
+In comparison, the C52A variant, which mutates the highly conserved Cys at site 52, grows very poorly, while the synonymous C52C mutant grows to titers comparable to those of wildtype.
+These results are now shown in Figure S9, and we have updated the Methods section describing how we validated these point mutants.
+}
 
 Of note, position 1 for the H1 HA in the supplementary figure is not even shown. 
 
@@ -47,49 +49,47 @@ We have added a sentence to the legend for this supplementary figure explaining 
 
 2) While other important features of the HA like several cysteines seem to be conserved, there is no pressure on other elements which are considered important for viral fitness including the NGT glycosylation site in the beginning of HA1 which is conserved in all group 2 HAs or the adjacent NAT glycosylation site which is conserved in H3, H7, H10 and H15. On the other hand, head glycosylation sites, which are highly variable in nature, seem to be conserved. Again, viruses without these glycosylation sites should be rescued and evaluated for fitness relative to wild type. 
 
-\comment{{\bf Juhye:} to reply to this point, we should generate several of these mutants and evaluate their growth in cell culture.}
+\response{This is a valid point, and we have also individually evaluated the growth of three glycosylation site mutants.
+Two of the mutants, T24F and T40V, remove the aforementioned highly conserved but mutationally tolerant NGT and NAT glycosylation sites, respectively.
+The third mutant, S287A, removes a constrained glycosylation site.
+In Figure S9, we show that the T24F and T40V mutants grow to titers comparable to or higher than that of wildtype. 
+However, the titer of the S287A is approximately 2.8-fold lower than that of wildtype, suggesting that the glycan at sites 285-287 is important for viral growth in cell culture. 
 
-\comment{JML: We can test some of these as well. But fitness in nature is not necessarily reflective of fitness in a cell culture system, and just because something is conserved in natural sequences does not necessarily mean it is indisposable for viral growth in the lab.... This is related to point 3 below.}
+Furthermore, constraint in our experiments and conservation in nature are not expected to be entirely the same.
+Conservation in nature results from the convolution of constraint and diversifying selection from immunity, whereas our experiments only look at constraint.
+\comment{As evidence to explain this point, we can point to studies showing that the head of HA is much more conserved for swine influenza viruses where there is less pressure from immunity.}
+}
+
+\comment{Alanine is not the least preferred amino acid at site 287, while it is the least preferred at site 52.}
 
 3) It is also surprising that the transmembrane domain seems to be highly plastic, a feature that is certainly not present in nature where it is highly conserved within H3 HAs. 
 
-\comment{Here we need to explain that constraint in our experiments and conservation in nature are not expected to be entirely the same.
-Conservation in nature results from the convolution of constraint and diversifying selection from immunity, whereas our experiments only look at constraint.
-As evidence to explain this point, we can point to studies showing that the head of HA is much more conserved for swine influenza viruses where there is less pressure from immunity.
-{\bf Juhye:} To make this more convincing, we should also pick a site in the transmembrane domain that is highly conserved in nature but not under constraint in our experiments, and validate it.}
-
-\comment{JML: OK, can test a couple of these as well. I'd also like to point out (1) that the WSN HA also exhibits some degree of flexibility in amino acids that are tolerated in the TM domain, and (2) that various studies have found that chimeric HA's with transmembrane domains from {\bf completely different proteins} can still maintain HA cell surface expression and fusion activity (Melikyan et al 1999 Mol Biol Cell, Schroth-Diez et al 1998 JVI, Dong et al 1992 JVI, Roth et al 1986 JCB) and that the {\bf length} of the TM domain seems to play a large role in determining HA fusion activity (Armstrong et al 2000 JCB).} 
+\response{We validated growth of a transmembrane domain mutant, C199(HA2)K, and show that this mutant attains titers approximately 1.6-fold higher than that of wildtype.
+In addition, various studies have found that chimeric HA's with transmembrane domains from completely different proteins can still maintain HA cell surface expression and fusion activity (Melikyan et al 1999 Mol Biol Cell, Schroth-Diez et al 1998 JVI, Dong et al 1992 JVI, Roth et al 1986 JCB), and that the length of the transmembrane domain seems to play a large role in determining HA fusion activity (Armstrong et al 2000 JCB).
+}
 
 4) Were sequences from passaged viruses (isolated on MDCKs and other cell lines) included in the comparison between in vitro mutagenesis data and natural evolution data? They need to be excluded since their presence might induce a bias towards what is tolerated/preferred in cell culture. Only sequences obtained directly from patient specimens should be used for the comparison. 
 
-\response{We thank the reviewer for this good suggestion and now include an analysis of the relationship between mutational effect and maximum frequency for mutations from unpassaged isolates.
+\response{We thank the reviewer for this astute suggestion and now include an analysis of the relationship between mutational effect and maximum frequency for mutations from unpassaged isolates.
 Due to the sparseness of unpassaged isolate sequences previous to the last decade, we analyzed unpassaged isolates from the post-Perth/2009 partition of the H3N2 HA phylogenetic tree.
-Figures 5, 6, and S6 now include panels showing the results for these unpassaged isolate mutations.
+Figures 5, 6, and S7 now include panels showing the results for these unpassaged isolate mutations.
 The results in Figure 5 demonstrate that the correlation between mutational effect as determined by our experiments and maximum mutation frequency is stronger for unpassaged isolates than when we include all isolates ($\rho = 0.24$).
 We do not see such a correlation when we use the WSN/1933 H1 HA preferences to estimate the mutational effects for unpassaged isolate mutations.
 }
 
-\comment{This is a good suggestion. 
-{\bf John:} I think we should add an additional analysis that does this only for sequences that were not passaged in cell-culture or eggs.
-I believe that GISAID annotates passage history.
-I would expect that we can only do this for the post-Perth sequences as I doubt that there are many unpasaged viruses prior to the early 2000's.
-We could just add this as another panel assuming it gives the same results.}
-
 5) It is unclear how the ``rescaling'' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a ``sequence logo'' figure for comparison. 
 
 \response{Rescaling of the preferences is performed by fitting a stringency parameter that is a reflection of how strongly our experimentally determined preferences correspond to the gene's evolution in nature.
-This parameter is fit under an experimentally informed codon substitution model (ExpCM) using the phydms program \comment{reference here}.
+This parameter is fit under an experimentally informed codon substitution model (ExpCM) using the phydms program (Hilton 2017 PeerJ).
 A stringency parameter greater than 1 indicates that natural selection favors the same amino acids as the experiments but with greater stringency, while a value less than 1 indicates that natural selection does not favor the amino acids with as much stringency as the experiments.
 Because selection in the lab often does not fully reflect the stringency of selection in nature and selection across experiments may not be entirely consistent, we re-scale the preferences by this stringency parameter.
+Importantly, re-scaling does not affect any of the evolutionary analyses performed in this paper since it is a constant that multiplies all mutational effects, simply corresponding a change in units on the x-axis of Figure~5.
 We now include a supplementary panel A to Figure S3 showing the un-scaled Perth/2009 H3 HA preferences.
 }
 
-\comment{This is easy to explain better; the only reason we didn't go into more detail before is because of space constraints.
-We can also show the non-rescaled logo plots, as Supplemental Information.
-I thought there was a limit on the number of Supplemental Information figures, but I can't find that right now so maybe we can just add them as more... If someone objects, we can then merge some of the SI figures into one large multi-panel figure.
-We can explain how the scaling factor doesn't effect any of the evolutionary analyses as it is just a constant factor that multiplies all mutational effects, and so will therefore simply correspond to a change in units on the x-axis of the Figure~5.}
-
 6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
+
+\response{We have now removed this sentence from the paper.}
 
 \comment{We looked at this pretty carefully, and there are definitely more reports of selecting anti-stalk antibodies for H1 and H3.
 The reviewer's counterpoint is to mention on of the H3 studies. 
@@ -98,8 +98,6 @@ Certainly this is not systematic proof, but our statement in the text goes to gr
 But since this isn't a central claim of the paper of anyway, let's just remove it in a concession to the reviewer.
 The study we're helping Nicholas Wu with will eventually systematically test this point.
 }
-
-\comment{JML: Agreed that it may be better just to remove that sentence.}
 
 7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
 
@@ -110,7 +108,7 @@ We do not deny that there are slightly different ways that the experiments could
 In the manuscript, we show that the measurements made using the experimental parameters that we chose lead to useful data as judged by the following criterion:
 \begin{itemize}
 \item The results from fully independent experimental replicates are highly correlated (Fig.~1D), which would not be the case if the results were dominated by noise.
-\item The experimental measurements do a good job of predicting the effects of individually validated mutations \comment{Here we would refer to the validation experiments described above}.
+\item The experimental measurements do a good job of predicting the effects of individually validated mutations, as shown in Figure S8.
 \item The experimental measurements can inform substitution models that describe influenza virus's evolution much better than standard models (Table~1).
 \item The experimental measurements provide information that can help predict the fates of influenza virus lineages in nature (Fig.~5).
 \end{itemize}
@@ -125,51 +123,33 @@ a) The TCID50 is likely underestimating the number of virus particles with HA ge
 This is why we used an extremely low MOI (0.0035) so that most cells are still infected by no more than one virion.
 It is impossible to ever grow a viral stock that is completely free of defective particles.
 However, in both our original rescue with helper virus and in the passage, we follow the steps suggested by Carolina Lopez and Scott Hensley (PMID 27047455) to minimize defective particles.
-These include low MOI (0.0035 TCID50 per cell is quite low), and short growth times to avoid accumulation of defective particles (the helper-virus rescue was allowed to propagate for just 24 hours, and the low-MOI passage for just 48 hours).
-\comment{Juhye, do you have HA-staining titers for these viruses too? Then we can explicitly compare HA-expressing units to TCID50.}
+These include low MOI (0.0035 TCID50 per cell is quite low), short growth times to avoid accumulation of defective particles (the helper-virus rescue was allowed to propagate for just 24 hours, and the low-MOI passage for just 48 hours), and replacing the media three hours post-infection to remove residual defective particles.
 }
-
-\comment{JML: I only titered by TCID50, but we used a super low MOI and see points below.}
 
 b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
 
-\response{It is true that the original inoculum remains and so will contribute to the variants detected during sequencing.
-However, the original inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing.
-Specifically, in the original inoculum placed on the cells, the titer is \comment{100 to 700} TCID50 / ul, whereas at the time of supernatant collection for sequencing the titer is \comment{30 to 230} TCID50 / ul for unconcentrated virus \comment{but 400 to 7550 TCID50 / ul for the concentrated virus}.
-Therefore, the original inoculum constitutes just \comment{?}\% of the viral titer at the time of collection, and therefore makes a negligible contribution to the sequenced material.
-\comment{Juhye, can you calculate these numbers from the TCID50 of the collected viruses. 
-You can also mention those titers in the Methods.
-I expect that we will see at least a 10,000-fold dilution of the original inoculum.
-If we really want to nail this point (and the one after it), we could also do qPCR on the inoculum (we could re-constitute some from a bit of transfection supernatant) and the passage supernatant to show that the HA RNA amounts also changed comparably.
-I don't think this is really necessary since it's obvious, but we could do it if we want to really drive a stake through the heart of the reviewers' concern...}
+\response{For biological replicates 1, 2, and 3-2, we replaced the original infectious inoculum with 25 mL fresh IGM three hours post-infection.
+For replicate 3-1, we did not change the media. 
+However, for this replicate, the original inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing.
+Specifically, in the original inoculum placed on the cells, the titer is 2.5 TCID50 / ul, whereas at the time of supernatant collection for sequencing the titer is 32 TCID50 / ul for unconcentrated virus but 400 TCID50 / ul for the concentrated virus.
+Therefore, the original inoculum constitutes just 8\% of the viral titer at the time of collection, and therefore makes a negligible contribution to the sequenced material.
+We deeply apologize for not including this crucial step in the Methods, and have updated the Methods to now include completion of this step. 
+We have also included in the GitHub repository a PDF of the lab notebook describing the rescue and passage of the mutant virus libraries at %\url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/lab_notes/Perth09%20HA%20Library%20Rescue.pdf} (relevant details of the notebook can be found in pages 20-25).
 }
-
-\comment{JML: Actually I {\bf did} change the media. I was really concerned about viral particles hanging around, so 3 hours post-infection, I changed the media to fresh IGM. I have updated the Methods to reflect this. So particles transferred from the rescue transfection, even if they make up a large proportion of the original inoculum are not going to be detected anyway.}
 
 c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged $9\times10^5$ TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
 
-\comment{The reviewer's math is off here, we passaged $9\times 10^5$ TCID50 \emph{total} across all 15 cm dishes. 
-This could be clarified by adding a word to the Methods indicating how many 15-cm dishes we used (right now, it just says ``in 15-cm dishes.''
-Below that we say that we used an inoculum of 2.5 TCID50 / $\mu$l, which corresponds to dilutions that range from 1:37 to 1:294, not 1:2.5 or 1:25 as the reviewer says.
-In addition, we should point out that the supernatant comes from a helper-virus rescue that has occurred for just 24 hours, and so has low titers of both infectious virus and TCID50s.
-Again, we could really drive a stake through this question by doing the qPCR mentioned above.
+\response{We passaged for each mutant virus library $9\times10^5$ TCID50 total across 15 $\times$ 15-cm dishes.
+Because we used an inoculum of 2.5 TCID50 / $\mu$l across these fifteen dishes, this corresponds to dilutions that range from 1:37 to 1:294.
+The quantity of dishes used to passage each mutant virus library is now mentioned in the Methods.
 }
-
-\comment{JML: Yes, the $9\times 10^5$ TCID50 was across 15 x 15 cm plates. Also added this to the Methods.}
 
 d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
 
-\response{The reviewer is correct that we never clarified the viral supernatant before RNA extraction.
-There are two reason for this.
-First, for a relatively short and very low MOI passage like the one we used (48 hours starting at a MOI of 0.0035), there was little cell debri since the cell monolayer was still largely intact at the end of the passage.
-Second, there is no reason to expect that the RNA in supernatant virions will better correspond to functional HA mutants that RNA in cell debris.
-If anything, the opposite might be expected.
-Functional HA is needed only for viral entry.
-The RNA in cell debris at least originated from a virus that was able to enter the cell, whereas the HA in released virions has not yet undergone selection beyond that which occurred at the infection stage.
-In practice, after 48 hours, most RNA is from viruses that have undergone multiple cycles of infection, and so there has been reasonably strong selection for HA function in both virion RNA and cell debris RNA.
+\response{We clarified the viral supernatant before RNA extraction by centrifuging the supernatant at 2000 $\times$ \textit{g} for five minutes to remove any cellular debris.
+We failed to mention this step in the Methods, and again deeply apologize for this critical oversight.
+We have updated the Methods to now include mention of this step.
 }
-
-\comment{JML: Actually I {\bf did} centrifuge the viral supernatant at 2000xg for 5 min to clarify any cellular debris. I then took the clarified supernatant and ultracentrifuged 24 mL of this for RNA extraction. Updated the methods to reflect this.}
 
 The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
 
@@ -177,13 +157,11 @@ The experiments should be repeated with at least one more passaging step, proper
 Certainly other experimental parameter choices could have been used, but this is always the case for complex experiments.
 Our choices will reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
 
-\comment{JML: see JML comments above}
-
 \subsubsection*{Minor points} 
 
 1) Many abbreviations are not defined in the manuscript including MDCK-SIAT1, TMPRSS2, MOI, DMEM, FBS, LB. 
 
-\comment{Easy to address.}
+\response{We now explain these abbreviations in the manuscript.}
 
 2) The authors state on page 5 that mutations detected in cell culture as deleterious rarely reach high frequency in nature. Could you please give a few examples? 
 
@@ -192,16 +170,18 @@ But I suppose if we validate some specific mutation (e.g., a cysteine mutation) 
 
 3) The authors picked 31 random clones to evaluate the mutation rate per clone. These sequences should be made available. Did this set include viruses without a proper start codon (see above)? What was their growth phenotype in vitro? 
 
-\comment{We can add these sequences to Figure~S1.}
+\response{We have now added the list of mutations from the 31 clones to Dataset S3.
+Two of the clones had a mutation that removed the ATG start codon.
+}
 
-\comment{JML: Two of the 31 clones had mutations in the start codon. I'll compile a list of the mutations in the 31 clones}.
+\comment{Not sure how to address the growth phenotype question}.
 
 \subsection*{Reviewer \#2 Comments} 
 
 \subsubsection*{Comments:} 
 The work presented in this manuscript is a thorough analysis of the tolerance of an H3 hemagglutinin to all possible single amino-acid mutations. H3 evolution is of particular relevance now in light of the most recent flu season where vaccine efficacy against H3N2 was estimated at only 25\%. The experimental setup presented in the manuscript is sound and there is strong correlation among the biological and technical replicates. The authors show that data from deep mutational scanning is better able to describe the evolution of H3 HA compared to conventional models. This is consistent with the results of their previous study using deep mutational scanning on the H1 HA of WSN. It is important to note that their approach is ``systematic and quantitative'' in capturing potential effects of mutations in the H3 HA on viral fitness in cell culture. The significance statement is accurate in describing the conclusions of the paper and is understandable to a general scientific audience. 
 
-\comment{We thank the reviewer for the accurate and fair summary of our work.}
+\response{We thank the reviewer for an accurate and fair summary of our work.}
 
 \subsubsection*{Major points:} 
 
@@ -211,14 +191,7 @@ The authors themselves acknowledge the most important limitation of this study: 
 
 The suggestion to make a version of Fig.~4 that distinguished between the stalk and the head is a good one.
 It is difficult to also overlay the structural location (stalk versus head) on the current Fig.~4, since colors are already used to indicate mutational effects.
-We have therefore created a new supplemental figure (Fig.~S\comment{?}) that shows these data---as the reviewer suspected, this shows that head mutations are much more common.
-\comment{{\bf John:} Can you make this figure? I'm actually not 100\% sure of the point, as I don't think the layout in Fig.~4 is the best way to show head versus stalk. 
-But since it's what the reviewer suggested, let's just do it and make it a supplement.
-This would be just like the current Fig.~4 except rather than coloring by mutational effect, we color by head versus stalk.
-Then I think we should also make a second panel that shows the number of head and stalk mutations that reach an indicated frequency over the whole timespan, as this is really a better way to show the point.
-So the x-axis would be mutation frequency, we would count mutations that reach each frequency, bin them and show this for head and stalk.
-This would definitely show that there are more head mutations overall, and would probably show that more head mutations reach high frequency.
-You could argue that it would be more informative to do this for epitope versus non-epitope, but since the reviewer asked for head versus stalk and we won't really discuss this much in the text anyway, let's just do head versus stalk...}
+We have therefore created a new supplemental figure (Fig.~S7) that shows these data---as the reviewer suspected, this shows that head mutations are much more common.
 
 The reviewer is correct that G78D appears to be a site where the correspondence between selection in our experiments and frequency in nature is low.
 This makes sense, as G78D is one of the two sites that we specifically identified as being a lab adaptation (see Figure~S1).
@@ -227,29 +200,26 @@ We now explicitly mention this fact in the text \comment{still need to actually 
 
 The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
 
-\response{We agree that this would be an interesting experiment to perform...}
-
-\comment{This would be interesting to do, but is a whole other study.
-This is the one point that I think we are just going to have to argue is beyond the scope of the manuscript.
+\response{We agree that this would be a very interesting experiment to perform.
+However, we believe such a study, which would require rigorous examination of escape from multiple head- and stalk-specific antibodies, is beyond the scope of this manuscript.
 }
 
 Additionally, the authors should directly show the discrepancies between this in vitro selection and the H3 HA's evolution in nature. This group has performed such an analysis in their previous deep mutational scanning work with the H1 HA of WSN (Doud and Bloom, Viruses 2016). Maximum likelihood phylogenetics can be used to estimate the difference between experimental amino acid preference and natural preference. One might expect that this would provide some insight into the nature of the bias introduced through cell culture. 
 
-\comment{We can definitely do this pretty easily, perhaps adding Sarah Hilton as an author to help.
-Not sure where we would fit the data given that the paper is already too long, but I guess we could cram it in the supplement.
+\response{This is a good suggestion and we have now added the results of this analysis in Figure S4.
 }
 
-\comment{JML: I've also been wanting to do this and can do this easily. But it depends on how much space we have (probably not much)}.
+\comment{Also need to add mention of this figure in the manuscript text somewhere...}
 
 The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as ``modest.'' One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
 
 \response{We now have acknowledged this possibility in the Discussion in the sentence "We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains.}
 
-\comment{This is a possibility, although I highly doubt that it is true.
-However, we can easily add a sentence acknowledging the possibility.
-}
-
 The experimental approach of deep mutational scanning has been applied to viral proteins before, including HIV env, influenza H1 HA, and NP. The novelty in this paper is that it is the first time such an analysis has been performed for H3 specifically and that it demonstrates the (albeit limited) utility of deep mutational scanning in predicting the success of viral strains in nature. Ultimately, it is clear from the discussion that the authors see this study as an intermediate step, suggesting that their work is "an improvement over no information at all." While something is indeed better than nothing, in my opinion, this paper represents only an incremental step forward in the field of influenza evolutionary forecasting due to the aforementioned limitations, especially since this experiment and subsequent analysis could be performed using more stringent selection methods during viral passaging like treatment with human sera for data that is presumably more faithful to nature. 
+
+\response{This is a fair assessment by the reviewer.
+However, this is the first paper to show that data from deep mutational scanning can actually provide some insight into evolutionary outcomes in nature, and it is possible that this can provide a useful framework for applying deep mutational scanning studies in the context of evolution in nature...
+}
 
 \comment{This is a fair point.
 However, I think we should argue that it's the first paper to show deep mutational scanning can actually provide at least some information that reflects outcomes in nature.
@@ -264,16 +234,13 @@ The correlation for prospective analysis (post-Perth) is smaller than the correl
 The results show that this correlation is stronger when considering mutations from unpassaged isolates in a post-hoc analysis, demonstrating the potential utility of our experimental measurements in a prospective analysis, specifically when passaged isolate sequences are excluded.
 }
 
-\comment{Not sure if the difference between $\rho = 0.17$ and $\rho = 0.14$ is significant. 
-We could figure out how to calculate this, but first let's see what it looks like for the non-lab-passaged sequences requested by Reviewer 1.}
-
 A number of issues interfere with the clarity of this manuscript, particularly when appealing to a broader scientific audience. While this is understandable given the nature of this study, several adjustments should be made. A clear description of mutational effect is never provided in the results, though it forms a crucial component of the data. As such, it is not really intuitive as to why the range from -10-0 should be considered "neutral." Additionally, mutational tolerance is quantified as Shannon entropy of the re-scaled amino-acid preferences at each site, but it is unclear how this entropy is calculated. The entire first half of the second results section describing how the experimentally informed codon substitution model they generate is better than existing models and the associated Table 1 is very difficult to understand. AIC is never explained. The significance of dN/dS being much less than 1 for conventional models should be explained. The purpose of modeling of ExpCM, site avg. is unclear. 
 
 \comment{We can clarify these easily.}
 
 In figure 4, it would be useful to show Perth09 on the tree and mention that closely related strains are excluded from analysis in the figure legend. As it stands, there is just an unlabeled cluster of viruses for which no individual amino acid mutations are characterized. It is also important for the authors to clearly state what frequency they are talking about. Specifically, in consideration of a particular mutation, what is the population in the denominator? 
 
-\comment{We can clarify these easily.}
+\comment{Fixed the figure. Still need to explain frequency}
 
 The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
 
