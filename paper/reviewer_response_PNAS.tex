@@ -79,7 +79,7 @@ We do not see such a correlation when we use the WSN/1933 H1 HA preferences to e
 
 5) It is unclear how the ``rescaling'' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a ``sequence logo'' figure for comparison. 
 
-\response{Rescaling of the preferences is performed by fitting a stringency parameter that is a reflection of how strongly our experimentally determined preferences correspond to the gene's evolution in nature.
+\response{Re-scaling of the preferences is performed by fitting a stringency parameter that is a reflection of how strongly our experimentally determined preferences correspond to the gene's evolution in nature.
 This parameter is fit under an experimentally informed codon substitution model (ExpCM) using the phydms program (Hilton 2017 PeerJ).
 A stringency parameter greater than 1 indicates that natural selection favors the same amino acids as the experiments but with greater stringency, while a value less than 1 indicates that natural selection does not favor the amino acids with as much stringency as the experiments.
 Because selection in the lab often does not fully reflect the stringency of selection in nature and selection across experiments may not be entirely consistent, we re-scale the preferences by this stringency parameter.
@@ -155,7 +155,7 @@ The experiments should be repeated with at least one more passaging step, proper
 
 \response{For the reasons described above, it is not necessary to totally repeat the experiments.
 Certainly other experimental parameter choices could have been used, but this is always the case for complex experiments.
-Our choices will reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
+Our choices are reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
 
 \subsubsection*{Minor points} 
 
@@ -165,6 +165,12 @@ Our choices will reasonable, and the four lines of evidence listed at the beginn
 
 2) The authors state on page 5 that mutations detected in cell culture as deleterious rarely reach high frequency in nature. Could you please give a few examples? 
 
+\response{We individually validated viral growth of a C52A mutant, which removes a Cys critical in forming a disulfide bond with Cys-277 and maintaining HA structure.
+We confirmed that this mutant grows very poorly when rescued, and mutations at site 52 never arise at a detectable level.
+
+As another example, mutation N170H fails to reach $>$1\% frequency in nature, and according to our dataset, is a mutation towards a highly unpreferred amino acid. 
+}
+
 \comment{Not obvious how to give an example, as there are many mutations we identify as deleterious and many mutations that don't reach high frequency. 
 But I suppose if we validate some specific mutation (e.g., a cysteine mutation) as deleterious, we can point out that it doesn't reach high frequency...}
 
@@ -172,9 +178,9 @@ But I suppose if we validate some specific mutation (e.g., a cysteine mutation) 
 
 \response{We have now added the list of mutations from the 31 clones to Dataset S3.
 Two of the clones had a mutation that removed the ATG start codon.
+One of these resulted in an M(-16)V mutation, while the other resulted in an M(-16)Q mutation which was linked to a Q80I mutation.
+According to our preferences, Val and Gln are not very preferred at this site, suggesting that these mutants would not grow well compared to wildtype.
 }
-
-\comment{Not sure how to address the growth phenotype question}.
 
 \subsection*{Reviewer \#2 Comments} 
 
@@ -191,11 +197,16 @@ The authors themselves acknowledge the most important limitation of this study: 
 
 The suggestion to make a version of Fig.~4 that distinguished between the stalk and the head is a good one.
 It is difficult to also overlay the structural location (stalk versus head) on the current Fig.~4, since colors are already used to indicate mutational effects.
-We have therefore created a new supplemental figure (Fig.~S7) that shows these data---as the reviewer suspected, this shows that head mutations are much more common.
+We have therefore created a new supplemental figure (Fig.~S8) that shows these data---as the reviewer suspected, this shows that head mutations are much more common.
 
 The reviewer is correct that G78D appears to be a site where the correspondence between selection in our experiments and frequency in nature is low.
 This makes sense, as G78D is one of the two sites that we specifically identified as being a lab adaptation (see Figure~S1).
-We now explicitly mention this fact in the text \comment{still need to actually add this mention}.
+We now explicitly mention this fact in the Discussion as follows:
+
+\begin{quote}
+\textsl{Indeed, a vast amount of work in virology has chronicled the ways in which experiments can select for lab artifacts or fail to capture important pressures that are relevant in nature.
+As an example of this, although we identified G78D as a lab adaptation mutation and the wildtype Gly is not highly preferred at this site, this mutation never reaches above 20\% frequency in nature. }
+\end{quote}
 } 
 
 The data regarding greater mutational tolerance in the stalk compared to the head should be paired with data from deep mutational scanning utilizing stalk- and head-specific antibodies as a selection process as this group has previously done with WSN H1 (Doud et al., Nat Comm 2018, Doud et al., PLoS Path 2017) to see if tolerant sites are responsible for viral escape. 
@@ -207,40 +218,46 @@ However, we believe such a study, which would require rigorous examination of es
 Additionally, the authors should directly show the discrepancies between this in vitro selection and the H3 HA's evolution in nature. This group has performed such an analysis in their previous deep mutational scanning work with the H1 HA of WSN (Doud and Bloom, Viruses 2016). Maximum likelihood phylogenetics can be used to estimate the difference between experimental amino acid preference and natural preference. One might expect that this would provide some insight into the nature of the bias introduced through cell culture. 
 
 \response{This is a good suggestion and we have now added the results of this analysis in Figure S4.
+As the logo plot shows, although there are some differences, at most sites there is little difference between the amino acids that are preferred in our experiments to their frequencies in nature.
 }
-
-\comment{Also need to add mention of this figure in the manuscript text somewhere...}
 
 The authors are upfront about the limited degree to which their calculated mutational effect and the maximum mutation frequency in nature correlate, describing it as ``modest.'' One of the major points of the paper is that conclusions from this type of analysis cannot be generalized when using data from strains that are too divergent. The authors should address the possibility that data from deep mutational scanning can be generalized to divergent strains if the study is done in a system that is more reflective of nature. 
 
-\response{We now have acknowledged this possibility in the Discussion in the sentence "We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains.}
+\response{We now have acknowledged this possibility in the Discussion in the sentence ``We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains."}
 
 The experimental approach of deep mutational scanning has been applied to viral proteins before, including HIV env, influenza H1 HA, and NP. The novelty in this paper is that it is the first time such an analysis has been performed for H3 specifically and that it demonstrates the (albeit limited) utility of deep mutational scanning in predicting the success of viral strains in nature. Ultimately, it is clear from the discussion that the authors see this study as an intermediate step, suggesting that their work is "an improvement over no information at all." While something is indeed better than nothing, in my opinion, this paper represents only an incremental step forward in the field of influenza evolutionary forecasting due to the aforementioned limitations, especially since this experiment and subsequent analysis could be performed using more stringent selection methods during viral passaging like treatment with human sera for data that is presumably more faithful to nature. 
 
 \response{This is a fair assessment by the reviewer.
-However, this is the first paper to show that data from deep mutational scanning can actually provide some insight into evolutionary outcomes in nature, and it is possible that this can provide a useful framework for applying deep mutational scanning studies in the context of evolution in nature...
-}
-
-\comment{This is a fair point.
-However, I think we should argue that it's the first paper to show deep mutational scanning can actually provide at least some information that reflects outcomes in nature.
-This comment does make me worry that the reviewer just doesn't think the work is significant enough, but since the editor did ask for a revision you'd have to hope that if we answer all specific comments that would be enough.
+However, this is the first paper to show that data from deep mutational scanning can actually reflect evolutionary outcomes in nature, and provides some insight into the extent by which functional constraints on HA shape its evolution. 
+Furthermore, it is possible that this work can provide a useful framework for applying deep mutational scanning studies in the context of evolution in nature.
 }
 
 \subsubsection*{Minor Points:} 
 
 The correlation for prospective analysis (post-Perth) is smaller than the correlation for post-hoc analysis (pre-Perth). Since prospective analysis is more important when predicting evolutionary fates, it might be beneficial for the authors to comment on this difference. 
 
-\response{We now include an analysis of mutational effects and maximum frequency for mutations of unpassaged isolates (see Figures 5, 6, and S6) from the post-Perth partition of the phylogenetic tree to limit any potential biases that our experimental measurements may have towards mutations from cell- or egg-passaged isolates.
+\response{We now include an analysis of mutational effects and maximum frequency for mutations of unpassaged isolates (see Figures 5, 6, and S7) from the post-Perth partition of the phylogenetic tree to limit any potential biases that our experimental measurements may have towards mutations from cell- or egg-passaged isolates.
 The results show that this correlation is stronger when considering mutations from unpassaged isolates in a post-hoc analysis, demonstrating the potential utility of our experimental measurements in a prospective analysis, specifically when passaged isolate sequences are excluded.
 }
 
 A number of issues interfere with the clarity of this manuscript, particularly when appealing to a broader scientific audience. While this is understandable given the nature of this study, several adjustments should be made. A clear description of mutational effect is never provided in the results, though it forms a crucial component of the data. As such, it is not really intuitive as to why the range from -10-0 should be considered "neutral." Additionally, mutational tolerance is quantified as Shannon entropy of the re-scaled amino-acid preferences at each site, but it is unclear how this entropy is calculated. The entire first half of the second results section describing how the experimentally informed codon substitution model they generate is better than existing models and the associated Table 1 is very difficult to understand. AIC is never explained. The significance of dN/dS being much less than 1 for conventional models should be explained. The purpose of modeling of ExpCM, site avg. is unclear. 
 
-\comment{We can clarify these easily.}
+\response{We appreciate these suggestions from the reviewer and have made the following changes:
+\begin{itemize}
+\item We have now included a description of how we calculated mutational effects in the Results section.
+\item We agree that a cutoff of -10 to 0 is arbitrary and removed the sentence ``Mutations that reach high frequencies generally have neutral or beneficial effects according to our experimental measurements." 
+\item We included in the Methods a description of how we calculated Shannon entropy.
+\item We now define AIC in the legend of Table 1.
+\item We have now included an explanation of dN/dS $\ll$1 for conventional substitution models, and now describe the utility of building an ExpCM, site avg. substitution model
+\end{itemize}
+}
 
 In figure 4, it would be useful to show Perth09 on the tree and mention that closely related strains are excluded from analysis in the figure legend. As it stands, there is just an unlabeled cluster of viruses for which no individual amino acid mutations are characterized. It is also important for the authors to clearly state what frequency they are talking about. Specifically, in consideration of a particular mutation, what is the population in the denominator? 
 
-\comment{Fixed the figure. Still need to explain frequency}
+\response{We have now labeled the Perth/2009 strain on the tree in Figure 4 and now mention in the caption that we have excluded closely related strains from the analysis...
+}
+
+\comment{Fixed the figure. Maybe John and Trevor can do a better job than me at explaining the frequency denominator. Is it the population observed at a given pivot?}
 
 The graph labels in figure 8B could be cleaner. The question marks after "absolutely conserved" and "clade-specific" are extraneous. Indeed, the graph labels themselves ("HA domain," "absolutely conserved? ""clade-specific?") are unnecessary. 
 

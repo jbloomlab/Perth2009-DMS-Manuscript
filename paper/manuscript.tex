@@ -165,7 +165,7 @@ GY94 M0 & 2536 & -9704 & -- & 0.31 \\
 \end{tabular}
  \end{center}
 \addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
-Models are compared by AIC~\cite{posada2004model} computed from the log likelihood (LnL) and number of model parameters.
+Models are compared by Akaike information criterion (AIC)~\cite{posada2004model} computed from the log likelihood (LnL) and number of model parameters.
 The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
 For the M5 model, we give the mean followed by the shape and rate parameters of the gamma distribution over $\omega$.
 }
@@ -195,13 +195,15 @@ The two technical replicates 3-1 and 3-2 were only slightly more correlated than
 \subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
 How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
 This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describes H3N2 evolution compared to standard substitution models~\cite{bloom2017identification,hilton2017phydms}.
-Table~\ref{tab:phydms} shows that the ExpCM using the across-replicate average of our measurements greatly outperforms conventional substitution models.
+Table~\ref{tab:phydms} shows that the phylogenetic fit of the ExpCM using the across-replicate average of our measurements greatly outperforms conventional substitution models.
 This result indicates that our experiments authentically capture some of the constraints on HA evolution.
-The relative rate of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models (Table~\ref{tab:phydms}).
+A substitution model in which the amino-acid preferences were averaged across all sites (ExpCM, site avg.) performs no better than conventional substitution models, demonstrating the importance of site-specificity for the preferences.
+The relative rate of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models (Table~\ref{tab:phydms}), illustrating that these models need to account for constraints on natural HA evolution.
 However, the relative rate of nonsynonymous to synonymous substitutions after accounting for the amino-acid preferences measured in our experiments ($\omega$ for the ExpCM) is close to one (Table~\ref{tab:phydms}), indicating that most purifying selection against nonsynonymous substitutions is accounted for in the deep mutational scanning.
 The ExpCM stringency parameter~\cite{hilton2017phydms} is 2.47 (Table~\ref{tab:phydms}), indicating that natural selection favors the same amino acids as the experiments but with greater stringency.
 Throughout the rest of this paper, we use the amino-acid preferences re-scaled~\cite{bloom2017identification,hilton2017phydms} by this stringency parameter.
 These re-scaled preferences are shown in Figure~\ref{fig:logoplot}.
+Furthermore, Figure~\ref{suppfig:diffprefs_logoplot} shows that when we compare these preferences to amino-acid frequencies from natural human H3N2 HA sequences, at most sites, there is little difference between the amino acids that are preferred in our experiments to their frequencies in nature.
 
 %\begin{SCfigure*}[\sidecaptionrelwidth][t]
 \begin{figure*}[ht]
@@ -285,14 +287,15 @@ As such, each mutation is shown as a separate circle on a separate branch in Fig
 However, because multiple mutations on the same phylogeny branch cannot be disentangled, when multiple mutations occurred on a single branch, we assigned a single mutational effect based on the sum of effects of each mutation.
 
 After annotating mutations and their frequencies on the phylogeny in this way (Figure~\ref{fig:frequency_trajectory}), it is visually obvious that there are relatively few circulating mutations that we measure to be strongly deleterious---and that such deleterious mutations rarely reach high frequency when they do occur.
-Mutations that reach high frequencies generally have neutral or beneficial effects according to our experimental measurements.
 
 We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evolution.
+To calculate a given mutation's effect, we simply took the logarithm of the preference for the new amino-acid identity divided by the preference for the original amino-acid identity.
 To minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
 We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
 We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
 In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$). 
+
 To restrict potential biases of our experimental measurements towards mutations from cell- or egg-passaged isolates, we evaluated mutations from unpassaged isolates.
 Due to the limited availability of primary isolate sequences until the last decade, we analyzed mutations of unpassaged isolates from the post-Perth partition of the phylogenetic tree~\cite{mcwhite2016sequence}.
 The correlation between mutational effect and maximum frequency was stronger for mutations from unpassaged post-Perth isolates ($\rho = 0.24$).
@@ -401,6 +404,7 @@ Our work suggests that deep mutational scanning may be able to provide such data
 
 It is important to emphasize that measurements of viral growth in cell culture do \emph{not} represent true fitness in nature.
 Indeed, a vast amount of work in virology has chronicled the ways in which experiments can select for lab artifacts or fail to capture important pressures that are relevant in nature~\cite{daniels1985fusion,sun2010modifications,lee2013comparison,wu2017structural}.
+As an example of this, although we identified G78D as a lab adaptation mutation and the wildtype Gly is not highly preferred at this site, this mutation never reaches above 20\% frequency in nature.
 Mutations in viral genes other than HA are also important in determining strain success~\cite{memoli2009recent,raghwani2017selection}.
 Given these caveats, it might seem surprising that measuring viral growth in cell culture can be informative about the success of viral strains in nature.
 Yet, prior to our work, there were no comprehensive studies of the functional effects of mutations to H3 HA on any property that even resembled viral fitness in nature, and modeling work has either omitted the non-antigenic effects of mutations~\cite{sun2013using,harvey2016identification,neher2016prediction} or assumed that all non-epitope mutations had equivalent deleterious effects~\cite{luksza2014predictive}.
@@ -495,7 +499,9 @@ The amino-acid preferences were re-scaled by the stringency parameter using the 
 
 The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2018quantifying}.
 
-\subsection*{Quantification of relative solvent accessibility}
+\subsection*{Quantification of Shannon entropy and relative solvent accessibility}
+We calculated Shannon entropy, $h_r$ for site $r$ as $h_r = - \sum_{x} \pi_{r,x} \log(\pi_{r,x})$, where $\pi_{r,x}$ is the preference for amino acid $x$ at site $r$.
+
 We quantified the absolute solvent accessibility of each site of the H3 HA (PDB 4O5N;~\cite{lee2014receptor}) or the H1 HA (PDB 1RVX;~\cite{gamblin2004structure}) structure using DSSP~\cite{kabsch1983}.
 We then normalized to a relative solvent accessibility using the absolute accessibilities in~\cite{tien2013}.
 
