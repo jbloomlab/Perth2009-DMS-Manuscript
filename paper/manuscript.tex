@@ -530,6 +530,7 @@ The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
 
 The frequency trajectory of each individual mutation on the phylogeny is estimated following Nextstrain's augur pipeline and as first implemented in Nextflu \cite{neher2015nextflu}.
 Herein, mutation frequency dynamics are modeled according to a Brownian motion diffusion process discretized to one-month intervals.
+The number of viruses sampled in each interval determines the denominator of the mutation frequency calculations.
 Relative to a simple Brownian motion, the expectation includes an ``inertia'' term $\inertia$ that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
 This results in the following diffusion process
 \begin{equation}
