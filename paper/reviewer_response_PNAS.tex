@@ -8,6 +8,7 @@
 								
 												
 \usepackage{amssymb}
+\usepackage{hyperref}
 
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
 \newcommand{\response}[1]{{\color{black}#1}}
@@ -104,25 +105,27 @@ We thank the reviewer for this suggestion, which has strengthened our work.
 
 5) It is unclear how the ``rescaling'' is performed and what it exactly does. The authors need to described and justify this better and should also provide the non-rescaled data in a ``sequence logo'' figure for comparison. 
 
-\response{Re-scaling of the preferences is performed by fitting a stringency parameter that is a reflection of how strongly our experimentally determined preferences correspond to the gene's evolution in nature.
-This parameter is fit under an experimentally informed codon substitution model (ExpCM) using the phydms program (Hilton 2017 PeerJ).
-A stringency parameter greater than 1 indicates that natural selection favors the same amino acids as the experiments but with greater stringency, while a value less than 1 indicates that natural selection does not favor the amino acids with as much stringency as the experiments.
-Because selection in the lab often does not fully reflect the stringency of selection in nature and selection across experiments may not be entirely consistent, we re-scale the preferences by this stringency parameter.
-Importantly, re-scaling does not affect any of the evolutionary analyses performed in this paper since it is a constant that multiplies all mutational effects, simply corresponding a change in units on the x-axis of Figure~5.
-We now include a supplementary panel A to Figure S3 showing the un-scaled Perth/2009 H3 HA preferences.
+\response{
+The re-scaling of amino-acid preferences by a stringency parameter is a well-defined mathematical procedure that is explained in detail in Hilton et al (\textit{PeerJ}, 5:e3657, 2017), which is cited in the manuscript.
+This re-scaling procedure has now been used fairly widely in the literature. 
+Importantly, re-scaling does \emph{not} affect any of the evolutionary analyses performed in this paper since it just corresponds to a constant that multiplies all mutational effects (e.g., a change in units on the x-axis of Figure~5).
+Specifically, if the re-scaling parameter is $\beta$, then the mutational effects calculated using Equation~1 in the manuscript are just multiplied by $\beta$ after re-scaling.
+Therefore, for analyses of mutational effects, the re-scaling simply corresponds to a change in units (e.g., comparable to showing an antibody titration in ng/mL versus $\mu$M), and therefore has no effect on the conclusions.
+We have added the following text in the Methods explaining this fact:
+
+\begin{quote}
+\textsl{The amino-acid preferences were re-scaled by the stringency parameter using the approach described in Hilton et al (2017).
+Note that the re-scaling simply puts the amino-acid preferences on a useful scale for visualization in logo plots, and has no effect on any of the quantitative conclusions relating the deep mutational scanning to natural evolution.
+The reason is that all of these conclusions use the effects of mutations as calculated using Equation~1, and the re-scaling simply acts as a constant multiplier on all mutational effects (e.g., a scale factor) when re-scaled preferences are converted to mutational effects.}
+\end{quote}
+
+Due to space constraints and the size of the logo plots, we cannot fit another main figure with the preferences prior to re-scaling, but such an image is now included in the Jupyter notebook in the manuscript's GitHub repository at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}.
+The unscaled amino-acid preferences for each replicate are also provided in numerical form in Dataset S3.
 }
 
 6) The authors state that it there are more reports of escape from stalk antibodies for H3 than H1. This is simply not true. Actually, the first reference used as evidence for easy selection of H3 anti-stalk escape mutants (Chai et al) reported three escape mutants which a) did not disrupt binding completely and b) were crippled in vitro and in vivo. The authors should remove their statement as there is not systematic data to support this. 
 
 \response{We have removed this sentence from the paper.}
-
-\comment{We looked at this pretty carefully, and there are definitely more reports of selecting anti-stalk antibodies for H1 and H3.
-The reviewer's counterpoint is to mention on of the H3 studies. 
-However, we didn't say that there are no H3 reports, just that there are a lot more H1 reports.
-Certainly this is not systematic proof, but our statement in the text goes to great pains to caveat that this is purely circumstantial and not systematic proof.
-But since this isn't a central claim of the paper of anyway, let's just remove it in a concession to the reviewer.
-The study we're helping Nicholas Wu with will eventually systematically test this point.
-}
 
 7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
 

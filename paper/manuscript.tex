@@ -500,7 +500,10 @@ Computer code that performs the entirety of this analysis and shows many detaile
 For the analysis in Table~\ref{tab:phydms}, we downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
 These sequences were aligned using MAFFT~\cite{katoh2013mafft} and used to infer a phylogenetic tree using RAxML~\cite{stamatakis2006raxml} with a GTRCAT model of nucleotide substitution.
 We then used \texttt{phydms}~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms}, version \texttt{2.2.1}) to fit the substitution models listed in Table~\ref{tab:phydms}.
+
 The amino-acid preferences were re-scaled by the stringency parameter using the approach described in \cite{hilton2017phydms}.
+Note that the re-scaling simply puts the amino-acid preferences on a useful scale for visualization in logo plots, and has no effect on any of the quantitative conclusions relating the deep mutational scanning to natural evolution.
+The reason is that all of these conclusions use the effects of mutations as calculated using Equation~\ref{eq:muteffect}, and the re-scaling simply acts as a constant multiplier on all mutational effects (e.g., a scale factor) when re-scaled preferences are converted to mutational effects.
 
 The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2018quantifying}.
 
@@ -514,6 +517,7 @@ We then normalized to a relative solvent accessibility using the absolute access
 We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
 The effect of mutating site $r$ from amino-acid $a_1$ to $a_2$ was calculated as
 \begin{equation}
+\label{eq:muteffect}
 \log_2 \frac{\pi_{r,a_2}}{\pi_{r,a_1}}
 \end{equation}
 where $\pi_{r,a_1}$ and $\pi_{r,a_2}$ are the re-scaled preferences for amino acids $a_1$ or $a_2$ at site $r$ as shown in Figure~\ref{fig:logoplot}.
