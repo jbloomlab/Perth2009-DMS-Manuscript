@@ -230,12 +230,11 @@ At residues involved in receptor binding, there are strong preferences for the a
 A positively charged amino acid at site 329 is important for cleavage of the HA0 precursor into the mature form~\cite{stech2005new}, and this site strongly prefers arginine.
 
 However, there are also some notable differences between the amino-acid preferences measured in our experiments and amino-acid frequencies in natural H3 HA sequences.
-Most surprisingly, the start codon at position does not show a particularly strong preference for methionine.
-We validated that viruses carrying a mutation at this site from methionine to lysine do in fact reach appreciable titers (Figure~\ref{suppfig:startcodon_validation}), perhaps because of alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
-\comment{I AM HERE}
-a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine (Figure~\ref{fig:logoplot}).
-This codon is part of the signal peptide and is cleaved from the mature HA protein.
-One possible reason that our experiments do not show a strong preference for methionine at this site could be alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
+Most surprisingly, the start codon does not show a particularly strong preference for methionine (Figure~\ref{fig:logoplot}).
+We validated that a virus carrying a mutation at this site from methionine to lysine does in fact reach appreciable titers (Figure~\ref{suppfig:startcodon_validation}), perhaps because of alternative translation-initiation at a downstream or upstream start site as has been described for other HAs~\cite{girard2011upstream}.
+Our measurements also suggest mutational tolerance at some other sites that are relatively conserved among natural HAs, such as the N-linked glycosylation motifs near the beginning of HA1 and the transmembrane domain (Figure~\ref{fig:logoplot}).
+We validated that viruses with mutations to the glycosylation motifs at sites 22 or 38, or a site in the transmembrane domain, do in fact grow to high titers (Figures~\ref{suppfig:glycan_validation} and \ref{suppfig:TM_validation}, respectively).
+The disparity between the relative conservation of these sites in nature and their mutational tolerance in our study could be because cell culture does not fully capture the constraints on HA function on nature, or could be because these sites are not under strong immune pressure and so mutations at them are not positively selected in nature.
 
 \subsection*{There is less difference in mutational tolerance between the HA head and stalk domains for H3 than for H1}
 Our experiments measure which amino acids are tolerated at each HA site under selection for viral growth.
@@ -665,14 +664,13 @@ The sites are in H3 numbering.
 \begin{suppfigure}[H]
 \centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
 \caption{
-\comment{Just show the first panel (A) here, the others can go in later figures}
+\comment{Just show the first panel (A) here}
 {\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
 We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation \comment{what was it}), a conserved cysteine was mutated to alanine (C52A, codon mutation \comment{what was it?}), and the same cysteine was synonymously mutated (C52C, codon mutation \comment{what was it}).
 We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggests that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
 The synonymous C52C mutation is a negative control mutation that is not expected to have any effect.
 We then used reverse genetics to generate viruses carrying the wildtype HA or each point mutant, with GFP packaged in the PB1 segment to enable easy titering by flow cytometry~\cite{bloom2010permissive,hooper2013mutant}.
-Each variant was generated in duplicate.
-The plots show the viral titer in the supernatant at 53 hours post-transfection.
+Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 As expected, the C52A virus is essentially non-viable, while the C52C mutation is roughly equivalent to wildtype.
 the M(-16)K mutation is only moderately attenuated, validating that the canonical start codon is not completely essential for viral growth.
 }
@@ -681,17 +679,25 @@ the M(-16)K mutation is only moderately attenuated, validating that the canonica
 
 \begin{suppfigure}[H]
 \centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
-\caption{\label{XXX}
-{\bf Viral titers of individual Perth/2009 H3 HA point mutants.}
-Influenza GFP viruses carrying wildtype or single point mutants of the Perth/2009 HA were rescued by reverse genetics in duplicate. 
-Viral transfection supernatant was harvested at 53 hours post-transfection and titered by flow cytometry in MDCK-SIAT1-TMPRSS2 cells.
-Note that the wildtype, C52A and C52C mutant virus titers shown in each panel represent the same duplicate measurements.
-The points mark each duplicate and the bar marks the mean.
-(A) The start codon mutant M(-16)K reaches titers approximately one log less than those of wildtype. 
-The C52A mutant fails to reach high titers, and the C52C synonymous variant grows to titers comparable to those of wildtype virus.
-(B) The transmembrane domain mutant C199(HA2)K grows to higher titers than the wildtype.
-(C) The T24F and T40V mutants, which remove glycosylation motifs, attain titers similar to or higher than wildtype, respectively. 
-The S287A mutant, which also removes a glycosylation motif, does not grow as well as wildtype virus.
+\caption{\label{suppfig:glycan_validation}
+\comment{Just show the third panel (C) here, removing the cysteine mutants and adjusting the y-axis to a more appropriate for just these mutants.}
+{\bf Validation of viral variants with mutations at N-linked glycosylation motifs.}
+We created variants of the Perth/2009 HA with mutations that eliminated N-linked glycosylation motifs (Asn-Xaa-Ser/Thr) at asparagine residues 22, 38, and 285 (these are mutations T24F, T40V, and S287A, respectively).
+We then used reverse genetics to generate viruses carrying the wildtype HA or each of these mutants.
+Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
+The viruses with mutations at the motifs at residues 22 and 38 reached titers at least as high as wildtype, whereas the virus with a mutation to the motif at residue 285 was modestly attenuated.
+}
+\end{suppfigure}
+
+\begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\caption{\label{suppfig:TM_validation}
+\comment{Just show TM mutant here, similar to previous figure}
+{\bf Validation of the mutational tolerance of a site in the transmembrane domain.}
+We created a variant of the Perth/2009 HA with a transmembrane domain mutation, C199(HA2)K, at a site that our deep mutational scanning suggests should be highly mutationally tolerant (Figure~\ref{fig:logoplot}).
+We then used reverse genetics to generate viruses carrying the wildtype HA or this mutants
+Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
+The virus the mutation reached titers comparable to wildtype.
 }
 \end{suppfigure}
 
