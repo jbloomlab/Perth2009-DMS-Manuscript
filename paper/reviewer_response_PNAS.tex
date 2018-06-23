@@ -4,7 +4,9 @@
 \usepackage{color}
 \usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+								% TeX will automatically convert eps --> pdf in pdflatex	
+								
+												
 \usepackage{amssymb}
 
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
@@ -17,7 +19,7 @@
 \maketitle
 
 We thank the reviewers for the careful reading and suggestions about the manuscript.
-In the revised version, we have performed additional experiments and analyses that should address all of the reviewer concerns.
+In the revised version, we have performed additional experiments and analyses that address all of the reviewer questions and concerns.
 
 \emph{Below, the reviewer comments {\color{blue} are in blue}, and our responses are in black.}
 
@@ -28,21 +30,29 @@ In the revised version, we have performed additional experiments and analyses th
 \subsubsection*{Comments:} 
 In their manuscript Lee et al. examine the tolerance of an H3 virus HA for single point mutations using deep mutational scanning. Using the data obtained from cell culture experiments the authors then try to understand if there is a correlation between the observed changes in vitro and actual virus evolution in vivo. Finally, they test if there is any correlation between H3 and H1 mutational tolerance and basically find that measurements made with H1 HA are not helpful to predict H3 evolution. The manuscript is written in a relatively confusing way and the experimental setup is problematic. Some of the obtained data also need re-evaluation/experimental validation. 
 
+\response{We are sorry that the reviewer found some parts of the manuscript confusing.
+We have revised the parts of the text that the reviewer highlighted, performed additional validation experiments, and clarified the experimental setup.
+These modifications should fully address the reviewer's concerns.}
+
 \subsubsection*{Major points} 
 
 1) It is disturbing that there is no preference for having a methionine in the first position of the HA ORF. The authors discuss this and refer to one 2002 paper that shows additional start sites for non-human H2. This is a pretty weak explanation. If this is really the case the authors should actually isolate/rescue these viruses and test their fitness relative to wild type. 
 
-\response{We have now rescued by reverse genetics influenza GFP viruses carrying the M(-16)K mutation in the start codon, and titered by flow cytometry. 
-By 53 hours post-transfection when we harvested transfection supernatant, the M(-16)K mutant reached a titer of approximately one log less than that of wildtype virus.
-Although we may have expected the M(-16)K mutant to grow comparably to wildtype given that Met and Lys are both preferred at the start codon, we would like to emphasize that (1) we grew influenza GFP viruses which may not behave identically to live influenza viruses and (2) we did not capture the full viral growth kinetics of this mutant since we titered at a relatively early timepoint after transfection.
-In comparison, the C52A variant, which mutates the highly conserved Cys at site 52, grows very poorly, while the synonymous C52C mutant grows to titers comparable to those of wildtype.
-These results are now shown in Figure S9, and we have updated the Methods section describing how we validated these point mutants.
+\response{
+We have now used reverse genetics to generate viruses carrying a mutation of the initiating methionine to lysine.
+These start-codon mutant viruses grow to appreciable titers, suggesting that there is indeed some flexibility in the site of translation initiation in this HA.
+These data are in Figure \comment{S5} of the revised manuscript.
+As we note in the manuscript, this finding is concordant with prior work on suggesting additional translation initiation sites sites in H2 HAs.
+Because translation initiation of HA is not the focus of our manuscript, we have not performed further investigation of the exact mechanism or identity of the alternate start sites.
+However, the data we have added clearly show that the canonical ATG is not strictly necessary for viral replication.
 }
 
 Of note, position 1 for the H1 HA in the supplementary figure is not even shown. 
 
-\response{Figure~S3 shows data for the H1 HA as measured previously by Doud and Bloom (2016). 
-That study used mutant libraries in which all codons \emph{except} the one for the N-terminal methionine were mutagenized.
+\response{
+The reviewer is correct. 
+Figure~S3 shows data for a H1 HA as measured previously by Doud and Bloom (2016), and these prior data are simply presented here in H3 numbering for comparative purposes (the original Doud and Bloom paper used a different HA numbering scheme that makes site-to-site comparisons with the current study difficult). 
+The Doud and Bloom study used mutant libraries in which all codons in HA \emph{except} for the one encoding the N-terminal methionine were mutagenized.
 Therefore, that study did not estimate the effects of mutations to the first codon, which is why it is not shown in Figure~S3.
 We have added a sentence to the legend for this supplementary figure explaining this fact.
 }

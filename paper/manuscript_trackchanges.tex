@@ -1,4 +1,7 @@
 \documentclass[9pt,twocolumn,twoside]{pnas-new}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL manuscript_PNAS_original_submission.tex   Tue May  8 07:38:26 2018
+%DIF ADD manuscript.tex                            Thu Jun 21 09:56:44 2018
 % Use the lineno option to display guide line numbers if required.
 % Note that the use of elements such as single-column equations
 % may affect the guide line number alignment.
@@ -22,7 +25,25 @@
 \setcounter{totalnumber}{10}
 
 \newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
-
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -138,9 +159,11 @@ We mutagenized the entire HA coding sequence at the codon level to create mutant
 We then generated mutant virus libraries from the mutant plasmids using a helper-virus system that enables efficient generation of complex influenza virus libraries~\cite{doud2016accurate} (Figure~\ref{fig:dms_overview}A).
 These mutant viruses derived all their non-HA genes from the lab-adapted A/WSN/1933 strain.
 Using WSN/1933 for the non-HA genes reduces biosafety concerns, and also helped increase viral titers.
-To further increase viral titers, we used MDCK-SIAT1 cells (Madin-Darby canine kidney cells overexpressing 2,6-sialyltransferase)~\cite{matrosovich2003overexpression} that we engineered to constitutively express TMPRSS2 (Transmembrane Protease, Serine 2), which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
+To further increase viral titers, we used MDCK-SIAT1 cells \DIFdelbegin \DIFdel{that we had }\DIFdelend \DIFaddbegin \DIFadd{(Madin-Darby canine kidney cells overexpressing 2,6-sialyltransferase)~\mbox{%DIFAUXCMD
+\cite{matrosovich2003overexpression} }%DIFAUXCMD
+that we }\DIFaddend engineered to constitutively express \DIFdelbegin \DIFdel{the }\DIFdelend TMPRSS2 \DIFdelbegin \DIFdel{protease, }\DIFdelend \DIFaddbegin \DIFadd{(Transmembrane Protease, Serine 2), }\DIFaddend which cleaves the HA precursor to activate it for membrane fusion~\cite{bottcher2006proteolytic, bottcher2010cleavage}.
 
-After generating the mutant virus libraries, we passaged them at low multiplicity of infection (MOI) in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
+After generating the mutant virus libraries, we passaged them at low \DIFdelbegin \DIFdel{MOI }\DIFdelend \DIFaddbegin \DIFadd{multiplicity of infection (MOI) }\DIFaddend in cell culture to create a genotype-phenotype link and select for functional HA variants (Figure~\ref{fig:dms_overview}A).
 All experiments were completed in full biological triplicate (Figure~\ref{fig:dms_overview}B).
 We also passaged and deep sequenced library 3 in duplicate (library 3-1 and 3-2) to gauge experimental noise \textit{within} a single biological replicate.
 As a control to measure sequencing and mutational errors, we used the unmutated HA gene to generate and passage viruses carrying wildtype HA.
@@ -164,12 +187,18 @@ GY94 M0 & 2536 & -9704 & -- & 0.31 \\
 \hline
 \end{tabular}
  \end{center}
-\addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
+\DIFdelbeginFL %DIFDELCMD < \addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
+%DIFDELCMD < Models are compared by AIC~\cite{posada2004model} computed from the log likelihood (LnL) and number of model parameters.
+%DIFDELCMD < The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
+%DIFDELCMD < For the M5 model, we give the mean followed by the shape and rate parameters of the gamma distribution over $\omega$.
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \addtabletext{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM~\cite{hilton2017phydms}, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model~\cite{yang2000codon}.
 Models are compared by Akaike information criterion (AIC)~\cite{posada2004model} computed from the log likelihood (LnL) and number of model parameters.
 The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
 For the M5 model, we give the mean followed by the shape and rate parameters of the gamma distribution over $\omega$.
 }
-\end{table}
+\DIFaddendFL \end{table}
 
 \begin{figure*}[ht]
 \centering
@@ -195,15 +224,16 @@ The two technical replicates 3-1 and 3-2 were only slightly more correlated than
 \subsection*{Our measurements are consistent with existing knowledge about HA's evolution and function}
 How do the HA amino-acid preferences measured in our experiments relate to the evolution of H3N2 influenza virus in nature?
 This question can be addressed by evaluating how well an experimentally informed codon substitution model (ExpCM) using our measurements describes H3N2 evolution compared to standard substitution models~\cite{bloom2017identification,hilton2017phydms}.
-Table~\ref{tab:phydms} shows that an ExpCM using the across-replicate average of our measurements greatly outperforms conventional substitution models.
+Table~\ref{tab:phydms} shows that the \DIFaddbegin \DIFadd{phylogenetic fit of the }\DIFaddend ExpCM using the across-replicate average of our measurements greatly outperforms conventional substitution models.
 This result indicates that our experiments authentically capture some of the constraints on HA evolution.
-A substitution model in which the amino-acid preferences were averaged across all sites (ExpCM, site avg.) performs no better than conventional substitution models, demonstrating that the reason that our measurements are informative is because they capture site-specific constraints.
-The relative rate of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models (Table~\ref{tab:phydms}), since the only way that these models can account for the constraints on HA evolution is via the heuristic use of the $\omega$ parameter to depress the rates of all nonysynonymous substitutions.
+\DIFaddbegin \DIFadd{A substitution model in which the amino-acid preferences were averaged across all sites (ExpCM, site avg.) performs no better than conventional substitution models, demonstrating the importance of site-specificity for the preferences.
+}\DIFaddend The relative rate of nonsynonymous to synonymous substitutions (dN/dS or $\omega$) is $\ll$1 for conventional substitution models (Table~\ref{tab:phydms})\DIFaddbegin \DIFadd{, illustrating that these models need to account for constraints on natural HA evolution}\DIFaddend .
 However, the relative rate of nonsynonymous to synonymous substitutions after accounting for the amino-acid preferences measured in our experiments ($\omega$ for the ExpCM) is close to one (Table~\ref{tab:phydms}), indicating that most purifying selection against nonsynonymous substitutions is accounted for in the deep mutational scanning.
 The ExpCM stringency parameter~\cite{hilton2017phydms} is 2.47 (Table~\ref{tab:phydms}), indicating that natural selection favors the same amino acids as the experiments but with greater stringency.
 Throughout the rest of this paper, we use the amino-acid preferences re-scaled~\cite{bloom2017identification,hilton2017phydms} by this stringency parameter.
 These re-scaled preferences are shown in Figure~\ref{fig:logoplot}.
-Furthermore, Figure~\ref{suppfig:diffprefs_logoplot} shows that when we compare these preferences to amino-acid frequencies from natural human H3N2 HA sequences, at most sites, there is little difference between the amino acids that are preferred in our experiments to their frequencies in nature. \comment{This needs to be improved / changed}
+\DIFaddbegin \DIFadd{Furthermore, Figure~\ref{suppfig:diffprefs_logoplot} shows that when we compare these preferences to amino-acid frequencies from natural human H3N2 HA sequences, at most sites, there is little difference between the amino acids that are preferred in our experiments to their frequencies in nature.
+}\DIFaddend 
 
 %\begin{SCfigure*}[\sidecaptionrelwidth][t]
 \begin{figure*}[ht]
@@ -228,12 +258,7 @@ Examination of Figure~\ref{fig:logoplot} reveals that the experimentally measure
 For instance, sites that form structurally important disulfide bridges (sites 52 \& 277, 64 \& 76, 97 \& 139, 281 \& 305, 14 \& 137-HA2, 144-HA2 \& 148-HA2)~\cite{waterfield1981disulphide} strongly prefer cysteine.
 At residues involved in receptor binding, there are strong preferences for the amino acids that are known to be involved in binding sialic acid, such as Y98, D190, W153, and S228~\cite{weis1988structure,martin1998studies,nobusawa2000change,yang2015structure}.
 A positively charged amino acid at site 329 is important for cleavage of the HA0 precursor into the mature form~\cite{stech2005new}, and this site strongly prefers arginine.
-
-However, there are also some notable differences between the amino-acid preferences measured in our experiments and amino-acid frequencies in natural H3 HA sequences.
-Most surprisingly, the start codon at position does not show a particularly strong preference for methionine.
-We validated that viruses carrying a mutation at this site from methionine to lysine do in fact reach appreciable titers (Figure~\ref{suppfig:startcodon_validation}), perhaps because of alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
-\comment{I AM HERE}
-a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine (Figure~\ref{fig:logoplot}).
+However, a notable exception occurs at the start codon at position -16, which does not show a strong preference for methionine.
 This codon is part of the signal peptide and is cleaved from the mature HA protein.
 One possible reason that our experiments do not show a strong preference for methionine at this site could be alternative translation-initiation at a downstream or upstream start site, as has been described for other HAs~\cite{girard2011upstream}.
 
@@ -247,7 +272,11 @@ Surprisingly, the head domain of the H3 HA is \emph{not} more mutationally toler
 Specifically, whereas solvent-exposed residues in the head domain are substantially more mutationally tolerant than those in the stalk domain for the WSN/1933 H1 HA, the trend is actually reversed for the Perth/2009 H3 HA (Figure~\ref{fig:mut_tolerance}B).
 This difference between the relative mutational tolerances of the H1 and H3 HAs is robust to the cutoff used to define surface residues (Figure~\ref{suppfig:head_stalk_RSA}).
 For instance, for the H3 HA, the short helix A in the stalk domain is as mutationally tolerant as many surface-exposed residues in the head domain---something that is not the case for the H1 HA.
-Helix A forms part of the epitope of many broadly neutralizing anti-stalk antibodies~\cite{mallajosyula2014influenza,laursen2013broadly,chai2016two}.
+Helix A forms part of the epitope of many broadly neutralizing anti-stalk antibodies~\cite{mallajosyula2014influenza,laursen2013broadly,chai2016two}\DIFdelbegin \DIFdel{, and interestingly, there are more reports of readily selecting escape mutants from such anti-stalk antibodies in H3~\mbox{%DIFAUXCMD
+\cite{ekiert2011highly, friesen2014common, chai2016two, yamayoshi2017human} }%DIFAUXCMD
+than in H1~\mbox{%DIFAUXCMD
+\cite{okuno1993common,doud2018quantifying,anderson2017natural} }%DIFAUXCMD
+HAs}\DIFdelend .
 
 We also see high mutational tolerance in many of the known antigenic regions of H3 HA~\cite{wiley1981structural}.
 For instance, antigenic region B is an immunodominant area, and many recent major antigenic drift mutations have occurred in this region~\cite{chambers2015identification,koel2013substitutions,popova2012immunodominance}.
@@ -264,8 +293,8 @@ In contrast, the residues surrounding the receptor binding pocket are fairly mut
 {\bf Frequency trajectories of individual mutations and their relation to the experimentally measured effects of these mutations.}
 The top panel shows the subset of the full H3N2 HA tree in Figure~\ref{suppfig:tree} from 2004 to 2014.
 Circles indicate individual amino-acid mutations, and are colored according to the mutational effect measured in our deep mutational scanning (negative values indicate mutations measured to be deleterious to viral growth).
-The Perth/2009 strain is labeled with a star, and nodes in the clade containing the Perth/2009 strain were excluded from our analyses.
-The bottom panel shows the frequency trajectory of each mutation, with trajectories colored according to the mutational effects as in the top panel.
+The \DIFaddbeginFL \DIFaddFL{Perth/2009 strain is labeled with a star, and nodes in the clade containing the Perth/2009 strain were excluded from our analyses.
+The }\DIFaddendFL bottom panel shows the frequency trajectory of each mutation, with trajectories colored according to the mutational effects as in the top panel.
 It is clear that most mutations that reach high frequency are measured to be relatively favorable in our experiments.
 }
 \end{figure}
@@ -279,7 +308,7 @@ It is clear that most mutations that reach high frequency are measured to be rel
 The plots show Spearman $\rho$ and an empirical $P$-value representing the proportion of 10,000 permutations of the experimental measurements for which the permuted $\rho$ was greater than or equal to the observed $\rho$.
 (B) The distribution of mutational effects partitioned by maximum mutation frequency.
 The vertical black line shows the mean mutation effect for each category.
-The analysis is performed separately for pre-Perth/2009, post-Perth/2009, and unpassaged isolates from the post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
+The analysis is performed separately for \DIFdelbegin \DIFdel{the pre- }\DIFdelend \DIFaddbegin \DIFadd{pre-Perth/2009, post-Perth/2009, }\DIFaddend and \DIFaddbegin \DIFadd{unpassaged isolates from the }\DIFaddend post-Perth/2009 partitions of the tree (see Figure~\ref{suppfig:tree}).
 }
 \end{SCfigure*}
 
@@ -292,19 +321,25 @@ As such, each mutation is shown as a separate circle on a separate branch in Fig
 However, because multiple mutations on the same phylogeny branch cannot be disentangled, when multiple mutations occurred on a single branch, we assigned a single mutational effect based on the sum of effects of each mutation.
 
 After annotating mutations and their frequencies on the phylogeny in this way (Figure~\ref{fig:frequency_trajectory}), it is visually obvious that there are relatively few circulating mutations that we measure to be strongly deleterious---and that such deleterious mutations rarely reach high frequency when they do occur.
+\DIFdelbegin \DIFdel{Mutations that reach high frequencies generally have neutral or beneficial effects according to our experimental measurements.
+}\DIFdelend 
 
-We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evolution.
+We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural \DIFdelbegin \DIFdel{evoluton.
+To }\DIFdelend \DIFaddbegin \DIFadd{evolution.
 To calculate a given mutation's effect, we simply took the logarithm of the preference for the new amino-acid identity divided by the preference for the original amino-acid identity.
-To minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
+To }\DIFaddend minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
 We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
 We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
 In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.14$). 
+\DIFdelbegin \DIFdel{The }\DIFdelend \DIFaddbegin 
 
-To restrict potential biases of our experimental measurements towards mutations from cell- or egg-passaged isolates, we evaluated mutations from unpassaged isolates.
-Due to the limited availability of primary isolate sequences until the last decade, we analyzed mutations of unpassaged isolates from the post-Perth partition of the phylogenetic tree~\cite{mcwhite2016sequence}.
+\DIFadd{To restrict potential biases of our experimental measurements towards mutations from cell- or egg-passaged isolates, we evaluated mutations from unpassaged isolates.
+Due to the limited availability of primary isolate sequences until the last decade, we analyzed mutations of unpassaged isolates from the post-Perth partition of the phylogenetic tree~\mbox{%DIFAUXCMD
+\cite{mcwhite2016sequence}}%DIFAUXCMD
+.
 The correlation between mutational effect and maximum frequency was stronger for mutations from unpassaged post-Perth isolates ($\rho = 0.24$).
-The similar effect sizes for both partitions shows that our experimental measurements can help explain the evolutionary fates of mutations in strains that post-date the experimentally studied strain, as well as to retrospectively analyze mutations that precede the experimental strain. 
+The }\DIFaddend similar effect sizes for both partitions shows that our experimental measurements can help explain the evolutionary fates of mutations in strains that post-date the experimentally studied strain, as well as to retrospectively analyze mutations that precede the experimental strain. 
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
@@ -409,12 +444,12 @@ Our work suggests that deep mutational scanning may be able to provide such data
 
 It is important to emphasize that measurements of viral growth in cell culture do \emph{not} represent true fitness in nature.
 Indeed, a vast amount of work in virology has chronicled the ways in which experiments can select for lab artifacts or fail to capture important pressures that are relevant in nature~\cite{daniels1985fusion,sun2010modifications,lee2013comparison,wu2017structural}.
-As an example of this, although we identified G78D as a lab adaptation mutation and the wildtype Gly is not highly preferred at this site, this mutation never reaches above 20\% frequency in nature.
-Mutations in viral genes other than HA are also important in determining strain success~\cite{memoli2009recent,raghwani2017selection}.
+\DIFaddbegin \DIFadd{As an example of this, although we identified G78D as a lab adaptation mutation and the wildtype Gly is not highly preferred at this site, this mutation never reaches above 20\% frequency in nature.
+}\DIFaddend Mutations in viral genes other than HA are also important in determining strain success~\cite{memoli2009recent,raghwani2017selection}.
 Given these caveats, it might seem surprising that measuring viral growth in cell culture can be informative about the success of viral strains in nature.
 Yet, prior to our work, there were no comprehensive studies of the functional effects of mutations to H3 HA on any property that even resembled viral fitness in nature, and modeling work has either omitted the non-antigenic effects of mutations~\cite{sun2013using,harvey2016identification,neher2016prediction} or assumed that all non-epitope mutations had equivalent deleterious effects~\cite{luksza2014predictive}.
 The strength of our measurements are not that they perfectly capture fitness in nature, but that they are systematic and quantitative---and so represent an improvement over no information at all.
-We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility and possibly their generalizability to more divergent strains.
+We suspect that performing similar experiments using more realistic and complex selections (e.g., ferrets or primary human airway cultures) might further improve their utility \DIFaddbegin \DIFadd{and possibly their generalizability to more divergent strains}\DIFaddend .
 
 We measured the effects of all single amino-acid mutations to a specific HA, and then generalized these measurements to other H3N2 HAs from a 50-year timespan.
 These generalizations will only be valid to the extent that the effects of mutations are conserved during HA's evolution.
@@ -428,7 +463,158 @@ However, our basic selection and deep-sequencing approach can be harnessed to co
 But so far, experiments using this approach have not examined antibodies or sera that are relevant to driving the evolution of H3N2 influenza~\cite{doud2017complete,doud2018quantifying}, or have used relevant sera but examined a non-comprehensive set of mutations~\cite{li2016selection}.
 Future experiments that completely map how HA mutations affect recognition by human sera seem likely to be especially fruitful for informing viral forecasting.
 
-\matmethods{
+\DIFdelbegin %DIFDELCMD < \matmethods{
+%DIFDELCMD < \subsection*{Data and computer code}
+%DIFDELCMD < Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610.
+%DIFDELCMD < Computer code used to analyze the data and produce the results in the paper are on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{HA numbering}
+%DIFDELCMD < Sites are in H3 numbering, with the signal peptide in negative numbers, HA1 in plain numbers, and HA2 denoted with "(HA2)". Sequential 1, 2, ... numbering of the Perth/2009 HA can be converted to H3 numbering by subtracting 16 for the HA1 subunit, and subtracting 345 for the HA2 subunit.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cells}
+%DIFDELCMD < When growing influenza virus in cell culture, trypsin is normally added to cleave HA into its mature form.
+%DIFDELCMD < To obviate the need for trypsin, we engineered MDCK-SIAT1 cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
+%DIFDELCMD < The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656) and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter followed by an IRES driving expression of mCherry to create plasmid pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
+%DIFDELCMD < We used the lentiviral vector to transduce MDCK-SIAT1 cells, and sorted an intermediate mCherry-positive population by flow cytometry.
+%DIFDELCMD < We refer to the sorted bulk population as MDCK-SIAT1-TMPRSS2 cells.
+%DIFDELCMD < There is no selectable marker for the TMPRSS2; however, we maintain the cells at low passage number, and have seen no indication that they lose their ability to support the growth of viruses with H3 HAs in the absence of exogenous trypsin.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Generation of HA codon mutant plasmid libraries}
+%DIFDELCMD < HA and NA genes for the Perth/2009 viral strain were cloned from recombinant virus obtained from BEI Resources (NR-41803) into the pHW2000~\citep{hoffmann2000dna} influenza reverse-genetics plasmids to create pHW-Perth09-HA and pHW-Perth09-NA.
+%DIFDELCMD < 
+
+%DIFDELCMD < We initially created a virus with the HA and NA from Perth/2009 and internal genes from WSN/1933, and passaged it in cell culture to test its genetic stability.
+%DIFDELCMD < To generate this virus, we transfected a co-culture of 293T and MDCK-SIAT1-TMPRSS2 in D10 media (DMEM supplemented with 10\% heat-inactivated FBS, 2 mM L-glutamine, 100 U of penicillin/mL, and 100 $\mu$g of streptomycin/mL) with equal amounts of pHW-Perth09-HA, pHW-Perth09-NA, the pHW18* series of plasmids~\cite{hoffmann2000dna} for all non-HA/NA viral genes, and pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
+%DIFDELCMD < The next day we changed the media to influenza growth media (IGM, consisting of Opti-MEM supplemented with 0.01\% heat-inactivated FBS, 0.3\% BSA, 100 U of penicillin/mL, 100 $\mu$g of streptomycin/mL, and 100 $\mu$g of calcium chloride/mL (no trypsin was added since there was TMPRSS2), and then collected the viral supernatant at 72 hours post-transfection.
+%DIFDELCMD < This viral supernatant was blind passaged in MDCK-SIAT1-TMPRSS2 a total of six additional times.
+%DIFDELCMD < We isolated viral RNA from these passaged viruses and sequenced the HA gene.
+%DIFDELCMD < The passaged HA had two mutations, G78D and T212I, which enhanced viral growth as shown in Figure~\ref{suppfig:Perth2009_mut}.
+%DIFDELCMD < The HA with these two mutations was cloned into pHW2000~\citep{hoffmann2000dna} and pICR2~\cite{ashenberg2017deep} to create pHW-Perth09-HA-G78D-T212I and pICR2-Perth09-HA-G78D-T212I.
+%DIFDELCMD < For all subsequent experiments, we used viruses with the HA containing these two mutations to improve titers and viral genetic stability, and this is the HA that we refer to as Perth/2009 in the manuscript text.
+%DIFDELCMD < We used all non-HA genes (including NA) from WSN/1933 to help increase titers and reduce biosafety concerns.
+%DIFDELCMD < 
+
+%DIFDELCMD < The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using the PCR-based approach described in \cite{bloom2014experimentally} with the primer melting-temperature modifications described in \cite{dingens2017comprehensive}, using two rounds of mutagenesis.
+%DIFDELCMD < The script to design the mutagenesis primers is at \url{https://github.com/jbloomlab/CodonTilingPrimers}.
+%DIFDELCMD < We created three independent libraries, one for each biological replicate.
+%DIFDELCMD < The mutant variants were then cloned at high efficiency into the pICR2~\cite{ashenberg2017deep} vector using digestion with BsmBI, ligation with T4 DNA ligase, and electroporation into ElectroMAX DH10B competent cells (Invitrogen 18290015).
+%DIFDELCMD < We obtained $>$6 million transformants for each replicate.
+%DIFDELCMD < We scraped the plates, expanded the cultures in liquid LB + ampicillin at 37$^{\circ}$C for 3 h with shaking, and then maxiprepped.
+%DIFDELCMD < We randomly chose 31 clones to Sanger sequence to evaluate the mutation rate (Figure~\ref{suppfig:SangerSeq}).
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Generation and passaging of mutant viruses}
+%DIFDELCMD < The mutant virus libraries were generated using the helper-virus approach described in \cite{doud2016accurate} with several modifications, most notably the cell line used.
+%DIFDELCMD < Briefly, we transfected $5 \times 10^5$ MDCK-SIAT1-TMPRSS2 cells in suspension with 937.5 ng each of four protein expression plasmids encoding the ribonucleoprotein complex (HDM-Nan95-PA, HDM-Nan95-PB1, HDM-Nan95-PB2, and HDM-Aichi68-NP)~\cite{gong2013stability}, and 1250 ng of one of the three pICR2-mutant-HA libraries (or the wildtype control) using Lipofectamine 3000 (ThermoFisher L3000008).
+%DIFDELCMD < We allowed the transfected cells to adhere in 6-well plates and four hours later changed the media to D10 media.
+%DIFDELCMD < Eighteen hours after transfection, we infected the cells with the WSN/1933 HA-deficient helper virus~\cite{doud2016accurate} by preparing an inoculum of 500 TCID$_{50}$ per $\mu$L of helper virus (as computed on HA-expressing cells) in IGM, aspirating the D10 media from the cells, and adding 2 mL of the helper-virus inoculum to each well.
+%DIFDELCMD < After three hours, we changed the media to fresh IGM.
+%DIFDELCMD < At 24 hours after helper-virus infection, we harvested the viral supernatants for each replicate, froze aliquots at -80$^{\circ}$C, and titered in MDCK-SIAT1-TMPRSS2 cells.
+%DIFDELCMD < The titers were 92, 536, 536, and 734 TCID$_{50}$ per $\mu$L for the three library replicates and the wildtype control, respectively.
+%DIFDELCMD < 
+
+%DIFDELCMD < We passaged $9 \times 10^5$ TCID$_{50}$ of the transfection supernatants at an MOI of 0.0035 TCID$_{50}$ per cell.
+%DIFDELCMD < To do this, we plated $4.6 \times 10^6$ MDCK-SIAT1-TMPRSS2 cells per dish in 15-cm dishes in D10 media, and allowed the cells to grow for 24 hours, at which time they were at $\sim 1.7 \times 10^7$ cells per dish.
+%DIFDELCMD < We replaced the media in each dish with 25 mL of an inoculum of 2.5 TCID$_{50}$ of virus per $\mu$L in IGM.
+%DIFDELCMD < We collected viral supernatant for sequencing 48 hours post-infection.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Barcoded subamplicon sequencing}
+%DIFDELCMD < To extract viral RNA from the three replicate HA virus libraries and the wildtype HA virus, we ultracentrifuged 24 mL of supernatant at 22,000 rpm for 1.5 h at 4$^{\circ}$C in a Beckman Coulter SW28 rotor, and extracted RNA using the Qiagen RNeasy Mini Kit by resuspending the viral pellet in 400 $\mu$L of buffer RLT supplemented with $\beta$-mercaptoethanol, pipetting 30 times, transferring the liquid to a microcentrifuge tube, adding 600 $\mu$L 70\% ethanol, and proceeding according to the manufacturer's instructions.
+%DIFDELCMD < The HA gene was reverse-transcribed with AccuScript Reverse Transcriptase (Agilent 200820) using primers P09-HA-For (5'-AGCAAAAGCAGGGGATAATTCTATTAATC-3') and P09-HA-Rev (5'-AGTAGAAACAAGGGTGTTTTTAATTACTAATACAC-3').
+%DIFDELCMD < 
+
+%DIFDELCMD < We generated the HA PCR amplicons for the three plasmid libraries, the three virus libraries, the wildtype plasmid control, and the wildtype virus control using KOD Hot Start Master Mix (EMD Millipore 71842) using the PCR reaction mixture and cycling conditions described in~\cite{bloom2014experimentally} and the P09-HA-For and P09-HA-Rev primers.
+%DIFDELCMD < We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite{wu2014high} to increase the accuracy from deep sequencing.
+%DIFDELCMD < The exact details of this approach are described in~\cite{doud2016accurate} (also see \url{https://jbloomlab.github.io/dms_tools2/bcsubamp.html}).
+%DIFDELCMD < The primers used to generate the subamplicons are in Dataset~\ref{suppdata:bcsubamp_primers}.
+%DIFDELCMD < We performed deep sequencing on a lane of an Illumina HiSeq 2500 using 2 $\times$ 250 bp paired-end reads in rapid-run mode.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Analysis of deep sequencing data}
+%DIFDELCMD < We used the \texttt{dms\_tools2} software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}, version \texttt{2.2.0}) to analyze the deep sequencing data.
+%DIFDELCMD < The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
+%DIFDELCMD < The amino-acid preferences for each replicate and for the re-scaled, across-replicate average are provided in Dataset~\ref{suppdata:prefsfiles}.
+%DIFDELCMD < Computer code that performs the entirety of this analysis and shows many detailed plots about read depth and other quality control metrics is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/analysis_notebook.ipynb}.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Phylogenetic model comparison and fitting of a stringency parameter}
+%DIFDELCMD < For the analysis in Table~\ref{tab:phydms}, we downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
+%DIFDELCMD < These sequences were aligned using MAFFT~\cite{katoh2013mafft} and used to infer a phylogenetic tree using RAxML~\cite{stamatakis2006raxml} with a GTRCAT model of nucleotide substitution.
+%DIFDELCMD < We then used \texttt{phydms}~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms}, version \texttt{2.2.1}) to fit the substitution models listed in Table~\ref{tab:phydms}.
+%DIFDELCMD < The amino-acid preferences were re-scaled by the stringency parameter using the approach described in \cite{hilton2017phydms}.
+%DIFDELCMD < 
+
+%DIFDELCMD < The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2018quantifying}.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Quantification of relative solvent accessibility}
+%DIFDELCMD < We quantified the absolute solvent accessibility of each site of the H3 HA (PDB 4O5N;~\cite{lee2014receptor}) or the H1 HA (PDB 1RVX;~\cite{gamblin2004structure}) structure using DSSP~\cite{kabsch1983}.
+%DIFDELCMD < We then normalized to a relative solvent accessibility using the absolute accessibilities in~\cite{tien2013}.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Quantification of mutational effects}
+%DIFDELCMD < We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
+%DIFDELCMD < The effect of mutating site $r$ from amino-acid $a_1$ to $a_2$ was calculated as
+%DIFDELCMD < \begin{displaymath}
+%DIFDELCMD < \log_2 \frac{\pi_{r,a_2}}{\pi_{r,a_1}}
+%DIFDELCMD < \end{displaymath}
+%DIFDELCMD < where $\pi_{r,a_1}$ and $\pi_{r,a_2}$ are the re-scaled preferences for amino acids $a_1$ or $a_2$ at site $r$ as shown in Figure~\ref{fig:logoplot}.
+%DIFDELCMD < The WSN/1933 H1 HA amino-acid preferences are the replicate-average values reported in \cite{doud2016accurate}, re-scaled by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum mutation frequencies}
+%DIFDELCMD < To generate the tree shown in Figure~\ref{suppfig:tree}, we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid} (see Dataset~\ref{suppdata:gisaid}), sampling six viruses per month over the time interval of January 1, 1968 to February 1, 2018.
+%DIFDELCMD < We aligned the resulting 2,189 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
+%DIFDELCMD < Ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
+%DIFDELCMD < The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/data/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
+%DIFDELCMD < The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
+%DIFDELCMD < 
+
+%DIFDELCMD < % notation for frequencies model
+%DIFDELCMD < \newcommand{\dx}{\mathrm{d}x}						% change in x
+%DIFDELCMD < \newcommand{\dy}{\mathrm{d}y}						% change in y
+%DIFDELCMD < \newcommand{\dt}{\mathrm{d}t}						% change in t
+%DIFDELCMD < \newcommand{\inertia}{\epsilon}			    % inertia parameter
+%DIFDELCMD < \newcommand{\normal}{\mathcal{N}}				% normal distribution
+%DIFDELCMD < 
+
+%DIFDELCMD < The frequency trajectory of each individual mutation on the phylogeny is estimated following Nextstrain's augur pipeline and as first implemented in Nextflu \cite{neher2015nextflu}.
+%DIFDELCMD < Herein, mutation frequency dynamics are modeled according to a Brownian motion diffusion process discretized to one-month intervals.
+%DIFDELCMD < Relative to a simple Brownian motion, the expectation includes an ``inertia'' term $\inertia$ that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
+%DIFDELCMD < This results in the following diffusion process
+%DIFDELCMD < \begin{displaymath}
+%DIFDELCMD < x(t+\dt) = \normal\big( x(t) + \inertia \, \dx , \; \dt \, \sigma^2 \, x(t) \, (1-x(t)) \big),
+%DIFDELCMD < \end{displaymath}
+%DIFDELCMD < with `volatility' parameter $\sigma^2$.
+%DIFDELCMD < The term $\dx$ is the increment in the previous timestep, so that $\dx = x(t) - x(t-\dt)$.
+%DIFDELCMD < We used $\inertia = 0.7$ and $\sigma^2 = 0.05$ to maximize fit to empirical trajectory behavior.
+%DIFDELCMD < 
+
+%DIFDELCMD < We also include an Bernoulli observation model for mutation presence / absence among sampled viruses at timestep $t$.
+%DIFDELCMD < This observation model follows
+%DIFDELCMD < \begin{displaymath}
+%DIFDELCMD < f(x,t) = \prod_{v\in V} x(t) \prod_{v\notin V} (1-x(t)),
+%DIFDELCMD < \end{displaymath}
+%DIFDELCMD < where $v\in V$ represents the set of viruses that have the mutation and $v\notin V$ represents the set of viruses that do not have the mutation.
+%DIFDELCMD < Each frequency trajectory is estimated by simultaneously maximizing the likelihood of the process model and the likelihood of the observation model via adjusting frequency trajectory $\mathbf{x}=(x_1, \ldots, x_n)$.
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Analysis of mutational shifts}
+%DIFDELCMD < To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using MAFFT~\cite{katoh2013mafft}.
+%DIFDELCMD < To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2018mapping} and used the RMSD$_{\text{corrected}}$ values as our quantification of the extent of each shift.
+%DIFDELCMD < 
+
+%DIFDELCMD < For the plots shown in Figure~\ref{fig:RMSD_heatmap}B, any residues falling between Cys-52 and Cys-277 were defined as the head domain, and all other residues were defined as the stalk domain.
+%DIFDELCMD < We used the multiple sequence alignment of the HA subtype sequences from \cite{doud2018quantifying} to identify sites that are absolutely conserved across all subtypes, or in the different clades described in Figure~\ref{fig:RMSD_heatmap}.
+%DIFDELCMD < 
+
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \matmethods{
 \subsection*{Data and computer code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610.
 Computer code used to analyze the data and produce the results in the paper are on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}.
@@ -577,6 +763,7 @@ Four hours after plating, we infected cells with dilutions of viral supernatant.
 At 16 hours post-infection, we selected wells with 1 to 10\% of cells that were GFP-positive and analyzed the fraction of GFP-positive cells by flow cytometry to calculate the titer of infectious particles per $\mu$L.
 
 }
+\DIFaddend 
 
 \showmatmethods{} % Display the Materials and Methods section
 
@@ -638,67 +825,52 @@ The blue line indicates the expected distribution if mutations in multiply mutat
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_WSNprefs_logoplot/supp_logoplots.pdf}}
-\caption{\label{suppfig:WSNprefs_logoplot}
-{\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA.}
-\comment{Get rid of unscaled Perth/2009 in this figure. It doesn't make sense to show them here. I've removed from legend; remove from the actual figure}
-The amino-acid preferences of the WSN/1933 H1 HA from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
-The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
-Note that \cite{doud2016accurate} used libraries in which all codons were mutagenized \emph{except} for the one encoding N-terminal methionine.
+\DIFdelbegin %DIFDELCMD < \centerline{\includegraphics[width=\textwidth]{figs/supp_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \centerline{\includegraphics[width=0.8\textwidth]{figs/supp_WSNprefs_logoplot/supp_logoplots.pdf}}
+\DIFaddend \caption{\label{suppfig:WSNprefs_logoplot}
+{\bf The site-specific amino-acid preferences of the \DIFaddbegin \DIFadd{Perth/2009 H3 HA and the }\DIFaddend WSN/1933 H1 HA\DIFaddbegin \DIFadd{.}}
+\DIFadd{(A) The un-scaled amino-acid preferences of the Perth/2009 H3 HA.
+The overlays show the same information }\DIFaddend as \DIFdelbegin \DIFdel{measured }\DIFdelend in \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{doud2016accurate}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{Figure~\ref{fig:logoplot} (domain, epitope site, and wildtype amino acid)}\DIFaddend .
+\DIFdelbegin %DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{(B) }\DIFaddend The amino-acid preferences \DIFaddbegin \DIFadd{of the WSN/1933 H1 HA }\DIFaddend from~\cite{doud2016accurate} after taking the average of the experimental replicates and re-scaling~\cite{hilton2017phydms} by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
+The \DIFdelbegin \DIFdel{sites are in H3 numbering.
+The }\DIFdelend overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
+\DIFaddbegin \DIFadd{Note that \mbox{%DIFAUXCMD
+\cite{doud2016accurate} }%DIFAUXCMD
+used libraries in which all codons were mutagenized }\emph{\DIFadd{except}} \DIFadd{for the one encoding N-terminal methionine.
 Therefore, no data is shown for the first codon in the gene.
-The sites are in H3 numbering.
+The sites are in H3 numbering for both logo plots.
+}\DIFaddend }
+\end{suppfigure}
+
+\begin{suppfigure}[H]
+\DIFdelbegin %DIFDELCMD < \centerline{\includegraphics[width=1.0\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_diffprefs/diffprefs.pdf}}
+\DIFaddend \caption{\DIFdelbegin %DIFDELCMD < \label{suppfig:tree}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \label{suppfig:diffprefs_logoplot}
+\DIFaddend {\bf \DIFdelbegin \DIFdel{A phylogenetic tree }\DIFdelend \DIFaddbegin \DIFadd{The differential preferences }\DIFaddend of \DIFdelbegin \DIFdel{all }\DIFdelend \DIFaddbegin \DIFadd{the Perth/2009 H3 }\DIFaddend HA \DIFdelbegin \DIFdel{sequences used in our analysis of mutation }\DIFdelend \DIFaddbegin \DIFadd{compared to amino-acid }\DIFaddend frequencies \DIFdelbegin \DIFdel{.}%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdel{HA sequences were sampled at }\DIFdelend \DIFaddbegin \DIFadd{from }\DIFaddend a \DIFdelbegin \DIFdel{rate }\DIFdelend \DIFaddbegin \DIFadd{sequence alignment }\DIFaddend of \DIFdelbegin \DIFdel{six viruses per month from January 1, 1968 through February 1, 2018.
+The Perth/2009 strain used in our experiments is indicated}\DIFdelend \DIFaddbegin \DIFadd{natural human H3}\DIFaddend .\DIFaddbegin }
+\DIFaddend The \DIFdelbegin \DIFdel{rest of }\DIFdelend \DIFaddbegin \DIFadd{differential preferences estimated by comparing }\DIFaddend the \DIFdelbegin \DIFdel{tree is partitioned into nodes that preceded the split of the }\DIFdelend Perth/2009 \DIFdelbegin \DIFdel{strain }\DIFdelend \DIFaddbegin \DIFadd{H3 HA preferences to amino-acid frequencies }\DIFaddend from \DIFdelbegin \DIFdel{the trunk }\DIFdelend \DIFaddbegin \DIFadd{a sequence alignment }\DIFaddend of \DIFdelbegin \DIFdel{the tree (blue) and nodes that branched off the trunk after the clade containing Perth/2009 (orange)}\DIFdelend \DIFaddbegin \DIFadd{natural human H3N2 HA sequences}\DIFaddend .
+\DIFdelbegin \DIFdel{In Figure~\ref{fig:muteffect_maxfreq}}\DIFdelend \DIFaddbegin \DIFadd{For each site}\DIFaddend , \DIFdelbegin \DIFdel{these two partitions }\DIFdelend \DIFaddbegin \DIFadd{the height }\DIFaddend of \DIFaddbegin \DIFadd{each letter above and below }\DIFaddend the \DIFdelbegin \DIFdel{tree are analyzed separately.
+Nodes }\DIFdelend \DIFaddbegin \DIFadd{line indicate how differentially preferred that amino acid is }\DIFaddend in \DIFdelbegin \DIFdel{the clade containing the Perth/2009 strain and nodes sampled in 2014 or after were excluded from }\DIFdelend our \DIFdelbegin \DIFdel{analyses}\DIFdelend \DIFaddbegin \DIFadd{experiments compared to in nature}\DIFaddend .
+The \DIFdelbegin \DIFdel{Perth/2009 strain was excluded to avoid artifacts related to mutations that occurred on }\DIFdelend \DIFaddbegin \DIFadd{overlays show }\DIFaddend the \DIFdelbegin \DIFdel{branches leading to the HA sequence used }\DIFdelend \DIFaddbegin \DIFadd{same information as }\DIFaddend in \DIFdelbegin \DIFdel{the experiment}\DIFdelend \DIFaddbegin \DIFadd{Figure~\ref{fig:logoplot} (domain and wildtype amino acid)}\DIFaddend .
+The \DIFdelbegin \DIFdel{post-2014 nodes were excluded because the evolutionary fates of many sequences after this date }\DIFdelend \DIFaddbegin \DIFadd{sites }\DIFaddend are \DIFdelbegin \DIFdel{not yet full resolved}\DIFdelend \DIFaddbegin \DIFadd{in H3 numbering}\DIFaddend .
 }
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.9\textwidth]{figs/supp_diffprefs/diffprefs.pdf}}
-\caption{\label{suppfig:diffprefs_logoplot}
-{\bf The differential preferences of the Perth/2009 H3 HA compared to amino-acid frequencies from a sequence alignment of natural human H3.}
-The differential preferences estimated by comparing the Perth/2009 H3 HA preferences to amino-acid frequencies from a sequence alignment of natural human H3N2 HA sequences.
-For each site, the height of each letter above and below the line indicate how differentially preferred that amino acid is in our experiments compared to in nature.
-The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
-The sites are in H3 numbering.
-}
-\end{suppfigure}
-
-\begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
-\caption{
-\comment{Just show the first panel (A) here, the others can go in later figures}
-{\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
-We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation \comment{what was it}), a conserved cysteine was mutated to alanine (C52A, codon mutation \comment{what was it?}), and the same cysteine was synonymously mutated (C52C, codon mutation \comment{what was it}).
-We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggests that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
-The synonymous C52C mutation is a negative control mutation that is not expected to have any effect.
-We then used reverse genetics to generate viruses carrying the wildtype HA or each point mutant, with GFP packaged in the PB1 segment to enable easy titering by flow cytometry~\cite{bloom2010permissive,hooper2013mutant}.
-Each variant was generated in duplicate.
-The plots show the viral titer in the supernatant at 53 hours post-transfection.
-As expected, the C52A virus is essentially non-viable, while the C52C mutation is roughly equivalent to wildtype.
-the M(-16)K mutation is only moderately attenuated, validating that the canonical start codon is not completely essential for viral growth.
-}
-\label{suppfig:startcodon_validation}
-\end{suppfigure}
-
-\begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
-\caption{\label{XXX}
-{\bf Viral titers of individual Perth/2009 H3 HA point mutants.}
-Influenza GFP viruses carrying wildtype or single point mutants of the Perth/2009 HA were rescued by reverse genetics in duplicate. 
-Viral transfection supernatant was harvested at 53 hours post-transfection and titered by flow cytometry in MDCK-SIAT1-TMPRSS2 cells.
-Note that the wildtype, C52A and C52C mutant virus titers shown in each panel represent the same duplicate measurements.
-The points mark each duplicate and the bar marks the mean.
-(A) The start codon mutant M(-16)K reaches titers approximately one log less than those of wildtype. 
-The C52A mutant fails to reach high titers, and the C52C synonymous variant grows to titers comparable to those of wildtype virus.
-(B) The transmembrane domain mutant C199(HA2)K grows to higher titers than the wildtype.
-(C) The T24F and T40V mutants, which remove glycosylation motifs, attain titers similar to or higher than wildtype, respectively. 
-The S287A mutant, which also removes a glycosylation motif, does not grow as well as wildtype virus.
-}
-\end{suppfigure}
-
-\begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.9\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
+\DIFaddbegin \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
-{\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
-(A) HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
+{\bf \DIFadd{A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}}
+\DIFadd{(A) HA sequences were sampled at a rate of six viruses per month from January 1, 1968 through February 1, 2018.
 The Perth/2009 strain used in our experiments is indicated.
 The rest of the tree is partitioned into nodes that preceded the split of the Perth/2009 strain from the trunk of the tree (blue) and nodes that branched off the trunk after the clade containing Perth/2009 (orange).
 In Figure~\ref{fig:muteffect_maxfreq}, these two partitions of the tree are analyzed separately.
@@ -706,11 +878,11 @@ Nodes in the clade containing the Perth/2009 strain and nodes sampled in 2014 or
 The Perth/2009 strain was excluded to avoid artifacts related to mutations that occurred on the branches leading to the HA sequence used in the experiment.
 The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet full resolved.
 (B) The post-Perth/2009 partition of the tree containing only sequences from unpassaged isolates.
-}
+}}
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.75\textwidth]{figs/supp_head_stalk_RSA/head_stalk_RSA.pdf}}
+\DIFaddend \centerline{\includegraphics[width=0.75\textwidth]{figs/supp_head_stalk_RSA/head_stalk_RSA.pdf}}
 \caption{\label{suppfig:head_stalk_RSA}
 {\bf Mutational tolerances of the head and stalk domains at various relative solvent accessibility cutoffs.}
 The mutational tolerances of the head and stalk domains show less disparity for the Perth/2009 H3 HA compared to those for the WSN/1933 H1 HA.
@@ -731,19 +903,33 @@ This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref
 }
 \end{suppfigure}
 
-\begin{suppfigure}[H]
+\DIFaddbegin \begin{suppfigure}[H]
 \centerline{\includegraphics[width=0.5\textwidth]{figs/supp_head_stalk_mutfreq/head_stalk_mutfreq.pdf}}
 \caption{\label{suppfig:head_stalk_mutfreq_supp}
-{\bf Frequency trajectories of head and stalk domain mutations.}
-(A) This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:frequency_trajectory}, but colors amino-acid mutations by whether they occur in the head (purple) or the stalk (blue) domain.
+{\bf \DIFadd{Frequency trajectories of head and stalk domain mutations.}}
+\DIFadd{(A) This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:frequency_trajectory}, but colors amino-acid mutations by whether they occur in the head (purple) or the stalk (blue) domain.
 (B) Histogram of mutation maximum frequencies by the number of nodes for head and stalk domain mutations.
 It is clear that mutations in the head domain are more numerous than those in the stalk.
-}
+}}
 \end{suppfigure}
 
+\begin{suppfigure}[H]
+\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\caption{\label{suppfig:point_mut_validation_supp}
+{\bf \DIFadd{Viral titers of individual Perth/2009 H3 HA point mutants.}}
+\DIFadd{Influenza GFP viruses carrying wildtype or single point mutants of the Perth/2009 HA were rescued by reverse genetics in duplicate. 
+Viral transfection supernatant was harvested at 53 hours post-transfection and titered by flow cytometry in MDCK-SIAT1-TMPRSS2 cells.
+Note that the wildtype, C52A and C52C mutant virus titers shown in each panel represent the same duplicate measurements.
+The points mark each duplicate and the bar marks the mean.
+(A) The start codon mutant M(-16)K reaches titers approximately one log less than those of wildtype. 
+The C52A mutant fails to reach high titers, and the C52C synonymous variant grows to titers comparable to those of wildtype virus.
+(B) The transmembrane domain mutant C199(HA2)K grows to higher titers than the wildtype.
+(C) The T24F and T40V mutants, which remove glycosylation motifs, attain titers similar to or higher than wildtype, respectively. 
+The S287A mutant, which also removes a glycosylation motif, does not grow as well as wildtype virus.
+}}
+\end{suppfigure}
 
-
-\begin{suppdata}[H]
+\DIFaddend \begin{suppdata}[H]
 \caption{\label{suppdata:PerthHA}
 Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth09-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.
 }
@@ -760,7 +946,7 @@ Excel file providing the primers used to generate the barcoded subamplicons for 
 Excel file giving the amino-acid preferences in sequential 1, 2, ... numbering of the Perth/2009 HA.
 The unscaled preferences for replicates 1, 2, 3-1, and 3-2 are each in a separate tab of the file.
 Additional tabs give the across-replicate averaged and re-scaled amino-acid preferences in sequential numbering and in H3 numbering as shown in Figure~\ref{fig:logoplot}.
-There are also tabs that give the conversion from sequential to H3 numbering, and a list of the mutations in the 31 clones we Sanger sequenced to evaluate the mutation rate of the mutant plasmid libraries.
+There are also tabs that give the conversion from sequential to H3 numbering\DIFaddbegin \DIFadd{, and a list of the mutations in the 31 clones we Sanger sequenced to evaluate the mutation rate of the mutant plasmid libraries}\DIFaddend .
 Each tab can simply be exported to CSV for computational analyses.
 }
 \end{suppdata}
