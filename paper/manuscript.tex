@@ -478,7 +478,11 @@ We passaged $9 \times 10^5$ TCID$_{50}$ of the transfection supernatants at an M
 To do this, we plated $4.6 \times 10^6$ MDCK-SIAT1-TMPRSS2 cells per dish in fifteen 15-cm dishes in D10 media, and allowed the cells to grow for 24 hours, at which time they were at $\sim 1.7 \times 10^7$ cells per dish.
 We replaced the media in each dish with 25 mL of an inoculum of 2.5 TCID$_{50}$ of virus per $\mu$L in IGM.
 Three hours post-infection, we replaced the inoculum with fresh IGM for replicates 1, 2, and 3-2.
+We did not perform a media change for replicate 3-1.
+As can be seen in Figure~\ref{fig:dms_overview}D, the media change does not appear to have a substantial effect, as replicate 3-1 looks comparable to the other replicates.
 We collected viral supernatant for sequencing 48 hours post-infection.
+
+Full lab notes from these experiments are at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/tree/master/lab_notes}.
 
 \subsection*{Barcoded subamplicon sequencing}
 To extract viral RNA from the three replicate HA virus libraries and the wildtype HA virus, we clarified the viral supernatant by centrifuging at 2000 x \textit{g} for five minutes, then ultracentrifuged 24 mL of the clarified supernatant at 22,000 rpm for 1.5 h at 4$^{\circ}$C in a Beckman Coulter SW28 rotor, and extracted RNA using the Qiagen RNeasy Mini Kit by resuspending the viral pellet in 400 $\mu$L of buffer RLT supplemented with $\beta$-mercaptoethanol, pipetting 30 times, transferring the liquid to a microcentrifuge tube, adding 600 $\mu$L 70\% ethanol, and proceeding according to the manufacturer's instructions.
@@ -489,6 +493,8 @@ We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite
 The exact details of this approach are described in~\cite{doud2016accurate} (also see \url{https://jbloomlab.github.io/dms_tools2/bcsubamp.html}).
 The primers used to generate the subamplicons are in Dataset~\ref{suppdata:bcsubamp_primers}.
 We performed deep sequencing on a lane of an Illumina HiSeq 2500 using 2 $\times$ 250 bp paired-end reads in rapid-run mode.
+
+Full lab notes for the library preparation are at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/tree/master/lab_notes}.
 
 \subsection*{Analysis of deep sequencing data}
 We used the \texttt{dms\_tools2} software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}, version \texttt{2.2.0}) to analyze the deep sequencing data.

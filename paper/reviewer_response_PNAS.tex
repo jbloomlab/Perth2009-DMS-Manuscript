@@ -130,60 +130,79 @@ The unscaled amino-acid preferences for each replicate are also provided in nume
 7) The biggest issue with the manuscript is the experimental set up. The authors titrate their rescued virus using a TCID50 assay on MDCK cells. Based on the titer that they measure, they passage the virus from the initial rescue once onto fresh MDCK cells using a low MOI. After infection, the virus dilution stays on the cells and is then harvested without centrifugation followed by RNA extraction and sequencing. There are many issue with this process. 
 
 \response{The reviewer has a number of questions and suggestions about the experimental design.
-Over the last few years, we have performed a number of studies optimizing procedures for deep mutational scanning of influenza virus libraries (see PMIDs 24859245, 25006036, 27271655) during which we have carefully considered all of the experimental parameters that the reviewer discusses.
-Below we briefly explain why each of our choices for these experimental parameters were appropriate.
-We do not deny that there are slightly different ways that the experiments could be done, but the in end, the ``proof is in the pudding.'' 
-In the manuscript, we show that the measurements made using the experimental parameters that we chose lead to useful data as judged by the following criterion:
-\begin{itemize}
-\item The results from fully independent experimental replicates are highly correlated (Fig.~1D), which would not be the case if the results were dominated by noise.
-\item The experimental measurements do a good job of predicting the effects of individually validated mutations, as shown in Figure S8.
-\item The experimental measurements can inform substitution models that describe influenza virus's evolution much better than standard models (Table~1).
-\item The experimental measurements provide information that can help predict the fates of influenza virus lineages in nature (Fig.~5).
-\end{itemize}
-We do not claim that other experimental parameter choices might not lead to equivalent or even slightly better results, but we have carefully considered all of our choices and clearly they lead to very good results.
+Some of these suggestions are things that were already implemented in our experiments and we simply failed to explain in adequate detail, while others are things that we have evidence are unimportant. 
+Below we describe the issues one-by-one.
 
-Below we explain our reasoning for each choice about which the reviewer makes suggestions:
+In addition, we have now included our \emph{full original lab notes} for the relevant experiments (\url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/tree/master/lab_notes}) so that readers can examine everything that we did in full detail.
+This level of transparency goes well beyond that usually taken in scientific papers, and will enable readers to fully understand our reasoning and procedures for each detail of the experiments.
 }
 
 a) The TCID50 is likely underestimating the number of virus particles with HA genomic segments because not all of them (likely the minority) will be capable of inducting a full infectious cycle (but their presence might still be detected in the cell supernatants). 
 
 \response{The reviewer is certainly correct that TCID50 assays underestimate the number of HA genomic segments, as it is well known that the number of physical influenza virions exceeds the number of infectious units by 10-100 fold.
 This is why we used an extremely low MOI (0.0035) so that most cells are still infected by no more than one virion.
-It is impossible to ever grow a viral stock that is completely free of defective particles.
+It is impossible to grow a viral stock that is completely free of defective particles.
 However, in both our original rescue with helper virus and in the passage, we follow the steps suggested by Carolina Lopez and Scott Hensley (PMID 27047455) to minimize defective particles.
-These include low MOI (0.0035 TCID50 per cell is quite low), short growth times to avoid accumulation of defective particles (the helper-virus rescue was allowed to propagate for just 24 hours, and the low-MOI passage for just 48 hours), and replacing the media three hours post-infection to remove residual defective particles.
+These include low MOI (0.0035 TCID50 per cell is quite low), short growth times to avoid accumulation of defective particles (the helper-virus rescue was allowed to propagate for just 24 hours, and the low-MOI passage for just 48 hours).
+
+In short, the presence of non-infectious particles is an inherent feature of all virology work.
+The best that can be done is to use MOIs and growth times that ensure that they do not dominate the experiments, and we have done that.
 }
 
 b) The infectious inoculum is never washed off the infected cells meaning that any particles that are transferred from the rescue transfection are going to be detected during sequencing. This might even apply to naked RNPs released from dead cells. 
 
-\response{For biological replicates 1, 2, and 3-2, we replaced the original infectious inoculum with 25 mL fresh IGM three hours post-infection.
-For replicate 3-1, we did not change the media. 
-However, for this replicate, the original inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing.
-Specifically, in the original inoculum placed on the cells, the titer is 2.5 TCID50 / ul, whereas at the time of supernatant collection for sequencing the titer is 32 TCID50 / ul for unconcentrated virus but 400 TCID50 / ul for the concentrated virus.
-Therefore, the original inoculum constitutes just 8\% of the viral titer at the time of collection, and therefore makes a negligible contribution to the sequenced material.
-We deeply apologize for not including this crucial step in the Methods, and have updated the Methods to now include completion of this step. 
-We have also included in the GitHub repository a PDF of the lab notebook describing the rescue and passage of the mutant virus libraries at %\url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/lab_notes/Perth09%20HA%20Library%20Rescue.pdf} (relevant details of the notebook can be found in pages 20-25).
+\response{
+We apologize for not expanding on this detail in the Methods of the original paper.
+
+In fact, like the reviewer, we initially thought that a media change to wash aways the inoculum might be important. 
+Therefore, in our experiments, we performed such a media change to remove the initial inoculum for biological replicates 1 and 2, and for one of the technical replicates (3-2) of biological replicate 3.
+We did not perform such a change for the other technical replicate (3-2) of biological replicate 3.
+It turns out that the media change makes no discernible difference, which is why we neglected to expand on this point in the original manuscript. 
+We now have added the following explanatory text to the Methods:
+
+\begin{quote}
+\textsl{Three hours post-infection, we replaced the inoculum with fresh media for replicates 1, 2, and 3-2.
+We did not perform a media change for replicate 3-1.
+As can be seen in Figure~1D, the media change does not appear to have a substantial effect, as replicate 3-1 looks comparable to the other replicates.
+}
+\end{quote}
+The full details of the media changes can be found in the lab notes we have included at We have also included in the GitHub repository a PDF of the lab notebook describing the rescue and passage of the mutant virus libraries at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/lab_notes/Perth09_HA_Library_Rescue.pdf} (relevant details of the notebook can be found in pages 21-25).
+
+We think that the reason that washing away the original inoculum has no discernible effect on the results it that the low concentration of virus in the inoculum makes a negligible contribution to the total number of virions that are present at the time of sequencing, since vastly more new virions are produced from the infected cells.
 }
 
 c) This would actually not be an issue, if the dilution from the rescue culture to the new culture would be large enough. But this is not the case. The authors passaged $9\times10^5$ TCID50 (and likely much more DIs/RNA) from the rescue cultures onto the new cells in a volume of 25 ml. This is, depending on experiment, between 10 and 1 ml of supernatant of the original rescue and leads to a 1:2.5 or 1:25 dilution respectively. 
 
-\response{We passaged for each mutant virus library $9\times10^5$ TCID50 total across 15 $\times$ 15-cm dishes.
+\response{
+We apologize if the original wording of our methods were unclear. 
+For each mutant virus library, we passaged a total of $9\times10^5$ TCID50, but this was passaged across \emph{fifteen} 15-cm dishes \emph{each} of which received 25 ml.
 Because we used an inoculum of 2.5 TCID50 / $\mu$l across these fifteen dishes, this corresponds to dilutions that range from 1:37 to 1:294.
-The quantity of dishes used to passage each mutant virus library is now mentioned in the Methods.
+The number of dishes used to passage each mutant virus library is now mentioned in the Methods; before it had to be calculated from the stated total number of cells and the cells per dish.
+
+Also, we note that the supernatants from the helper virus rescues are collected at just 24 hours post-infection, which leads to lower viral titers (which is why we have to passage relatively large volumes), but also presumably much lower amounts of DIs / RNA.
+This is probably the reason why (as described above), we did removing the inoculum did not yield discernibly affect the results.
 }
 
 d) The supernatant is never centrifuged before RNA extraction. Cell debris is not removed which is likely contributing significantly to RNA sequences detected in the supernatant. However, RNA associated with cell debris is not representative of RNA from fit, replicating viruses. 
 
-\response{We clarified the viral supernatant before RNA extraction by centrifuging the supernatant at 2000 $\times$ \textit{g} for five minutes to remove any cellular debris.
-We failed to mention this step in the Methods, and again deeply apologize for this critical oversight.
-We have updated the Methods to now include mention of this step.
+\response{We apologize for failing to provide sufficiently detailed methods stating that we ultra-centrifuged \emph{clarified} the viral supernatant before RNA extraction.
+The supernatant was clarified by centrifugation at 2000 $\times$ \textit{g} for five minutes to remove any cellular debris, similar to the reviewer's suggestions.
+We have updated the Methods to now include this detail, and (as mentioned above) also now include our full lab notes so that all other details can be reviewed.
+Specifically, see \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/lab_notes/Perth09_HA_Library_Rescue.pdf} (relevant details of the notebook can be found in pages 21-25)
 }
 
 The experiments should be repeated with at least one more passaging step, proper removal of inoculum and washing of the cells after infection. Centrifugation steps should also be included between the passages and before RNA extraction in the end. 
 
 \response{For the reasons described above, it is not necessary to totally repeat the experiments.
-Certainly other experimental parameter choices could have been used, but this is always the case for complex experiments.
-Our choices are reasonable, and the four lines of evidence listed at the beginning of this comment show that they yield reproducible and meaningful results.}
+We do not deny that there are slightly different ways that the experiments could be done, but the in end, the ``proof is in the pudding.'' 
+In the manuscript, we show that the measurements made using the experimental parameters that we chose lead to useful data as judged by the following criterion:
+\begin{itemize}
+\item The results from fully independent experimental replicates are highly correlated (Fig.~1D), which would not be the case if the results were dominated by noise.
+\item The experimental measurements can inform substitution models that describe influenza virus's evolution much better than standard models (Table~1).
+\item The experimental measurements provide information that can help predict the fates of influenza virus lineages in nature (Fig.~5).
+\end{itemize}
+For any experimental study there are an almost infinite number of slight methodological variations that could be employed, and it is impossible to test them all.
+Our experiments used reasonable parameter choices, were performed in full biological triplicate, and give meaningful / useful results with respect to the larger goals of the study.}
 
 \subsubsection*{Minor points} 
 
