@@ -233,7 +233,7 @@ Most surprisingly, the start codon does not show a particularly strong preferenc
 We validated that a virus carrying a mutation at this site from methionine to lysine does in fact reach appreciable titers (Figure~\ref{suppfig:startcodon_validation}), perhaps because of alternative translation-initiation at a downstream or upstream start site as has been described for other HAs~\cite{girard2011upstream}.
 Our measurements also suggest mutational tolerance at some other sites that are relatively conserved among natural HAs, such as the N-linked glycosylation motifs near the beginning of HA1 and the transmembrane domain (Figure~\ref{fig:logoplot}).
 We validated that viruses with mutations to the glycosylation motifs at sites 22 or 38, or a site in the transmembrane domain, do in fact grow to high titers (Figures~\ref{suppfig:glycan_validation} and \ref{suppfig:TM_validation}, respectively).
-The disparity between the relative conservation of these sites in nature and their mutational tolerance in our study could be because cell culture does not fully capture the constraints on HA function on nature, or could be because these sites are not under strong immune pressure and so mutations to them are not positively selected in nature.
+The disparity between the relative conservation of these sites in nature and their mutational tolerance in our study could be because cell culture does not fully capture the constraints on HA function in nature, or could be because these sites are not under strong immune pressure and so mutations at them are not positively selected in nature.
 
 \subsection*{There is less difference in mutational tolerance between the HA head and stalk domains for H3 than for H1}
 Our experiments measure which amino acids are tolerated at each HA site under selection for viral growth.
@@ -285,7 +285,7 @@ The analysis is performed separately for pre-Perth/2009, post-Perth/2009, and un
 \subsection*{Our measurements can help distinguish between mutations that reach low and high frequencies in nature}
 Mutations occurring in the H3N2 virus population experience widely varying evolutionary fates (Figure~\ref{fig:frequency_trajectory}).
 Some mutations appear, spread and fix in the population, while others briefly circulate before disappearing.
-We take the maximum frequency reached by a mutation as a coarse indicator of its effect on fitness, since favorable mutations generally reach higher frequency than unfavorable ones~\cite{ewens2012mathematical}.
+We take the maximum frequency reached by a mutation as a coarse indicator of its effect on fitness, since favorable mutations generally reach higher frequencies than unfavorable ones~\cite{ewens2012mathematical}.
 Here, we follow the population genetic definition of \textit{mutation} and track the outcome of each individual mutation event, e.g.\ although R142G occurs multiple times on the phylogeny we track each of these mutations occurring on different backgrounds separately.
 As such, each mutation is shown as a separate circle on a separate branch in Figure \ref{fig:frequency_trajectory}.
 However, because multiple mutations on the same phylogeny branch cannot be disentangled, when multiple mutations occurred on a single branch, we assigned a single mutational effect based on the sum of effects of each mutation.
@@ -295,7 +295,7 @@ After annotating mutations and their frequencies on the phylogeny in this way (F
 We next sought to quantify the correlation between a mutation's experimentally measured effect and the maximum frequency it attained during natural evolution.
 To calculate a given mutation's effect, we simply took the logarithm of the ratio of the preferences for the mutant and wildtype amino acids at that site.
 To minimize effects related to the genetic background of the strain used in the experiment, we excluded mutations closely related to the experimental strain itself and partitioned the remaining mutations into 1,022 mutations pre-dating and 299 mutations post-dating the Perth/2009 strain (Figure~\ref{suppfig:tree}).
-We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after that have not had enough time for their evolutionary fates to be fully resolved.
+We additionally excluded mutations from the post-Perth partition that were sampled in 2014 or after, since these mutations have not had enough time for their evolutionary fates to be fully resolved.
 We used these pre-Perth and post-Perth partitions to test the utility of our measurements for both post-hoc and prospective analyses, respectively.
 We quantified the relationship between mutational effects and maximum mutation frequencies in the H3N2 phylogeny via Spearman rank correlation (Figure~\ref{fig:muteffect_maxfreq}A).
 In both pre-Perth and post-Perth time periods, we found a modest, but statistically significant relationship between mutational effect and maximum mutation frequency (pre-Perth $\rho = 0.17$, post-Perth $\rho = 0.15$). 
@@ -311,21 +311,21 @@ Figure~\ref{fig:muteffect_maxfreq}A shows that the correlation between our measu
 \includegraphics[width=12cm]{figs/muteffect_by_maxfreq_WSN/muteffect_by_maxfreq_WSN.pdf}
 \caption{\label{fig:muteffect_maxfreq_WSN}
 {\bf Experimental measurements on an H1 HA are not informative about the evolutionary fate of H3N2 mutations.}
-This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}, i.e.\
+This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}A, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
 Figure~\ref{suppfig:muteffect_maxfreq_WSN_supp} shows the histograms comparable to those in Figure~\ref{fig:muteffect_maxfreq}B.
-The empirical $P$-value represents the results of 1,000 permutations.
+The empirical $P$-value represents the result of 1,000 permutations.
 }
 \end{SCfigure*}
 
 The trends in Figure~\ref{fig:muteffect_maxfreq}A are most strongly driven by the behavior of substantially deleterious mutations.
 We investigated this further by partitioning mutations into those that reach low, medium and high frequencies, and those that fix in the population (Figure~\ref{fig:muteffect_maxfreq}B).
-The mutations that reach higher frequency have a more favorable mean effect.
+The mutations that reach higher frequencies have a more favorable mean effect.
 Mutations measured to be substantially deleterious almost never reach high frequency.
 Overall, these results demonstrate that measurements of how mutations affect viral growth in cell culture are informative for understanding the fates of these mutations in nature: in particular, if a mutation is measurably deleterious to viral growth, that mutation is unlikely to prosper in nature.
 
 \subsection*{Measurements made on an H1 HA are not useful for understanding the evolution of H3 influenza}
 To determine how broadly experimental measurements can be generalized across HAs, we repeated the foregoing analysis of H3N2 mutation frequencies, but using mutational effects measured in our prior deep mutational scanning of the WSN/1933 H1 HA~\cite{doud2016accurate} (Figure~\ref{suppfig:WSNprefs_logoplot}), which is highly diverged from the Perth/2009 H3 HA (the two HAs only have 42\% protein sequence identity).
-Figure~\ref{fig:muteffect_maxfreq_WSN} shows that there is no correlation between the H1 experimental measurements and maximum frequency that mutations reach during H3N2 viral evolution.
+Figure~\ref{fig:muteffect_maxfreq_WSN} shows that there is no correlation between the H1 experimental measurements and maximum frequency that mutations reach during H3N2 viral evolution, and only a weak correlation with mutations from unpassaged viral isolates.
 Therefore, the utility of an experiment for understanding natural evolution degrades as the experimental sequence becomes more diverged from the natural sequences that are being studied.
 
 \begin{SCfigure*}[\sidecaptionrelwidth][b]
@@ -438,10 +438,10 @@ Sites are in H3 numbering, with the signal peptide in negative numbers, HA1 in p
 
 \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cells}
 When growing influenza virus in cell culture, trypsin is normally added to cleave HA into its mature form.
-To obviate the need for trypsin, we engineered MDCK-SIAT1 cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
+To obviate the need for trypsin, we engineered MDCK-SIAT1 cells and MDCK-SIAT1-CMV-PB1 cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
 The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656) and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter followed by an IRES driving expression of mCherry to create plasmid pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
-We used the lentiviral vector to transduce MDCK-SIAT1 cells, and sorted an intermediate mCherry-positive population by flow cytometry.
-We refer to the sorted bulk population as MDCK-SIAT1-TMPRSS2 cells.
+We used the lentiviral vector to transduce MDCK-SIAT1 or MDCK-SIAT1-CMV-PB1 cells, and sorted an intermediate mCherry-positive population by flow cytometry.
+We refer to the sorted bulk population as MDCK-SIAT1-TMPRSS2 cells or MDCK-SIAT1-CMV-PB1-TMPRSS2 cells.
 There is no selectable marker for the TMPRSS2; however, we maintain the cells at low passage number, and have seen no indication that they lose their ability to support the growth of viruses with H3 HAs in the absence of exogenous trypsin.
 
 \subsection*{Generation of HA codon mutant plasmid libraries}
@@ -517,7 +517,7 @@ We then normalized to a relative solvent accessibility using the absolute access
 
 \subsection*{Quantification of mutational effects}
 We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
-The effect of mutating site $r$ from amino-acid $a_1$ to $a_2$ was calculated as
+The effect of mutating site $r$ from amino acid $a_1$ to $a_2$ was calculated as
 \begin{equation}
 \label{eq:muteffect}
 \log_2 \frac{\pi_{r,a_2}}{\pi_{r,a_1}}
@@ -561,7 +561,7 @@ Each frequency trajectory is estimated by simultaneously maximizing the likeliho
 
 We also repeated the above analyses using only viruses that were sequenced directly without passaging.
 Routine direct sequencing did not begin until the early 2000s \cite{mcwhite2016sequence}.
-To construct a tree with a similar number of viruses as the original analysis, we sampled 30 viruses per month between January 1, 2000 and April 1, 2018, producing a tree with 2,374 unpassaged viruses with augur (commit: 6d9f708).
+To construct a tree with a similar number of viruses as the original analysis, we sampled 30 viruses per month between January 1, 2000 and April 1, 2018, producing a tree with 2,374 unpassaged viruses with augur (commit: \texttt{6d9f708}).
 We included the passaged DMS strain, A/Perth/16/2009, in the resulting tree to enable comparison between pre-Perth and post-Perth clades.
 
 \subsection*{Analysis of mutational shifts}
@@ -572,9 +572,9 @@ For the plots shown in Figure~\ref{fig:RMSD_heatmap}B, any residues falling betw
 We used the multiple sequence alignment of the HA subtype sequences from \cite{doud2018quantifying} to identify sites that are absolutely conserved across all subtypes, or in the different clades described in Figure~\ref{fig:RMSD_heatmap}.
 
 \subsection*{Validation of individual point mutants}
-To validate the viral growth of Perth/2009 HA point mutants M(-16)K, C52A, C52C, C199(HA2)K, T24F, T40V, and S287A, we used site-directed mutagenesis to introduce the amino-acid mutation into the Perth/2009 HA bidirectional reverse genetics plasmid, and verified the sequence of two clones for each mutant by Sanger sequencing.
+To validate the viral growth of Perth/2009 HA point mutants M(-16)K, C52A, C52C, T24F, T40V, S287A, and C199(HA2)K, we used site-directed mutagenesis to introduce the amino-acid mutation into the Perth/2009 HA bidirectional reverse genetics plasmid, and verified the sequence of two clones for each mutant by Sanger sequencing.
 We generated these individual mutant viruses carrying GFP in the PB1 segment using a protocol described in \cite{bloom2010permissive,hooper2013mutant}, and the PB2, PA, NP, NA, M, and NS segments of the A/WSN/1933 (H1N1) strain.
-To rescue each mutant GFP-carrying virus in duplicate, we transfected a co-culture of $4 \times 10^5$ 293T-CMV-PB1 and $0.5 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells with the eight reverse genetics plasmid and the pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W plasmid.
+To rescue each mutant GFP-carrying virus in duplicate, we transfected a co-culture of $4 \times 10^5$ 293T-CMV-PB1 and $0.5 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells with the eight reverse genetics plasmids and the pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W plasmid.
 Each well received a transfection mixture of 100 $\mu$L DMEM, 3 $\mu$L BioT transfection reagent, and 250 ng of each plasmid.
 We changed the media in each well with 2 mL IGM eight hours post-transfection.
 At 53 hours post-transfection, transfection supernatants were harvested, clarified by centrifugation at 2000 $\times$ \textit{g} for five minutes, aliquoted, and frozen at -80$^\circ$C.
@@ -651,7 +651,7 @@ The blue line indicates the expected distribution if mutations in multiply mutat
 \caption{\label{suppfig:diffprefs_logoplot}
 {\bf Sites where there are strong differences between our experimental measurements and the amino-acid frequencies among natural HA sequences.}
 We calculated the distance between our H3 measurements and the alignment frequencies using the same approach as in Figure~\ref{fig:distance_distribution}, but using the alignment frequencies in place of the H1 preferences.
-For each site, the height of each letter above or below the line indicate how much more or less preferred that amino acid is in our experiments compared to its frequency nature.
+For each site, the height of each letter above or below the line indicates how much more or less preferred that amino acid is in our experiments compared to its frequency nature.
 The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
 The sites are in H3 numbering.
 The HA alignment used to calculate the natural frequencies is the same one used in Table~\ref{tab:phydms}.
@@ -663,12 +663,12 @@ The HA alignment used to calculate the natural frequencies is the same one used 
 \caption{
 {\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
 We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation ATG(-16)AAA), a conserved cysteine was mutated to alanine (C52A, codon mutation TGC52GCA), and the same cysteine was synonymously mutated (C52C, codon mutation TGC52TGT).
-We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggests that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
+We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggest that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
 The synonymous C52C mutation is a negative control mutation that is not expected to have any effect.
 We then used reverse genetics to generate viruses carrying the wildtype HA or each point mutant, with GFP packaged in the PB1 segment to enable easy titering by flow cytometry~\cite{bloom2010permissive,hooper2013mutant}.
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 As expected, the C52A virus is essentially non-viable, while the C52C mutation is roughly equivalent to wildtype.
-the M(-16)K mutation is only moderately attenuated, validating that the canonical start codon is not completely essential for viral growth.
+The M(-16)K mutation is only moderately attenuated, validating that the canonical start codon is not completely essential for viral growth.
 }
 \label{suppfig:startcodon_validation}
 \end{suppfigure}
@@ -689,9 +689,9 @@ The viruses with mutations at the motifs at residues 22 and 38 reached titers at
 \caption{\label{suppfig:TM_validation}
 {\bf Validation of the mutational tolerance of a site in the transmembrane domain.}
 We created a variant of the Perth/2009 HA with a transmembrane domain mutation, C199(HA2)K, at a site that our deep mutational scanning suggests should be highly mutationally tolerant (Figure~\ref{fig:logoplot}).
-We then used reverse genetics to generate viruses carrying the wildtype HA or this mutants
+We then used reverse genetics to generate viruses carrying the wildtype HA or this mutant.
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
-The virus the mutation reached titers comparable to wildtype.
+The virus with the mutation reached titers comparable to wildtype.
 }
 \end{suppfigure}
 
@@ -719,7 +719,7 @@ The rest of the tree is partitioned into nodes that preceded the split of the Pe
 In Figure~\ref{fig:muteffect_maxfreq}, these two partitions of the tree are analyzed separately.
 Nodes in the clade containing the Perth/2009 strain and nodes sampled in 2014 or after were excluded from our analyses.
 The Perth/2009 strain was excluded to avoid artifacts related to mutations that occurred on the branches leading to the HA sequence used in the experiment.
-The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet full resolved.
+The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet fully resolved.
 (B) The post-Perth/2009 partition of the tree containing only sequences from unpassaged isolates.
 }
 \end{suppfigure}
