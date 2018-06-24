@@ -438,7 +438,7 @@ Sites are in H3 numbering, with the signal peptide in negative numbers, HA1 in p
 
 \subsection*{Creation of MDCK-SIAT1-TMPRSS2 cells}
 When growing influenza virus in cell culture, trypsin is normally added to cleave HA into its mature form.
-To obviate the need for trypsin, we engineered MDCK-SIAT1 cells and MDCK-SIAT1-CMV-PB1 cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
+To obviate the need for trypsin, we engineered MDCK-SIAT1 cells and MDCK-SIAT1-CMV-PB1~\cite{bloom2010permissive} cells to constitutively express the TMPRSS2 protease, which cleaves and activates HA in the human airways~\cite{bottcher2006proteolytic,bottcher2010cleavage}.
 The human TMPRSS2 cDNA ORF was ordered from OriGene (NM\_005656) and cloned into a pHAGE2 lentiviral vector under an EF1$\alpha$-Int promoter followed by an IRES driving expression of mCherry to create plasmid pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W.
 We used the lentiviral vector to transduce MDCK-SIAT1 or MDCK-SIAT1-CMV-PB1 cells, and sorted an intermediate mCherry-positive population by flow cytometry.
 We refer to the sorted bulk population as MDCK-SIAT1-TMPRSS2 cells or MDCK-SIAT1-CMV-PB1-TMPRSS2 cells.
@@ -662,7 +662,7 @@ The HA alignment used to calculate the natural frequencies is the same one used 
 \centerline{\includegraphics[width=0.4\textwidth]{figs/supp_point_mut_validation/startcodon_titers.pdf}}
 \caption{
 {\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
-We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation ATG(-16)AAA), a conserved cysteine was mutated to alanine (C52A, codon mutation TGC52GCA), and the same cysteine was synonymously mutated (C52C, codon mutation TGC52TGT).
+We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation ATG$\rightarrow$AAA), a conserved cysteine was mutated to alanine (C52A, codon mutation TGC$\rightarrow$GCA), and the same cysteine was synonymously mutated (C52C, codon mutation TGC$\rightarrow$TGT).
 We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggest that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
 The synonymous C52C mutation is a negative control mutation that is not expected to have any effect.
 We then used reverse genetics to generate viruses carrying the wildtype HA or each point mutant, with GFP packaged in the PB1 segment to enable easy titering by flow cytometry~\cite{bloom2010permissive,hooper2013mutant}.
@@ -678,6 +678,7 @@ The M(-16)K mutation is only moderately attenuated, validating that the canonica
 \caption{\label{suppfig:glycan_validation}
 {\bf Validation of viral variants with mutations at N-linked glycosylation motifs.}
 We created variants of the Perth/2009 HA with mutations that eliminated N-linked glycosylation motifs (Asn-Xaa-Ser/Thr) at asparagine residues 22, 38, and 285 (these are mutations T24F, T40V, and S287A, respectively).
+\comment{The codon mutations were NNN$\rightarrow$NNN, NNN$\rightarrow$NNN, and NNN$\rightarrow$NNN, respectively.}
 We then used reverse genetics to generate viruses carrying the wildtype HA or each of these mutants.
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 The viruses with mutations at the motifs at residues 22 and 38 reached titers at least as high as wildtype, whereas the virus with a mutation to the motif at residue 285 was modestly attenuated.
@@ -688,7 +689,7 @@ The viruses with mutations at the motifs at residues 22 and 38 reached titers at
 \centerline{\includegraphics[width=0.45\textwidth]{figs/supp_point_mut_validation/tm_titers.pdf}}
 \caption{\label{suppfig:TM_validation}
 {\bf Validation of the mutational tolerance of a site in the transmembrane domain.}
-We created a variant of the Perth/2009 HA with a transmembrane domain mutation, C199(HA2)K, at a site that our deep mutational scanning suggests should be highly mutationally tolerant (Figure~\ref{fig:logoplot}).
+We created a variant of the Perth/2009 HA with a transmembrane domain mutation, C199(HA2)K (\comment{codon mutation NNN$\rightarrow$NNN}), at a site that our deep mutational scanning suggests should be highly mutationally tolerant (Figure~\ref{fig:logoplot}).
 We then used reverse genetics to generate viruses carrying the wildtype HA or this mutant.
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 The virus with the mutation reached titers comparable to wildtype.
