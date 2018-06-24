@@ -655,19 +655,14 @@ For each site, the height of each letter above or below the line indicate how mu
 The overlays show the same information as in Figure~\ref{fig:logoplot} (domain and wildtype amino acid).
 The sites are in H3 numbering.
 The HA alignment used to calculate the natural frequencies is the same one used in Table~\ref{tab:phydms}.
-\comment{Juhye: the notebook that creates this has a bug, as it never creates the \texttt{H3\_alignment\_frequences\_copy.csv}. 
-This must be something you did by hand but then didn't include the code for in the notebook: fix this!
-Also, it might be nice if you added a bit more explanation to this section of the Jupyter notebook.
-}
 }
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\centerline{\includegraphics[width=0.4\textwidth]{figs/supp_point_mut_validation/startcodon_titers.pdf}}
 \caption{
-\comment{Just show the first panel (A) here}
 {\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
-We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation \comment{what was it}), a conserved cysteine was mutated to alanine (C52A, codon mutation \comment{what was it?}), and the same cysteine was synonymously mutated (C52C, codon mutation \comment{what was it}).
+We created variants of the Perth/2009 HA in which the canonical start codon was mutated (amino-acid mutation M(-16)K, codon mutation ATG(-16)AAA), a conserved cysteine was mutated to alanine (C52A, codon mutation TGC52GCA), and the same cysteine was synonymously mutated (C52C, codon mutation TGC52TGT).
 We selected these mutations because our deep mutational scanning results in Figure~\ref{fig:logoplot} surprisingly suggests that the start codon (position -16) is fairly tolerant of mutations, but that site 52 is highly intolerant of mutation to anything other than cysteine.
 The synonymous C52C mutation is a negative control mutation that is not expected to have any effect.
 We then used reverse genetics to generate viruses carrying the wildtype HA or each point mutant, with GFP packaged in the PB1 segment to enable easy titering by flow cytometry~\cite{bloom2010permissive,hooper2013mutant}.
@@ -679,9 +674,8 @@ the M(-16)K mutation is only moderately attenuated, validating that the canonica
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\centerline{\includegraphics[width=0.4\textwidth]{figs/supp_point_mut_validation/glycan_titers.pdf}}
 \caption{\label{suppfig:glycan_validation}
-\comment{Just show the third panel (C) here, removing the cysteine mutants and adjusting the y-axis to a more appropriate for just these mutants.}
 {\bf Validation of viral variants with mutations at N-linked glycosylation motifs.}
 We created variants of the Perth/2009 HA with mutations that eliminated N-linked glycosylation motifs (Asn-Xaa-Ser/Thr) at asparagine residues 22, 38, and 285 (these are mutations T24F, T40V, and S287A, respectively).
 We then used reverse genetics to generate viruses carrying the wildtype HA or each of these mutants.
@@ -691,9 +685,8 @@ The viruses with mutations at the motifs at residues 22 and 38 reached titers at
 \end{suppfigure}
 
 \begin{suppfigure}[H]
-\centerline{\includegraphics[width=0.8\textwidth]{figs/supp_point_mut_validation/point_mut_validation.pdf}}
+\centerline{\includegraphics[width=0.45\textwidth]{figs/supp_point_mut_validation/tm_titers.pdf}}
 \caption{\label{suppfig:TM_validation}
-\comment{Just show TM mutant here, similar to previous figure}
 {\bf Validation of the mutational tolerance of a site in the transmembrane domain.}
 We created a variant of the Perth/2009 HA with a transmembrane domain mutation, C199(HA2)K, at a site that our deep mutational scanning suggests should be highly mutationally tolerant (Figure~\ref{fig:logoplot}).
 We then used reverse genetics to generate viruses carrying the wildtype HA or this mutants
