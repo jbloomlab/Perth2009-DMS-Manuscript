@@ -4,6 +4,7 @@
 *.log
 *.out
 *.synctex.gz
+SI.pdf
 .DS_store
 manuscript_trackchanges.*
 manuscript*.pdf
