@@ -1,0 +1,40 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{table}[b!]
+\caption{\label{tab:phydms}
+{\bf Substitution models informed by the experiments describe HA's evolution better than traditional models.}}
+\begin{center}
+\begin{tabular}{cccccccc}
+\hline
+\bf{Model} & \bf{$\Delta$AIC} & \bf{LnL} & \bf{Stringency} & \bf{$\omega$}  \\ \hline
+ExpCM & 0.0 & -8441 & 2.47 & 0.91 \\
+GY94 M5 & 2094 & -9482 & -- & 0.36 (0.30, 0.84) \\
+ExpCM, site avg. & 2501 & -9692 & 0.67 & 0.32 \\
+GY94 M0 & 2536 & -9704 & -- & 0.31 \\
+\hline
+\end{tabular}
+ \end{center}
+{Maximum likelihood phylogenetic fit to an alignment of human H3N2 HAs using ExpCM, ExpCM in which the experimental measurements are averaged across sites (site avg.), and M0 and M5 versions of the Goldman-Yang (GY94) model.
+Models are compared by Akaike information criterion (AIC) computed from the log likelihood (LnL) and number of model parameters.
+The $\omega$ parameter is dN/dS for the Goldman-Yang models, and the relative dN/dS after accounting for the measurements for the ExpCM.
+For the M5 model, we give the mean followed by the shape and rate parameters of the gamma distribution over $\omega$.
+}
+\end{table}
+
+\end{document}  
