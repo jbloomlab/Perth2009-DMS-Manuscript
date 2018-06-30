@@ -1,53 +1,43 @@
-\documentclass[9pt,twocolumn,twoside]{pnas-new}
+\documentclass[9pt,twoside,lineno]{pnas-new}
 % Use the lineno option to display guide line numbers if required.
-% Note that the use of elements such as single-column equations
-% may affect the guide line number alignment.
 
-\templatetype{pnasresearcharticle} % Choose template
-% {pnasresearcharticle} = Template for a two-column research article
-% {pnasmathematics} = Template for a one-column mathematics article
-% {pnasinvited} = Template for a PNAS invited submission
-
-% added to enable supplementary figures
-\usepackage{placeins}
-\usepackage{newfloat}
 \usepackage{xr-hyper}
 \externaldocument{manuscript_noSI}
-\DeclareFloatingEnvironment[name={Figure}]{suppfigure}
-\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
 
-\DeclareFloatingEnvironment[name={Dataset}]{suppdata}
-\renewcommand{\thesuppdata}{S\arabic{suppdata}}
+\templatetype{pnassupportinginfo}
+% \readytosubmit %% Uncomment this line before submitting, so that the instruction page is removed.
 
-\setcounter{topnumber}{10}
-\setcounter{bottomnumber}{10}
-\setcounter{totalnumber}{10}
-
-\newcommand{\comment}[1]{{\color{red}[\textsl{#1}]}}
-
+\title{Deep mutational scanning of hemagglutinin helps predict evolutionary fates of human H3N2 influenza variants}
+\author{JM Lee, J Huddleston, MB Doud, KA Hooper, NC Wu, T Bedford, JD Bloom}
+\correspondingauthor{Trevor Bedford \\ tbedford@fredhutch.org \\ Jesse D. Bloom \\ jbloom@fredhutch.org}
 
 \begin{document}
 
-% Please give the surname of the lead author for the running footer
-\leadauthor{Lee}
+%% Comment/remove this line before generating final copy for submission
+\instructionspage  
 
-\dates{This manuscript was compiled on \today}
-\doi{\url{www.pnas.org/cgi/doi/10.1073/pnas.XXXXXXXXXX}}
+\maketitle
+
+%% Adds the main heading for the SI text. Comment out this line if you do not have any supporting information text.
+\SItext
 
 
-% Optional adjustment to line up main text (after abstract) of first page with line numbers, when using both lineno and twocolumn options.
-% You should only change this length when you've finalised the article contents.
-\verticaladjustment{-2pt}
+\subsection*{Subhead}
+Type or paste text here. This should be additional explanatory text such as an extended technical description of results, full details of mathematical models, extended lists of acknowledgments, etc.  
 
-\onecolumn
+\section*{Heading}
+\subsection*{Subhead}
+Type or paste text here. You may break this section up into subheads as needed (e.g., one section on ``Materials'' and one on ``Methods'').
 
-\clearpage
-\section*{Supporting Information (SI)}
-\FloatBarrier
-\pagenumbering{arabic}% resets `page` counter to 1
-\renewcommand*{\thepage}{S\arabic{page}}
+\subsection*{Materials}
+Add a Materials subsection if you need to.
 
-\begin{suppfigure}[H]
+\subsection*{Methods}
+Add a Methods subsection if you need to.
+
+
+%%% Each figure should be on its own page
+\begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{figs/supp_G78D-T212I/G78D-T212I.pdf}}
 \caption{\label{suppfig:Perth2009_mut}
 {\bf Characterization of the G78D-T212I Perth/2009 HA variant.}
@@ -60,9 +50,10 @@ The points mark each duplicate and the bar marks the mean.
 The D78 variant remained at a low frequency in natural human H3N2 sequences over the past $~\sim$10 years.
 The A212 variant rose to fixation in $~\sim$2011, replacing the T212 variant.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{figs/supp_SangerSeq/SangerSeq.pdf}}
 \caption{\label{suppfig:SangerSeq}
 {\bf Sanger sequencing of 31 randomly chosen clones from the mutant plasmid libraries.}
@@ -74,9 +65,10 @@ The A212 variant rose to fixation in $~\sim$2011, replacing the T212 variant.
 The cumulative distribution of these distances is shown in the red line.
 The blue line indicates the expected distribution if mutations in multiply mutated genes are randomly dispersed along the sequence.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_diffprefs/diffprefs.pdf}}
 \caption{\label{suppfig:diffprefs_logoplot}
 {\bf Sites where there are strong differences between our experimental measurements and the amino-acid frequencies among natural HA sequences.}
@@ -86,9 +78,10 @@ The overlays show the same information as in Figure~\ref{fig:logoplot} (domain a
 The sites are in H3 numbering.
 The HA alignment used to calculate the natural frequencies is the same one used in Table~\ref{tab:phydms}.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.4\textwidth]{figs/supp_point_mut_validation/startcodon_titers.pdf}}
 \caption{
 {\bf Validation that the Perth/2009 HA is somewhat tolerant to mutation of the canonical start codon.}
@@ -101,9 +94,10 @@ As expected, the C52A virus is essentially non-viable, while the C52C mutation i
 The M(-16)K mutation is only moderately attenuated, validating that the canonical start codon is not completely essential for viral growth.
 }
 \label{suppfig:startcodon_validation}
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.4\textwidth]{figs/supp_point_mut_validation/glycan_titers.pdf}}
 \caption{\label{suppfig:glycan_validation}
 {\bf Validation of viral variants with mutations at N-linked glycosylation motifs.}
@@ -113,9 +107,10 @@ We then used reverse genetics to generate viruses carrying the wildtype HA or ea
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 The viruses with mutations at the motifs at residues 22 and 38 reached titers at least as high as wildtype, whereas the virus with a mutation to the motif at residue 285 was modestly attenuated.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.45\textwidth]{figs/supp_point_mut_validation/tm_titers.pdf}}
 \caption{\label{suppfig:TM_validation}
 {\bf Validation of the mutational tolerance of a site in the transmembrane domain.}
@@ -124,9 +119,10 @@ We then used reverse genetics to generate viruses carrying the wildtype HA or th
 Each variant was generated in duplicate, and the plots show the viral titer in the supernatant at 53 hours post-transfection.
 The virus with the mutation reached titers comparable to wildtype.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.75\textwidth]{figs/supp_head_stalk_RSA/head_stalk_RSA.pdf}}
 \caption{\label{suppfig:head_stalk_RSA}
 {\bf Mutational tolerances of the head and stalk domains at various relative solvent accessibility cutoffs.}
@@ -138,9 +134,10 @@ One monomer is shown in surface representation and another monomer shown in ribb
 Residues in lighter shades of purple or brown are in the head domain, while residues in darker shades are in the stalk domain.
 Note that the mutational tolerance values are not comparable between the two HAs.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_H3N2_phylogeny/H3N2_phylogeny.pdf}}
 \caption{\label{suppfig:tree}
 {\bf A phylogenetic tree of all HA sequences used in our analysis of mutation frequencies.}
@@ -153,9 +150,10 @@ The Perth/2009 strain was excluded to avoid artifacts related to mutations that 
 The post-2014 nodes were excluded because the evolutionary fates of many sequences after this date are not yet fully resolved.
 (B) The post-Perth/2009 partition of the tree containing only sequences from unpassaged isolates.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{figs/supp_WSNprefs_logoplot/WSN-rescaled_prefs.pdf}}
 \caption{\label{suppfig:WSNprefs_logoplot}
 {\bf The site-specific amino-acid preferences of the WSN/1933 H1 HA.}
@@ -165,17 +163,19 @@ Note that \cite{doud2016accurate} used libraries in which all codons were mutage
 Therefore, no data is shown for the first codon in the gene.
 The sites are in H3 numbering.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{figs/supp_muteffect_maxfreq_WSN/muteffect_maxfreq_WSN_supp.pdf}}
 \caption{\label{suppfig:muteffect_maxfreq_WSN_supp}
 {\bf The distribution of mutational effects measured in H1 HA among H3N2 mutations binned by the maximum frequency that they reach.}
 This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref{fig:muteffect_maxfreq}B, but uses the deep mutational scanning data for an H1 HA as measured in \cite{doud2016accurate}.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
-\begin{suppfigure}[H]
+\begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{figs/supp_head_stalk_mutfreq/head_stalk_mutfreq.pdf}}
 \caption{\label{suppfig:head_stalk_mutfreq_supp}
 {\bf Frequency trajectories of head and stalk domain mutations.}
@@ -183,39 +183,23 @@ This figure repeats the analysis of the H3N2 mutation frequencies in Figure~\ref
 (B) Histogram of mutation maximum frequencies by the number of mutations in the head and stalk domains.
 It is clear that mutations in the head domain are more numerous than those in the stalk, particularly among mutations that reach high frequencies.
 }
-\end{suppfigure}
+\end{figure}
+\FloatBarrier
 
 
 
-\begin{suppdata}[H]
-\caption{\label{suppdata:PerthHA}
-Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth09-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.
-}
-\end{suppdata}
+\dataset{pHW_Perth09-HA-G78D-T212I.txt}{Genbank file giving the full sequence of the bidirectional reverse-genetics plasmid pHW-Perth09-HA-G78D-T212I, which encodes the wildtype HA sequence used in this study.}
 
-\begin{suppdata}[H]
-\caption{\label{suppdata:bcsubamp_primers}
-Excel file providing the primers used to generate the barcoded subamplicons for Perth/2009 HA deep sequencing.
-}
-\end{suppdata}
+\dataset{Perth2009_subamplicon_primers.xlsx}{Excel file providing the primers used to generate the barcoded subamplicons for Perth/2009 HA deep sequencing.}
 
-\begin{suppdata}[H]
-\caption{\label{suppdata:prefsfiles}
-Excel file giving the amino-acid preferences in sequential 1, 2, ... numbering of the Perth/2009 HA.
+\dataset{DatasetS3.xlsx}{Excel file giving the amino-acid preferences in sequential 1, 2, ... numbering of the Perth/2009 HA.
 The unscaled preferences for replicates 1, 2, 3-1, and 3-2 are each in a separate tab of the file.
 Additional tabs give the across-replicate averaged and re-scaled amino-acid preferences in sequential numbering and in H3 numbering as shown in Figure~\ref{fig:logoplot}.
 There are also tabs that give the conversion from sequential to H3 numbering, and a list of the mutations in the 31 clones we Sanger sequenced to evaluate the mutation rate of the mutant plasmid libraries.
-Each tab can simply be exported to CSV for computational analyses.
-}
-\end{suppdata}
+Each tab can simply be exported to CSV for computational analyses.}
 
-\begin{suppdata}[H]
-\caption{\label{suppdata:gisaid}
-Excel file providing acknowledgments and accessions for sequences downloaded from GISAID.
-}
-\end{suppdata}
+\dataset{gisaid_acknowledgment_table.xls}{Excel file providing acknowledgments and accessions for sequences downloaded from GISAID.}
 
-\subsection*{References}
 \bibliography{references}
 
 \end{document}
