@@ -427,7 +427,7 @@ Future experiments that completely map how HA mutations affect recognition by hu
 \section*{Materials and Methods}
 \subsection*{Data and computer code}
 Deep sequencing data are available from the Sequence Read Archive under BioSample accessions SAMN08102609 and SAMN08102610.
-Computer code used to analyze the data and produce the results in the paper are on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}.
+Computer code used to analyze the data is at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript}.
 
 \subsection*{HA numbering}
 Sites are in H3 numbering, with the signal peptide in negative numbers, HA1 in plain numbers, and HA2 denoted with "(HA2)". Sequential 1, 2, ... numbering of the Perth/2009 HA can be converted to H3 numbering by subtracting 16 for the HA1 subunit, and subtracting 345 for the HA2 subunit.
@@ -453,13 +453,8 @@ The HA with these two mutations was cloned into pHW2000~\citep{hoffmann2000dna} 
 For all subsequent experiments, we used viruses with the HA containing these two mutations to improve titers and viral genetic stability, and this is the HA that we refer to as Perth/2009 in the manuscript text.
 We used all non-HA genes (including NA) from WSN/1933 to help increase titers and reduce biosafety concerns.
 
-The codon-mutant libraries were generated in the Perth/2009 HA-G78D-T212I background using the PCR-based approach described in \cite{bloom2014experimentally} with the primer melting-temperature modifications described in \cite{dingens2017comprehensive}, using two rounds of mutagenesis.
-The script to design the mutagenesis primers is at \url{https://github.com/jbloomlab/CodonTilingPrimers}.
-We created three independent libraries, one for each biological replicate.
-The mutant variants were then cloned at high efficiency into the pICR2~\cite{ashenberg2017deep} vector using digestion with BsmBI, ligation with T4 DNA ligase, and electroporation into ElectroMAX DH10B competent cells (Invitrogen 18290015).
-We obtained $>$6 million transformants for each replicate.
-We scraped the plates, expanded the cultures in liquid LB (Luria-Bertani Broth) + ampicillin at 37$^{\circ}$C for 3 h with shaking, and then maxiprepped.
-We randomly chose 31 clones to Sanger sequence to evaluate the mutation rate (see SI Appendix, Figure~S2).
+The codon-mutant libraries were generated using the approach in \cite{bloom2014experimentally} with the modifications in \cite{dingens2017comprehensive}.
+See the SI Appendix (Supplementary text) for full details.
 
 \subsection*{Generation and passaging of mutant viruses}
 The mutant virus libraries were generated using the helper-virus approach described in \cite{doud2016accurate} with several modifications, most notably the cell line used.
@@ -481,39 +476,26 @@ We collected viral supernatant for sequencing 48 hours post-infection.
 \subsection*{Barcoded subamplicon sequencing}
 To extract viral RNA from the three replicate HA virus libraries and the wildtype HA virus, we clarified the viral supernatant by centrifuging at 2000 x \textit{g} for five minutes, then ultracentrifuged 24 mL of the clarified supernatant at 22,000 rpm for 1.5 h at 4$^{\circ}$C in a Beckman Coulter SW28 rotor, and extracted RNA using the Qiagen RNeasy Mini Kit by resuspending the viral pellet in 400 $\mu$L of buffer RLT supplemented with $\beta$-mercaptoethanol, pipetting 30 times, transferring the liquid to a microcentrifuge tube, adding 600 $\mu$L 70\% ethanol, and proceeding according to the manufacturer's instructions.
 The HA gene was reverse-transcribed with AccuScript Reverse Transcriptase (Agilent 200820) using primers P09-HA-For (5'-AGCAAAAGCAGGGGATAATTCTATTAATC-3') and P09-HA-Rev (5'-AGTAGAAACAAGGGTGTTTTTAATTACTAATACAC-3').
-
-We generated the HA PCR amplicons for the three plasmid libraries, the three virus libraries, the wildtype plasmid control, and the wildtype virus control using KOD Hot Start Master Mix (EMD Millipore 71842) using the PCR reaction mixture and cycling conditions described in~\cite{bloom2014experimentally} and the P09-HA-For and P09-HA-Rev primers.
-We prepared the sequencing libraries using a barcoded-subamplicon strategy~\cite{wu2014high} to increase the accuracy from deep sequencing.
-The exact details of this approach are described in~\cite{doud2016accurate} (also see \url{https://jbloomlab.github.io/dms_tools2/bcsubamp.html}).
-The primers used to generate the subamplicons are in the SI Appendix (Dataset~S2).
-We performed deep sequencing on a lane of an Illumina HiSeq 2500 using 2 $\times$ 250 bp paired-end reads in rapid-run mode.
+The barcoded-subamplicon library prep and deep sequencing were then performed as in~\cite{doud2016accurate}.
+See the SI Appendix (Supplementary text) for full details.
 
 \subsection*{Analysis of deep sequencing data}
 We used the \texttt{dms\_tools2} software package~\cite{bloom2015software} (\url{https://github.com/jbloomlab/dms_tools2}, version \texttt{2.2.5}) to analyze the deep sequencing data.
-The algorithm used to estimate the site-specific amino-acid preferences from the deep sequencing counts is described in~\cite{bloom2015software}.
-The amino-acid preferences for each replicate and for the re-scaled, across-replicate average are provided in the SI Appendix (Dataset~S3).
-Computer code that performs the entirety of this analysis and shows many detailed plots about read depth and other quality control metrics is available on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/analysis_notebook.ipynb}.
+The amino-acid preferences are provided in the SI Appendix (Dataset~S3).
+Computer code and detailed plots about read depth and other quality control metrics are at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/analysis_notebook.ipynb}.
 
-\subsection*{Phylogenetic model comparison and fitting of a stringency parameter}
-For the analysis in Table~\ref{tab:phydms}, we downloaded all full-length H3 HA sequences from the Influenza Virus Resource~\cite{bao2008}, and randomly subsampled two sequences per year.
-These sequences were aligned using MAFFT~\cite{katoh2013mafft} and used to infer a phylogenetic tree using RAxML~\cite{stamatakis2006raxml} with a GTRCAT model of nucleotide substitution.
-We then used \texttt{phydms}~\cite{hilton2017phydms} (\url{https://github.com/jbloomlab/phydms}, version \texttt{2.2.2}) to fit the substitution models listed in Table~\ref{tab:phydms}.
+\subsection*{Phylogenetic model comparison and stringency parameter}
+Phylogenetic model comparisons and fitting of a stringency parameter were performed using \texttt{phydms} as described in~\cite{hilton2017phydms}.
+See the SI Appendix (Supplementary text) for full details.
 
-The amino-acid preferences were re-scaled by the stringency parameter using the approach described in \cite{hilton2017phydms}.
-Note that the re-scaling simply puts the amino-acid preferences on a useful scale for visualization in logo plots, and has no effect on any of the quantitative conclusions relating the deep mutational scanning to natural evolution.
-The reason is that all of these conclusions use the effects of mutations as calculated using Equation~\ref{eq:muteffect}, and the re-scaling simply acts as a constant multiplier on all mutational effects (e.g., a scale factor) when re-scaled preferences are converted to mutational effects.
-
-The phylogenetic tree of HA subtypes in Figure~\ref{fig:distance_distribution}A was generated as described in~\cite{doud2018quantifying}.
-
-\subsection*{Quantification of Shannon entropy and relative solvent accessibility}
+\subsection*{Shannon entropy and relative solvent accessibility}
 We calculated Shannon entropy, $h_r$ for site $r$ as $h_r = - \sum_{x} \pi_{r,x} \log(\pi_{r,x})$, where $\pi_{r,x}$ is the preference for amino acid $x$ at site $r$.
 
 We quantified the absolute solvent accessibility of each site of the H3 HA (PDB 4O5N;~\cite{lee2014receptor}) or the H1 HA (PDB 1RVX;~\cite{gamblin2004structure}) structure using DSSP~\cite{kabsch1983}.
 We then normalized to a relative solvent accessibility using the absolute accessibilities in~\cite{tien2013}.
 
 \subsection*{Quantification of mutational effects}
-We calculated the effects of mutations from the amino-acid preferences that were estimated from the deep mutational scanning data.
-The effect of mutating site $r$ from amino acid $a_1$ to $a_2$ was calculated as
+The effect of mutating site $r$ from amino acid $a_1$ to $a_2$ was quantified as
 \begin{equation}
 \label{eq:muteffect}
 \log_2 \frac{\pi_{r,a_2}}{\pi_{r,a_1}}
@@ -521,63 +503,18 @@ The effect of mutating site $r$ from amino acid $a_1$ to $a_2$ was calculated as
 where $\pi_{r,a_1}$ and $\pi_{r,a_2}$ are the re-scaled preferences for amino acids $a_1$ or $a_2$ at site $r$ as shown in Figure~\ref{fig:logoplot}.
 The WSN/1933 H1 HA amino-acid preferences are the replicate-average values reported in \cite{doud2016accurate}, re-scaled by a stringency parameter of 2.05 (see \url{https://github.com/jbloomlab/dms_tools2/blob/master/examples/Doud2016/analysis_notebook.ipynb}).
 
-\subsection*{Inference of human H3N2 phylogenetic tree and calculation of maximum mutation frequencies}
-To generate the tree shown in the SI Appendix (Figure~S8), we applied Nextstrain's augur pipeline~\cite{Hadfield224048} (\url{https://github.com/nextstrain/augur}; commit \texttt{006896d}) to publicly available H3N2 HA sequences from GISAID \cite{shu2017gisaid} (see the SI Appendix, Dataset~S4), sampling six viruses per month over the time interval of January 1, 1968 to February 1, 2018.
-We aligned the resulting 2,189 HA sequences with MAFFT v7.310~\cite{katoh2013mafft} and constructed a maximum likelihood phylogeny from this alignment with RAxML 8.2.10~\cite{stamatakis2006raxml}.
-Ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
-The phylogenetic tree is available as a JSON file on GitHub at \url{https://github.com/jbloomlab/Perth2009-DMS-Manuscript/blob/master/analysis_code/data/flu_h3n2_ha_1968_2018_6v_tree.json.gz}.
-The tree was visualized using BALTIC (\url{https://github.com/blab/baltic}).
-
-% notation for frequencies model
-\newcommand{\dx}{\mathrm{d}x}						% change in x
-\newcommand{\dy}{\mathrm{d}y}						% change in y
-\newcommand{\dt}{\mathrm{d}t}						% change in t
-\newcommand{\inertia}{\epsilon}			    % inertia parameter
-\newcommand{\normal}{\mathcal{N}}				% normal distribution
-
-The frequency trajectory of each individual mutation on the phylogeny is estimated following Nextstrain's augur pipeline and as first implemented in Nextflu \cite{neher2015nextflu}.
-Herein, mutation frequency dynamics are modeled according to a Brownian motion diffusion process discretized to one-month intervals.
-The number of viruses sampled in each interval determines the denominator of the mutation frequency calculations.
-Relative to a simple Brownian motion, the expectation includes an ``inertia'' term $\inertia$ that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
-This results in the following diffusion process
-\begin{equation}
-x(t+\dt) = \normal\big( x(t) + \inertia \, \dx , \; \dt \, \sigma^2 \, x(t) \, (1-x(t)) \big),
-\end{equation}
-with `volatility' parameter $\sigma^2$.
-The term $\dx$ is the increment in the previous timestep, so that $\dx = x(t) - x(t-\dt)$.
-We used $\inertia = 0.7$ and $\sigma^2 = 0.05$ to maximize fit to empirical trajectory behavior.
-
-We also include an Bernoulli observation model for mutation presence / absence among sampled viruses at timestep $t$.
-This observation model follows
-\begin{equation}
-f(x,t) = \prod_{v\in V} x(t) \prod_{v\notin V} (1-x(t)),
-\end{equation}
-where $v\in V$ represents the set of viruses that have the mutation and $v\notin V$ represents the set of viruses that do not have the mutation.
-Each frequency trajectory is estimated by simultaneously maximizing the likelihood of the process model and the likelihood of the observation model via adjusting frequency trajectory $\mathbf{x}=(x_1, \ldots, x_n)$.
-
-We also repeated the above analyses using only viruses that were sequenced directly without passaging.
-Routine direct sequencing did not begin until the early 2000s \cite{mcwhite2016sequence}.
-To construct a tree with a similar number of viruses as the original analysis, we sampled 30 viruses per month between January 1, 2000 and April 1, 2018, producing a tree with 2,374 unpassaged viruses with augur (commit: \texttt{6d9f708}).
-We included the passaged DMS strain, A/Perth/16/2009, in the resulting tree to enable comparison between pre-Perth and post-Perth clades.
+\subsection*{H3N2 phylogenetic tree and maximum mutation frequencies}
+The pylogenetic tree was generated using Nextstrain's augur pipeline~\cite{Hadfield224048}, and ancestral state reconstruction and branch length timing were performed with TreeTime~\cite{Sagulenko2018}.
+Frequency trajectories of mutations were estimated following Nextstrain's augur pipeline as first implemented in Nextflu~\cite{neher2015nextflu}.
+See the SI Appendix (Supplementary text) for full details.
 
 \subsection*{Analysis of mutational shifts}
-To compare the Perth/2009 H3 and WSN/1933 H1 HA preferences, we first aligned the wildtype HA sequences using MAFFT~\cite{katoh2013mafft}.
-To quantify the shifts in preference for every alignable site while accounting for experimental noise, we used the approach described in~\cite{haddox2018mapping} and used the RMSD$_{\text{corrected}}$ values as our quantification of the extent of each shift.
-
-For the plots shown in Figure~\ref{fig:RMSD_heatmap}B, any residues falling between Cys-52 and Cys-277 were defined as the head domain, and all other residues were defined as the stalk domain.
-We used the multiple sequence alignment of the HA subtype sequences from \cite{doud2018quantifying} to identify sites that are absolutely conserved across all subtypes, or in the different clades described in Figure~\ref{fig:RMSD_heatmap}.
+We compared the preferences for the Perth/2009 H3 and WSN/1933 H1 HAs using the approach in~\cite{haddox2018mapping}.
+See the SI Appendix (Supplementary text) for full details.
 
 \subsection*{Validation of individual point mutants}
-To validate the viral growth of Perth/2009 HA point mutants M(-16)K, C52A, C52C, T24F, T40V, S287A, and C199(HA2)K, we used site-directed mutagenesis to introduce the amino-acid mutation into the Perth/2009 HA bidirectional reverse genetics plasmid, and verified the sequence of two clones for each mutant by Sanger sequencing.
-We generated these individual mutant viruses carrying GFP in the PB1 segment using a protocol described in \cite{bloom2010permissive,hooper2013mutant}, and the PB2, PA, NP, NA, M, and NS segments of the A/WSN/1933 (H1N1) strain.
-To rescue each mutant GFP-carrying virus in duplicate, we transfected a co-culture of $4 \times 10^5$ 293T-CMV-PB1 and $0.5 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells with the eight reverse genetics plasmids and the pHAGE2-EF1aInt-TMPRSS2-IRES-mCherry-W plasmid.
-Each well received a transfection mixture of 100 $\mu$L DMEM, 3 $\mu$L BioT transfection reagent, and 250 ng of each plasmid.
-We changed the media in each well with 2 mL IGM eight hours post-transfection.
-At 53 hours post-transfection, transfection supernatants were harvested, clarified by centrifugation at 2000 $\times$ \textit{g} for five minutes, aliquoted, and frozen at -80$^\circ$C.
-
-To titer the GFP-carrying viruses, we plated $1 \times 10^5$ MDCK-SIAT1-CMV-PB1-TMPRSS2 cells per well in 12-well plates in IGM.
-Four hours after plating, we infected cells with dilutions of viral supernatant.
-At 16 hours post-infection, we selected wells with 1 to 10\% of cells that were GFP-positive and analyzed the fraction of GFP-positive cells by flow cytometry to calculate the titer of infectious particles per $\mu$L.
+To validate the viral growth of Perth/2009 HA point mutants M(-16)K, C52A, C52C, T24F, T40V, S287A, and C199(HA2)K, we examined the supernatant titers of each of these variants after reverse-genetics generation in the context of PB1flank-GFP viruses~\cite{bloom2010permissive,hooper2013mutant}.
+See the SI Appendix (Supplementary text) for full details.
 }
 
 \acknow{We thank Sarah Hilton, Hugh Haddox, and Sidney Bell for helpful discussions about data analysis, and Richard Neher for sharing analysis code and providing helpful comments on the manuscript.
