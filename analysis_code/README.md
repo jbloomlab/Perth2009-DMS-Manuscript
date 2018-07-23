@@ -23,6 +23,8 @@ The [./data/](./data/) subdirectory contains the following input files:
   * `domains.csv`: csv file listing each site and its associated HA domain
   * `flu_h3n2_ha_1968_2018_6v_frequencies.json.gz`: `JSON` file of the frequency trajectories of all nodes in a human H3N2 phylogeny (see file below)
   * `flu_h3n2_ha_1968_2018_6v_tree.json.gz`: tree build of human H3N2 influenza virus HA sequences from 1968 to 2018 in a `JSON` file format
+  * `flu_h3n2_ha_1968_2018_30v_unpassaged_frequencies.json.gz`: `JSON` file of the frequency trajectories of all nodes in a human H3N2 phylogeny using only unpassaged viruses (see file below)
+  * `flu_h3n2_ha_1968_2018_30v_unpassaged_tree.json.gz`: tree build of only unpassaged human H3N2 influenza virus HA sequences from 1968 to 2018 in a `JSON` file format
   * `H1toH3_renumber.csv`: file to convert from H1 sequential numbering to H3 numbering
   * `H3_human_alignment.fa`: file of subsampled human seasonal H3N2 HA sequences for running `phydms`
   * `H3_swine_alignment.fa`: file of subsampled swine H3N2 HA sequences for running `phydms`

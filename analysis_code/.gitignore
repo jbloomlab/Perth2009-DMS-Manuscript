@@ -4,3 +4,4 @@ run.sbatch
 slurm*
 *.pyc
 .ipynb_checkpoints
+!*.json.gz
