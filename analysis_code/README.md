@@ -38,3 +38,10 @@ The [./data/](./data/) subdirectory contains the following input files:
   * `WSN_replicate-*_prefs.csv`: the unscaled amino-acid preferences files for the WSN/1933 H1 HA for each replicate, in sequential numbering
   * `Env_BF520_replicate-*_prefs_rescaled.csv`: amino-acid preferences files for HIV Env (BF520) for each replicate. These amino-acid preferences have already been re-scaled. Taken from [Haddox et al](https://doi.org/10.1101/235630).
   * `BG505_to_BF520_prefs_dist.csv`: shifts between BG505 and BF520 preferences as calculated by [Haddox et al](https://doi.org/10.1101/235630).
+
+#### Results
+Most results are not tracked, but the following are:
+
+- [results/codoncounts](results/codoncounts): the codon counts from the sequencing.
+- [results/preferences](results/preferences): the amino-acid preferences in sequential numbering.
+- [results/H3renumberedprefs](results/H3renumberedprefs): the amino-acid preferences in H3 numbering.
